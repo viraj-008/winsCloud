@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
+import { ReactNode } from "react";
 
 type NavItem = {
     name: string | ReactNode;
@@ -102,13 +103,18 @@ const Navbar: React.FC = () => {
                             <span className="lg:hidden">{mobileDropdowns[index] ? '−' : '+'}</span>
                         </button>
                     ) : (
-                        <Link to={item.dropdown.length === 0 ? `/${item.name.toLowerCase().replace(/\s+/g, "-")}` : "#"}
-                            className={`w-full lg:w-auto py-2 px-4 text-[20px] hover:scale-105 transition-all duration-300 font-josefin flex justify-between items-center
-                            ${isScrolled ? "text-black" : "text-white lg:text-white"}`}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            {item.name}
-                        </Link>
+                        <Link
+                        to={
+                          item.dropdown.length === 0
+                            ? `/${String(item.name).toLowerCase().replace(/\s+/g, "-")}`
+                            : "#"
+                        }
+                        className={`w-full lg:w-auto py-2 px-4 text-[20px] hover:scale-105 transition-all duration-300 font-josefin flex justify-between items-center
+                          ${isScrolled ? "text-black" : "text-white lg:text-white"}`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
                     )}
 
                     {/* Dropdown Menu */}

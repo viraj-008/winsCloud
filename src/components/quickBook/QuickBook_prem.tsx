@@ -203,20 +203,7 @@ Want us to help you decide which version of QuickBooks Premier Hosting is best f
                  ))}
                </div>
 
-               <div>
-       <h1 className='text-4xl my-7 bg-gray-200 text-center text-gray-700 
-       font-josefin md:w-[50%] mx-auto p-3 rounded-md font-bold'>Our Trusted Partners</h1>
-       <img  className='md:h-32 mx-auto px-2' src='./images/logo/Partner.avif'/> 
-       <div className='bg-red-700 flex flex-col md:flex-row justify-between mt-8 px-4 rounded-lg md:w-[60%] w-[90%] mx-auto items-center'>
-   <p className='text-white text-center mt-4 md:mt-0 font-josefin font-bold'>
-       Get an Account in Minutes Today!
-   </p> 
-   <Link to="/trial"><button className='border mx-auto font-josefin m-4 md:my-3 bg-green-600 hover:bg-green-700 text-md md:text-lg px-6 md:px-12 text-white py-2 rounded-full'>
-      Free One-Month trial!
-   </button></Link>
-</div>
-
-     </div>
+              
 </>
   )
 }

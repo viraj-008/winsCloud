@@ -10,6 +10,9 @@ import QuickBook_prem from "./components/quickBook/QuickBook_prem";
 import QuickBook_enterprice from "./components/quickBook/QuickBook_enterprice";
 import QuickBook_pos from "./components/quickBook/QuickBook_pos";
 import Quick_hosting_canada from "./components/quickBook/Quick_hosting_canada";
+import Sage_Hosting from "./components/sage/Sage_Hosting";
+import Sage50Hosting from "./components/sage/Sage50Hosting";
+import Sage100Hosting from "./components/sage/Sage100Hosting";
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
         <Route path="/quickbooks-enterprise" element={<QuickBook_enterprice/>} />
         <Route path="/quickbooks-pos" element={<QuickBook_pos/>} />
         <Route path="/quickbooks-hosting-canada" element={<Quick_hosting_canada/>} />
+        <Route path="/sage-hosting" element={<Sage_Hosting />} />
+        <Route path="/sage-50-hosting" element={<Sage50Hosting />} />
+        <Route path="/sage-100-hosting" element={<Sage100Hosting />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -202,15 +202,9 @@ Winscloud QuickBooks Enterprise Cloud Hosting: Powerful Features That Help Your 
               }`}
           >
             <div className="p-4 bg-gray-50 text-gray-700">
-              {faq.Head && <p className="font-bold text-xs md:text-xl">{faq.Head}</p>}
-              {faq.Head2 && <p className="font-bold mt-2 text-xs md:text-xl">{faq.Head2}</p>}
+             
               {faq.answer && <p className="font-montserrat text-[10px] md:text-sm">{faq.answer}</p>}
-              {faq.Head3 && <p className="font-bold mt-4 text-xs md:text-xl">{faq.Head3}</p>}
-              {faq.answer2 && <p className="font-montserrat text-[10px] md:text-sm">{faq.answer2}</p>}
-              {faq.Head4 && <p className="font-bold mt-4 text-xs md:text-xl">{faq.Head4}</p>}
-              {faq.answer3 && <p className="font-montserrat text-[10px] md:text-sm">{faq.answer3}</p>}
-              {faq.Head5 && <p className="font-bold mt-4 text-xs md:text-xl">{faq.Head5}</p>}
-              {faq.answer4 && <p className="font-montserrat text-[10px] md:text-sm">{faq.answer4}</p>}
+            
             </div>
 
           </div>

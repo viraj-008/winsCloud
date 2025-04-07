@@ -13,6 +13,9 @@ import Quick_hosting_canada from "./components/quickBook/Quick_hosting_canada";
 import Sage_Hosting from "./components/sage/Sage_Hosting";
 import Sage50Hosting from "./components/sage/Sage50Hosting";
 import Sage100Hosting from "./components/sage/Sage100Hosting";
+import Sage_300Hosting from "./components/sage/Sage_300Hosting";
+import Sage_500Hosting from "./components/sage/Sage_500Hosting";
+import Lecerte_Hosting from "./components/services/Lecerte_Hosting";
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
         <Route path="/sage-hosting" element={<Sage_Hosting />} />
         <Route path="/sage-50-hosting" element={<Sage50Hosting />} />
         <Route path="/sage-100-hosting" element={<Sage100Hosting />} />
+        <Route path="/sage-300-hosting" element={<Sage_300Hosting  />} />
+        <Route path="/sage-500-hosting" element={<Sage_500Hosting />} />
+        <Route path="/lacerte_Hosting" element={< Lecerte_Hosting />} />
       </Routes>
       <Footer />
     </BrowserRouter>

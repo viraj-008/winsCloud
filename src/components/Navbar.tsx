@@ -40,10 +40,11 @@ const Navbar: React.FC = () => {
                 { label: "Sage Hosting", href: "/sage-hosting" },
                 { label: "Sage 50 Hosting", href: "/sage-50-hosting" },
                 { label: "Sage 100 Hosting", href: "/sage-100-hosting" },
+                { label: "Sage 300 Hosting", href: "/sage-300-hosting" },
                 { label: "Sage 500 Hosting", href: "/sage-500-hosting" }
             ]
         },
-        { name: "Service", dropdown: [{ label: "Consulting", href: "/consulting" }, { label: "Support", href: "/support" }] },
+        { name: "Service", dropdown: [{ label: "Lacerte_Hostiing", href: "/lacerte_Hosting" }, ] },
         { name: "Pricing", dropdown: [] }, // Direct link, no dropdown
         { name: "Support", dropdown: [{ label: "Help Center", href: "/help-center" }, { label: "Live Chat", href: "/live-chat" }] },
         { name: "About Us", dropdown: [{ label: "Company Info", href: "/company-info" }, { label: "Our Team", href: "/our-team" }] },

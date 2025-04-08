@@ -1,50 +1,50 @@
-
+import { useState } from "react";
+import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
 const Lecerte_Hosting = () => {
 
 
-  //  const faqs = [
-  //         {
-  //           question: "What is Sage 500 hosting?",
-  //           answer: "Sage 500 cloud hosting means integrating the desktop software into the cloud environment. It provides business owners with the flexibility to access their business data on the go, in real time, from any device they have in vicinity, only with internet connectivity.",
+   const faqs = [
+          {
+            question: "What is Lacerte Tax Hosting?",
+            answer: "Lacerte Hosting means your desktop tax application is hosted on a remote cloud server, making it accessible on any device such as laptop, cellphone, desktop or tablet, with the help of the internet. Anyone who hosts their Lacerte on the cloud can access their data on-the-go and collaborate with their tax professionals and remote teams from anywhere in the world.",
            
-  //         },
-  //         {
-  //           question: "How much does Sage 100 cloud hosting services cost?",
-  //           answer: "Winscloud Matrix Sage 100 cloud hosting services shared plans start from $23 and dedicated hosting plans start from $69. You can scale up or down as you go and pay only for what you use. The features vary depending on the plan you choose.",
-  //         },
-  //         {
-  //           question: "How much does Sage 500 hosting cost?",
-  //           answer: "The cost of Sage 500 cloud hosting depends on certain factors, like the number of authorized users you choose the type of hosting you prefer for your business such as shared or dedicated hosting, the data storage you need, among a few other features. Our plans start at $23 per month. Know more about our pricing plans by getting in touch with our cloud experts.",
-  //         },
-  //         {
-  //           question: "How can I transition to Sage 500 cloud hosting?",
-  //           answer: "To transition your on-premises Sage 500 ERP application to the cloud, you can get in touch with our cloud expert team for assistance. We will help you transition seamlessly, with maximum up time, so your customers enjoy maximum satisfaction and your profits multiply even during your cloud transition.",
-  //         },
-  //         {
-  //           question: "Will my data be always accessible with Sage 500 cloud hosting?",
-  //           answer: "Yes, your data is always accessible on Sage 500 hosting. Multiple backups of your data, multiple-user access to a file in real-time, and other such features of the cloud make your data always accessible.",
-  //         },
-  //         {
-  //           question: "Do I need my Sage 500 license before moving to the cloud?",
-  //           answer: "Yes, you need to provide your Sage 500 license to transition the cloud. If you do not have the license, you need to procure it and present it to your hosting provider before making the move.",
-  //         },
-  //         {
-  //           question: "Can multiple members from my team access my Sage 500 hosting?",
-  //           answer: "The cloud facilitates multiple user access to the information saved on the desktop software hosted on the cloud. All you need is authorization to access the remote software and the log in credentials provided by your hosting provider to access the saved data.",
-  //         },
-  //         {
-  //           question: "Can I host multiple versions of Sage on the cloud?",
-  //           answer: "Yes, the cloud supports multiple versions of Sage software – whether you wish to host Sage 50, 100, 300, or 500. Furthermore, all versions of this software are also supported.",
-  //         },
+          },
+          {
+            question: "How much does Lacerte tax software hosting cost?",
+            answer: "Lacerte Hosting by Winscloud Matrix starts at just $23 per month. The amount you pay depends on your number of users, hosting type you choose, and your storage needs. You can easily scale up and down as per your business needs with our pay as you go model.",
+          },
+          {
+            question: "What if I don’t want to host my desktop software anymore? Can I get a FREE Trial of Lacerte Hosting?",
+            answer: "Yes, we provide a one-month long free trial to our clients. You can use your cloud-hosted Lacerte and get firsthand experience of the cloud environment before making any decision. Your business still stays up and your data is completely secure, promising maximum up time. Pay for your preferred plan only when you are satisfied with our services",
+          },
+          {
+            question: "Does Lacerte Hosting save time?",
+            answer: "Lacerte hosting is a time-saving tax preparation and filing solution based in the cloud. Users can work on their essential tax files and carry out their operations from anywhere across the globe without needing to physically travel to their office to conduct these essential activities. Setting up on the cloud only takes 120 minutes, depending on your data, and you can enjoy up time even during the transition.",
+          },
+          {
+            question: "is my Lacerte Hosting safe?",
+            answer: "Yes, your data on Lacerte Tax Hosting is completely secure. A good tax software hosting provider like Winscloud Matrix ensures there are multiple safety measures in place such as network firewall, anti-virus and anti-malware, data encryption, multi-factor authentication, and secure login details that are shared only with the authorized personnel.",
+          },
+          {
+            question: "Does Lacerte Hosting support add-ons integration and third-party applications?",
+            answer: "Yes, you can host as many add-ons and third-party applications as you want along with your Lacerte hosting. Our cloud expert team at Winscloud can provide end-to-end support with hosting of your preferred add-ons and other apps.",
+          },
+          {
+            question: "Will I be provided with any support during my transition to the cloud?",
+            answer: "Yes, we offer 24/7 support to our clients all year round. Our team is well trained to tackle all sorts of issues that you might face during and after your transition to the cloud. Contact our team NOW for support!.",
+          },
+          {
+            question: "How many versions of Lacerte can I host in the cloud?",
+            answer: "You can host multiple versions of Lacerte Tax software in the cloud.",
+          },
       
-  //       ];
-  //       const [openIndex, setOpenIndex] = useState<number | null>(null);
+        ];
+        const [openIndex, setOpenIndex] = useState<number | null>(null);
       
-  //       const toggleFAQ = (index: number | null) => {
-  //         setOpenIndex(openIndex === index ? null : index);
-  //       };
+        const toggleFAQ = (index: number | null) => {
+          setOpenIndex(openIndex === index ? null : index);
+        };
   return (
     <>
     <div className="h-auto w-full pb-10">
@@ -168,7 +168,7 @@ Winscloud Matrix Lacerte Tax Hosting: Why should you choose Lacerte Hosting with
 <h1 className="text-2xl text-center font-bold font-kanit mt-8 px-8">Most Asked QuickBooks Enterprise Hosting Questions -</h1>
 
     <div className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
-      {/* {faqs.map((faq, index) => (
+      {faqs.map((faq, index) => (
         <div key={index} className="border-b last:border-b-0">
           <button
             className="w-full text-left flex justify-between items-center p-4 text-lg font-semibold hover:bg-gray-100"
@@ -194,7 +194,7 @@ Winscloud Matrix Lacerte Tax Hosting: Why should you choose Lacerte Hosting with
 
           </div>
         </div>
-      ))} */}
+      ))}
     </div>
   
 

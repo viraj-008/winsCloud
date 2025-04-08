@@ -16,7 +16,9 @@ import Sage100Hosting from "./components/sage/Sage100Hosting";
 import Sage_300Hosting from "./components/sage/Sage_300Hosting";
 import Sage_500Hosting from "./components/sage/Sage_500Hosting";
 import Lecerte_Hosting from "./components/services/Lecerte_Hosting";
-
+import ProseriesHosting from "./components/services/Proseries-hosting";
+import CloudServerHosting from "./components/services/Cloud-server-hosting";
+import DrakeHosting from "./components/services/Drake_Hosting";
 function App() {
   return (
     <BrowserRouter> {/* Wrap everything inside BrowserRouter */}
@@ -37,6 +39,9 @@ function App() {
         <Route path="/sage-300-hosting" element={<Sage_300Hosting  />} />
         <Route path="/sage-500-hosting" element={<Sage_500Hosting />} />
         <Route path="/lacerte_Hosting" element={< Lecerte_Hosting />} />
+        <Route path="/proseries-hosting" element={< ProseriesHosting  />} />
+        <Route path="/cloud-server-hosting" element={< CloudServerHosting />} />
+        <Route path="/drake-hosting" element={< DrakeHosting/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

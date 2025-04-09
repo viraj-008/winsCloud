@@ -19,6 +19,9 @@ import Lecerte_Hosting from "./components/services/Lecerte_Hosting";
 import ProseriesHosting from "./components/services/Proseries-hosting";
 import CloudServerHosting from "./components/services/Cloud-server-hosting";
 import DrakeHosting from "./components/services/Drake_Hosting";
+import UltraTaxHosting from "./components/services/UltraTaxHosting";
+import ActHosting from "./components/services/ActHosting";
+import AxtHosting from "./components/services/AtxHosting";
 function App() {
   return (
     <BrowserRouter> {/* Wrap everything inside BrowserRouter */}
@@ -42,6 +45,9 @@ function App() {
         <Route path="/proseries-hosting" element={< ProseriesHosting  />} />
         <Route path="/cloud-server-hosting" element={< CloudServerHosting />} />
         <Route path="/drake-hosting" element={< DrakeHosting/>} />
+        <Route path="/ultratax-hosting" element={< UltraTaxHosting/>} />
+        <Route path="/act-hosting" element={< ActHosting/>} />
+        <Route path="/atx-hosting" element={< AxtHosting/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

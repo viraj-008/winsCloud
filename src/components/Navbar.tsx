@@ -44,7 +44,15 @@ const Navbar: React.FC = () => {
                 { label: "Sage 500 Hosting", href: "/sage-500-hosting" }
             ]
         },
-        { name: "Service", dropdown: [{ label: "Lacerte_Hostiing", href: "/lacerte_Hosting" },{ label: "Proseries-hosting", href: "/proseries-hosting" }, { label: "Cloud server hosting", href: "/cloud-server-hosting" }, { label: "Drake Hosting", href: "drake-hosting" }, ] },
+        { name: "Service", dropdown: [{ label: "Lacerte_Hostiing", href: "/lacerte_Hosting" },
+            { label: "Proseries-hosting", href: "/proseries-hosting" }, 
+            { label: "Cloud server hosting", href: "/cloud-server-hosting" },
+             { label: "Drake Hosting", href: "drake-hosting" }, 
+             { label: "Ultratax Hosting", href: "ultratax-hosting" },
+             { label: "Act Hosting", href: "act-hosting" },
+             { label: "Atx Hosting", href: "atx-hosting" },
+             ] },
+             
         { name: "Pricing", dropdown: [] }, // Direct link, no dropdown
         { name: "Support", dropdown: [{ label: "Help Center", href: "/help-center" }, { label: "Live Chat", href: "/live-chat" }] },
         { name: "About Us", dropdown: [{ label: "Company Info", href: "/company-info" }, { label: "Our Team", href: "/our-team" }] },

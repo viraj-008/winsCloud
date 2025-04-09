@@ -1,48 +1,52 @@
-// import { useState } from "react";
-// import { FaPlus, FaMinus } from "react-icons/fa";
+import { useState } from "react";
+import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Drake_Hosting = () => {
-    // const faqs = [
-    //     {
-    //       question: "What is ProSeries Hosting?",
-    //       answer: "ProSeries Cloud Hosting refers to accessing and working on the ProSeries desktop application on a virtual server using the internet. Hosting the desktop application on the cloud allows tax preparers and accountants to collaborate with their clients remotely, saving them time and effort during the busy tax season.",
+    const faqs = [
+        {
+          question: "What is Drake tax hosting?",
+          answer: "Drake tax hosting is a blend of the drake desktop software and the power of cloud. It provides users with a centralized platform to access their key tax data from a location of their choice, irrespective of the time zone or device.",
          
-    //     },
-    //     {
-    //       question: "What is the cost of ProSeries Tax Software Hosting?",
-    //       answer: "The hosting plans offered by Winscloud Matrix are affordable and flexible. Starting at just $23 per month, our pay as you go model allows you to choose the services you need and pay only for what you have used.",
-    //     },
-    //     {
-    //       question: "Why should I choose Winscloud Matrix for my ProSeries Cloud Hosting?",
-    //       answer: "Having worked with clients from varied domains and several businesses of small and medium sizes, we have years of experience in hosting all accounting and tax applications. Not just that, our team of cloud experts are equipped with the required knowledge to host more than 200 add-ons and third-party apps that assist in making your accounting and tax process smoother.",
-    //     },
-    //     {
-    //       question: "Can I get a ProSeries Cloud Hosting Free Trial before hosting?",
-    //       answer: "Yes, we offer a one-month Free Trial for clients who wish to experience working in the cloud environment before deciding. Ready to take a free trial with Winscloud Matrix? Start FREE TRIAL Now.",
-    //     },
-    //     {
-    //       question: "What security measures are in place to ensure my data is secure with ProSeries hosting?",
-    //       answer: "We understand that the taxpayer’s data is critical and must be protected from the risk of data theft, ransomware, floods, and earthquakes. We ensure that your stored data is safe by implementing the latest security measures like end-to-end data encryption in servers, network firewalls for added protection, multi-factor authentication to ensure only authorized users gain access to the data, anti-virus and anti-malware protection, and multiple redundancies and data center monitoring round-the-clock.",
-    //     },
-    //     {
-    //       question: "Can I collaborate with my clients and members of my team through ProSeries Hosting?",
-    //       answer: "Yes, with ProSeries Hosting, you can collaborate with your clients and team at any time of the day and from any device. You can be on vacation or at any remote location and still stay up to date with your tax operations, the only requirements being a working internet connection.",
-    //     },
-    //     {
-    //       question: "Is my version of ProSeries desktop application supported for cloud hosting?",
-    //       answer: "Yes, we support all versions of ProSeries whether you wish to host ProSeries Basic, Professional, or any other edition that our clients own. We provide the same level of support and security irrespective of the version you have.",
-    //     },
-    //     {
-    //       question: "Is there any support for troubleshooting provided by my top hosting services provider?",
-    //       answer: "Yes, we provide 24/7/365 support related to ProSeries hosting as well as add-ons and third-party apps. Our team is available on email, chat, and call to help you with your issues and is responsive whenever you need.",
-    //     },
+        },
+        {
+          question: "Why should I choose Drake Tax software cloud hosting?",
+          answer: "Drake Tax hosting is one of the best decisions business owners can make. Since you can access your data at any time and from anywhere, you can get more done in less time and effort. Hosting your Drake tax software on the cloud makes tax season a lot easier, allowing multiple authorized users to work on the same data set, filing taxes faster, with less errors.",
+        },
+        {
+          question: "How much does Drake cloud hosting cost?",
+          answer: "We have many affordable and flexible pricing plans to offer. You can check out our hosting plans here – https://www.winscloudmatrix.com/pricing/.",
+        },
+        {
+          question: "Are all versions of Drake Tax Hosting supported on the cloud servers?",
+          answer: "It does not matter which version of Drake Tax software you are using. We provide hosting of all Drake versions.",
+        },
+        {
+          question: "I use a number of add-ons along with my Drake tax software. Is hosting possible for these add-ons as well?",
+          answer: "Yes, at Winscloud, we offer hosting of 200+ add-ons and third party apps for your uninterrupted tax filing with drake cloud hosting.",
+        },
+        {
+          question: "Do you provide any sort of tech support in case of any issue?",
+          answer: "Yes, we have a dedicated, trained, and experienced team in-house to provide you with the support needed,  at anytime of the day or night. You can reach out to us for support via email, phone, and chat.",
+        },
+        {
+          question: "What are the pre-requisites for Drake software cloud hosting?",
+          answer: "The only prerequisite for opting for drake cloud hosting solution is a working device like laptop, computer, tablet or phone and uninterrupted internet connection.",
+        },
+        {
+          question: "Is my data safe with Drake hosting providers?",
+          answer: "Yes, your drake hosting provider ensures complete safety of your critical information. There are several measures in place to protect your data from theft, ransomware attacks, and man-made and natural disasters like earthquake, floods, or robbery.",
+        },
+        {
+          question: "How much time does it take to migrate to the cloud? Can I access my data during transition?",
+          answer: "It usually takes a couple of hours to migrate the Drake desktop software to the cloud. It depends on you if you wish to migrate your entire data to the cloud. It may take a few hours extra depending on the size of your data..",
+        },
     
-    //   ];
-    //   const [openIndex, setOpenIndex] = useState<number | null>(null);
+      ];
+      const [openIndex, setOpenIndex] = useState<number | null>(null);
     
-    //   const toggleFAQ = (index: number | null) => {
-    //     setOpenIndex(openIndex === index ? null : index);
-    //   };
+      const toggleFAQ = (index: number | null) => {
+        setOpenIndex(openIndex === index ? null : index);
+      };
   return (
     <>
     <div className="h-auto w-full pb-10">
@@ -129,61 +133,61 @@ const Drake_Hosting = () => {
     How to Set Up Your Drake Tax Software on the Cloud in 3 Simple Steps?
       </h1>
 
-      {/* <p className="text-center px-4 font-montserrat">Team Winscloud can help you transition to ProSeries Hosting seamlessly in 3 easy steps –</p> */}
+       <p className="text-center px-4 font-montserrat">Team Winscloud can help you transition to ProSeries Hosting seamlessly in 3 easy steps –</p> 
 
 
-      {/* <div className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6"> */}
+ <div className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6"> 
       {/* Card 1 */}
       <div className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
         <img src="images/logo/qb2.webp" alt="Best-fitting Plans" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
         <h2 className="font-bold text-xl mb-2 font-kanit">
-        Choose a hosting plan that best suits your business</h2>
+        Find the most suitable hosting plan for your small business</h2>
         <p className="text-gray-700 font-montserrat  transition-all duration-300">
-        We offer both dedicated as well as shared hosting so you can choose the option that fits in with your budget and meets your hosting needs. You can scale up or down as you go hassle-free.
+        As an experienced drake hosting provider, we offer dedicated as well as shared hosting to our clients to accommodate their unique needs. We offer complete freedom to business owners to select the plan that meets their needs, is affordable, and offers flexibility to scale..
         </p>
       </div>
 
       {/* Card 2 */}
       <div className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
         <img src="images/logo/qb3.webp" alt="Round-the-Clock Support" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
-        <h2 className="font-bold text-xl mb-2 font-kanit">Share your ProSeries License and other details</h2>
+        <h2 className="font-bold text-xl mb-2 font-kanit">Provide your Drake License details</h2>
         <p className="text-gray-700 font-montserrat " >
-        Once you provide our cloud expert with your application license, software link, data you need to be transferred to the cloud and chosen plan details, we will begin your cloud transition process.
+        To begin your cloud transition process, you must present your Drake software license to your Drake hosting provider. You might also need to provide additional details like your number of users and the amount of storage you need.
         </p>
       </div>
 
       {/* Card 3 */}
       <div className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
         <img src="images/logo/qb1.webp" alt="Data Security and Recovery" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
-        <h2 className="font-bold text-xl mb-2  font-kanit">Start Your Tax Preparation Process in the Cloud</h2>
+        <h2 className="font-bold text-xl mb-2  font-kanit">Access your drake tax software cloud hosting</h2>
         <p className="text-gray-800 font-montserrat transition-all duration-300">
-        Our experts are trained to complete your transition to cloud in just 120 minutes, depending on your data. Your data is safely and securely migrated to the cloud with maximum up time, so you can start your clients’ tax prep right away.
+        In just 2-5 hours, depending on the size of your data, your transition to the cloud will be complete. You can then access your favorite software and safely begin your tax preparation process, on the very same day!
         </p>
       </div>
      
-    {/* </div> */}
+   </div> 
 
 
 
 
 
 
-{/* 
+
     <div className="bg-gray-200 my-8 w-[90%] mx-auto rounded-lg flex flex-col items-center py-6">
       <h1 className="text-center font-semibold font-kanit text-2xl px-4">
-      Ready to see how ProSeries Cloud Hosting helps with tax preparation?
+      Ready to see how Drake Cloud Hosting helps with tax preparation?
       </h1>
       <button className="mt-6 border-2 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-      Try ProSeries Hosting for FREE
+      Try Drake Hosting for FREE
       </button>
-    </div> */}
+    </div>
 
     
 
     
-    {/* <div className="my-12 w-[90%] mx-auto">
+    <div className="my-12 w-[90%] mx-auto">
 <h1 className="text-center font-kanit font-semibold text-2xl pt-5">
-Why Choose Winscloud Matrix for Your ProSeries Cloud Hosting: Anytime, Anywhere Advantage with Unceasing Expert Support
+Why Should You Choose Winscloud for Drake Tax Software Hosting: Tax Preparation Transformed with the Power of Cloud
   </h1>
 
 
@@ -191,27 +195,26 @@ Why Choose Winscloud Matrix for Your ProSeries Cloud Hosting: Anytime, Anywhere 
     <div className="flex flex-col  md:flex-row  mt-8">
 
       <div className="md:w-[50%] space-y-4 font-montserrat text-sm p-3">
-      <p className=" "><span className="font-kanit font-bold ">Remote Collaboration-</span>With Winscloud Matrix ProSeries Hosting, you can collaborate with your clients and other professionals from your team on-the-go, breaking all the location barriers. </p>
-      <p className=" "> <span className="font-kanit font-bold my-6 ">Effective Hosting Cost- </span>Our hosting plans are affordable, flexible, and scalable, giving you complete freedom to choose services that you require and pay only for what you use.</p>
-      <p className=" "> <span className="font-kanit font-bold my-6 ">Bank Grade Security- </span>We make conscious efforts to keep your data integrity intact, with multiple layers of security such as firewall, encryption, backups, monitoring, and anti-virus protection in place.
-
+      <p className=" "><span className="font-kanit font-bold ">Multi-User Collaboration-</span>With Winscloud’s Drake Tax hosting, you can experience maximum productivity with your tax filing operations by remotely collaborating with multiple members of your team, in real time.</p>
+      <p className=" "> <span className="font-kanit font-bold my-6 ">Cost-Effective Hosting- </span>We offer affordable and the most flexible drake tax hosting pricing. Our plans are flexible and provide you with the freedom to choose the services you need and pay only for what you use.</p>
+      <p className=" "> <span className="font-kanit font-bold my-6 ">Highest Level Security- </span>We understand the importance of keeping our client’s data safe, with an array of security measures like a network firewall, end-to-end data encryption, regular backups of your files, etc.
 </p>
       </div>
     
     <div className="md:w-[50%] space-y-4 p-3 font-montserrat text-sm">
 
-      <p className=""> <span className="font-kanit font-bold ">High Up Time Guarantee- </span>Our high-speed servers and secure and reliable networks ensure that you get maximum up time with your ProSeries cloud hosting, ensuring a high level of productivity.</p>
-      <p className=" "><span className="font-kanit font-bold ">Multiple Device Compatibility-</span>ProSeries Cloud hosting allows tax preparers and accountants to access the software and tax data from any device connected with the internet, including laptop, phone, tablet, and desktop.</p>
-      <p className=" "><span className="font-kanit font-bold ">24×7 Technical Support- </span>Our technical support team is dedicatedly working round-the-clock to provide you with assistance, troubleshooting, and guidance via email, chat, and call.</p>
+      <p className=""> <span className="font-kanit font-bold ">Multiple Device Compatibility- </span> Drake Cloud hosting allows tax preparers and accountants to access the software and tax data from any device connected with the internet, including laptop, phone, tablet, and desktop.</p>
+      <p className=" "><span className="font-kanit font-bold ">24×7 Tech-Support--</span>We have a team of certified IT professionals who work round-the-clock to provide our clients with unparalleled assistance to help keep your system up-and-running.</p>
+      <p className=" "><span className="font-kanit font-bold ">High Up Time- </span> Experience minimum downtime uninterrupted access to your Drake hosting and the tax data saved on all your devices with our 99.99% uptime guarantee.</p>
      
     </div>
     </div>
-</div> */}
+</div> 
 
 
-{/* <h1 className="text-2xl text-center font-bold font-kanit mt-8 px-8">ProSeries Cloud Hosting Frequently Asked Questions (FAQs) -</h1> */}
+<h1 className="text-2xl text-center font-bold font-kanit mt-8 px-8">Drake Tax Software Hosting: Frequently Asked Questions (FAQs) -</h1> 
 
-    {/* <div className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
+    <div className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
       {faqs.map((faq, index) => (
         <div key={index} className="border-b last:border-b-0">
           <button
@@ -239,9 +242,9 @@ Why Choose Winscloud Matrix for Your ProSeries Cloud Hosting: Anytime, Anywhere 
           </div>
         </div>
       ))}
-    </div> */}
-  
- remaining
+    </div>
+   
+
   </>
   )
 }

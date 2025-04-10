@@ -22,9 +22,14 @@ import DrakeHosting from "./components/services/Drake_Hosting";
 import UltraTaxHosting from "./components/services/UltraTaxHosting";
 import ActHosting from "./components/services/ActHosting";
 import AxtHosting from "./components/services/AtxHosting";
+import TaxWiseHosting from "./components/services/TextWiseHosting"
+import QuickenHosting from "./components/services/QuickenHosting";
+import MyobHosting from "./components/services/MyobHosting";
+import FishbowlHosting from "./components/services/FishbowlHosting";
+import DocItHosting from "./components/services/DocItHosting";
 function App() {
   return (
-    <BrowserRouter> {/* Wrap everything inside BrowserRouter */}
+    <BrowserRouter> 
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -48,6 +53,11 @@ function App() {
         <Route path="/ultratax-hosting" element={< UltraTaxHosting/>} />
         <Route path="/act-hosting" element={< ActHosting/>} />
         <Route path="/atx-hosting" element={< AxtHosting/>} />
+        <Route path="/tax-wise-hosting" element={<TaxWiseHosting/>} />
+        <Route path="/quicken-hosting" element={<QuickenHosting/>} />
+        <Route path="/myob-hosting" element={<MyobHosting />} />
+        <Route path="/fishbowl-hosting" element={<FishbowlHosting />} />
+        <Route path="/doc-it-hosting" element={<DocItHosting />} />
       </Routes>
       <Footer />
     </BrowserRouter>

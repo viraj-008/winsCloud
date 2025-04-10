@@ -51,6 +51,11 @@ const Navbar: React.FC = () => {
              { label: "Ultratax Hosting", href: "ultratax-hosting" },
              { label: "Act Hosting", href: "act-hosting" },
              { label: "Atx Hosting", href: "atx-hosting" },
+             { label: "Tax wise Hosting", href: "tax-wise-hosting" },
+             { label: "Quicken Hosting", href: "quicken-hosting" },
+             { label: "Myob Hosting", href: "myob-hosting" },
+             { label: "Fishbowl Hosting", href: "fishbowl-hosting" },
+             { label: "Doc IT Hosting", href: "doc-it-hosting" },
              ] },
              
         { name: "Pricing", dropdown: [] }, // Direct link, no dropdown
@@ -129,10 +134,10 @@ const Navbar: React.FC = () => {
                                     ${index >= navItems.length - 2 ? 'lg:right-0' : 'lg:left-0'}
                                     lg:shadow-lg lg:rounded-lg`}>
                                     {item.dropdown.map((subItem, subIndex) => (
-                                        <div key={subIndex} className="mt-2">
+                                        <div key={subIndex} className="font-josefin">
                                             <Link to={subItem.href}  
                                                 onClick={() => setIsMobileMenuOpen(false)}
-                                                className="block px-4 py-2 text-[16px] font-montserrat text-gray-900
+                                                className="block px-4 py-2 text-[16px] font-josefin text-gray-600
                                                 hover:text-purple-600 transition-colors duration-200 cursor-pointer">
                                                 {subItem.label}
                                             </Link>

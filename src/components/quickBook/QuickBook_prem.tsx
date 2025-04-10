@@ -92,7 +92,7 @@ const QuickBook_prem = () => {
 </div>
 
 <div className="w-[90%] mx-auto mt-10 flex flex-col items-center">
-               <h1 className="font-bold text-2xl font-kanit">
+               <h1 className="font-bold text-center my-4 text-2xl font-kanit">
                QuickBooks Premier Cloud Hosting: Why should you opt for
                </h1>
                <p className="text-gray-600 text-center font-bold">Automate Everyday Accounting Tasks and Focus on Other Important Productive Business Operations</p>

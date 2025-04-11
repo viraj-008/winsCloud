@@ -79,7 +79,7 @@ function Pricing() {
               </h3>
               <p className="flex justify-between font-josefin">
                 <span className="text-gray-800 font-bold">{planType === "shared" ?"User":"Package"}/month:</span>{" "}
-                <span>${plan.userMonth}</span>
+                <span className=" text-red-600 ">${plan.userMonth}</span>
               </p>
               <p className="flex justify-between font-josefin">
                 <span className="text-gray-800 font-bold">Number of Users:</span>{" "}
@@ -98,7 +98,7 @@ function Pricing() {
               {planType === "dedicated" && plan.AdditionalAccount !== undefined && (
                 <p className="flex justify-between font-josefin">
                   <span className="text-gray-800 font-bold">Additional Account:</span>{" "}
-                  <span>${plan.AdditionalAccount}</span>
+                  <span className="text-gray-800"> <span className="text-white">$ </span>{plan.AdditionalAccount}</span>
                 </p>
               )}
 

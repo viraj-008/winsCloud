@@ -1,7 +1,8 @@
 import { useState } from "react";
+import PriceForm from "./PriceForm";
 
 // Define a type that supports both shared and dedicated plan properties
-type Plan = {
+export type Plan = {
   keyName: string;
   userMonth: number;
   numberUserFrom: number;
@@ -15,9 +16,9 @@ type Plan = {
 function Pricing() {
   const sharedPlans: Plan[] = [
     { keyName: "Basic", userMonth: 29, numberUserFrom: 1, numberUserto: 5, storage: 6 },
-    { keyName: "Standard", userMonth: 49, numberUserFrom: 6, numberUserto: 10, storage: 8 },
-    { keyName: "Enterprise", userMonth: 79, numberUserFrom: 11, numberUserto: 15, storage: 10 },
-    { keyName: "Corporate", userMonth: 99, numberUserFrom: 16, numberUserto: 20, storage: 12 },
+    { keyName: "Standard", userMonth: 27, numberUserFrom: 6, numberUserto: 10, storage: 8 },
+    { keyName: "Enterprise", userMonth: 25, numberUserFrom: 11, numberUserto: 15, storage: 10 },
+    { keyName: "Corporate", userMonth: 23, numberUserFrom: 16, numberUserto: 20, storage: 12 },
   ];
 
   const dedicatedPlans: Plan[] = [
@@ -30,8 +31,14 @@ function Pricing() {
   const [planType, setPlanType] = useState("shared");
   const plans: Plan[] = planType === "shared" ? sharedPlans : dedicatedPlans;
 
+  const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
+  const [showForm, setShowForm] = useState(false);  // Form ko dikhane ke liye state
+
+
+
+
   return (
-    <>
+    <div className="z-10">
       <div className="h-auto w-full pb-10">
         <div className="w-full flex bg-gradient-to-r from-black via-pink-500 to-blue-500 pt-20 px-5 md:px-20 items-center min-h-[530px]">
           <div className="w-full text-center md:text-left">
@@ -51,17 +58,15 @@ function Pricing() {
         <div className="mb-4 flex gap-4 justify-center">
           <button
             onClick={() => setPlanType("shared")}
-            className={`px-4 py-2 rounded font-josefin font-bold ${
-              planType === "shared" ? "bg-blue-900 text-white" : "bg-gray-100"
-            }`}
+            className={`px-4 py-2 rounded font-josefin font-bold ${planType === "shared" ? "bg-blue-900 text-white" : "bg-gray-100"
+              }`}
           >
             Shared
           </button>
           <button
             onClick={() => setPlanType("dedicated")}
-            className={`px-4 py-2 rounded font-josefin font-bold ${
-              planType === "dedicated" ? "bg-blue-900 text-white" : "bg-gray-100"
-            }`}
+            className={`px-4 py-2 rounded font-josefin font-bold ${planType === "dedicated" ? "bg-blue-900 text-white" : "bg-gray-100"
+              }`}
           >
             Dedicated
           </button>
@@ -78,7 +83,7 @@ function Pricing() {
                 {plan.keyName}
               </h3>
               <p className="flex justify-between font-josefin">
-                <span className="text-gray-800 font-bold">{planType === "shared" ?"User":"Package"}/month:</span>{" "}
+                <span className="text-gray-800 font-bold">{planType === "shared" ? "User" : "Package"}/month:</span>{" "}
                 <span className=" text-red-600 ">${plan.userMonth}</span>
               </p>
               <p className="flex justify-between font-josefin">
@@ -119,7 +124,12 @@ function Pricing() {
               )}
 
               <div className="flex justify-center mt-4">
-                <button className="bg-red-500 px-3 mr-2 font-semibold font-josefin pt-1 text-white rounded-lg">
+                <button className="bg-red-500 px-3 mr-2 font-semibold font-josefin pt-1 text-white rounded-lg"
+                  onClick={() => {
+                    setSelectedPlan(plan);  // Selected plan ko set karo
+                    setShowForm(true);       // Form ko show karo
+                  }}
+                >
                   Choose Plan
                 </button>
               </div>
@@ -127,7 +137,14 @@ function Pricing() {
           ))}
         </div>
       </div>
-    </>
+
+
+      {showForm && selectedPlan && (
+        <PriceForm selectedPlan={selectedPlan}  setShowForm={setShowForm} planType={planType} />
+
+      )}
+
+    </div>
   );
 }
 

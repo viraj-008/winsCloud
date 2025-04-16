@@ -27,6 +27,7 @@ import QuickenHosting from "./components/services/QuickenHosting";
 import MyobHosting from "./components/services/MyobHosting";
 import FishbowlHosting from "./components/services/FishbowlHosting";
 import DocItHosting from "./components/services/DocItHosting";
+import GetTouch from "./components/GetTouch";
 import Pricing from "./components/price/Pricing";
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
         <Route path="/myob-hosting" element={<MyobHosting />} />
         <Route path="/fishbowl-hosting" element={<FishbowlHosting />} />
         <Route path="/doc-it-hosting" element={<DocItHosting />} />
+        <Route path="/Get-in-Touch" element={<GetTouch/>} />
         <Route path="/pricing" element={<Pricing />} />
       </Routes>
       <Footer />

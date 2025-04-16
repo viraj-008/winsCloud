@@ -56,7 +56,7 @@ const QickBooks_Hosting = () => {
             <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
               Make your accounting operations more secure and collaborate with your team anytime, from anywhere with Winscloud’s QuickBooks Hosting Services.
             </p>
-            <Link to='/trial'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
+            <Link to='/Get-in-Touch'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
               Start FREE Trial - Claim Top Hosting Services Today!
             </button></Link>
           </div>

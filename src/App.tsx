@@ -29,6 +29,9 @@ import FishbowlHosting from "./components/services/FishbowlHosting";
 import DocItHosting from "./components/services/DocItHosting";
 import GetTouch from "./components/GetTouch";
 import Pricing from "./components/price/Pricing";
+import FAQ from "./components/Support/FAQ";
+import WhatsIp from "./components/Support/Whats-Ip";
+import Introduction from "./components/AbluteUs/Introduction";
 function App() {
   return (
     <BrowserRouter> 
@@ -62,6 +65,9 @@ function App() {
         <Route path="/doc-it-hosting" element={<DocItHosting />} />
         <Route path="/Get-in-Touch" element={<GetTouch/>} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/faq" element={<FAQ/>} />
+        <Route path="/whats-ip" element={<WhatsIp/>} />ḍ
+        <Route path="/introduction" element={<Introduction/>} />ḍ
       </Routes>
       <Footer />
     </BrowserRouter>

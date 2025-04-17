@@ -59,8 +59,15 @@ const Navbar: React.FC = () => {
              ] },
              
         { name: "Pricing", dropdown: [] }, // Direct link, no dropdown
-        { name: "Support", dropdown: [{ label: "Help Center", href: "/help-center" }, { label: "Live Chat", href: "/live-chat" }] },
-        { name: "About Us", dropdown: [{ label: "Company Info", href: "/company-info" }, { label: "Our Team", href: "/our-team" }] },
+        { name: "Support", dropdown: [
+            { label: "Windows supprt", href: "https://www.zoho.com/assist/join/" }, 
+         { label: "Windows supprt", href: "https://www.zoho.com/assist/join/" },
+         { label: "Android supprt", href: "https://www.zoho.com/assist/join/" },
+         { label: "FAQ", href: "faq" },
+         { label: "Whats My Ip", href: "whats-ip" }
+        ] },
+         
+        { name: "About Us", dropdown: [{ label: "Introduction", href: "/introduction" }, { label: "Our Team", href: "/our-team" }] },
         { name: <FaUserCircle className="text-3xl text-blue-700"/>, dropdown: [{ label: "Profile", href: "/profile" }, { label: "", href: "/terms" }] },
     ];
 

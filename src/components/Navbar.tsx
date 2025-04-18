@@ -67,7 +67,11 @@ const Navbar: React.FC = () => {
          { label: "Whats My Ip", href: "whats-ip" }
         ] },
          
-        { name: "About Us", dropdown: [{ label: "Introduction", href: "/introduction" }, { label: "Our Team", href: "/our-team" }] },
+        { name: "About Us", dropdown: [{ label: "Introduction", href: "/introduction" }, 
+            { label: "Policy", href: "/policy" },
+            { label: "Contact", href: "/Get-in-Touch" },
+            { label: "Blogs", href: "/blogs" },
+        ] },
         { name: <FaUserCircle className="text-3xl text-blue-700"/>, dropdown: [{ label: "Profile", href: "/profile" }, { label: "", href: "/terms" }] },
     ];
 
@@ -103,8 +107,8 @@ const Navbar: React.FC = () => {
                     ${isMobileMenuOpen ? 'block' : 'hidden lg:block'}`}>
 
                     <Link to="/" 
-                        className={`w-full lg:w-auto py-2 px-4 mb-1 hidden md:block hover:scale-105 transition-all duration-300 
-                        ${isScrolled ? "text-black" : "text-black lg:text-white"}`}
+                        className={`w-full lg:w-auto py-2 px-4 mb-1 hidden font-josefin font-semibold md:block hover:scale-105 transition-all duration-300 
+                        ${isScrolled ? "text-black" : "text-black lg:text-black"}`}
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
                         Home
@@ -115,8 +119,8 @@ const Navbar: React.FC = () => {
                             {item.dropdown.length > 0 ? (
                                 <button
                                     onClick={() => toggleMobileDropdown(index)}
-                                    className={`w-full lg:w-auto py-2 px-4 text-[20px] hover:scale-105 transition-all duration-300 font-josefin flex justify-between items-center 
-                                    ${isScrolled ? "text-black" : "text-black lg:text-white"}`}
+                                    className={`w-full lg:w-auto py-2 px-4 text-[20px] hover:scale-105  transition-all duration-300 font-josefin flex justify-between items-center 
+                                    ${isScrolled ? "text-black" : "text-black lg:text-black"}`}
                                     aria-expanded={mobileDropdowns[index]}
                                 >
                                     {item.name}
@@ -126,7 +130,7 @@ const Navbar: React.FC = () => {
                                 <Link
                                     to={`/${String(item.name).toLowerCase().replace(/\s+/g, "-")}`}
                                     className={`w-full lg:w-auto py-2 px-4 text-[20px] hover:scale-105 transition-all duration-300 font-josefin flex justify-between items-center
-                                    ${isScrolled ? "text-black" : "text-black lg:text-white"}`}
+                                    ${isScrolled ? "text-black" : "text-black lg:text-black"}`}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {item.name}

@@ -32,6 +32,9 @@ import Pricing from "./components/price/Pricing";
 import FAQ from "./components/Support/FAQ";
 import WhatsIp from "./components/Support/Whats-Ip";
 import Introduction from "./components/AbluteUs/Introduction";
+import Policy from "./components/AbluteUs/Policy"
+import Blogs from "./components/AbluteUs/Blogs";
+import BlogDetail from "./components/AbluteUs/BlogDetail";
 function App() {
   return (
     <BrowserRouter> 
@@ -66,8 +69,11 @@ function App() {
         <Route path="/Get-in-Touch" element={<GetTouch/>} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/faq" element={<FAQ/>} />
-        <Route path="/whats-ip" element={<WhatsIp/>} />ḍ
-        <Route path="/introduction" element={<Introduction/>} />ḍ
+        <Route path="/whats-ip" element={<WhatsIp/>} />
+        <Route path="/introduction" element={<Introduction/>} />
+        <Route path="/Policy" element={<Policy/>} />
+        <Route path="/blogs" element={<Blogs/>} />
+        <Route path="/blog/:id" element={<BlogDetail/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

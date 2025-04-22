@@ -30,7 +30,7 @@ const BlogDetail = () => {
               <h2 className="text-[13px]   font-semibold font-kanit text-gray-700">
                  {section.minHead}
               </h2>
-              <p className=" font-josefin text-gray-600 text-justify">
+              <p className=" font-josefin  text-gray-600 ">
                 {section.paragraph}
               </p>
               <h2 className="text-[13px]   font-semibold font-kanit text-gray-700">

@@ -41,12 +41,13 @@ const Sage_300Hosting = () => {
   return (
    <>
     <div className="h-auto w-full pb-10">
-      <div className="w-full flex bg-gradient-to-r from-black via-pink-500 to-blue-500 pt-20 px-5 md:px-20 items-center min-h-[530px]">
+      <div className="w-full flex pt-28 px-5 md:px-20 items-center bg-red-600 bg-cover bg-center">
         <div className="w-full text-center md:text-left">
-          <h1 className="text-white text-3xl md:text-6xl leading-tight">
+          <h1 className="font-semibold font-josefin bg-[#ffefd5]
+ text-transparent bg-clip-text text-3xl md:text-8xl ">
           Sage 300 ERP Application Hosting
           </h1>
-          <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
+          <p className="text-base text-black font-josefin md:text-3xl mt-4 md:mt-7">
           Better organize projects, and optimize business operations from anywhere, anytime with Sage 300 cloud hosting
           </p>
           <Link to='/trial'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
@@ -55,8 +56,8 @@ const Sage_300Hosting = () => {
         </div>
       </div>
     </div>
-    <div className="md:-mt-[30px] -mt-6 px-4">
-      <h1 className="text-center text-lg md:text-3xl font-bold">
+    <div className="md:-mt-[-20px] text-gray-800 -mt-8 px-4">
+      <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
       Unify All Your Critical Tasks, Elevate Accounting, and Boost Productivity with Sage 300 ERP Hosting
       </h1>
         <h1 className="font-semibold text-center font-montserrat mt-5 text-sm text-gray-700 md:text-xl">
@@ -66,11 +67,11 @@ const Sage_300Hosting = () => {
 
     <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
       {/* Text Section */}
-      <div className="w-full md:w-[45%]">
-        <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
+      <div className=" font-josefin w-full md:w-[45%]">
+        <p className="  my-2 md:my-4 text-sm md:text-base">
         Sage 300 ERP is robust business management software which is used for multiple business operations such as accounting, bookkeeping, inventory tracking, sales, among others. An Infrastructure-as-a-service, Sage 300 cloud hosting service helps businesses enjoy an enhanced level of security, greater productivity, and more accessibility from anywhere, at any time.
         </p>
-        <p className="font-montserrat text-sm md:text-base">
+        <p className=" text-sm md:text-base">
         Business owners can rely on Sage 300 cloud hosting to safely carry out business operations such as inventory management, accounts payable, accounts receivable, automated bank reconciliation, and financial reporting from any location and device.
         </p>
       </div>
@@ -112,7 +113,7 @@ const Sage_300Hosting = () => {
      
     </div>
 
-    <div className="bg-gray-200 w-[90%] mx-auto mt-8 rounded-lg flex flex-col items-center py-6">
+    <div className="bg-red-600 w-[90%] mx-auto mt-8 rounded-lg flex flex-col items-center py-6">
       <h1 className="text-center font-semibold font-kanit text-2xl px-4">
       Are you prepared to make your transition to cloud with Sage 300 Cloud Hosting?
       </h1>

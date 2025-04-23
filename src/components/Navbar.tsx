@@ -85,10 +85,10 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <div className={`fixed w-full z-50 transition-all duration-300 
+        <div className={`fixed w-full z-50  transition-all duration-300 
             bg-white lg:bg-transparent
-            ${isScrolled ? "lg:bg-white/95 shadow-lg" : ""}`}>
-            <div className="flex flex-wrap justify-between p-4 items-center lg:justify-around">
+            ${isScrolled ? "lg:bg-white/95 shadow-lg " : ""}`}>
+            <div className="flex flex-wrap justify-between p-4  items-center lg:justify-around">
                 <Link to="/">
                     <img className="bg-blue-500 px-2 h-9 rounded-lg" src="./images/logo/wins.avif" alt="Logo" />
                 </Link>
@@ -103,12 +103,12 @@ const Navbar: React.FC = () => {
                 </button>
 
                 {/* Nav Menu */}
-                <div className={`w-full lg:w-auto lg:flex lg:items-center transition-all duration-500 ease-in-out 
+                <div className={`w-full  lg:w-auto lg:flex  rounded-lg  lg:items-center transition-all duration-500 ease-in-out 
                     ${isMobileMenuOpen ? 'block' : 'hidden lg:block'}`}>
 
                     <Link to="/" 
                         className={`w-full lg:w-auto py-2 px-4 mb-1 hidden font-josefin font-semibold md:block hover:scale-105 transition-all duration-300 
-                        ${isScrolled ? "text-black" : "text-black lg:text-black"}`}
+                        ${isScrolled ? "text-black" : "text-black lg:text-white"}`}
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
                         Home
@@ -119,8 +119,8 @@ const Navbar: React.FC = () => {
                             {item.dropdown.length > 0 ? (
                                 <button
                                     onClick={() => toggleMobileDropdown(index)}
-                                    className={`w-full lg:w-auto py-2 px-4 text-[20px] hover:scale-105  transition-all duration-300 font-josefin flex justify-between items-center 
-                                    ${isScrolled ? "text-black" : "text-black lg:text-black"}`}
+                                    className={`w-full  lg:w-auto py-2 px-4 text-[20px] hover:scale-105  transition-all duration-300 font-josefin flex justify-between items-center 
+                                    ${isScrolled ? "text-black" : "text-black lg:text-gray-200 "}`}
                                     aria-expanded={mobileDropdowns[index]}
                                 >
                                     {item.name}
@@ -130,7 +130,7 @@ const Navbar: React.FC = () => {
                                 <Link
                                     to={`/${String(item.name).toLowerCase().replace(/\s+/g, "-")}`}
                                     className={`w-full lg:w-auto py-2 px-4 text-[20px] hover:scale-105 transition-all duration-300 font-josefin flex justify-between items-center
-                                    ${isScrolled ? "text-black" : "text-black lg:text-black"}`}
+                                    ${isScrolled ? "text-black" : "text-black lg:text-white"}`}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {item.name}

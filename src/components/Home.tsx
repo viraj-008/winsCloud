@@ -5,12 +5,13 @@ const Home: React.FC = () => {
   return (
     <>
       <div className='h-[530px] w-full pb-20'>
-        <div className='w-full flex bg-gradient-to-r from-black via-pink-500 to-blue-500 pt-28 px-5 md:px-20 items-center'>
+      <div className="w-full flex bg-[url('/images/Home/cloude.jpg')] bg-cover bg-center pt-28 px-5 md:px-20 items-center">
+
           <div className='w-full text-center md:text-left'>
-            <h1 className='text-white text-4xl md:text-6xl'>
+            <h1 className='text-white font-josefin text-4xl md:text-6xl'>
               Celebrating a Decade of <br /> Powerful Servers
             </h1>
-            <p className='text-xl md:text-4xl mt-4 md:mt-7'>
+            <p className='text-xl md:text-3xl bg-gradient-to-r from-orange-500 via-indigo-500 to-green-100 text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
               Get the financial tools and insights to<br /> start, build, and grow your business
             </p>
             <Link to="/trial">  <button className='mx-auto md:mx-0 flex border my-10 md:my-16 bg-green-600 text-xl md:text-4xl px-6 md:px-12 text-white font-josefin py-2 rounded-lg'>
@@ -20,14 +21,14 @@ const Home: React.FC = () => {
         </div>
       </div>
       
-      <div className='px-5 md:px-20'>
-        <h1 className='text-3xl md:text-4xl text-center font-bold font-kanit'>Remote Access Has Never Been Smoother</h1>
+      <div className='px-5 md:mt-16 md:px-20'>
+        <h1 className='text-3xl md:text-4xl text-center font-bold  font-josefin'>Remote Access Has Never Been Smoother</h1>
         <p className='text-center text-md mt-4 font-semibold'>
           Scale Your Business Efficiently with Winscloud – Your Top Cloud Hosting Provider
         </p>
 
         <div className='flex flex-col md:flex-row justify-around mt-12 items-center'>
-          <div className='w-full md:w-[45%] font-montserrat'>
+          <div className='w-full md:w-[45%] font-josefin'>
             <p>
             At Winscloud, we help businesses transform securely with our reliable, scalable, and flexible cloud hosting solutions. Right from the get-go, we work around-the-clock to ensure your business is up and running, acting as your partners in growth. To make that happen, we pay due attention to ensure that our advanced cloud infrastructure adapts to your business needs and promotes easy scalability.
             </p>
@@ -43,15 +44,15 @@ const Home: React.FC = () => {
       </div>
 
       <div className='px-5 md:px-20 mt-20'>
-        <h1 className='text-3xl md:text-4xl text-center font-bold font-kanit'>Why Choose Winscloud Matrix?</h1>
+        <h1 className='text-3xl md:text-4xl text-center font-bold font-josefin'>Why Choose Winscloud Matrix?</h1>
         <p className='text-center text-md mt-4 font-semibold'>
           Winscloud Matrix Cloud Hosting: Fast-track Your Tax and Accounting Practice
         </p>
-        <p className='text-center mt-7 font-montserrat'>
+        <p className='text-center mt-7 font-josefin'>
         At Winscloud, we believe in ironing out the challenges that modern businesses face in handling their tax and accounting operations with the help of technology. Our cloud hosting services help our business owners seamlessly transition to the cloud, combining the robust features of desktop applications with the cloud infrastructure.
         </p>
 
-        <div className='flex flex-col md:flex-row justify-around mt-9 px-5 md:px-12'>
+        <div className='flex flex-col font-josefin md:flex-row justify-around mt-9 px-5 md:px-12'>
           <div className='w-full md:w-[50%] p-4'>
             <p><span className='font-semibold'>Secure and Reliable Hosting –</span> Data Security is our top priority when it comes to our operations. At Winscloud Matrix, we protect your data from all sorts of cyber threats so you can put away your data theft worries and focus on more productive areas.</p>
             <p className='mt-4'><span className='font-semibold'>24/7 Assistance –</span> Our team of technical experts are available at your beck and call 24/7 to provide you with the best technical assistance to troubleshoot issues and keep your system running smoothly.</p>
@@ -62,11 +63,11 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className='border md:w-[90%] mx-auto rounded-lg my-8 p-2 bg-gray-200'>
+        <div className='border md:w-[90%] mx-auto rounded-lg my-8 p-2 bg-red-600'>
   <h1 className='font-kanit text-center text-3xl font-semibold'>
     Collaborate with your team in real-time, irrespective of where you are on the planet.
   </h1>
-  <p className='text-center font-montserrat text-gray-600 my-4 font-semibold'>
+  <p className='text-center  text-gray-100 px-2 font-josefin my-4 font-semibold'>
     We value your privacy and ensure round-the-clock security and easy accessibility to help you carry out your operations seamlessly.
   </p>
   <div className='flex justify-center'>

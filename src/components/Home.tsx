@@ -1,6 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { motion } from "framer-motion";
+interface Logo {
+  image: string;
+}
+const footerLogos:Logo[]=[
+{image:"/images/Flogo/Google.webp"},
+{image:"/images/Flogo/idrive.png"},
+{image:"/images/Flogo/micro.png"},
+{image:"/images/Flogo/pci.jpg"},
+{image:"/images/Flogo/Sectigo.png"},
+{image:"/images/Flogo/symantec.png"},
+{image:"/images/Flogo/veeam.png"},
+{image:"/images/Flogo/vm.png"},
+{image:"/images/Flogo/Wasabi.png"},
+]
+
 const Home: React.FC = () => {
   return (
     <>
@@ -8,9 +24,15 @@ const Home: React.FC = () => {
       <div className="w-full flex bg-[url('/images/Home/cloude.jpg')] bg-cover bg-center pt-28 px-5 md:px-20 items-center">
 
           <div className='w-full text-center md:text-left'>
-            <h1 className='text-white font-josefin text-4xl md:text-6xl'>
-              Celebrating a Decade of <br /> Powerful Servers
-            </h1>
+          <motion.h1
+  className="text-white font-josefin text-4xl md:text-6xl"
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  viewport={{ once: false, amount: 0.8 }}
+>
+  Celebrating a Decade of <br /> Powerful Servers
+</motion.h1>
             <p className='text-xl md:text-3xl bg-gradient-to-r from-orange-500 via-indigo-100 to-green-100 text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
               Get the financial tools and insights to<br /> start, build, and grow your business
             </p>
@@ -27,20 +49,39 @@ const Home: React.FC = () => {
           Scale Your Business Efficiently with Winscloud – Your Top Cloud Hosting Provider
         </p>
 
-        <div className='flex flex-col md:flex-row justify-around mt-12 items-center'>
-          <div className='w-full text-gray-600  md:w-[45%] font-josefin'>
-            <p>
-            At Winscloud, we help businesses transform securely with our reliable, scalable, and flexible cloud hosting solutions. Right from the get-go, we work around-the-clock to ensure your business is up and running, acting as your partners in growth. To make that happen, we pay due attention to ensure that our advanced cloud infrastructure adapts to your business needs and promotes easy scalability.
-            </p>
-            <h1 className='text-2xl md:text-3xl my-4'>We absolutely love to see your business scale!</h1>
-            <p>
-            To make that happen, we pay due attention to ensure that our advanced cloud infrastructure adapts to your business needs and promotes easy scalability. With Winscloud as your application hosting provider, scaling up and adapting to your dynamic business needs will be the least of your worries.
-            </p>
-          </div>
-          <div className='w-full md:w-[35%] mt-6 md:mt-0'>
-            <img className='w-full  max-w-[600px] h-auto border-gray-200 border-2 rounded-lg' src='./images/logo/herowind.webp' alt='Winscloud'/>
-          </div>
-        </div>
+       <div className="flex flex-col md:flex-row justify-between mt-12 items-center">
+  {/* Text on the left */}
+  <div className="w-full md:w-[55%] text-gray-600 font-josefin md:pr-8">
+    <p>
+      At Winscloud, we help businesses transform securely with our reliable,
+      scalable, and flexible cloud hosting solutions. Right from the get-go, we
+      work around-the-clock to ensure your business is up and running, acting
+      as your partners in growth. To make that happen, we pay due attention to
+      ensure that our advanced cloud infrastructure adapts to your business
+      needs and promotes easy scalability.
+    </p>
+    <h1 className="text-2xl md:text-3xl my-4">
+      We absolutely love to see your business scale!
+    </h1>
+    <p>
+      To make that happen, we pay due attention to ensure that our advanced
+      cloud infrastructure adapts to your business needs and promotes easy
+      scalability. With Winscloud as your application hosting provider, scaling
+      up and adapting to your dynamic business needs will be the least of your
+      worries.
+    </p>
+  </div>
+
+  {/* Image on the right */}
+  <div className="w-full md:w-[45%] mt-6 md:mt-0">
+    <img
+      className="w-full max-w-[600px] h-auto border-gray-200 border-2 rounded-lg"
+      src="./images/logo/herowind.webp"
+      alt="Winscloud"
+    />
+  </div>
+</div>
+
       </div>
 
       <div className='px-5 md:px-20 mt-20'>
@@ -149,10 +190,55 @@ const Home: React.FC = () => {
 
       </div>
 
-      
+      <h1 className='text-4xl my-7 bg-gray-200 text-center text-gray-700 font-josefin md:w-[50%] mx-auto p-3 rounded-md font-bold'>
+        Our Trusted Partners
+      </h1>
 
 
+      {/* Mapping the logos */}
+      <motion.div
+  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 bg-white w-[90%] mx-auto rounded-lg px-4 py-4"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ amount: 0.2, once: false }}
+  variants={{
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  }}
+>
+        {footerLogos.map((logo, index) => (
+          <motion.div
+            key={index}
+            className="w-full aspect-[6/3] flex items-center justify-center bg-white p-2 rounded-md shadow-sm"
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+          >
+            <img
+              src={logo.image}
+              alt={`Logo ${index + 1}`}
+              className="w-full h-full object-contain"
+            />
+          </motion.div>
+        ))}
+      </motion.div>
 
+
+<div className='bg-red-700 flex flex-col my-8 md:flex-row justify-between mt-8 px-4 rounded-lg md:w-[60%] w-[90%] mx-auto items-center'>
+        <p className='text-white text-center mt-4 md:mt-0 font-josefin font-bold'>
+          Get an Account in Minutes Today!
+        </p>
+        <Link to="/trial">
+          <button className='border mx-auto font-josefin m-4 md:my-3 bg-green-600 hover:bg-green-700 text-md md:text-lg px-6 md:px-12 text-white py-2 rounded-full'>
+            Free One-Month trial!
+          </button>
+        </Link>
+      </div>
     </>
   );
 };

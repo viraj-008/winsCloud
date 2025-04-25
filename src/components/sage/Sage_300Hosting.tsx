@@ -43,9 +43,8 @@ const Sage_300Hosting = () => {
     <div className="h-auto w-full pb-10">
       <div className="w-full flex pt-28 px-5 md:px-20 items-center bg-red-600 bg-cover bg-center">
         <div className="w-full text-center md:text-left">
-          <h1 className="font-semibold font-josefin bg-[#ffefd5]
- text-transparent bg-clip-text text-3xl md:text-8xl ">
-          Sage 300 ERP Application Hosting
+          <h1 className="text-white font-josefin text-4xl md:text-6xl ">
+          Sage 300 ERP Application <br /> Hosting
           </h1>
           <p className="text-base text-black font-josefin md:text-3xl mt-4 md:mt-7">
           Better organize projects, and optimize business operations from anywhere, anytime with Sage 300 cloud hosting

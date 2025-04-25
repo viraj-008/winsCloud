@@ -64,11 +64,11 @@ const QickBooks_Desktop = () => {
             <div className="h-auto w-full pb-10">
                 <div className="w-full flex bg-[url('/images/Home/cloude.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
                     <div className="w-full text-center md:text-left">
-                        <h1 className="text-white text-3xl md:text-6xl leading-tight">
-                        QuickBooks Desktop Cloud Hosting
+                        <h1 className="text-white font-josefin text-4xl md:text-6xl">
+                        QuickBooks Desktop Cloud <br/> Hosting
                         </h1>
-                        <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
-                        Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
+                        <p className='text-xl md:text-3xl bg-gradient-to-r from-orange-500 via-indigo-100 to-green-100 text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
+                        Anytime, anywhere access to business with Cloud Hosting for <br/> QuickBooks Desktop
                         </p>
                          <Link to='/trial'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
                          Get QuickBooks Desktop Hosting Now
@@ -79,7 +79,7 @@ const QickBooks_Desktop = () => {
 
             {/* Adjusted spacing to be responsive */}
             <div className="md:-mt-[30px] -mt-6 px-4">
-                <h1 className="text-center text-lg md:text-3xl font-bold">
+                <h1 className='text-3xl md:text-2xl text-center py-4 font-bold  font-serif text-gray-800'>
                 QuickBooks Desktop Hosting: Run your favorite QuickBooks Desktop Application from Anywhere, at Anytime
                 </h1>
             </div>
@@ -88,12 +88,12 @@ const QickBooks_Desktop = () => {
   {/* Text Section */}
   <div className="w-full md:w-[45%]">
    
-    <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
+    <p className="font-josefin text-gray-600 my-2 md:my-4 text-sm md:text-base">
     QuickBooks desktop cloud hosting means accessing the desktop version of QuickBooks software on a remote 
     server with the help of the internet. With only authorized users permitted to access QuickBooks desktop cloud hosting, users can
      safely access their critical business data, work on the same set of files in real-time, irrespective of where they are located.
     </p>
-    <p className="font-montserrat text-sm md:text-base">
+    <p className="font-josefin text-gray-600 text-sm md:text-base">
     QuickBooks Desktop Hosting providers take care of all the technical aspects of transitioning 
     to the cloud. Winscloud Matrix, for instance, provides everything from a safe and secure remote server,
      the IT infrastructure needed for cloud hosting QuickBooks Desktop software, 100% data backup, security measures to protect data from risks like theft, and technical 
@@ -107,11 +107,11 @@ const QickBooks_Desktop = () => {
   </div>
 </div>
 
-            <div className="bg-gray-200 p-4 w-[90%] mx-auto rounded-lg flex flex-col items-center py-6">
-                <h1 className="text-center font-semibold font-kanit text-2xl px-4">
+            <div className="bg-red-700 p-4 w-[90%] mx-auto rounded-lg flex flex-col items-center py-6">
+                <h1 className="text-center text-gray-800 font-semibold font-kanit text-2xl px-4">
                 Six Easy Steps to Transition to QuickBooks Desktop Cloud Hosting
                 </h1>
-               <p> Migrating to the cloud can be done in a few easy steps. Having the right QuickBooks Desktop Hosting Provider on your side can make the process simpler and faster. With Winscloud, you are assigned a cloud expert right from the start who will assist you with your cloud migration. You can also opt for a one-month Free Trial to get the real experience of running your business from the
+               <p className="text-white font-josefin text-center"> Migrating to the cloud can be done in a few easy steps. Having the right QuickBooks Desktop Hosting Provider on your side can make the process simpler and faster. With Winscloud, you are assigned a cloud expert right from the start who will assist you with your cloud migration. You can also opt for a one-month Free Trial to get the real experience of running your business from the
                  cloud. To begin your transition, here are the simple steps you need to follow</p>
             </div>
 
@@ -196,7 +196,7 @@ const QickBooks_Desktop = () => {
 <h1 className="text-center font-kanit font-semibold text-2xl pt-5">
 Winscloud Matrix: Your Trusted QuickBooks Cloud Hosting Provider
   </h1>
-  <p className="text-center font-montserrat text-sm mt-3">Winscloud, an experienced cloud hosting provider, has helped multiple businesses from an array of domains in their smooth transition to the cloud 
+  <p className="text-center font-josefin text-gray-600 text-sm mt-3">Winscloud, an experienced cloud hosting provider, has helped multiple businesses from an array of domains in their smooth transition to the cloud 
     and growing from there. We do not just offer QuickBooks hosting solutions to small and medium business owners – we offer a commitment to ensure data security, 
     uninterrupted business access that ensures maximum customer satisfaction, and support at any time of day and night. Here are some of the many benefits of QuickBooks desktop cloud hosting with Winscloud Matrix </p>
 

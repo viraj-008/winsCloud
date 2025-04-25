@@ -45,10 +45,10 @@ const QuickBook_pro = () => {
      <div className="h-auto w-full pb-10">
                 <div className="w-full flex bg-[url('/images/Home/cloude.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center min-h-[530px]">
                     <div className="w-full text-center md:text-left">
-                        <h1 className="text-white text-3xl md:text-6xl leading-tight">
+                        <h1 className='text-white font-josefin text-4xl md:text-6xl'>
                         QuickBooks Pro Hosting
                         </h1>
-                        <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
+                        <p className='text-xl md:text-3xl bg-gradient-to-r from-orange-500 via-indigo-200 to-green-100 text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
                         Secure your data on the cloud for hassle-free accounting with top quickbooks hosting providers
                         </p>
                          <Link to='/trial'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
@@ -59,20 +59,20 @@ const QuickBook_pro = () => {
             </div>
 
             <div className="md:-mt-[30px] -mt-6 px-4">
-                <h1 className="text-center text-lg md:text-3xl font-bold">
+                <h1 className='text-3xl md:text-2xl text-center py-4 font-bold  font-serif text-gray-800'>
                 QuickBooks Pro Cloud Hosting: Take your favorite QuickBooks Pro to the cloud and add more power to your accounting operations
                 </h1>
             </div>
 
             <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
   {/* Text Section */}
-  <div className="w-full md:w-[45%]">
+  <div className="w-full  font-josefin text-gray-600 md:w-[45%]">
    
-    <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
+    <p className=" my-2 md:my-4 text-sm md:text-base">
     Modern businesses need technology that saves time, promotes flexibility, and offers security. While QuickBooks Pro
      Desktop adds ease to accounting operations, QuickBooks Pro Plus Hosting takes the powerful desktop application one step further.
     </p>
-    <p className="font-montserrat text-sm md:text-base">
+    <p className=" text-sm md:text-base">
     QuickBooks Pro Hosting helps you to securely access your data from any device of your choice. Safely login to your QuickBooks Desktop application 
     on the cloud and experience enhanced flexibility while working with your team. Simplify accounting, stay up to date with
      your team, and experience multi-user collaboration with your remote team, irrespective of where you are.</p>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import Partner from "../Partner";
 const QuickBook_pos = () => {
 
     const faqs = [
@@ -219,7 +220,7 @@ const QuickBook_pos = () => {
                        </div>
                      ))}
                    </div>
-    
+    <Partner/>
                   
     </>
   )

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Partner from "../Partner";
 function FAQ() {
 
     const faqs = [
@@ -60,7 +61,7 @@ function FAQ() {
       };
       console.log("running FAQ component")
   return (
-    <div>
+    <>
        <div className="h-auto w-full pb-10">
       <div className="w-full flex bg-gradient-to-r from-black via-pink-500 to-blue-500 pt-20 px-5 md:px-20 items-center min-h-[530px]">
         <div className="w-full text-center ">
@@ -104,7 +105,8 @@ function FAQ() {
         </div>
       ))}
     </div>
-    </div>
+    <Partner/>
+    </>
   )
 }
 

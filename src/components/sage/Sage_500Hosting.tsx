@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Partner from "../Partner";
 const Sage_500Hosting = () => {
     const faqs = [
         {
@@ -208,7 +209,7 @@ Why Choose Winscloud Matrix for your Sage 300 ERP cloud hosting services?
       ))}
     </div>
   
-
+<Partner />
   </>
   )
 }

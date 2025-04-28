@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Partner from "../Partner";
 
 const ProseriesHosting = () => {
      const faqs = [
@@ -240,7 +241,7 @@ Why Choose Winscloud Matrix for Your ProSeries Cloud Hosting: Anytime, Anywhere 
       ))}
     </div>
   
-
+<Partner />
   </>
   )
 }

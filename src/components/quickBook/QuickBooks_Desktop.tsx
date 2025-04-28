@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { SlCalender } from "react-icons/sl";
+import Partner from "../Partner";
 
 
 
@@ -249,7 +250,7 @@ Winscloud Matrix: Your Trusted QuickBooks Cloud Hosting Provider
       ))}
     </div>
 
-   
+   <Partner/>
             
         </>
     );

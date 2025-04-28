@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Partner from "../Partner";
 const Sage_Hosting = () => {
   const faqs = [
     {
@@ -213,7 +214,7 @@ Winscloud QuickBooks Enterprise Cloud Hosting: Powerful Features That Help Your 
     </div>
 
   
-
+<Partner />
   </>
   )
 }

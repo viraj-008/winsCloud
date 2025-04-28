@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import Partner from "../Partner";
 const Quick_hosting_canada = () => {
     const faqs = [
         
@@ -219,7 +220,7 @@ Data Security and Recovery
                    </div>
                  ))}
                </div>
-
+<Partner/>
              
 </>
   )

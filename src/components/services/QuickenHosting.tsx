@@ -1,4 +1,4 @@
-
+import Partner from "../Partner"
 const QuickenHosting = () => {
   return (
     <>
@@ -144,7 +144,7 @@ const QuickenHosting = () => {
 
     </div>
    
-
+<Partner/>
 
   </>
   )

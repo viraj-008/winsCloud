@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { blogData } from "./Blogs";
+import Partner from "../Partner";
 
 const BlogDetail = () => {
     const { id } = useParams();
@@ -9,6 +10,7 @@ const BlogDetail = () => {
     if (!blog) return <div className="mt-[80px] text-center text-red-600">Blog not found</div>;
 
     return (
+      <>
         <div className="max-w-4xl mx-auto pt-28 px-4 ">
           <h1 className="md:text-3xl text-center font-bold px-[5px] md:px-4 font-josefin py-2 bg-red-600 text-white  rounded-md">
             {blog.TopHeading}
@@ -43,8 +45,12 @@ const BlogDetail = () => {
           ))}
       
         </div>
+
+
       </div>
+      <Partner/>
       
+      </>
     );
 };
 

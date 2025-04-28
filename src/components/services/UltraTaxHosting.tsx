@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Partner from "../Partner";
 
 function UltraTaxHosting() {
     const faqs = [
@@ -247,7 +248,7 @@ Winscloud Matrix UltraTax Hosting: Empower Your Tax Preparation with Your Most T
         </div>
       ))}
     </div>
-   
+   <Partner/>
 
   </>
   )

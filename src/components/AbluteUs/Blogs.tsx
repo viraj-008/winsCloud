@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Partner from "../Partner";
 interface BlogSection {
   heading?: string;
   minHead?: string;
@@ -728,6 +729,7 @@ const Blogs = () => {
     
     
   return (
+    <>
     <div className="pt-[100px]">
         <h1 className="text-2xl font-semibold  text-center font-kanit bg-red-600 w-[90%] mx-auto rounded-lg text-white mb-2">BLOG POST</h1>
         
@@ -761,6 +763,9 @@ const Blogs = () => {
       ))}
     </div>
     </div>
+
+    <Partner/>
+    </>
   )
 }
 

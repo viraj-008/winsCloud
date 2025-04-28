@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PriceForm from "./PriceForm";
+import Partner from "../Partner";
 
-// Define a type that supports both shared and dedicated plan properties
 export type Plan = {
   keyName: string;
   userMonth?: number;
@@ -41,6 +41,8 @@ function Pricing() {
 
 
   return (
+
+    <>
     <div className="z-10">
       <div className="h-auto w-full pb-10">
         <div className="w-full flex bg-gradient-to-r from-black via-pink-500 to-blue-500 pt-20 px-5 md:px-20 items-center min-h-[530px]">
@@ -156,6 +158,8 @@ function Pricing() {
       )}
 
     </div>
+    <Partner/>
+    </>
   );
 }
 

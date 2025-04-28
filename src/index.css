@@ -4,5 +4,5 @@
 @tailwind utilities;
 
 body {
-    @apply bg-[#ffefd5] min-h-screen;
+    @apply bg-[#ffffff] min-h-screen;
   }

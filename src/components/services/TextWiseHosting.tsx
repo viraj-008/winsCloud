@@ -1,4 +1,4 @@
-
+import Partner from "../Partner"
 const TextWiseHost = () => {
   return (
     <>
@@ -144,7 +144,7 @@ TaxWise Hosting Software stands out as one of the most efficient, exhaustive, an
 
     </div>
    
-
+<Partner/>
 
   </>
   )

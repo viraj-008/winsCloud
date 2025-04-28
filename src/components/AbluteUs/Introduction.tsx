@@ -1,3 +1,4 @@
+import Partner from "../Partner"
 const Introduction = () => {
   return (
     <>
@@ -154,6 +155,8 @@ Our data centers are equipped with several best-in-class security measures to en
   </div>
 
     </div>
+
+    <Partner/>
     </>
   )
 }

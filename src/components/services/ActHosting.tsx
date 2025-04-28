@@ -1,5 +1,6 @@
 import { FaLink } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Partner from "../Partner";
 const ActHosting = () => {
   return (
     <>
@@ -159,7 +160,7 @@ Well-equipped Data centers
     </Link> 
 </div>
 
-
+<Partner />
   </>
   )
 }

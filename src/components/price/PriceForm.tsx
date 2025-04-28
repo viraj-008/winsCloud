@@ -1,11 +1,10 @@
 import React from 'react';
 import { Plan } from './Pricing';
-
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
-
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import Partner from '../Partner';
 
 // Validation Schema using Yup
 const validationSchema = Yup.object({
@@ -157,6 +156,7 @@ console.log("Form data:", form); // Log the form data to the console
     };
 
     return (
+        <>
         <div className='fixed top-3 px-4 shadow-xl inset-0 z-50 flex items-center justify-center bg-opacity-90'>
             <div className='rounded-lg w-full max-w-4xl'> {/* Added responsive width */}
                 <div className='bg-white w-full sm:w-[600px] mx-auto border-4 border-red-600 p-6 rounded-lg max-h-[90vh] overflow-y-auto shadow-lg'>
@@ -378,6 +378,8 @@ console.log("Form data:", form); // Log the form data to the console
                 </div>
             </div>
         </div>
+        <Partner/>
+        </>
     );
 };
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Partner from "../Partner";
 const Lecerte_Hosting = () => {
 
 
@@ -197,7 +198,7 @@ Winscloud Matrix Lacerte Tax Hosting: Why should you choose Lacerte Hosting with
       ))}
     </div>
   
-
+<Partner />
   </>
   )
 }

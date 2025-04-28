@@ -1,3 +1,4 @@
+import Partner from "../Partner";
 const Policy =()=>{
 
     return(
@@ -124,6 +125,8 @@ const Policy =()=>{
       </div>
     
         </div>
+
+        <Partner/>
         </>
     )
 }

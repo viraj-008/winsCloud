@@ -1,4 +1,4 @@
-
+import Partner from "../Partner"
 const MyobHosting = () => {
   return (
     <>
@@ -146,7 +146,7 @@ const MyobHosting = () => {
 
     </div>
    
-
+<Partner/>
 
   </>
   )

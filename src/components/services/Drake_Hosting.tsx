@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Partner from "../Partner";
 const Drake_Hosting = () => {
+
     const faqs = [
         {
           question: "What is Drake tax hosting?",
@@ -244,6 +246,7 @@ Why Should You Choose Winscloud for Drake Tax Software Hosting: Tax Preparation 
       ))}
     </div>
    
+   <Partner />
 
   </>
   )

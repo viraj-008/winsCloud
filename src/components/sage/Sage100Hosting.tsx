@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Partner from "../Partner";
 
 const Sage100Hosting = () => {
     const faqs = [
@@ -193,7 +194,7 @@ Why should you choose Winscloud Matrix for Sage 100 cloud hosting?
     </div>
 
   
-
+<Partner />
   </>
   )
 }

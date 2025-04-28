@@ -1,4 +1,4 @@
-
+import Partner from "../Partner";
 
 const AxtHosting = () => {
   return (
@@ -151,7 +151,7 @@ const AxtHosting = () => {
 
     </div>
   
-
+<Partner/>
 
   </>
   )

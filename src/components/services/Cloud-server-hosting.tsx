@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Partner from "../Partner";
 
 const CloudServerHosting = () => {
    
@@ -139,6 +140,7 @@ const CloudServerHosting = () => {
       </div>
 
       </div>
+      <Partner/>
     </>
   )
 }

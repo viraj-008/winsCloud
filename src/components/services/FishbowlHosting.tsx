@@ -1,4 +1,4 @@
-
+import Partner from "../Partner"
 const FishbowlHosting = () => {
     console.log("Fishbowl Hosting Page Loaded")
   return (
@@ -147,7 +147,7 @@ const FishbowlHosting = () => {
 
     </div>
    
-
+<Partner/>
 
   </>
   )

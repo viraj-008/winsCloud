@@ -1,21 +1,6 @@
 import { FaFacebook, FaXTwitter, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa6";
-import { Link } from "react-router-dom";
 
-  interface Logo {
-    image: string;
-  }
-const footerLogos:Logo[]=[
-  {image:"/images/Flogo/Google.webp"},
-  {image:"/images/Flogo/idrive.png"},
-  {image:"/images/Flogo/micro.png"},
-  {image:"/images/Flogo/pci.jpg"},
-  {image:"/images/Flogo/Sectigo.png"},
-  {image:"/images/Flogo/symantec.png"},
-  {image:"/images/Flogo/veeam.png"},
-  {image:"/images/Flogo/vm.png"},
-  {image:"/images/Flogo/Wasabi.png"},
-]
-
+ 
 export default function Footer() {
   return (
     <>
@@ -24,33 +9,9 @@ export default function Footer() {
       
     <footer className="bg-black text-white py-8 px-6 mt-8">
     <div>
-     
-
-
-      {/* Mapping the logos */}
-      {/* <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 bg-white py-4 w-[90%] mx-auto rounded-lg px-4'>
-  {footerLogos.map((logo, index) => (
-    <div
-      key={index}
-      className='w-full aspect-[6/3] flex items-center justify-center bg-white p-2 rounded-md shadow-sm'
-    >
-      <img
-        src={logo.image}
-        alt={`Logo ${index + 1}`}
-        className='w-full h-full object-contain'
-      />
-    </div>
-  ))}
-</div> */}
-
-
-
-
-   
     </div>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
-        {/* Logo & Description */}
         <div>
           <div className="flex items-center space-x-2">
             <img src="./images/logo/wins.avif" alt="WinsCloud Logo" className=" h-10" />

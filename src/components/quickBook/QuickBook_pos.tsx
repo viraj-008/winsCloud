@@ -43,12 +43,12 @@ const QuickBook_pos = () => {
   return (
          <>
         <div className="h-auto w-full pb-10">
-                   <div className="w-full flex bg-[url('/images/Home/cloude.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center min-h-[530px]">
+                   <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center min-h-[530px]">
                        <div className="w-full text-center md:text-left">
-                           <h1 className="text-white text-3xl md:text-6xl leading-tight">
+                           <h1 className="text-white font-josefin text-4xl md:text-6xl">
                            QuickBooks POS Hosting
                            </h1>
-                           <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
+                           <p className='text-xl   md:text-3xl bg-gradient-to-r from-orange-500 via-indigo-100 to-green-100 text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
                            An excellent hosting solution for handling simple to complex business transactions with ease
                            </p>
                             <Link to='/trial'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
@@ -59,7 +59,7 @@ const QuickBook_pos = () => {
                </div>
     
                <div className="md:-mt-[30px] -mt-6 px-4">
-                   <h1 className="text-center text-lg md:text-3xl font-bold">
+                   <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
                    QuickBooks POS Cloud Hosting: Conveniently track multi-channel sales and manage your retail inventory from multiple locations
                    </h1>
                </div>
@@ -68,7 +68,7 @@ const QuickBook_pos = () => {
      {/* Text Section */}
      <div className="w-full md:w-[45%]">
       
-       <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
+       <p className="font-josefin text-gray-600 my-2 md:my-4 text-sm md:text-base">
        At Winscloud, we understand that small businesses need technology that can be game changers when it comes to business efficiency. QuickBooks POS cloud 
        hosting is one such solution that takes sales tracking, inventory management, return management, and more such functions to the next level. Businesses today need remote access 
        to manage their sales and inventory on the go. Unlike traditional POS systems, QuickBooks POS hosting offers a comprehensive solution for businesses to save their data on a remote server which can be
@@ -89,7 +89,7 @@ const QuickBook_pos = () => {
     Ready to take your retail business to the cloud?
     </h1>
     <div className="flex justify-center">
-     <Link to='/contact'>
+     <Link to='/get-in-touch'>
        <button className="border-2 my-6 md:my-6 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
        Get in Touch With an Expert
        </button>
@@ -98,25 +98,25 @@ const QuickBook_pos = () => {
     </div>
     
     <div className="my-12 w-[90%] mx-auto">
-    <h1 className="text-center font-kanit font-semibold text-2xl pt-5">
+    <h1 className="text-center font-serif font-semibold text-2xl pt-5">
     Why Choose Winscloud Matrix for taking your QuickBooks Cloud Hosting?
      </h1>
-     <p className="text-gray-600 text-center font-bold ">Retail businesses need to stay updated with their inventory and sales to ensure maximum customer satisfaction. QuickBooks POS is a fantastic solution that allows retail business owners and its employees to stay on the same page and work together in sync, irrespective of their physical location. Winscloud Matrix allows businesses to host their highly efficient and useful QuickBooks POS desktop on the cloud, adding another level of efficacy in managing a retail business. Issues like low inventory, order placement, return requests, sales can be managed in real-time, helping customer satisfaction reach an all-time high. Here’s how Winscloud can help seamlessly achieve this success –</p>
+     <p className="text-gray-600 text-center font-semibold ">Retail businesses need to stay updated with their inventory and sales to ensure maximum customer satisfaction. QuickBooks POS is a fantastic solution that allows retail business owners and its employees to stay on the same page and work together in sync, irrespective of their physical location. Winscloud Matrix allows businesses to host their highly efficient and useful QuickBooks POS desktop on the cloud, adding another level of efficacy in managing a retail business. Issues like low inventory, order placement, return requests, sales can be managed in real-time, helping customer satisfaction reach an all-time high. Here’s how Winscloud can help seamlessly achieve this success –</p>
     
     
-       <div className="flex flex-col  md:flex-row  mt-8">
+       <div className="flex flex-col font-josefin md:flex-row  mt-8">
     
-         <div className="md:w-[50%] space-y-4 font-montserrat text-sm p-3">
-         <p className=" "><span className="font-kanit font-bold ">Support 24/7/365 –</span> Team Winscloud promises unlimited support round the clock to troubleshoot issues and provide guidance on technical concerns to ensure that your business runs smoothly, without any hiccups during and after the transition to the cloud.</p>
-         <p className=" "> <span className="font-kanit font-bold my-6 ">Free Trial to Help Decision Making–</span>We offer a month-long Free Trial for our users to help them make an informed decision. Explore your favorite cloud hosted QuickBooks POS and run your business with the added flexibility of the cloud without paying a penny.</p>
-         <p className=" "> <span className="font-kanit font-bold  ">Seamless Migration – </span>Our dedicated team of experts ensure a smooth transition of your retail business to the cloud, maintaining uptime and data security.</p>
+         <div className="md:w-[50%] space-y-4  text-sm p-3">
+         <p className=" "><span className=" font-bold ">Support 24/7/365 –</span> Team Winscloud promises unlimited support round the clock to troubleshoot issues and provide guidance on technical concerns to ensure that your business runs smoothly, without any hiccups during and after the transition to the cloud.</p>
+         <p className=" "> <span className=" font-bold my-6 ">Free Trial to Help Decision Making–</span>We offer a month-long Free Trial for our users to help them make an informed decision. Explore your favorite cloud hosted QuickBooks POS and run your business with the added flexibility of the cloud without paying a penny.</p>
+         <p className=" "> <span className=" font-bold  ">Seamless Migration – </span>Our dedicated team of experts ensure a smooth transition of your retail business to the cloud, maintaining uptime and data security.</p>
          </div>
        
-       <div className="md:w-[50%] space-y-4 p-3 font-montserrat text-sm">
-         <p className=""> <span className="font-kanit font-bold ">99.99% Uptime Guarantee – </span> We guarantee a 99.99% uptime so that your critical business information and the hosted QuickBooks POS application is always accessible, and you can run your business without any interruption.</p>
-         <p className=""> <span className="font-kanit font-bold ">Pay As You Go </span>Winscloud offers flexible QuickBooks POS hosting plans that cater to your business size. You can customize your plan as per your need, without any contract restriction.</p>
+       <div className="md:w-[50%] space-y-4 p-3  text-sm">
+         <p className=""> <span className=" font-bold ">99.99% Uptime Guarantee – </span> We guarantee a 99.99% uptime so that your critical business information and the hosted QuickBooks POS application is always accessible, and you can run your business without any interruption.</p>
+         <p className=""> <span className=" font-bold ">Pay As You Go </span>Winscloud offers flexible QuickBooks POS hosting plans that cater to your business size. You can customize your plan as per your need, without any contract restriction.</p>
     
-         <p className=" "><span className="font-kanit font-bold ">Unlimited Add-Ons Integration –</span> Our servers are enabled to host as many add-ons and third-party apps as you want. Our expert team is also equipped to provide you with technical support in case of any issues.</p>
+         <p className=" "><span className=" font-bold ">Unlimited Add-Ons Integration –</span> Our servers are enabled to host as many add-ons and third-party apps as you want. Our expert team is also equipped to provide you with technical support in case of any issues.</p>
         
        </div>
        </div>
@@ -127,7 +127,7 @@ const QuickBook_pos = () => {
     Ready to take complete control of your Business Finances? Get QuickBooks Enterprise Hosting Today
     </h1>
     <div className="flex justify-center">
-     <Link to='/contact'>
+     <Link to='/get-in-touch'>
        <button className="border-2 my-6 md:my-6 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
        Get in Touch with Us
        </button>

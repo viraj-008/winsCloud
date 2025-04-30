@@ -30,7 +30,7 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <div className='px-5 md:mt-6 md:px-20'>
+      <div className='px-5  md:px-20'>
         <h1 className='text-3xl md:text-2xl text-center py-4 font-bold  font-serif text-gray-800'>Remote Access Has Never Been Smoother</h1>
         <p className='text-center text-md mt-4 font-semibold'>
           Scale Your Business Efficiently with Winscloud – Your Top Cloud Hosting Provider
@@ -91,7 +91,7 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className='border md:w-[90%] mx-auto rounded-lg my-8 p-2 bg-[#922724] shadow-lg'>
+        <div className='border md:w-[90%] mx-auto rounded-lg my-8 p-2 bg-red-600 shadow-lg'>
           <h1 className='font-serif text-white text-center text-2xl font-semibold'>
             Collaborate with your team in real-time, irrespective of where you are on the planet.
           </h1>

@@ -42,12 +42,12 @@ const Sage_300Hosting = () => {
   return (
    <>
     <div className="h-auto w-full pb-10">
-      <div className="w-full flex pt-28 px-5 md:px-20 items-center bg-red-600 bg-cover bg-center">
+      <div className="w-full flex bg-[url('/images/Home/sage1.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
         <div className="w-full text-center md:text-left">
-          <h1 className="text-white font-josefin text-4xl md:text-6xl ">
+          <h1 className="text-gray-200 font-josefin text-4xl md:text-6xl ">
           Sage 300 ERP Application <br /> Hosting
           </h1>
-          <p className="text-base text-black font-josefin md:text-3xl mt-4 md:mt-7">
+          <p className='text-xl   md:text-3xl bg-gradient-to-r  from-blue-100 via-indigo-100 to-green-100  text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
           Better organize projects, and optimize business operations from anywhere, anytime with Sage 300 cloud hosting
           </p>
           <Link to='/trial'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">

@@ -55,12 +55,12 @@ const QuickBook_enterprice = () => {
   return (
     <>
       <div className="h-auto w-full pb-10">
-        <div className="w-full flex bg-[url('/images/Home/cloude.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center min-h-[530px]">
+        <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center min-h-[530px]">
           <div className="w-full text-center md:text-left">
-            <h1 className="text-white text-3xl md:text-6xl leading-tight">
+            <h1  className="text-white font-josefin text-4xl md:text-6xl">
               QuickBooks Enterprise Hosting
             </h1>
-            <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
+            <p className='text-xl   md:text-3xl bg-gradient-to-r from-orange-500 via-indigo-100 to-green-100 text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
               Host your QuickBooks Premier on the cloud and make your critical accounting data easily accessible, anytime, anywhere.
             </p>
             <Link to='/trial'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
@@ -71,27 +71,27 @@ const QuickBook_enterprice = () => {
       </div>
 
       <div className="md:-mt-[30px] -mt-6 px-4">
-        <h1 className="text-center text-lg md:text-3xl font-bold">
+        <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
           QuickBooks Enterprise Cloud Hosting: A World Class Solution to Remotely Manage Your Business Operations
         </h1>
       </div>
 
       <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
         {/* Text Section */}
-        <div className="w-full md:w-[45%]">
+        <div className="w-full font-josefin text-gray-600 md:w-[45%]">
 
-          <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
+          <p className=" my-2 md:my-4 text-sm md:text-base">
             All the features of Intuit’s most powerful and advanced accounting software blended with the flexibility of the cloud.
             Grow your business by focusing on more important tasks with QuickBooks Enterprise cloud hosting by assigning relevant tasks
             to your team any time, anywhere.
           </p>
-          <p className="font-montserrat text-sm md:text-base">
+          <p className=" text-sm md:text-base">
             QuickBooks Desktop offers an end-to-end accounting solution to modern businesses. However, businesses today need added flexibility
             and ease while managing routine functions, such as managing cash flow, generating invoices, and keeping track of inventory. QuickBooks
             Enterprise Cloud Hosting lets you keep track of all your key tasks on the go. No more sitting tethered to your desktop to access your critical data.
             With QuickBooks Enterprise hosting, you can stay up to date anytime, anywhere.
           </p>
-          <p className="font-montserrat text-sm md:text-base mt-6">
+          <p className=" text-sm md:text-base mt-6">
             Winscloud’s QuickBooks Enterprise Hosting solution lets you use all of QuickBooks Enterprise’s robust features and simplifies business operations with the
             flexibility of the cloud. QuickBooks Enterprise hosting is the perfect solution for large businesses that need to manage business from multiple locations, large size of inventory, and heavy daily transactions, such as manufacturing, accounting, and retail businesses.
           </p>
@@ -118,23 +118,23 @@ const QuickBook_enterprice = () => {
       </div>
 
       <div className="my-12 w-[90%] mx-auto">
-        <h1 className="text-center font-kanit font-semibold text-2xl pt-5">
+        <h1 className="text-center font-serif font-semibold text-2xl pt-5">
           Winscloud QuickBooks Premier Cloud Hosting: Why should you choose us as your hosting provider?
         </h1>
         <p className="text-gray-600 text-center font-bold ">Unlock the power of cloud hosting services</p>
 
 
-        <div className="flex flex-col  md:flex-row  mt-8">
+        <div className="flex flex-col font-josefin md:flex-row  mt-8">
 
-          <div className="md:w-[50%] space-y-4 font-montserrat text-sm p-3">
-            <p className=" "><span className="font-kanit font-bold ">More Productivity on the Cloud-</span> QuickBooks Enterprise Cloud hosting provides businesses with a single cloud platform, facilitating multi-user collaboration in real-time, from anywhere across the globe. This makes accounting seamless for businesses and tax season stress free.</p>
-            <p className=" "> <span className="font-kanit font-bold my-6 ">Scalability-</span>Businesses are dynamic, needing to scale up or down frequently. QuickBooks Enterprise hosting offers the freedom to scale as you go, and you don’t have to worry about anything. QuickBooks Cloud Hosting adapts to business needs, promising operative freedom.</p>
+          <div className="md:w-[50%]  space-y-4  text-sm p-3">
+            <p className=" "><span className=" font-bold ">More Productivity on the Cloud-</span> QuickBooks Enterprise Cloud hosting provides businesses with a single cloud platform, facilitating multi-user collaboration in real-time, from anywhere across the globe. This makes accounting seamless for businesses and tax season stress free.</p>
+            <p className=" "> <span className=" font-bold my-6 ">Scalability-</span>Businesses are dynamic, needing to scale up or down frequently. QuickBooks Enterprise hosting offers the freedom to scale as you go, and you don’t have to worry about anything. QuickBooks Cloud Hosting adapts to business needs, promising operative freedom.</p>
           </div>
 
-          <div className="md:w-[50%] space-y-4 p-3 font-montserrat text-sm">
-            <p className=""> <span className="font-kanit font-bold ">Add-Ons Integration- </span> Your top QuickBooks hosting provider will not just host your QuickBooks Enterprise desktop software on the cloud. More than 200 add-ons and third-party apps, including all versions of QuickBooks, MS Excel, etc. are available and can be hosted on the cloud.</p>
+          <div className="md:w-[50%] space-y-4 p-3 font-josefin text-sm">
+            <p className=""> <span className=" font-bold ">Add-Ons Integration- </span> Your top QuickBooks hosting provider will not just host your QuickBooks Enterprise desktop software on the cloud. More than 200 add-ons and third-party apps, including all versions of QuickBooks, MS Excel, etc. are available and can be hosted on the cloud.</p>
 
-            <p className=" "><span className="font-kanit font-bold ">No Location Barriers-</span> While QuickBooks Enterprise Desktop needs you to be tethered to your computer, hosting the application on the cloud offers more convenience. Your data is in close proximity, irrespective of your location.</p>
+            <p className=" "><span className=" font-bold ">No Location Barriers-</span> While QuickBooks Enterprise Desktop needs you to be tethered to your computer, hosting the application on the cloud offers more convenience. Your data is in close proximity, irrespective of your location.</p>
 
           </div>
         </div>
@@ -145,7 +145,7 @@ const QuickBook_enterprice = () => {
           Ready to take complete control of your Business Finances? Get QuickBooks Enterprise Hosting Today
         </h1>
         <div className="flex justify-center">
-          <Link to='/contact'>
+          <Link to='/get-in-touch'>
             <button className="border-2 my-6 md:my-6 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
               Get in Touch with Us
             </button>

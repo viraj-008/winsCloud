@@ -44,7 +44,7 @@ const QuickBook_pro = () => {
   return (
     <>
       <div className="h-auto w-full pb-10">
-        <div className="w-full flex bg-[url('/images/Home/cloude.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center min-h-[530px]">
+        <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center min-h-[530px]">
           <div className="w-full text-center md:text-left">
             <h1 className='text-white font-josefin text-4xl md:text-6xl'>
               QuickBooks Pro Hosting
@@ -126,25 +126,25 @@ const QuickBook_pro = () => {
         QuickBooks Premier <span className="text-black">|</span>  QuickBooks Enterprise <span className="text-black">|</span>  QuickBooks POS <span className="text-black">|</span>  QuickBooks Canada</p>
 
       <div className="my-12 w-[90%] mx-auto">
-        <h1 className="text-center font-kanit font-semibold text-2xl pt-5">
+        <h1 className="text-center font-serif font-semibold text-2xl pt-5">
           WinsCloud: The Best QuickBooks Pro Hosting Provider for Your Business Accounting Needs
         </h1>
         <p className="text-center font-montserrat text-sm mt-3">As a small business, we understand that your biggest priority is to always be up and running. Using a desktop application comes with its own limitations – you cannot collaborate with your remote team, storage is limited, and performance may not be optimum. With Winscloud’s QuickBooks Pro Plus hosting solution, you experience enhanced performance of your QuickBooks Pro Plus –
         </p>
 
-        <div className="flex flex-col  md:flex-row  mt-8">
+        <div className="flex flex-col font-josefin  md:flex-row  mt-8">
 
-          <div className="md:w-[50%] space-y-4 font-montserrat text-sm p-3">
-            <p className=" "><span className="font-kanit font-bold ">Customized Pricing Plans -</span> We understand the dynamics of modern businesses. To provide you with tailor-made pricing, we ensure that our pocket-friendly plans allow you to pay as you go, without any contract boundation.</p>
-            <p className=" "> <span className="font-kanit font-bold my-6 ">Expert Support 24/7/365 -</span> We have a team of certified QuickBooks Pro Plus Advisors who are available on call and by email to cater to all your technical needs, including installation, upgrading and troubleshooting.</p>
-            <p className=""> <span className="font-kanit font-bold ">High Performance Servers-  </span>Our HPC servers are managed by our team of professionals who are equipped to tackle any unexpected downtime to ensure that your business runs smoothly 24/7.</p>
+          <div className="md:w-[50%] space-y-4  text-sm p-3">
+            <p className=" "><span className=" font-bold ">Customized Pricing Plans -</span> We understand the dynamics of modern businesses. To provide you with tailor-made pricing, we ensure that our pocket-friendly plans allow you to pay as you go, without any contract boundation.</p>
+            <p className=" "> <span className=" font-bold my-6 ">Expert Support 24/7/365 -</span> We have a team of certified QuickBooks Pro Plus Advisors who are available on call and by email to cater to all your technical needs, including installation, upgrading and troubleshooting.</p>
+            <p className=""> <span className=" font-bold ">High Performance Servers-  </span>Our HPC servers are managed by our team of professionals who are equipped to tackle any unexpected downtime to ensure that your business runs smoothly 24/7.</p>
           </div>
 
-          <div className="md:w-[50%] space-y-4 p-3 font-montserrat text-sm">
+          <div className="md:w-[50%] space-y-4 p-3  text-sm">
 
-            <p className=" "><span className="font-kanit font-bold ">Data Back Up- </span>Your critical business data is backed up twice daily and saved across multiple layers to ensure easy recovery in case of accidental deletion or a natural disaster like flood.</p>
-            <p className=""><span className="font-kanit font-bold ">More Profitability- </span> Winscloud Matrix’s QuickBooks hosting solutions eliminates the need to invest in heavy, in-house cloud infrastructure and helps you save big on maintenance costs.</p>
-            <p className=" "><span className="font-kanit font-bold ">Always Up and Running–</span>  Downtime can result in unhappy customers and thus adversely impact your business. Our QuickBooks Pro hosting solutions ensure business continuity with 99.99% up time.</p>
+            <p className=" "><span className=" font-bold ">Data Back Up- </span>Your critical business data is backed up twice daily and saved across multiple layers to ensure easy recovery in case of accidental deletion or a natural disaster like flood.</p>
+            <p className=""><span className=" font-bold ">More Profitability- </span> Winscloud Matrix’s QuickBooks hosting solutions eliminates the need to invest in heavy, in-house cloud infrastructure and helps you save big on maintenance costs.</p>
+            <p className=" "><span className=" font-bold ">Always Up and Running–</span>  Downtime can result in unhappy customers and thus adversely impact your business. Our QuickBooks Pro hosting solutions ensure business continuity with 99.99% up time.</p>
           </div>
         </div>
       </div>

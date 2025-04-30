@@ -49,15 +49,15 @@ const QickBooks_Hosting = () => {
   return (
     <>
       <div className="h-auto w-full pb-10">
-        <div className="w-full flex bg-[url('/images/Home/cloude.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
+        <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
           <div className="w-full text-center md:text-left">
-            <h1 className="text-white font-josefin text-4xl md:text-6xl">
+            <h1 className="text-white font-josefin text-3xl md:text-6xl">
               Trusted QuickBooks Hosting<br />  Provider
             </h1>
-            <p className='text-xl   md:text-3xl bg-gradient-to-r from-orange-500 via-indigo-100 to-green-100 text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
+            <p className='text-xl   md:text-3xl bg-gradient-to-r  from-blue-100 via-indigo-100 to-green-100  text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
               Make your accounting operations more secure and collaborate with your team anytime, from anywhere with Winscloud’s QuickBooks Hosting Services.
             </p>
-            <Link to='/Get-in-Touch'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
+            <Link to='/trial'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
               Start FREE Trial - Claim Top Hosting Services Today!
             </button></Link>
           </div>
@@ -66,8 +66,7 @@ const QickBooks_Hosting = () => {
 
 
 
-      {/* Adjusted spacing to be responsive */}
-      <div className="md:-mt-[30px] -mt-6 px-4">
+      <div className="md:-mt-[37px] -mt-6 px-4">
         <h1 className='text-3xl md:text-2xl text-center py-4 font-bold  font-serif text-gray-800'>
           QuickBooks Hosting: Desktop-like experience on any device, from any part of the globe
         </h1>
@@ -104,12 +103,12 @@ const QickBooks_Hosting = () => {
       </div>
 
       <div className="bg-red-600 w-[90%] mx-auto rounded-lg flex flex-col items-center py-6">
-        <h1 className="text-center text-gray-800 font-semibold font-kanit text-2xl px-4">
+        <h1 className="text-center text-white font-semibold font-kanit text-2xl px-4">
           Do away with saving and sharing your desktop files via VPN, email, or cloud storage today!
         </h1>
-        <button className="mt-6 border-2 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
+     <Link to='/trial'>  <button className="mt-6 border-2 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
           Start Your One-Month Free Trial
-        </button>
+        </button></Link> 
       </div>
 
       <div className="w-[90%] mx-auto mt-10 flex flex-col items-center">

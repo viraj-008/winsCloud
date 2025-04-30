@@ -3,9 +3,9 @@ const Introduction = () => {
   return (
     <>
     <div className="h-auto w-full pb-10">
-      <div className="w-full flex bg-gradient-to-r from-black via-pink-500 to-blue-500 pt-20 px-5 md:px-20 items-center min-h-[530px]">
+      <div className="w-full flex bg-[url('/images/Home/intro.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[430px]">
         <div className="w-full font-josefin font-semibold text-center ">
-        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 via-blue-900 to-black text-3xl md:text-9xl leading-tight">
+        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 via-blue-100 to-white shadow-2xl text-5xl md:text-9xl leading-tight">
   Introduction
 </h1>
         

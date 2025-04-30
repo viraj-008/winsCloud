@@ -63,7 +63,7 @@ const QickBooks_Desktop = () => {
     return (
         <>
             <div className="h-auto w-full pb-10">
-                <div className="w-full flex bg-[url('/images/Home/cloude.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
+                <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
                     <div className="w-full text-center md:text-left">
                         <h1 className="text-white font-josefin text-4xl md:text-6xl">
                         QuickBooks Desktop Cloud <br/> Hosting
@@ -108,11 +108,11 @@ const QickBooks_Desktop = () => {
   </div>
 </div>
 
-            <div className="bg-red-700 p-4 w-[90%] mx-auto rounded-lg flex flex-col items-center py-6">
-                <h1 className="text-center text-gray-800 font-semibold font-kanit text-2xl px-4">
+            <div className="bg-red-600 p-4 w-[90%] mx-auto rounded-lg flex flex-col items-center py-6">
+                <h1 className="text-center text-white font-semibold font-kanit text-2xl px-4">
                 Six Easy Steps to Transition to QuickBooks Desktop Cloud Hosting
                 </h1>
-               <p className="text-white font-josefin text-center"> Migrating to the cloud can be done in a few easy steps. Having the right QuickBooks Desktop Hosting Provider on your side can make the process simpler and faster. With Winscloud, you are assigned a cloud expert right from the start who will assist you with your cloud migration. You can also opt for a one-month Free Trial to get the real experience of running your business from the
+               <p className="text-gray-100 font-josefin text-center"> Migrating to the cloud can be done in a few easy steps. Having the right QuickBooks Desktop Hosting Provider on your side can make the process simpler and faster. With Winscloud, you are assigned a cloud expert right from the start who will assist you with your cloud migration. You can also opt for a one-month Free Trial to get the real experience of running your business from the
                  cloud. To begin your transition, here are the simple steps you need to follow</p>
             </div>
 
@@ -185,7 +185,7 @@ const QickBooks_Desktop = () => {
     Need our help with your QuickBooks Desktop Cloud Hosting?
   </h1>
   <div className="flex justify-center">
-    <Link to='/trial'>
+    <Link to='/Get-in-Touch'>
       <button className="border-2 my-6 md:my-6 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
       Contact QuickBooks Hosting Expert
       </button>

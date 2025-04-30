@@ -730,8 +730,8 @@ const Blogs = () => {
     
   return (
     <>
-    <div className="pt-[100px]">
-        <h1 className="text-2xl font-semibold  text-center font-kanit bg-red-600 w-[90%] mx-auto rounded-lg text-white mb-2">BLOG POST</h1>
+    <div className="pt-[100px] bg-gray-800">
+        <h1 className="text-2xl  font-semibold font-josefin text-center   w-[90%] mx-auto rounded-lg text-white border bg-pink-500 shadow-lg mb-2">BLOG POST</h1>
         
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-8">
 

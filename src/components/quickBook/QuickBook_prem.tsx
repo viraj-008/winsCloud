@@ -49,12 +49,12 @@ const QuickBook_prem = () => {
   return (
     <>
       <div className="h-auto w-full pb-10">
-        <div className="w-full flex bg-[url('/images/Home/cloude.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
+        <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
           <div className="w-full text-center md:text-left">
-            <h1 className="text-white text-3xl md:text-6xl leading-tight">
+            <h1 className="text-white font-josefin text-4xl md:text-6xl">
               QuickBooks Premier Hosting
             </h1>
-            <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
+            <p className='text-xl   md:text-3xl bg-gradient-to-r from-orange-500 via-indigo-100 to-green-100 text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
               Host your QuickBooks Premier on the cloud and make your critical accounting data easily accessible, anytime, anywhere.
             </p>
             <Link to='/trial'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
@@ -65,20 +65,20 @@ const QuickBook_prem = () => {
       </div>
 
       <div className="md:-mt-[30px] -mt-6 px-4">
-        <h1 className="text-center text-lg md:text-3xl font-bold">
+        <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
           Seamless Accounting for your Business with QuickBooks Premier Plus Hosting
         </h1>
       </div>
 
       <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
         {/* Text Section */}
-        <div className="w-full md:w-[45%]">
+        <div className="w-full font-josefin text-gray-600 md:w-[45%]">
 
-          <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
+          <p className=" my-2 md:my-4 text-sm md:text-base">
             QuickBooks Premier Plus is one of the most popular accounting software used by CPAs, accountants, and small businesses.
             Hosting the QuickBooks Premier Plus can transform your accounting workflow, boost productivity, and promote multi-user collaboration.
           </p>
-          <p className="font-montserrat text-sm md:text-base">
+          <p className=" text-sm md:text-base">
             Our team at Winscloud, your top quickbooks hosting provider, has helped small and mid-sized businesses completely turn around their business operations
             with services like QuickBooks Pro hosting. We help take your business to the cloud and help your team work remotely, without worrying about the hassles of transitioning
             to the cloud. Our team of experts take care of all your needs and preferences and ensure your business runs smoothly even during transition, ensuring maximum up time.
@@ -132,24 +132,24 @@ const QuickBook_prem = () => {
         QuickBooks Premier <span className="text-black">|</span>  QuickBooks Enterprise <span className="text-black">|</span>  QuickBooks POS <span className="text-black">|</span>  QuickBooks Canada</p>
 
       <div className="my-12 w-[90%] mx-auto">
-        <h1 className="text-center font-kanit font-semibold text-2xl pt-5">
+        <h1 className="text-center font-serif font-semibold text-2xl pt-5">
           Winscloud QuickBooks Premier Cloud Hosting: Why should you choose us as your hosting provider?
         </h1>
 
 
-        <div className="flex flex-col  md:flex-row  mt-8">
+        <div className="flex flex-col font-josefin  md:flex-row  mt-8">
 
-          <div className="md:w-[50%] space-y-4 font-montserrat text-sm p-3">
-            <p className=" "><span className="font-kanit font-bold ">Pocket-friendly Transition-</span>Our plans are pocket-friendly and can accommodate any changing business needs within minutes.<Link to='/pricing' className="text-blue-500 font-semibold">Check our quickbooks premier cloud hosting pricing here.</Link> </p>
-            <p className=" "> <span className="font-kanit font-bold my-6 ">Round-the-Clock Tech Support-</span>The expert advisors at Winscloud are available for support, guidance, and troubleshooting issues 24/7/365 so you don’t have to worry about any tech issues during/post transition.</p>
-            <p className=""> <span className="font-kanit font-bold ">99.99% Up-Time Guarantee- </span>Our team of technical experts work round-the-clock to ensure that you always get maximum server uptime. In case of any technical issue that may cause downtime, our team of experts can provide full support to resolve the issue.</p>
+          <div className="md:w-[50%] space-y-4  text-sm p-3">
+            <p className=" "><span className=" font-bold ">Pocket-friendly Transition-</span>Our plans are pocket-friendly and can accommodate any changing business needs within minutes.<Link to='/pricing' className="text-blue-500 font-semibold">Check our quickbooks premier cloud hosting pricing here.</Link> </p>
+            <p className=" "> <span className=" font-bold my-6 ">Round-the-Clock Tech Support-</span>The expert advisors at Winscloud are available for support, guidance, and troubleshooting issues 24/7/365 so you don’t have to worry about any tech issues during/post transition.</p>
+            <p className=""> <span className=" font-bold ">99.99% Up-Time Guarantee- </span>Our team of technical experts work round-the-clock to ensure that you always get maximum server uptime. In case of any technical issue that may cause downtime, our team of experts can provide full support to resolve the issue.</p>
           </div>
 
-          <div className="md:w-[50%] space-y-4 p-3 font-montserrat text-sm">
+          <div className="md:w-[50%] space-y-4 p-3  text-sm">
 
-            <p className=" "><span className="font-kanit font-bold ">Add-Ons Integration- </span> We are fully equipped with hosting multiple add-ons and integrating third party apps along with QuickBooks Premier hosting and promote seamless collaboration with other CPAs and bookkeeper</p>
-            <p className=""><span className="font-kanit font-bold ">High Data Security- </span> Security is a concern for most CPAs and business owners. With QuickBooks Premier cloud hosting, you have the freedom to provide access to authorized users only.</p>
-            <p className=" "><span className="font-kanit font-bold ">High-performance Servers- </span>  Our state-of-the-art high-performance, SSD-based remote servers offer seamless collaboration with your remote team and automated data backups for quick recovery in case of disaster</p>
+            <p className=" "><span className=" font-bold ">Add-Ons Integration- </span> We are fully equipped with hosting multiple add-ons and integrating third party apps along with QuickBooks Premier hosting and promote seamless collaboration with other CPAs and bookkeeper</p>
+            <p className=""><span className=" font-bold ">High Data Security- </span> Security is a concern for most CPAs and business owners. With QuickBooks Premier cloud hosting, you have the freedom to provide access to authorized users only.</p>
+            <p className=" "><span className=" font-bold ">High-performance Servers- </span>  Our state-of-the-art high-performance, SSD-based remote servers offer seamless collaboration with your remote team and automated data backups for quick recovery in case of disaster</p>
           </div>
         </div>
       </div>
@@ -159,7 +159,7 @@ const QuickBook_prem = () => {
           Want us to help you decide which version of QuickBooks Premier Hosting is best for your small business?
         </h1>
         <div className="flex justify-center">
-          <Link to='/contact'>
+          <Link to='/get-in-touch'>
             <button className="border-2 my-6 md:my-6 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
               Get in Touch for quickbooks premier hosting with our Expert
             </button>

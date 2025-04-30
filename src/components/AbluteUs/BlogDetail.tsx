@@ -11,8 +11,8 @@ const BlogDetail = () => {
 
     return (
       <>
-        <div className="max-w-4xl mx-auto pt-28 px-4 ">
-          <h1 className="md:text-3xl text-center font-bold px-[5px] md:px-4 font-josefin py-2 bg-red-600 text-white  rounded-md">
+        <div className=" mx-auto bg-gray-800 pt-28 px-4 pb-4 ">
+          <h1 className="md:text-3xl text-center font-bold px-[5px] md:px-4 font-josefin py-2 border bg-pink-500 shadow-xl text-white  rounded-md">
             {blog.TopHeading}
           </h1>
         <div className="border p-6 rounded-xl shadow-md bg-[#fdf5e6] mt-10 space-y-6">
@@ -21,7 +21,7 @@ const BlogDetail = () => {
           <img
             src={blog.images}
             alt="blog"
-            className="w-full h-auto border-2 border-black object-cover rounded-xl"
+            className="w-4xl mx-auto h-auto border-2 border-black object-cover rounded-xl"
           />
       
           {blog.sections.map((section, idx) => (

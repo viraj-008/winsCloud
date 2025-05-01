@@ -70,7 +70,7 @@ Anytime, anywhere accounting for your Small and Mid-Sized Business with Sage 50 
 
     {/* Adjusted spacing to be responsive */}
     <div className="md:-mt-[30px] -mt-6 px-4">
-      <h1 className="text-center text-lg md:text-3xl font-bold">
+      <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
       How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
       </h1>
         <h1 className="font-semibold text-center font-montserrat mt-5 text-sm text-gray-700 md:text-xl">

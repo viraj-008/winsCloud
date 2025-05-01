@@ -44,7 +44,7 @@ const Sage_Hosting = () => {
           <h1 className="text-white text-3xl md:text-6xl leading-tight">
           Sage Hosting
           </h1>
-          <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
+          <p className="text-base  text-gray-200 md:text-3xl mt-4 md:mt-7">
           Elevate your accounting experience with cloud-based Sage ERP & CRM applications with Winscloud Sage Hosting Provider
           </p>
           <Link to='/trial'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
@@ -56,23 +56,23 @@ const Sage_Hosting = () => {
 
     {/* Adjusted spacing to be responsive */}
     <div className="md:-mt-[30px] -mt-6 px-4">
-      <h1 className="text-center text-lg md:text-3xl font-bold">
+      <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
       Enhanced Flexibility and Business Accessibility with Sage Hosting
       </h1>
-        <h1 className="font-semibold text-center font-montserrat mt-5 text-sm text-gray-700 md:text-xl">
+        <h1 className="font-semibold text-center font-montserrat mt-5 text-sm text-gray-600 md:text-xl">
         Host Your Sage Desktop & Experience the Power of the Cloud
         </h1>
     </div>
 
     <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
       {/* Text Section */}
-      <div className="w-full md:w-[45%]">
-        <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
+      <div className="w-full font-josefin text-gray-600 md:w-[45%]">
+        <p className=" my-2 md:my-4 text-sm md:text-base">
         Sage hosting means taking your licensed desktop Sage accounting, ERP and CRM applications to the cloud to
          experience the flexibility and security of the cloud in your day-to-day business operations. Sage Cloud hosting allows multi-user collaboration in real-time, from anywhere across the world. The enhanced productivity that 
         comes with Sage hosting improves customer satisfaction, little to no errors in data, and saves time.
         </p>
-        <p className="font-montserrat text-sm md:text-base">
+        <p className=" text-sm md:text-base">
         Unlike Online versions, Sage hosting comes packed with all the features of the desktop application, thus
          adding to the efficiency. It can prove to be an excellent service for various businesses like accounting firms, retail & 
         wholesale businesses, various types of industries, food and beverage, and not-for-profit organizations.

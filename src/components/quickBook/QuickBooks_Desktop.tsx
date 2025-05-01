@@ -62,8 +62,7 @@ const QickBooks_Desktop = () => {
       };
     return (
         <>
-            <div className="h-auto w-full pb-10">
-                <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
+                <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center ">
                     <div className="w-full text-center md:text-left">
                         <h1 className="text-white font-josefin text-4xl md:text-6xl">
                         QuickBooks Desktop Cloud <br/> Hosting
@@ -76,11 +75,10 @@ const QickBooks_Desktop = () => {
                         </button></Link>
                     </div>
                 </div>
-            </div>
 
             {/* Adjusted spacing to be responsive */}
-            <div className="md:-mt-[30px] -mt-6 px-4">
-                <h1 className='text-3xl md:text-2xl text-center py-4 font-bold  font-serif text-gray-800'>
+            <div >
+                <h1 className='text-lg md:text-2xl text-center py-4 font-bold  font-serif text-gray-800'>
                 QuickBooks Desktop Hosting: Run your favorite QuickBooks Desktop Application from Anywhere, at Anytime
                 </h1>
             </div>

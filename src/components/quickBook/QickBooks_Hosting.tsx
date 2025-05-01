@@ -48,13 +48,12 @@ const QickBooks_Hosting = () => {
   };
   return (
     <>
-      <div className="h-auto w-full pb-10">
-        <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
-          <div className="w-full text-center md:text-left">
-            <h1 className="text-white font-josefin text-3xl md:text-6xl">
+        <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center  px-5 md:px-20 items-center ">
+          <div className="w-full text-center  md:text-left">
+            <h1 className="text-slate-100 mt-[100px] font-josefin text-3xl md:text-6xl">
               Trusted QuickBooks Hosting<br />  Provider
             </h1>
-            <p className='text-xl   md:text-3xl bg-gradient-to-r  from-blue-100 via-indigo-100 to-green-100  text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
+            <p className='text-sm   md:text-3xl bg-gradient-to-r  from-blue-100 via-indigo-100 to-green-100  text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
               Make your accounting operations more secure and collaborate with your team anytime, from anywhere with Winscloud’s QuickBooks Hosting Services.
             </p>
             <Link to='/trial'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
@@ -62,12 +61,11 @@ const QickBooks_Hosting = () => {
             </button></Link>
           </div>
         </div>
-      </div>
 
 
 
-      <div className="md:-mt-[37px] -mt-6 px-4">
-        <h1 className='text-3xl md:text-2xl text-center py-4 font-bold  font-serif text-gray-800'>
+      <div className="p-4">
+        <h1 className='text-lg md:text-2xl text-center py-4 font-bold  font-serif text-gray-800'>
           QuickBooks Hosting: Desktop-like experience on any device, from any part of the globe
         </h1>
       </div>

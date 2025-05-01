@@ -44,8 +44,7 @@ const Quick_hosting_canada = () => {
       };
   return (
     <>
-    <div className="h-auto w-full pb-10">
-               <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
+               <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center ">
                    <div className="w-full text-center md:text-left">
                        <h1 className="text-white font-josefin text-4xl md:text-6xl">
                        QuickBooks Hosting Canada
@@ -58,9 +57,8 @@ const Quick_hosting_canada = () => {
                        </button></Link>
                    </div>
                </div>
-           </div>
 
-           <div className="md:-mt-[30px] -mt-6 px-4">
+           <div className="">
                <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
                QuickBooks POS Cloud Hosting: Conveniently track multi-channel sales and manage your retail inventory from multiple locations
                </h1>

@@ -48,8 +48,7 @@ const QuickBook_prem = () => {
   };
   return (
     <>
-      <div className="h-auto w-full pb-10">
-        <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
+        <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center ">
           <div className="w-full text-center md:text-left">
             <h1 className="text-white font-josefin text-4xl md:text-6xl">
               QuickBooks Premier Hosting
@@ -62,9 +61,8 @@ const QuickBook_prem = () => {
             </button></Link>
           </div>
         </div>
-      </div>
 
-      <div className="md:-mt-[30px] -mt-6 px-4">
+      <div className="p-4">
         <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
           Seamless Accounting for your Business with QuickBooks Premier Plus Hosting
         </h1>

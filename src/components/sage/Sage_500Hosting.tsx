@@ -46,10 +46,9 @@ const Sage_500Hosting = () => {
       };
   return (
     <>
-    <div className="h-auto w-full pb-10">
-      <div className="w-full flex bg-[url('/images/Home/sage1.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
+      <div className="w-full flex bg-[url('/images/Home/sage1.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center ">
         <div className="w-full text-center md:text-left">
-          <h1 className="text-white text-3xl md:text-6xl leading-tight">
+          <h1 className="text-white text-3xl md:text-6xl leading-tight md:pt-6">
           Sage 500 ERP Hosting
           </h1>
           <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
@@ -60,11 +59,10 @@ const Sage_500Hosting = () => {
           </button></Link>
         </div>
       </div>
-    </div>
 
     {/* Adjusted spacing to be responsive */}
-    <div className="md:-mt-[30px] -mt-6 px-4">
-      <h1 className="text-center text-lg md:text-3xl font-bold">
+    <div className="p-2">
+      <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
       Business Operations Simplified with Sage 500 Cloud Hosting
       </h1>
         <h1 className="font-semibold text-center font-montserrat mt-5 text-sm text-gray-700 md:text-xl">

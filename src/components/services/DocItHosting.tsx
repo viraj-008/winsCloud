@@ -3,7 +3,7 @@ const DocItHosting = () => {
   return (
     <>
     <div className="h-auto w-full pb-10">
-    <div className="w-full flex bg-[url('/images/Home/server.webp')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
+    <div className="w-full flex bg-[url('/images/Home/server.webp')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[230px] md:min-h-[430px]">
       <div className="w-full text-center md:text-left">
         <h1 className="text-white px-2 p-4 rounded-lg font-kanit text-3xl md:text-6xl leading-tight">
         Doc IT Hosting
@@ -13,9 +13,9 @@ const DocItHosting = () => {
     </div>
   </div>
 
-  <div className="  justify-center  p-4 m">
+  <div className="   p-2">
 
-    <h1 className="text-center font-semibold font-kanit text-2xl">Doc-it Hosting Provider Streamlines Document Management for Businesses
+    <h1 className="text-center font-semibold font-serif text-gray-600 text-2xl">Doc-it Hosting Provider Streamlines Document Management for Businesses
 
     </h1>
     {/* Text Section */}

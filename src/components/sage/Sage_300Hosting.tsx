@@ -41,10 +41,9 @@ const Sage_300Hosting = () => {
   };
   return (
    <>
-    <div className="h-auto w-full pb-10">
-      <div className="w-full flex bg-[url('/images/Home/sage1.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
+      <div className="w-full flex bg-[url('/images/Home/sage1.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center ">
         <div className="w-full text-center md:text-left">
-          <h1 className="text-gray-200 font-josefin text-4xl md:text-6xl ">
+          <h1 className="text-gray-200 font-josefin text-4xl md:text-6xl md:pt-6">
           Sage 300 ERP Application <br /> Hosting
           </h1>
           <p className='text-xl   md:text-3xl bg-gradient-to-r  from-blue-100 via-indigo-100 to-green-100  text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
@@ -55,8 +54,7 @@ const Sage_300Hosting = () => {
           </button></Link>
         </div>
       </div>
-    </div>
-    <div className="md:-mt-[-20px] text-gray-800 -mt-8 px-4">
+    <div className="">
       <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
       Unify All Your Critical Tasks, Elevate Accounting, and Boost Productivity with Sage 300 ERP Hosting
       </h1>

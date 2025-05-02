@@ -50,10 +50,9 @@ const Sage50Hosting = () => {
       };
   return (
     <>
-    <div className="h-auto w-full pb-10">
-      <div className="w-full flex bg-[url('/images/Home/sage1.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
+      <div className="w-full flex bg-[url('/images/Home/sage1.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center ">
         <div className="w-full text-center md:text-left">
-          <h1 className="text-white text-3xl md:text-6xl leading-tight">
+          <h1 className="text-white text-3xl md:text-6xl leading-tight md:pt-6">
           Sage 50 Cloud Hosting
           </h1>
           <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
@@ -66,10 +65,9 @@ Anytime, anywhere accounting for your Small and Mid-Sized Business with Sage 50 
           </button></Link>
         </div>
       </div>
-    </div>
 
     {/* Adjusted spacing to be responsive */}
-    <div className="md:-mt-[30px] -mt-6 px-4">
+    <div className="">
       <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
       How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
       </h1>

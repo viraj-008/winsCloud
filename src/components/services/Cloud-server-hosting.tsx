@@ -5,8 +5,7 @@ const CloudServerHosting = () => {
    
   return (
     <>
-      <div className="h-auto w-full pb-10">
-      <div className="w-full flex bg-[url('/images/Home/server.webp')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
+      <div className="w-full flex bg-[url('/images/Home/server.webp')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[230px] md:min-h-[430px]">
         <div className="w-full text-center md:text-left">
           <h1 className="text-white text-3xl md:text-6xl leading-tight">
           TaxWise Hosting Software
@@ -19,9 +18,8 @@ const CloudServerHosting = () => {
           </button></Link>
         </div>
       </div>
-    </div>
 
-    <div className="  justify-center  p-4 m">
+    <div className="p-2">
       {/* Text Section */}
       <div className="w-[96%] font-semibold text-gray-700  mx-auto">
         <p className="font-montserrat text-center my-2 md:my-4 text-sm md:text-base">

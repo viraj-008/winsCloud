@@ -44,7 +44,7 @@ const QuickBook_pos = () => {
          <>
                    <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center ">
                        <div className="w-full text-center md:text-left">
-                           <h1 className="text-white font-josefin text-4xl md:text-6xl">
+                           <h1 className="text-white font-josefin text-4xl md:text-6xl md:pt-6">
                            QuickBooks POS Hosting
                            </h1>
                            <p className='text-xl   md:text-3xl bg-gradient-to-r from-orange-500 via-indigo-100 to-green-100 text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>

@@ -9,9 +9,9 @@ const Home: React.FC = () => {
     <>
         <div className="w-full flex bg-[url('/images/Home/cloude.jpg')] bg-cover h-[600xp] bg-center  px-5  items-center">
 
-          <div className='w-full   text-center md:text-left'>
+          <div className='w-full   text-center  md:text-left'>
             <motion.h1
-              className="text-amber-600 drop-shadow-xl   font-bold font-josefin mt-[70px]  text-2xl md:text-6xl"
+              className="ttext-slate-100 mt-[80px] md:mt-[100px] font-bold font-josefin text-3xl md:text-6xl text-orange-600 "
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -22,14 +22,14 @@ const Home: React.FC = () => {
             <p className='text-xl md:text-3xl bg-gradient-to-r from-gray-400 via-indigo-100 to-green-100 text-transparent bg-clip-text font-serif mt-4 md:mt-7'>
               Get the financial tools and insights to<br /> start, build, and grow your business
             </p>
-            <Link to="/trial">  <button className='mx-auto md:mx-0 flex border my-10 md:my-16 bg-green-600 text-xl md:text-4xl px-6 md:px-12 text-white font-josefin py-2 rounded-lg'>
+            <Link to="/trial">  <button className='mx-auto md:mx-0 flex border my-5 md:my-16 bg-green-600 text-xl md:text-4xl px-6 md:px-12 text-white font-josefin py-2 rounded-lg'>
               Request a Free Demo
             </button></Link>
           </div>
         </div>
 
       <div className='px-5  md:px-20'>
-        <h1 className='text-3xl md:text-2xl text-center py-4 font-bold  font-serif text-gray-800'>Remote Access Has Never Been Smoother</h1>
+        <h1 className='text-xl md:text-2xl text-center py-4 font-bold  font-serif text-gray-800'>Remote Access Has Never Been Smoother</h1>
         <p className='text-center text-md mt-4 font-semibold'>
           Scale Your Business Efficiently with Winscloud – Your Top Cloud Hosting Provider
         </p>

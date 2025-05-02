@@ -51,8 +51,7 @@ function UltraTaxHosting() {
       };
   return (
     <>
-    <div className="h-auto w-full pb-10">
-      <div className="w-full flex bg-[url('/images/Home/server.webp')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[530px]">
+      <div className="w-full flex bg-[url('/images/Home/server.webp')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center min-h-[230px] md:min-h-[430px]">
         <div className="w-full text-center md:text-left">
           <h1 className="text-white text-3xl md:text-4xl leading-tight">
           Work with remote teams & clients, file taxes seamlessly, from any location and any device with UltraTax CS Hosting
@@ -65,11 +64,10 @@ function UltraTaxHosting() {
           </button></Link>
         </div>
       </div>
-    </div>
 
     {/* Adjusted spacing to be responsive */}
-    <div className="md:-mt-[30px] -mt-6 px-4">
-      <h1 className="text-center text-lg md:text-3xl font-bold">
+    <div className="p-2">
+      <h1 className="text-center font-serif text-gray-600 text-lg md:text-3xl font-bold">
       UltraTax Cloud Hosting Service: Perfect solution for tax professionals and accounting firms to enhance productivity
       </h1>
 

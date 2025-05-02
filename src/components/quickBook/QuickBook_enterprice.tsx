@@ -55,7 +55,7 @@ const QuickBook_enterprice = () => {
   return (
     <>
         <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center ">
-          <div className="w-full text-center md:text-left">
+          <div className="w-full text-center md:text-left  md:pt-6">
             <h1  className="text-white font-josefin text-4xl md:text-6xl">
               QuickBooks Enterprise Hosting
             </h1>

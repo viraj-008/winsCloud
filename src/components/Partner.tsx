@@ -19,18 +19,13 @@ const Partner = () => {
       
   return (
     <>
-         <h1 className='text-4xl my-7 bg-gray-200 text-center text-gray-700 font-josefin md:w-[90%] mx-auto p-3 rounded-md font-bold'>
-        Our Trusted Partners
-      </h1>
 
-
-      {/* Mapping the logos */}
-      <motion.div
+<motion.div
   className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 bg-white w-[90%] mx-auto rounded-lg px-4 py-4"
-  initial={{ opacity: 0, x: -100 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.6, ease: 'easeOut' }}
-  viewport={{ once: false, amount: 0.2 }} // 👈 Animate on every scroll-in
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6, ease: "easeOut", type: "spring", bounce: 0.3 }}
+  viewport={{ once: false, amount: 0.2 }}
 >
   {footerLogos.map((logo, index) => (
     <div
@@ -46,16 +41,12 @@ const Partner = () => {
   ))}
 </motion.div>
 
-
-
-
-
-<motion.div
+     <motion.div
   className="bg-red-700 flex flex-col my-8 md:flex-row justify-around mt-8 px-4 rounded-lg md:w-[90%] w-[90%] mx-auto items-center"
-  initial={{ opacity: 0, x: 100 }} // 👈 start off-screen to the right
-  whileInView={{ opacity: 1, x: 0 }} // 👈 animate into place
-  transition={{ duration: 0.6, ease: 'easeOut' }}
-  viewport={{ once: false, amount: 0.2 }} // 👈 animate every scroll-in
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7, type: "spring", stiffness: 100, delay: 0.1 }}
+  viewport={{ once: false, amount: 0.2 }}
 >
   <p className="text-white text-center mt-4 md:mt-0 font-josefin font-bold">
     Get an Account in Minutes Today!
@@ -66,6 +57,8 @@ const Partner = () => {
     </button>
   </Link>
 </motion.div>
+
+
     </>      
     
   )

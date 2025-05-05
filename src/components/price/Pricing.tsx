@@ -44,17 +44,15 @@ function Pricing() {
 
     <>
     <div className="z-10">
-      <div className="h-auto w-full pb-10">
-        <div  className="w-full flex bg-[url('/images/Home/price1.webp')] bg-cover bg-center   pt-20 px-5 md:px-20 items-center min-h-[600px]">
+        <div  className="w-full flex bg-[url('/images/Home/price1.webp')] bg-cover bg-center   pt-20 px-5 md:px-20 items-center min-h-[340px]">
           <div className="w-full text-center md:text-left">
             <h1 className="text-white text-center font-josefin  px-2 p-4 rounded-lg shadow-lg text-3xl md:text-6xl leading-tight">
               OUR PRICING PLANS
             </h1>
           </div>
         </div>
-      </div>
 
-      <h1 className="text-center font-bold font-josefin w-[300px] bg-red-600 mx-auto p-3 text-white rounded-lg text-2xl">
+      <h1 className="text-center mt-8 font-bold font-josefin w-[300px] bg-red-600 mx-auto p-3 text-white rounded-lg text-2xl">
         Pricing
       </h1>
 

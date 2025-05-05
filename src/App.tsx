@@ -1,3 +1,6 @@
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -75,6 +78,7 @@ function App() {
         <Route path="/blogs" element={<Blogs/>} />
         <Route path="/blog/:id" element={<BlogDetail/>} />
       </Routes>
+      <ToastContainer position="top-right" autoClose={3000} />
       <Footer />
     </BrowserRouter>
   );

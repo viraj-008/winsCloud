@@ -17,9 +17,10 @@ const validationSchema = Yup.object({
         .required('Email is required'),
     Company: Yup.string()
         .required('Company is required'),
-    // Phone: Yup.string()
-    //     .required('Phone number is required'),
-    License_Details: Yup.string()
+    Phone: Yup.string()
+        .required('Phone number is required'),
+        License_Details: Yup.string()
+        .min(10, 'License details must be at least 10 characters')
         .required('License details are required'),
     Desired_User: Yup.string()
         .required('Desired User Name/Names is required'),
@@ -34,6 +35,7 @@ interface Props {
 }
 
 const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
+
     const [loading, setLoading] = useState<boolean>(false);
 
     const initialValues = {
@@ -71,6 +73,7 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
             }
             setFieldValue('totalPrice', newTotalPrice);
         }
+        console.log('Updated Value:', initialValues);
     };
 
     return (
@@ -96,30 +99,30 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                             initialValues={initialValues}
                             validationSchema={validationSchema}
                             onSubmit={(values) => {
-                                    // e.preventDefault();
-                                    // console.log("Form submitted:", e.target);
-                                    setLoading(true);
-                                
-                                    emailjs
-                                      .send('service_zho6x7p', 'template_ly9vtaw', values, {
+                                // e.preventDefault();
+                                // console.log("Form submitted:", e.target);
+                                setLoading(true);
+
+                                emailjs
+                                    .send('service_zho6x7p', 'template_ly9vtaw', values, {
                                         publicKey: 'Ywh2vouw_5P3OOzfk',
-                                      })
-                                      .then(
+                                    })
+                                    .then(
                                         () => {
                                             toast.success('Request sent successfully!');
-                                          console.log('SUCCESS!');
-                                          setLoading(false);
+                                            console.log('SUCCESS!');
+                                            setLoading(false);
                                         },
                                         (error) => {
                                             toast.error('Something went wrong!');
-                                          console.log('FAILED...', error.text);
-                                          setLoading(false);
+                                            console.log('FAILED...', error.text);
+                                            setLoading(false);
                                         },
-                                      );
-                                
-                                    // console.log("Submitted Form Data:", form);
-                                    // (Object.prototype.hasOwnProperty.call(values, 'AdditionalRAM') && delete values.AdditionalRAM);
-                                
+                                    );
+
+                                // console.log("Submitted Form Data:", form);
+                                // (Object.prototype.hasOwnProperty.call(values, 'AdditionalRAM') && delete values.AdditionalRAM);
+
                                 console.log('Form Submitted:', values);
                             }}
                         >
@@ -269,11 +272,12 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
 
                                     <div className="mb-4">
                                         <label className="block text-gray-700 font-josefin">Phone NO.</label>
-                                        <Field
-                                            name='Phone'
-                                            as={PhoneInput}
-                                            defaultCountry="ua"
-                                            className="w-full sm:w-[500px] py-2 border-gray-300 rounded-lg mt-2 outline-none"
+                                        <PhoneInput
+                                            defaultCountry="in"
+                                            value={values.Phone}
+                                            onChange={(phone: string) => setFieldValue('Phone', phone)}
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
+                                            placeholder="Phone Number*"
                                         />
                                         <ErrorMessage name='Phone' component='div' className='text-red-500 text-sm' />
                                     </div>
@@ -315,7 +319,7 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                                             type='submit'
                                             className='px-4 py-2 font-josefin bg-blue-600 text-white rounded-lg hover:bg-blue-700'
                                         >
-                                          {loading ? "Submiting..."  : "Get 7 Days Free Trial"}
+                                            {loading ? "Submiting..." : "Get 7 Days Free Trial"}
                                         </button>
                                     </div>
                                 </Form>

@@ -16,30 +16,57 @@ const Partner = () => {
       {image:"/images/Flogo/vm.png"},
       {image:"/images/Flogo/Wasabi.png"},
       ]
+      const slideVariants = {
+        animate: {
+          x: ["0%", "-50%"],
+          transition: {
+            duration: 10,      // Slower and smoother
+            ease: "linear",
+            repeat: Infinity,
+          },
+        },
+      };
+      
+      
       
   return (
     <>
 
-<motion.div
-  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 bg-white w-[90%] mx-auto rounded-lg px-4 py-4"
-  initial={{ opacity: 0, scale: 0.9 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.6, ease: "easeOut", type: "spring", bounce: 0.3 }}
-  viewport={{ once: false, amount: 0.2 }}
->
-  {footerLogos.map((logo, index) => (
-    <div
-      key={index}
-      className="w-full aspect-[6/3] flex items-center justify-center bg-white p-2 rounded-md shadow-sm"
-    >
-      <img
-        src={logo.image}
-        alt={`Logo ${index + 1}`}
-        className="w-full h-full object-contain"
-      />
-    </div>
-  ))}
-</motion.div>
+    <h1 className="text-4xl text-center bg-gray-300 my-8 font-serif p-3 font-bold text-gray-800 w-[96%] rounded-xl mx-auto">Our Truted Partner</h1>
+   <motion.div className="overflow-hidden my-4 w-[90%] bg-white py-4 mx-auto">
+      <motion.div
+        className="flex gap-8 w-max"
+        variants={slideVariants}
+        animate="animate"
+      >
+        {footerLogos.map((logo, index) => (
+          <div
+            key={index}
+            className="w-[150px] h-[75px] flex items-center justify-center bg-white p-2 rounded-md shadow-sm"
+          >
+            <img
+              src={logo.image}
+              alt={`Logo ${index + 1}`}
+              className="w-full h-full object-contain"
+            />
+          </div>
+        ))}
+
+        {/* Duplicate logos for seamless loop */}
+        {footerLogos.map((logo, index) => (
+          <div
+            key={`dup-${index}`}
+            className="w-[150px] h-[75px] flex items-center justify-center bg-white p-2 rounded-md shadow-sm"
+          >
+            <img
+              src={logo.image}
+              alt={`Logo duplicate ${index + 1}`}
+              className="w-full h-full object-contain"
+            />
+          </div>
+        ))}
+      </motion.div>
+    </motion.div>
 
      <motion.div
   className="bg-red-700 flex flex-col my-8 md:flex-row justify-around mt-8 px-4 rounded-lg md:w-[90%] w-[90%] mx-auto items-center"

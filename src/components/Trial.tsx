@@ -2,35 +2,44 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import { PhoneInput } from 'react-international-phone';
 
 interface FormData {
   fullName: string;
   email: string;
   company: string;
   software: string;
-  phone: number;
+  phone: string;
   licenseDetails?: string;
 };
 
 const FreeTrialForm = () => {
 
   const [loading, setLoading] = useState<boolean>(false);
-
+  const [err, setErr] = useState<string>("");
   const [form, setForm] = useState<FormData>({
     fullName: "",
     email: "",
     company: "",
     software: "QuickBooks",
-    phone: 0,
+    phone: "1234567890",
     licenseDetails: "",
   });
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
+    if (name === "licenseDetails" && value.length < 10) {
+      setErr("licenseDetails should be more than 10 characters");
+    } else {
+      setErr("");
+    }
+    console.log("Submitted Form Data:", form);
   };
+
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -55,7 +64,7 @@ const FreeTrialForm = () => {
         },
       );
 
-    console.log("Submitted Form Data:", form);
+
 
     // You can send this data to EmailJS or your backend here
   };
@@ -111,6 +120,7 @@ const FreeTrialForm = () => {
           <form onSubmit={handleSubmit} className="mt-6 space-y-4">
             <p className="text-pink-600 font-semibold font-josefin">Fill-up your trial form</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
               <input
                 type="text"
                 name="fullName"
@@ -120,6 +130,7 @@ const FreeTrialForm = () => {
                 className="border p-2 rounded-md w-full"
                 required
               />
+
               <select
                 name="software"
                 value={form.software}
@@ -152,14 +163,12 @@ const FreeTrialForm = () => {
               />
             </div>
 
-            <input
-              type="tel"
-              name="phone"
+            <PhoneInput
+              defaultCountry="in"
               value={form.phone}
-              onChange={handleChange}
+              onChange={(phone:string) => setForm((prev) => ({ ...prev, phone }))}
               placeholder="Phone Number*"
               className="border p-2 rounded-md w-full"
-              required
             />
 
             <textarea
@@ -170,12 +179,12 @@ const FreeTrialForm = () => {
               className="border p-2 rounded-md w-full h-20"
               required
             />
-
+            {err && <p className="text-red-500">{err}</p>}
             <button
               type="submit"
               className="w-full bg-gray-800 font-bold font-josefin text-white py-2 rounded-md hover:bg-gray-700"
             >
-             {loading ? "Submiting..."  : "Get 30 Days Free Trial"}  
+              {loading ? "Submiting..." : "Get 30 Days Free Trial"}
             </button>
           </form>
         </div>

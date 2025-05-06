@@ -1,6 +1,7 @@
 import { FaFacebook, FaXTwitter, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa6";
 
- 
+ import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <>
@@ -33,9 +34,9 @@ export default function Footer() {
         <div>
           <h2 className="text-lg font-bold border-b pb-2 mb-4">Company</h2>
           <ul className="space-y-2">
-            <li><a href="#" className="text-gray-300 hover:text-white">About Us</a></li>
-            <li><a href="#" className="text-gray-300 hover:text-white">Pricing</a></li>
-            <li><a href="#" className="text-gray-300 hover:text-white">Blogs</a></li>
+            <li><a href="#" className="text-gray-300 hover:text-white"><Link to='introduction'>About Us</Link></a></li>
+            <li><a href="#" className="text-gray-300 hover:text-white"><Link to='pricing'>Pricing</Link></a></li>
+            <li><a href="#" className="text-gray-300 hover:text-white"> <Link to='blogs'> Blogs</Link></a></li>
           </ul>
         </div>
 
@@ -43,9 +44,9 @@ export default function Footer() {
         <div>
           <h2 className="text-lg font-bold border-b pb-2 mb-4">Support</h2>
           <ul className="space-y-2">
-            <li><a href="#" className="text-gray-300 hover:text-white">FAQs</a></li>
-            <li><a href="#" className="text-gray-300 hover:text-white">Policy</a></li>
-            <li><a href="#" className="text-gray-300 hover:text-white">Contact Us</a></li>
+            <li><a href="#" className="text-gray-300 hover:text-white"><Link to='faq'>FAQs</Link></a></li>
+            <li><a href="#" className="text-gray-300 hover:text-white"><Link to='policy'>Policy</Link></a></li>
+            <li><a href="#" className="text-gray-300 hover:text-white"><Link to='Get-in-Touch'>Contact Us</Link></a></li>
           </ul>
         </div>
 

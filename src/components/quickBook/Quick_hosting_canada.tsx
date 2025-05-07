@@ -58,7 +58,7 @@ const Quick_hosting_canada = () => {
                    </div>
                </div>
 
-           <div className="p-2">
+           <div className="pt-6 p-2">
                <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
                QuickBooks POS Cloud Hosting: Conveniently track multi-channel sales and manage your retail inventory from multiple locations
                </h1>
@@ -66,7 +66,7 @@ const Quick_hosting_canada = () => {
 
            <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
  {/* Text Section */}
- <div className="w-full font-josefin text-gray-600 md:w-[45%]">
+ <div className="w-full text-justify font-josefin text-gray-600 md:w-[45%]">
   
    <p className="my-2 md:my-4 text-sm md:text-base">
    QuickBooks Canada Hosting is the most sought-after accounting solution by business owners, CPAs, and bookkeepers in Canada. QuickBooks Canada Hosting allows hosting of multiple versions of QuickBooks, offering added flexibility, security, and mobility to business owners who wish to collaborate with their team in real-time and stay up to date with their business operations on-the-go. 
@@ -185,8 +185,14 @@ Data Security and Recovery
 </div>
 
 <h1 className="text-3xl text-center font-bold font-serif mt-8 px-4">We host multiple versions of QuickBooks Desktop for Business Owners and Accountants in Canada</h1>
- <p className="text-blue-500 text-center mt-6">QuickBooks Desktop <span className="text-black">|</span> QuickBooks Pro <span className="text-black">|</span> 
-  QuickBooks Premier <span className="text-black">|</span>  QuickBooks Enterprise <span className="text-black">|</span>  QuickBooks POS <span className="text-black">|</span>  QuickBooks Canada</p>
+<p className="text-blue-500 text-center mt-6 font-bold">
+  <Link to="/quickbooks-desktop" className="hover:underline">QuickBooks Desktop</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-pro" className="hover:underline">QuickBooks Pro</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-premier" className="hover:underline">QuickBooks Premier</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-enterprise" className="hover:underline">QuickBooks Enterprise</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-pos" className="hover:underline">QuickBooks POS</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-canada" className="hover:underline">QuickBooks Canada</Link>
+</p>
 
     <h1 className="md:text-xl text-center font-bold font-kanit mt-8 px-4">QuickBooks Hosting Canada Frequently Asked Questions (FAQs) -</h1>
            <div className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">

@@ -72,8 +72,8 @@ const QickBooks_Hosting = () => {
 
       <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
         {/* Text Section */}
-        <div className="w-full md:w-[45%]">
-          <h1 className="font-semibold text-gray-800 font-montserrat text-lg md:text-xl">
+        <div className="w-full text-justify md:w-[45%]">
+          <h1 className="font-semibold  text-gray-800 font-montserrat text-lg md:text-xl">
             Want to experience the synergy between your most loved QuickBooks Desktop application and the
             power of the cloud? Tap into the efficacy and efficiency of cloud infrastructure with Winscloud Matrix – your authorized QuickBooks hosting provider.
           </h1>
@@ -168,12 +168,14 @@ const QickBooks_Hosting = () => {
       <h1 className="text-3xl text-center font-bold font-kanit mt-8">
         Explore Other Versions of QuickBooks Hosted by Winscloud Matrix
       </h1>
-      <p className="text-blue-500 text-center mt-6">
-        QuickBooks Desktop <span className="text-black">|</span> QuickBooks Pro <span className="text-black">|</span>
-        QuickBooks Premier <span className="text-black">|</span> QuickBooks Enterprise <span className="text-black">|</span>
-        QuickBooks POS <span className="text-black">|</span> QuickBooks Canada
-      </p>
-
+      <p className="text-blue-500 text-center mt-6 font-bold">
+  <Link to="/quickbooks-desktop" className="hover:underline">QuickBooks Desktop</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-pro" className="hover:underline">QuickBooks Pro</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-premier" className="hover:underline">QuickBooks Premier</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-enterprise" className="hover:underline">QuickBooks Enterprise</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-pos" className="hover:underline">QuickBooks POS</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-canada" className="hover:underline">QuickBooks Canada</Link>
+</p>
       <div className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
         {faqs.map((faq, index) => (
           <div key={index} className="border-b last:border-b-0">

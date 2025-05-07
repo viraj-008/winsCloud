@@ -53,7 +53,7 @@ const Sage_Hosting = () => {
       </div>
 
     {/* Adjusted spacing to be responsive */}
-    <div className="p-2">
+    <div className="p-4">
       <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
       Enhanced Flexibility and Business Accessibility with Sage Hosting
       </h1>
@@ -62,9 +62,9 @@ const Sage_Hosting = () => {
         </h1>
     </div>
 
-    <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
+    <div className="flex flex-col  md:flex-row justify-between p-4 md:p-8">
       {/* Text Section */}
-      <div className="w-full font-josefin text-gray-600 md:w-[45%]">
+      <div className="w-full text-justify font-josefin text-gray-600 md:w-[45%]">
         <p className=" my-2 md:my-4 text-sm md:text-base">
         Sage hosting means taking your licensed desktop Sage accounting, ERP and CRM applications to the cloud to
          experience the flexibility and security of the cloud in your day-to-day business operations. Sage Cloud hosting allows multi-user collaboration in real-time, from anywhere across the world. The enhanced productivity that 
@@ -162,21 +162,53 @@ Winscloud QuickBooks Enterprise Cloud Hosting: Powerful Features That Help Your 
   </h1>
   <p className="text-center font-montserrat text-sm mt-3">Flexible, Productive, and Secure Accounting</p>
 
-    <div className="flex flex-col  md:flex-row  mt-8">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 mt-8 font-montserrat text-sm p-3">
+  {/* Row 1 */}
+  <div>
+    <p>
+      <span className="font-kanit font-bold">Data Security - </span>
+      Winscloud Matrix has multiple layers of security in place such as SSAE 16 certified data centers, automated data backups, anti-virus and anti-malware, network firewalls, and two-factor verification to keep your data safe.
+    </p>
+  </div>
+  <div>
+    <p>
+      <span className="font-kanit font-bold">Uptime Guarantee - </span>
+      At Winscloud, we understand the importance of business continuity. Our SSAE-16 Type-II (SOC-2) data centers ensure maximum uptime with uninterrupted access to your business.
+    </p>
+  </div>
 
-      <div className="md:w-[50%] space-y-4 font-montserrat text-sm p-3">
-      <p className=" "><span className="font-kanit font-bold ">Data Security-</span>- Winscloud Matrix has multiple layers of security in place such as SSAE 16 certified data centers, automated data backups, anti-virus and anti-malware, network firewalls, and two-factor verification to keep your data safe.</p>
-      <p className=" "> <span className="font-kanit font-bold my-6 ">Round-the-Clock Tech support- </span>Our dedicated, in-house tech team provides support around the clock. Whether you need technical guidance or help with troubleshooting, our team is always at your disposal to provide the necessary assistance.</p>
-      <p className=""> <span className="font-kanit font-bold ">Scalability-</span>Modern businesses have dynamic needs. Our cloud infrastructure accommodates these changing needs of small businesses, giving them the freedom to scale up and down as require</p>
-      </div>
-    
-    <div className="md:w-[50%] space-y-4 p-3 font-montserrat text-sm">
+  {/* Row 2 */}
+  <div>
+    <p>
+      <span className="font-kanit font-bold">Round-the-Clock Tech Support - </span>
+      Our dedicated, in-house tech team provides support around the clock. Whether you need technical guidance or help with troubleshooting, our team is always at your disposal to provide the necessary assistance.
+    </p>
+  </div>
+  <div>
+    <p>
+      <span className="font-kanit font-bold">Flexible Plans - </span>
+      Winscloud’s pricing plans offer scalability and cost optimization. Our pricing model is flexible, allowing you to pay as you go based on the actual cloud usage.
+    </p>
+  </div>
 
-      <p className=" "><span className="font-kanit font-bold ">Uptime Guarantee- </span> At Winscloud, we understand the importance of business continuity. Our SSAE-16 Type-II (SOC-2) data centers ensure maximum uptime with uninterrupted access to your business.</p>
-      <p className=""><span className="font-kanit font-bold ">Flexible Plans-</span> Winscloud’s pricing plans offer scalability and cost optimization. Our pricing model is flexible, allowing you to pay as you go based on the actual cloud usage.</p>
-      <p className=" "><span className="font-kanit font-bold ">120-Min Data Migration-</span>Our team of experienced professionals are trained to seamlessly transfer business data saved on your desktop application to the cloud in just 2 hours.</p>
-    </div>
-    </div>
+  {/* Row 3 */}
+  <div>
+    <p>
+      <span className="font-kanit font-bold">Scalability - </span>
+      Modern businesses have dynamic needs. Our cloud infrastructure accommodates these changing needs of small businesses, giving them the freedom to scale up and down as required.
+    </p>
+  </div>
+  <div>
+    <p>
+      <span className="font-kanit font-bold">120-Min Data Migration - </span>
+      Our team of experienced professionals are trained to seamlessly transfer business data saved on your desktop application to the cloud in just 2 hours.
+    </p>
+  </div>
+</div>
+
+
+
+
 </div>
 
 <h1 className="text-2xl text-center font-bold font-kanit mt-8 px-8">Sage Hosting Frequently Asked Questions (FAQs) -</h1>

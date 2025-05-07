@@ -65,8 +65,8 @@ const Sage_300Hosting = () => {
 
     <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
       {/* Text Section */}
-      <div className=" font-josefin w-full md:w-[45%]">
-        <p className="  my-2 md:my-4 text-sm md:text-base">
+      <div className=" font-josefin  w-full md:w-[45%]">
+        <p className="  my-2 md:my-4  text-sm md:text-base">
         Sage 300 ERP is robust business management software which is used for multiple business operations such as accounting, bookkeeping, inventory tracking, sales, among others. An Infrastructure-as-a-service, Sage 300 cloud hosting service helps businesses enjoy an enhanced level of security, greater productivity, and more accessibility from anywhere, at any time.
         </p>
         <p className=" text-sm md:text-base">

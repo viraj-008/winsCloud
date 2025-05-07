@@ -69,11 +69,11 @@ const Sage100Hosting = () => {
 
     <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
       {/* Text Section */}
-      <div className="w-full md:w-[45%]">
-        <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
+      <div className="w-full font-josefin text-justify text-gray-600   md:w-[45%]">
+        <p className=" my-2 md:my-4 text-sm md:text-base">
         Sage 100 ERP is one of the most sought-after and user-friendly accounting software for small businesses. However, sticking to the traditional software has its own set of cons. With the increased need for businesses to stay online and accessible round-the-clock, it is important to move to the cloud. Sage 100 ERP hosting helps install and set up the desktop software on virtual servers, making it accessible on any device, from any location, and at any time of day, via the internet.
         </p>
-        <p className="font-montserrat text-sm md:text-base">
+        <p className=" text-sm md:text-base">
         Sage 10 ERP hosting is an exceptional solution for small and mid-sized businesses as it adds a greater level of flexibility and scalability. Business owners can still enjoy all the powerful features of their most used accounting software with Sage 100 cloud hosting allowing their business to scale at a pace that they desire. Taking the productivity of Sage 100 hosting further, SMBs can also host an array of add-ons on the cloud.
         </p>
       </div>

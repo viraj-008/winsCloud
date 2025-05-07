@@ -65,7 +65,7 @@ const QuickBook_pro = () => {
 
       <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
         {/* Text Section */}
-        <div className="w-full  font-josefin text-gray-600 md:w-[45%]">
+        <div className="w-full text-justify font-josefin text-gray-600 md:w-[45%]">
 
           <p className=" my-2 md:my-4 text-sm md:text-base">
             Modern businesses need technology that saves time, promotes flexibility, and offers security. While QuickBooks Pro
@@ -120,8 +120,14 @@ const QuickBook_pro = () => {
       </div>
 
       <h1 className="text-3xl text-center font-bold font-kanit mt-8">Explore Other Versions of QuickBooks Hosted by Winscloud Matrix</h1>
-      <p className="text-blue-500 text-center mt-6">QuickBooks Desktop <span className="text-black">|</span> QuickBooks Pro <span className="text-black">|</span>
-        QuickBooks Premier <span className="text-black">|</span>  QuickBooks Enterprise <span className="text-black">|</span>  QuickBooks POS <span className="text-black">|</span>  QuickBooks Canada</p>
+      <p className="text-blue-500 text-center mt-6 font-bold">
+  <Link to="/quickbooks-desktop" className="hover:underline">QuickBooks Desktop</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-pro" className="hover:underline">QuickBooks Pro</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-premier" className="hover:underline">QuickBooks Premier</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-enterprise" className="hover:underline">QuickBooks Enterprise</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-pos" className="hover:underline">QuickBooks POS</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-canada" className="hover:underline">QuickBooks Canada</Link>
+</p>
 
       <div className="my-12 w-[90%] mx-auto">
         <h1 className="text-center font-serif font-semibold text-2xl pt-5">
@@ -130,21 +136,50 @@ const QuickBook_pro = () => {
         <p className="text-center font-montserrat text-sm mt-3">As a small business, we understand that your biggest priority is to always be up and running. Using a desktop application comes with its own limitations – you cannot collaborate with your remote team, storage is limited, and performance may not be optimum. With Winscloud’s QuickBooks Pro Plus hosting solution, you experience enhanced performance of your QuickBooks Pro Plus –
         </p>
 
-        <div className="flex flex-col font-josefin  md:flex-row  mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 mt-8 font-josefin text-sm p-3">
+  {/* Row 1 */}
+  <div>
+    <p>
+      <span className="font-bold">Customized Pricing Plans -</span>
+      We understand the dynamics of modern businesses. To provide you with tailor-made pricing, we ensure that our pocket-friendly plans allow you to pay as you go, without any contract boundation.
+    </p>
+  </div>
+  <div>
+    <p>
+      <span className="font-bold">Data Back Up-</span>
+      Your critical business data is backed up twice daily and saved across multiple layers to ensure easy recovery in case of accidental deletion or a natural disaster like flood.
+    </p>
+  </div>
 
-          <div className="md:w-[50%] space-y-4  text-sm p-3">
-            <p className=" "><span className=" font-bold ">Customized Pricing Plans -</span> We understand the dynamics of modern businesses. To provide you with tailor-made pricing, we ensure that our pocket-friendly plans allow you to pay as you go, without any contract boundation.</p>
-            <p className=" "> <span className=" font-bold my-6 ">Expert Support 24/7/365 -</span> We have a team of certified QuickBooks Pro Plus Advisors who are available on call and by email to cater to all your technical needs, including installation, upgrading and troubleshooting.</p>
-            <p className=""> <span className=" font-bold ">High Performance Servers-  </span>Our HPC servers are managed by our team of professionals who are equipped to tackle any unexpected downtime to ensure that your business runs smoothly 24/7.</p>
-          </div>
+  {/* Row 2 */}
+  <div>
+    <p>
+      <span className="font-bold">Expert Support 24/7/365 -</span>
+      We have a team of certified QuickBooks Pro Plus Advisors who are available on call and by email to cater to all your technical needs, including installation, upgrading and troubleshooting.
+    </p>
+  </div>
+  <div>
+    <p>
+      <span className="font-bold">More Profitability-</span>
+      Winscloud Matrix’s QuickBooks hosting solutions eliminates the need to invest in heavy, in-house cloud infrastructure and helps you save big on maintenance costs.
+    </p>
+  </div>
 
-          <div className="md:w-[50%] space-y-4 p-3  text-sm">
+  {/* Row 3 */}
+  <div>
+    <p>
+      <span className="font-bold">High Performance Servers-</span>
+      Our HPC servers are managed by our team of professionals who are equipped to tackle any unexpected downtime to ensure that your business runs smoothly 24/7.
+    </p>
+  </div>
+  <div>
+    <p>
+      <span className="font-bold">Always Up and Running–</span>
+      Downtime can result in unhappy customers and thus adversely impact your business. Our QuickBooks Pro hosting solutions ensure business continuity with 99.99% up time.
+    </p>
+  </div>
+</div>
 
-            <p className=" "><span className=" font-bold ">Data Back Up- </span>Your critical business data is backed up twice daily and saved across multiple layers to ensure easy recovery in case of accidental deletion or a natural disaster like flood.</p>
-            <p className=""><span className=" font-bold ">More Profitability- </span> Winscloud Matrix’s QuickBooks hosting solutions eliminates the need to invest in heavy, in-house cloud infrastructure and helps you save big on maintenance costs.</p>
-            <p className=" "><span className=" font-bold ">Always Up and Running–</span>  Downtime can result in unhappy customers and thus adversely impact your business. Our QuickBooks Pro hosting solutions ensure business continuity with 99.99% up time.</p>
-          </div>
-        </div>
       </div>
 
       <div className="my-12 w-[90%] mx-auto bg-gray-200 rounded-lg text-center">

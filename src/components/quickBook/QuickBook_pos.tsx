@@ -56,7 +56,7 @@ const QuickBook_pos = () => {
                        </div>
                    </div>
     
-               <div className="">
+               <div className="pt-6 p-2">
                    <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
                    QuickBooks POS Cloud Hosting: Conveniently track multi-channel sales and manage your retail inventory from multiple locations
                    </h1>
@@ -64,7 +64,7 @@ const QuickBook_pos = () => {
     
                <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
      {/* Text Section */}
-     <div className="w-full md:w-[45%]">
+     <div className="w-full text-justify md:w-[45%]">
       
        <p className="font-josefin text-gray-600 my-2 md:my-4 text-sm md:text-base">
        At Winscloud, we understand that small businesses need technology that can be game changers when it comes to business efficiency. QuickBooks POS cloud 
@@ -179,14 +179,14 @@ const QuickBook_pos = () => {
                    <h1 className="font-bold font-kanit text-center">
                    Our Comprehensive Range of QuickBooks Hosting Services
                    </h1>
-                   <p className="text-blue-400 text-[10px] space-x-1 md:space-x-4 md:text-[12px]">
-                    <span>QuickBooksHosting</span>
-                    <span>Desktop</span>
-                    <span>PRO</span>
-                    <span>Premier</span>
-                    <span>Enterprise</span>
-                    <span> Canada</span>
-                   </p>
+                   <p className="text-blue-500 text-center mt-6 font-bold">
+  <Link to="/quickbooks-desktop" className="hover:underline">QuickBooks Desktop</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-pro" className="hover:underline">QuickBooks Pro</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-premier" className="hover:underline">QuickBooks Premier</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-enterprise" className="hover:underline">QuickBooks Enterprise</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-pos" className="hover:underline">QuickBooks POS</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-canada" className="hover:underline">QuickBooks Canada</Link>
+</p>
                </div>
     
                <div className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">

@@ -78,11 +78,11 @@ Anytime, anywhere accounting for your Small and Mid-Sized Business with Sage 50 
 
     <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
       {/* Text Section */}
-      <div className="w-full md:w-[45%]">
-        <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
+      <div className="w-full font-josefin text-justify text-gray-600   md:w-[45%]">
+        <p className=" my-2 md:my-4 text-sm md:text-base">
         Sage 50 cloud hosting is an IaaS (Infrastructure-as-a-Service) solution that offers the robust, desktop version of the easy-to-use Sage 50 application on the cloud. Business owners who choose to host their Sage 50 on cloud save time, money and the hassle of driving to their office every time they need to work on their important business files. With hosted Sage 50, you no longer must stay tethered to your office desktop. Instead, you can access your data on the go, on any device, from wherever you are.
         </p>
-        <p className="font-montserrat text-sm md:text-base">
+        <p className=" text-sm md:text-base">
         Sage 50 hosting offers the exact same features as the desktop application, along with enhanced storage and computing capabilities. Businesses that transition to the cloud-based Sage 50 have the leverage to allow business access to multiple people from their team so they can collaborate from the comfort of their home at any time of the day. Most Sage 50 hosting providers offer affordable plans where the businesses have the option to scale up as their business grows, without paying a hefty amount every now and then.
         </p>
       </div>

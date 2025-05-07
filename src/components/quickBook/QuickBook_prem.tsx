@@ -70,7 +70,7 @@ const QuickBook_prem = () => {
 
       <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
         {/* Text Section */}
-        <div className="w-full font-josefin text-gray-600 md:w-[45%]">
+        <div className="w-full text-justify font-josefin text-gray-600 md:w-[45%]">
 
           <p className=" my-2 md:my-4 text-sm md:text-base">
             QuickBooks Premier Plus is one of the most popular accounting software used by CPAs, accountants, and small businesses.
@@ -126,9 +126,14 @@ const QuickBook_prem = () => {
       </div>
 
       <h1 className="text-3xl text-center font-bold font-kanit mt-8">Step Up Your Accounting Operations with our QuickBooks Hosting Services</h1>
-      <p className="text-blue-500 text-center mt-6">QuickBooks Desktop <span className="text-black">|</span> QuickBooks Pro <span className="text-black">|</span>
-        QuickBooks Premier <span className="text-black">|</span>  QuickBooks Enterprise <span className="text-black">|</span>  QuickBooks POS <span className="text-black">|</span>  QuickBooks Canada</p>
-
+      <p className="text-blue-500 text-center mt-6 font-bold">
+  <Link to="/quickbooks-desktop" className="hover:underline">QuickBooks Desktop</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-pro" className="hover:underline">QuickBooks Pro</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-premier" className="hover:underline">QuickBooks Premier</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-enterprise" className="hover:underline">QuickBooks Enterprise</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-pos" className="hover:underline">QuickBooks POS</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-canada" className="hover:underline">QuickBooks Canada</Link>
+</p>
       <div className="my-12 w-[90%] mx-auto">
         <h1 className="text-center font-serif font-semibold text-2xl pt-5">
           Winscloud QuickBooks Premier Cloud Hosting: Why should you choose us as your hosting provider?

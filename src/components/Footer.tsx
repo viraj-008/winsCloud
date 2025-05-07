@@ -32,23 +32,66 @@ export default function Footer() {
 
         {/* Company Section */}
         <div>
-          <h2 className="text-lg font-bold border-b pb-2 mb-4">Company</h2>
-          <ul className="space-y-2">
-            <li><a href="#" className="text-gray-300 hover:text-white"><Link to='introduction'>About Us</Link></a></li>
-            <li><a href="#" className="text-gray-300 hover:text-white"><Link to='pricing'>Pricing</Link></a></li>
-            <li><a href="#" className="text-gray-300 hover:text-white"> <Link to='blogs'> Blogs</Link></a></li>
-          </ul>
-        </div>
+  <h2 className="text-lg font-bold border-b pb-2 mb-4">Company</h2>
+  <ul className="space-y-2">
+    <li>
+      <Link
+        to="introduction"
+        className="text-gray-300 hover:text-white hover:rotate-3 transition-transform block"
+      >
+        About Us
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="pricing"
+        className="text-gray-300 hover:text-white hover:-rotate-3 transition-transform block"
+      >
+        Pricing
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="blogs"
+        className="text-gray-300 hover:text-white hover:-rotate-3 transition-transform block"
+      >
+        Blogs
+      </Link>
+    </li>
+  </ul>
+</div>
 
-        {/* Support Section */}
-        <div>
-          <h2 className="text-lg font-bold border-b pb-2 mb-4">Support</h2>
-          <ul className="space-y-2">
-            <li><a href="#" className="text-gray-300 hover:text-white"><Link to='faq'>FAQs</Link></a></li>
-            <li><a href="#" className="text-gray-300 hover:text-white"><Link to='policy'>Policy</Link></a></li>
-            <li><a href="#" className="text-gray-300 hover:text-white"><Link to='Get-in-Touch'>Contact Us</Link></a></li>
-          </ul>
-        </div>
+{/* Support Section */}
+<div>
+  <h2 className="text-lg font-bold border-b pb-2 mb-4">Support</h2>
+  <ul className="space-y-2">
+    <li>
+      <Link
+        to="faq"
+        className="text-gray-300 hover:text-white hover:rotate-3 transition-transform block"
+      >
+        FAQs
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="policy"
+        className="text-gray-300 hover:text-white hover:-rotate-3 transition-transform block"
+      >
+        Policy
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="Get-in-Touch"
+        className="text-gray-300 hover:text-white hover:-rotate-3 transition-transform block"
+      >
+        Contact Us
+      </Link>
+    </li>
+  </ul>
+</div>
+
 
         {/* Address Section */}
         <div>

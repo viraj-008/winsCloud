@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
             { label: "Blogs", href: "/blogs" },
             ]
         },
-        { name: <FaUserCircle className="text-3xl text-blue-700" />, dropdown: [{ label: "Profile", href: "/profile" }, { label: "", href: "/terms" }] },
+        // { name: <FaUserCircle className="text-3xl text-blue-700" />, dropdown: [{ label: "Profile", href: "/profile" }, { label: "", href: "/terms" }] },
     ];
 
     const toggleMobileDropdown = (index: number) => {

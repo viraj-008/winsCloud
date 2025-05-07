@@ -71,26 +71,24 @@ const FreeTrialForm = () => {
 
   return (
     <>
-      <div className='w-full flex bg-gradient-to-r from-black via-pink-500 to-blue-500 pt-28 px-5 md:px-20 items-center'>
-        <div className='w-full text-center md:text-left'>
-          <h1 className='text-white text-2xl md:text-6xl'>
+      <div className='w-full flex bg-gradient-to-r from-red-500 via-pink-500 to-blue-500 pt-28 px-5 md:px-20 items-center'>
+        <div className='w-full text-center md:text-left py-6'>
+          <h1 className='text-white font-josefin  p-3 rounded-lg text-center  text-4xl md:text-6xl'>
             Start Your No-Obligation Free Trial Today!
           </h1>
-          <p className='text-md md:text-4xl m md:mt-7'>
+          <p className='text-md font-serif text-green-200 my-2 p-4 rounded-lg shadow-lg text-2xl text-center md:text-4xl m '>
             Get the financial tools and insights to<br /> start, build, and grow your business
           </p>
-          <Link to='/trial'><button className='mx-auto md:mx-0 flex border my-10 md:my-16 bg-green-600 hover:bg-green-700 text-xl md:text-4xl px-6 md:px-12 text-white font-josefin py-2 rounded-lg'>
-            Free One-Month trial!
-          </button></Link>
+          
         </div>
       </div>
-      <h2 className="text-xl font-serif font-bold mx-auto text-center mt-3
+      <h2 className="text-3xl font-serif font-bold mx-auto text-center p-4
         ">Start Your No-Obligation Free Trial Today!</h2>
       <div className="flex flex-col lg:flex-row justify-center items-center px-6 py-12">
         {/* Left Section */}
         <div className="max-w-lg text-left lg:mr-12">
-          <h3 className="text-xl font-semibold md:mt-4 font-kanit">What does Winscloud have in Store for you?</h3>
-          <p className="text-gray-600 mt-4 font-montserrat">
+          <h3 className="text-xl text-center md:text-satrt font-semibold md:mt-4 font-kanit">What does Winscloud have in Store for you?</h3>
+          <p className="text-gray-600  mt-4 text-justify">
             Unlock top-tier cloud solutions boasting unparalleled security and
             reliability accessible from any corner of the globe. Our
             cutting-edge cloud hosting services streamline your operations

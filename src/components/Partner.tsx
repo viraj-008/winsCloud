@@ -32,7 +32,8 @@ const Partner = () => {
   return (
     <>
 
-    <h1 className="text-4xl text-center bg-gray-300 my-8 font-serif p-3 font-bold text-gray-800 w-[96%] rounded-xl mx-auto">Our Truted Partner</h1>
+
+    <h1 className="text-4xl text-center bg-gray-300 my-8 font-serif p-3 font-bold text-gray-800 w-[96%] rounded-xl mx-auto">Our Trusted Partners</h1>
    <motion.div className="overflow-hidden my-4 w-[90%] bg-white py-4 mx-auto">
       <motion.div
         className="flex gap-8 w-max"

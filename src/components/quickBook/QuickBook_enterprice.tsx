@@ -68,7 +68,7 @@ const QuickBook_enterprice = () => {
           </div>
         </div>
 
-      <div className="">
+      <div className="pt-6">
         <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
           QuickBooks Enterprise Cloud Hosting: A World Class Solution to Remotely Manage Your Business Operations
         </h1>
@@ -76,7 +76,7 @@ const QuickBook_enterprice = () => {
 
       <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
         {/* Text Section */}
-        <div className="w-full font-josefin text-gray-600 md:w-[45%]">
+        <div className="w-full text-justify font-josefin text-gray-600 md:w-[45%]">
 
           <p className=" my-2 md:my-4 text-sm md:text-base">
             All the features of Intuit’s most powerful and advanced accounting software blended with the flexibility of the cloud.

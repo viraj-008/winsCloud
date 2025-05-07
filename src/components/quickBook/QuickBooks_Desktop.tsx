@@ -85,7 +85,7 @@ const QickBooks_Desktop = () => {
 
             <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
   {/* Text Section */}
-  <div className="w-full md:w-[45%]">
+  <div className="w-full text-justify md:w-[45%]">
    
     <p className="font-josefin text-gray-600 my-2 md:my-4 text-sm md:text-base">
     QuickBooks desktop cloud hosting means accessing the desktop version of QuickBooks software on a remote 
@@ -174,8 +174,14 @@ const QickBooks_Desktop = () => {
 
  <h1 className="text-3xl text-center font-bold font-kanit mt-8">We Host All Versions of Your Most Loved QuickBooks Desktop</h1>
  <p className="text-center w-[90%] md:w-[80%] mx-auto mt-4 font-montserrat">Maximize efficiency in your accounting and tax operations with affordable and secure QuickBooks Desktop Hosting. Let our team handle your QuickBooks Desktop Hosting, so you can focus on what is most important – YOUR Business!</p>
- <p className="text-blue-500 text-center mt-6">QuickBooks Desktop <span className="text-black">|</span> QuickBooks Pro <span className="text-black">|</span> 
-  QuickBooks Premier <span className="text-black">|</span>  QuickBooks Enterprise <span className="text-black">|</span>  QuickBooks POS <span className="text-black">|</span>  QuickBooks Canada</p>
+ <p className="text-blue-500 text-center mt-6 font-bold">
+  <Link to="/quickbooks-desktop" className="hover:underline">QuickBooks Desktop</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-pro" className="hover:underline">QuickBooks Pro</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-premier" className="hover:underline">QuickBooks Premier</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-enterprise" className="hover:underline">QuickBooks Enterprise</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-pos" className="hover:underline">QuickBooks POS</Link> <span className="text-black">|</span>{' '}
+  <Link to="/quickbooks-canada" className="hover:underline">QuickBooks Canada</Link>
+</p>
 
   
   <div className="my-12 w-[90%] mx-auto bg-gray-200 rounded-lg text-center">

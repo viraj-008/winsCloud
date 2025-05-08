@@ -22,11 +22,11 @@ export default function Footer() {
           </p>
           {/* Social Media Icons */}
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-white text-2xl hover:scale-125 transition-all"><FaFacebook /></a>
-            <a href="#" className="text-white text-2xl hover:scale-125 transition-all"><FaXTwitter /></a>
-            <a href="#" className="text-white text-2xl hover:scale-125 transition-all"><FaInstagram /></a>
-            <a href="#" className="text-white text-2xl hover:scale-125 transition-all"><FaYoutube /></a>
-            <a href="#" className="text-white text-2xl hover:scale-125 transition-all"><FaLinkedin /></a>
+            <a href="https://www.facebook.com/winscloudmatrixllc/" className="text-white text-2xl hover:scale-125 transition-all"><FaFacebook /></a>
+            <a href="https://x.com/WinscloudMatrix" className="text-white text-2xl hover:scale-125 transition-all"><FaXTwitter /></a>
+            <a href="https://www.instagram.com/winscloudmatrixllc/" className="text-white text-2xl hover:scale-125 transition-all"><FaInstagram /></a>
+            <a href="https://www.instagram.com/winscloudmatrixllc/" className="text-white text-2xl hover:scale-125 transition-all"><FaYoutube /></a>
+            <a href="https://www.linkedin.com/company/winscloud-matrix-llc/" className="text-white text-2xl hover:scale-125 transition-all"><FaLinkedin /></a>
           </div>
         </div>
 

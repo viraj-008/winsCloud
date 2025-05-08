@@ -730,7 +730,7 @@ const Blogs = () => {
     
   return (
     <>
-    <div className="pt-[100px] bg-gray-800">
+    <div className="pt-[100px] bg-pink-800">
         <h1 className="text-2xl  font-semibold font-josefin text-center   w-[90%] mx-auto rounded-lg text-white border bg-pink-500 shadow-lg mb-2">BLOG POST</h1>
         
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-8">
@@ -738,7 +738,7 @@ const Blogs = () => {
       {blogData.map((blog) => (
         <div
           key={blog.id}
-          className="border-2 border-blue-600 bg-[#fdf5e6]  rounded-2xl shadow-lg overflow-hidden   p-4 hover:scale-[1.02] hover:shadow-2xl transition duration-300"
+          className="border-2 bg-[#fdf5e6]  rounded-2xl shadow-lg overflow-hidden   p-4 hover:scale-[1.02] hover:shadow-2xl transition duration-300"
         >
           <img
             src={blog.images}

@@ -62,20 +62,19 @@ function FAQ() {
       console.log("running FAQ component")
   return (
     <>
-       <div className="h-auto w-full pb-10">
-      <div className="w-full flex bg-gradient-to-r from-black via-pink-500 to-blue-500 pt-20 px-5 md:px-20 items-center min-h-[530px]">
+     
+     <div className="w-full flex bg-[url('/images/Home/intro.jpg')] bg-cover bg-center  pt-10 px-5 md:px-20 items-center min-h-[330px]">
         <div className="w-full text-center ">
-          <h1 className="text-white text-3xl md:text-6xl leading-tight">
-          Faq
+          <h1 className="text-white text-3xl md:text-6xl leading-tight ">
+          FAQ
           </h1>
         
-          <Link to='/trial'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
+          <Link to='/trial'><button className="mx-auto flex border-2  my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
           Get Free Trial Now
           </button></Link>
         </div>
       </div>
-    </div>
-        <h1 className="text-center font-kanit font-semibold text-2xl">FAQs</h1>
+        <h1 className="text-center font-kanit font-semibold my-4 text-2xl">FAQs</h1>
        <div className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
       {faqs.map((faq, index) => (
         <div key={index} className="border-b last:border-b-0">

@@ -88,11 +88,11 @@ const Navbar: React.FC = () => {
         }
     };
 
-    return (
-        <div className={`fixed w-full z-50  transition-all duration-300 
+    return ( 
+        <div className={`fixed max-w-[1440px] mx-auto w-full   z-50  transition-all duration-300 
              lg:bg-transparent
             ${isScrolled ? "lg:bg-white/95 bg-white shadow-lg " : ""}`}>
-            <div className="flex flex-wrap justify-between p-4  items-center lg:justify-around">
+            <div className=" flex flex-wrap justify-between p-4  items-center lg:justify-around">
                 <Link to="/">
                     <img className="bg-blue-500 px-2 h-9 rounded-lg" src="./images/logo/wins.avif" alt="Logo" />
                 </Link>

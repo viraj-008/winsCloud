@@ -41,6 +41,7 @@ import BlogDetail from "./components/AbluteUs/BlogDetail";
 function App() {
   return (
     <BrowserRouter> 
+     <div className="max-w-[1440px] mx-auto w-full ">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -80,6 +81,8 @@ function App() {
       </Routes>
       <ToastContainer position="top-right" autoClose={3000} />
       <Footer />
+
+      </div>
     </BrowserRouter>
   );
 }

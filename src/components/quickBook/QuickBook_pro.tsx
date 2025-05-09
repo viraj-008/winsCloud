@@ -90,30 +90,30 @@ const QuickBook_pro = () => {
         <p className="text-gray-600 text-center font-bold">Benefits of taking advantage of cloud hosting your QuickBooks Pro Desktop</p>
       </div>
 
-      <div className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="w-[90%] mt-5   mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Card 1 */}
-        <div className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
+        <div className="bg-white/20 backdrop-blur-lg p-6 border hover:bg-red-800 hover:text-white transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
           <img src="images/logo/qb2.webp" alt="Best-fitting Plans" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
           <h2 className="font-bold text-xl mb-2 font-kanit">Optimal Performance</h2>
-          <p className="text-gray-700 font-montserrat  transition-all duration-300">
+          <p className="font-montserrat  transition-all duration-300">
             The high-performance SSD servers ensure maximum uptime, offer additional storage, and eliminate speed and downtime issues, so your business runs smoothly.
           </p>
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
+        <div className="bg-white/20 backdrop-blur-lg p-6 hover:bg-red-800 hover:text-white transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
           <img src="images/logo/qb1.webp" alt="Round-the-Clock Support" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
           <h2 className="font-bold text-xl mb-2 font-kanit">Unlimited Add-Ons Integrations</h2>
-          <p className="text-gray-700 font-montserrat " >
+          <p className="font-montserrat " >
             Need multiple add-ons and/or third-party apps to go along with QuickBooks Pro Hosting? Your top QuickBooks hosting provider can host all your apps and add-ons that support your business on the cloud
           </p>
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
+        <div className="bg-white/20 hover:bg-red-800 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
           <img src="images/logo/teamwork.webp" alt="Data Security and Recovery" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
           <h2 className="font-bold text-xl mb-2  font-kanit">Industry Standard Security</h2>
-          <p className="text-gray-800 font-montserrat transition-all duration-300">
+          <p className="font-montserrat transition-all duration-300">
             The high-performance SSD servers ensure maximum uptime, offer additional storage, and eliminate speed and downtime issues, so your business runs smoothly.e.
           </p>
         </div>
@@ -133,10 +133,10 @@ const QuickBook_pro = () => {
         <h1 className="text-center font-serif font-semibold text-2xl pt-5">
           WinsCloud: The Best QuickBooks Pro Hosting Provider for Your Business Accounting Needs
         </h1>
-        <p className="text-center font-montserrat text-sm mt-3">As a small business, we understand that your biggest priority is to always be up and running. Using a desktop application comes with its own limitations – you cannot collaborate with your remote team, storage is limited, and performance may not be optimum. With Winscloud’s QuickBooks Pro Plus hosting solution, you experience enhanced performance of your QuickBooks Pro Plus –
+        <p className="text-center font-josefin text-sm mt-3">As a small business, we understand that your biggest priority is to always be up and running. Using a desktop application comes with its own limitations – you cannot collaborate with your remote team, storage is limited, and performance may not be optimum. With Winscloud’s QuickBooks Pro Plus hosting solution, you experience enhanced performance of your QuickBooks Pro Plus –
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 mt-8 font-josefin text-sm p-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 mt-8 font-montserrat text-sm p-3">
   {/* Row 1 */}
   <div>
     <p>

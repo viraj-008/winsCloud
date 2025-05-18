@@ -5,8 +5,13 @@ import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import Partner from '../Partner';
 import emailjs from '@emailjs/browser';
+import { FaPlus } from "react-icons/fa";
+import { TiMinus } from "react-icons/ti";
+import { RiCloseLargeFill } from "react-icons/ri";
+import { GrStorage } from "react-icons/gr";
+import { MdSdStorage } from "react-icons/md";
+import { FiUsers } from "react-icons/fi";
 
 const validationSchema = Yup.object({
     FullName: Yup.string()
@@ -80,18 +85,14 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
         <>
             <div className='fixed top-3 px-4 shadow-xl inset-0 z-50 flex items-center justify-center bg-opacity-90'>
                 <div className='rounded-lg w-full max-w-4xl'> {/* Added responsive width */}
-                    <div className='bg-white w-full sm:w-[600px] mx-auto border-4 border-red-600 p-6 rounded-lg max-h-[90vh] overflow-y-auto shadow-lg'>
-                        <h1
-                            onClick={() => setShowForm(false)}
-                            className='hover:cursor-pointer text-red-500 font-josefin w-[60px] border px-2 shadow-lg rounded-lg py-[2px] text-xs'
-                        >
-                            Close
-                        </h1>
+                    <div className='bg-white w-full sm:w-[600px] mx-auto border-4 border-green-500 p-6 rounded-lg max-h-[90vh] overflow-y-auto shadow-lg'>
+                     
+                       <div className=' mb-4  flex justify-end'> <RiCloseLargeFill  className='text-2xl text-red-600 border border-black rounded-xl p-1 cursor-pointer'   onClick={() => setShowForm(false)}/></div>
 
-                        <h1 className='text-center text-xl font-anton mb-2 text-gray-800 tracking-wider underline'>
-                            {planType.toUpperCase()}
+                        <h1 className='text-center md:text-xl font-josefin font-bold mb-2 text-gray-800  tracking-wider  '>
+                        <span className='font-serif text-black font-extralight'>Plan Type: </span>  ( {planType.toUpperCase()} )
                         </h1>
-                        <h2 className='text-2xl text-center font-josefin font-bold bg-red-600 text-white py-3 rounded-lg mb-4'>
+                        <h2 className='text-2xl text-center font-josefin font-bold underline  text-red-800 py-3 rounded-lg mb-4'>
                             {selectedPlan.keyName}
                         </h2>
 
@@ -131,58 +132,58 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                                     <div className='flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 mb-4'>
                                         <div className='md:w-1/2 w-full'>
                                             <label className='block text-red-700 ml-1 text-sm text-center font-josefin'>
-                                                Additional Storage
+                                              <GrStorage className='mx-auto text-gray-800  text-2xl '/>  Additional Storage
                                             </label>
-                                            <div className='flex justify-center items-center space-x-2 mt-2'>
+                                            <div className='flex justify-center  items-center space-x-2 mt-2'>
                                                 <button
                                                     type='button'
                                                     onClick={() => handleIncrease('additionalStorage', -1, values, setFieldValue)}
-                                                    className='px-4 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 transition-all'
+                                                    className='text-red-600'
                                                 >
-                                                    −
+                                                   <TiMinus />
                                                 </button>
                                                 <input
                                                     type='text'
                                                     value={values.additionalStorage}
                                                     readOnly
-                                                    className='w-10 text-center border-2 border-gray-800 rounded-full'
+                                                    className='w-10 text-center font-bold text-2xl  rounded-full'
                                                 />
                                                 <button
                                                     type='button'
                                                     onClick={() => handleIncrease('additionalStorage', 1, values, setFieldValue)}
-                                                    className='px-4 py-1 bg-green-500 text-white rounded-md hover:bg-green-600 transition-all'
+                                                    className='text-green-600'
                                                 >
-                                                    +
+                                                    <FaPlus />
                                                 </button>
                                             </div>
                                         </div>
 
                                         {planType === "dedicated" && (
                                             <div className='md:w-1/2 w-full'>
-                                                <label className='block text-red-700 ml-1 text-sm text-center font-josefin'>
-                                                    Additional Ram
+                                                <label className='block text-blue-700 ml-1 text-sm text-center font-josefin'>
+                                                   <MdSdStorage className='mx-auto text-gray-800  text-2xl' /> Additional Ram
                                                 </label>
                                                 <div className='flex justify-center items-center space-x-2 mt-2'>
                                                     <button
                                                         type='button'
                                                         onClick={() => handleIncrease('AdditionalRAM', -1, values, setFieldValue)}
-                                                        className='px-4 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 transition-all'
+                                                        className='text-red-600'
                                                     >
-                                                        −
+                                                         <TiMinus />
                                                     </button>
                                                     <input
                                                         type='text'
                                                         value={values.AdditionalRAM}
                                                         name='AdditionalRAM'
                                                         readOnly
-                                                        className='w-10 text-center border-2 border-gray-800 rounded-full'
+                                                        className='w-10 text-center font-bold text-2xl '
                                                     />
                                                     <button
                                                         type='button'
                                                         onClick={() => handleIncrease('AdditionalRAM', 1, values, setFieldValue)}
-                                                        className='px-4 py-1 bg-green-500 text-white rounded-md hover:bg-green-600 transition-all'
-                                                    >
-                                                        +
+                                                         className='text-green-600 '
+                                                >
+                                                    <FaPlus />
                                                     </button>
                                                 </div>
                                             </div>
@@ -191,29 +192,29 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                                         {selectedPlan.numberUserFrom !== undefined && (
                                             <div className='md:w-1/2 w-full flex flex-col justify-center'>
                                                 <label className='block text-green-700 font-josefin text-center'>
-                                                    Number of Users
+                                                  <FiUsers  className='mx-auto text-gray-800  text-2xl '/>  Number of Users
                                                 </label>
                                                 <div className='flex justify-center items-center space-x-2 mt-2'>
                                                     <button
                                                         type='button'
                                                         onClick={() => handleIncrease('noOfUsers', -1, values, setFieldValue)}
-                                                        className='px-4 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 transition-all'
+                                                       className='text-red-600'
                                                     >
-                                                        −
+                                                         <TiMinus />
                                                     </button>
                                                     <input
                                                         type='number'
                                                         value={values.noOfUsers}
                                                         name='noOfUsers'
                                                         readOnly
-                                                        className='w-10 text-center border-2 border-gray-800 rounded-full'
+                                                        className='w-10 text-center font-bold text-2xl'
                                                     />
                                                     <button
                                                         type='button'
                                                         onClick={() => handleIncrease('noOfUsers', 1, values, setFieldValue)}
-                                                        className='px-4 py-1 bg-green-500 text-white rounded-md hover:bg-green-600 transition-all'
-                                                    >
-                                                        +
+                                                        className='text-green-600'
+                                                >
+                                                    <FaPlus />
                                                     </button>
                                                 </div>
                                             </div>
@@ -328,7 +329,7 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                     </div>
                 </div>
             </div>
-            <Partner />
+            {/* <Partner /> */}
         </>
     );
 };

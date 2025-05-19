@@ -1,12 +1,18 @@
- import React from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 import { Plan } from './Pricing';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import Partner from '../Partner';
+import emailjs from '@emailjs/browser';
+import { FaPlus } from "react-icons/fa";
+import { TiMinus } from "react-icons/ti";
+import { RiCloseLargeFill } from "react-icons/ri";
+import { GrStorage } from "react-icons/gr";
+import { MdSdStorage } from "react-icons/md";
+import { FiUsers } from "react-icons/fi";
 
-// Validation Schema using Yup
 const validationSchema = Yup.object({
     FullName: Yup.string()
         .min(2, 'Name is too short')
@@ -19,6 +25,7 @@ const validationSchema = Yup.object({
     Phone: Yup.string()
         .required('Phone number is required'),
     License_Details: Yup.string()
+        .min(10, 'License details must be at least 10 characters')
         .required('License details are required'),
     Desired_User: Yup.string()
         .required('Desired User Name/Names is required'),
@@ -33,7 +40,10 @@ interface Props {
 }
 
 const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
-    const [form, setForm] = React.useState({
+
+    const [loading, setLoading] = useState<boolean>(false);
+
+    const initialValues = {
         AdditionalRAM: 0,
         additionalStorage: 0,
         noOfUsers: planType === "dedicated" ? (selectedPlan.default ?? 0) : selectedPlan.numberUserFrom,
@@ -47,225 +57,213 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
         Company: '',
         Phone: '',
         License_Details: '',
-    });
-    console.log("Form data:", form); // Log the form data to the console
-    React.useEffect(() => {
-        if (planType === "dedicated") {
-            setForm(prev => ({
-                ...prev,
-                noOfUsers: selectedPlan.default ?? 0,
-                totalPrice: selectedPlan.packageMonth ?? 0,
-            }));
+        planType
+    };
+
+
+    // const handleIncrease = (field: string, increment: number, values: any, setFieldValue: any) => {
+    //     const newValue = values[field] + increment;
+    //     setFieldValue(field, Math.max(newValue, 0));
+    //     if (field === 'AdditionalRAM' || field === 'additionalStorage') {
+    //         setFieldValue('totalPrice', values.totalPrice + increment);
+    //     } else if (field === 'noOfUsers') {
+    //         let newTotalPrice = 0;
+    //         if (planType === "shared") {
+    //             newTotalPrice = newValue * (selectedPlan.userMonth ?? 0);
+    //         } else {
+    //             const basePrice = selectedPlan.packageMonth ?? 0;
+    //             const defaultUsers = selectedPlan.default ?? 0;
+    //             const extraPerUser = selectedPlan.AdditionalAccount ?? 0;
+    //             const extraUsers = Math.max(0, newValue - defaultUsers);
+    //             newTotalPrice = basePrice + extraUsers * extraPerUser;
+    //         }
+    //         setFieldValue('totalPrice', newTotalPrice);
+    //     }
+    //     console.log('Updated Value:', initialValues);
+    // };
+
+    const handleIncrease = (
+        field: string,
+        increment: number,
+        values: any,
+        setFieldValue: any
+    ) => {
+        let newValue = values[field] + increment;
+
+        if (field === 'noOfUsers') {
+            const minUsers = selectedPlan.numberUserFrom ?? 1;
+            const maxUsers = selectedPlan.numberUserto ?? 100;
+
+            // Apply limits
+            if (newValue < minUsers) {
+                newValue = minUsers;
+            } else if (newValue > maxUsers) {
+                newValue = maxUsers;
+            }
+
+            setFieldValue(field, newValue);
+
+            let newTotalPrice = 0;
+            if (planType === "shared") {
+                newTotalPrice = newValue * (selectedPlan.userMonth ?? 0);
+            } else {
+                const basePrice = selectedPlan.packageMonth ?? 0;
+                const defaultUsers = selectedPlan.default ?? 0;
+                const extraPerUser = selectedPlan.AdditionalAccount ?? 0;
+                const extraUsers = Math.max(0, newValue - defaultUsers);
+                newTotalPrice = basePrice + extraUsers * extraPerUser;
+            }
+
+            setFieldValue('totalPrice', newTotalPrice);
+
         } else {
-            setForm(prev => ({
-                ...prev,
-                noOfUsers: selectedPlan.numberUserFrom,
-                totalPrice: selectedPlan.numberUserFrom * (planType === "shared" ? (selectedPlan.userMonth ?? 0) : (selectedPlan.packageMonth ?? 0)),
-            }));
+            // For fields like AdditionalRAM or additionalStorage
+            newValue = Math.max(newValue, 0);
+            setFieldValue(field, newValue);
+
+            if (field === 'AdditionalRAM' || field === 'additionalStorage') {
+                setFieldValue('totalPrice', values.totalPrice + increment);
+            }
         }
-    }, [planType, selectedPlan]);
 
-
-    const increaseAdditionalRAM = () => {
-        setForm(prev => ({
-            ...prev,
-            AdditionalRAM: prev.AdditionalRAM + 1,
-            totalPrice: prev.totalPrice + 1,
-        }));
-    };
-    const decreaseAdditionalRAM = () => {
-        setForm(prev => {
-            if (prev.AdditionalRAM <= 0) return prev;
-
-            return {
-                ...prev,
-                AdditionalRAM: prev.AdditionalRAM - 1,
-                totalPrice: prev.totalPrice - 1,
-            };
-        });
+        console.log('Updated Value:', initialValues);
     };
 
-
-    const increaseStorage = () => {
-        setForm(prev => ({
-            ...prev,
-            additionalStorage: prev.additionalStorage + 1,
-            totalPrice: prev.totalPrice + 1,
-        }));
-    };
-
-    const decreaseStorage = () => {
-        setForm(prev => ({
-            ...prev,
-            additionalStorage: prev.additionalStorage > 0 ? prev.additionalStorage - 1 : 0,
-            totalPrice: prev.additionalStorage > 0 ? prev.totalPrice - 1 : prev.totalPrice,
-        }));
-    };
-
-    const increaseUsers = () => {
-        setForm(prev => {
-            const newUserCount = prev.noOfUsers < selectedPlan.numberUserto
-                ? prev.noOfUsers + 1
-                : prev.noOfUsers;
-
-            let newTotalPrice = 0;
-
-            if (planType === "shared") {
-                newTotalPrice = newUserCount * (selectedPlan.userMonth ?? 0);
-            } else {
-                const basePrice = selectedPlan.packageMonth ?? 0;
-                const defaultUsers = selectedPlan.default ?? 0;
-                const extraPerUser = selectedPlan.AdditionalAccount ?? 0;
-                const extraUsers = Math.max(0, newUserCount - defaultUsers);
-                newTotalPrice = basePrice + extraUsers * extraPerUser;
-            }
-
-            return {
-                ...prev,
-                noOfUsers: newUserCount,
-                totalPrice: newTotalPrice,
-            };
-        });
-    };
-
-
-    const decreaseUsers = () => {
-        setForm(prev => {
-            const newUserCount = prev.noOfUsers > selectedPlan.numberUserFrom
-                ? prev.noOfUsers - 1
-                : prev.noOfUsers;
-
-            let newTotalPrice = 0;
-
-            if (planType === "shared") {
-                newTotalPrice = newUserCount * (selectedPlan.userMonth ?? 0);
-            } else {
-                const basePrice = selectedPlan.packageMonth ?? 0;
-                const defaultUsers = selectedPlan.default ?? 0;
-                const extraPerUser = selectedPlan.AdditionalAccount ?? 0;
-                const extraUsers = Math.max(0, newUserCount - defaultUsers);
-                newTotalPrice = basePrice + extraUsers * extraPerUser;
-            }
-
-            return {
-                ...prev,
-                noOfUsers: newUserCount,
-                totalPrice: newTotalPrice,
-            };
-        });
-    };
 
     return (
         <>
             <div className='fixed top-3 px-4 shadow-xl inset-0 z-50 flex items-center justify-center bg-opacity-90'>
                 <div className='rounded-lg w-full max-w-4xl'> {/* Added responsive width */}
-                    <div className='bg-white w-full sm:w-[600px] mx-auto border-4 border-red-600 p-6 rounded-lg max-h-[90vh] overflow-y-auto shadow-lg'>
-                        <h1
-                            onClick={() => setShowForm(false)}
-                            className='hover:cursor-pointer text-red-500 font-josefin w-[60px] border px-2 shadow-lg rounded-lg py-[2px] text-xs'
-                        >
-                            Close
-                        </h1>
+                    <div className='bg-white w-full sm:w-[600px] mx-auto border-4 border-green-500 p-6 rounded-lg max-h-[90vh] overflow-y-auto shadow-lg'>
 
-                        <h1 className='text-center text-xl font-anton mb-2 text-gray-800 tracking-wider underline'>
-                            {planType.toUpperCase()}
+                        <div className=' mb-4  flex justify-end'> <RiCloseLargeFill className='text-2xl text-red-600 border border-black rounded-xl p-1 cursor-pointer' onClick={() => setShowForm(false)} /></div>
+
+                        <h1 className='text-center md:text-xl font-josefin font-bold mb-2 text-gray-800  tracking-wider  '>
+                            <span className='font-serif text-black font-extralight'>Plan Type: </span>  ( {planType.toUpperCase()} )
                         </h1>
-                        <h2 className='text-2xl text-center font-josefin font-bold bg-red-600 text-white py-3 rounded-lg mb-4'>
+                        <h2 className='text-2xl text-center font-josefin font-bold underline  text-red-800 py-3 rounded-lg mb-4'>
                             {selectedPlan.keyName}
                         </h2>
 
                         <Formik
-                            initialValues={form}
+                            initialValues={initialValues}
                             validationSchema={validationSchema}
                             onSubmit={(values) => {
+                                // e.preventDefault();
+                                // console.log("Form submitted:", e.target);
+                                setLoading(true);
+
+                                emailjs
+                                    .send('service_zho6x7p', 'template_ly9vtaw', values, {
+                                        publicKey: 'Ywh2vouw_5P3OOzfk',
+                                    })
+                                    .then(
+                                        () => {
+                                            toast.success('Request sent successfully!');
+                                            console.log('SUCCESS!');
+                                            setLoading(false);
+                                        },
+                                        (error) => {
+                                            toast.error('Something went wrong!');
+                                            console.log('FAILED...', error.text);
+                                            setLoading(false);
+                                        },
+                                    );
+
+                                // console.log("Submitted Form Data:", form);
+                                // (Object.prototype.hasOwnProperty.call(values, 'AdditionalRAM') && delete values.AdditionalRAM);
+
                                 console.log('Form Submitted:', values);
                             }}
                         >
-                            {({ values, handleSubmit }) => (
-                                console.log("Form values:", values), // Log the form values to the console
+                            {({ values, setFieldValue, handleSubmit }) => (
                                 <Form onSubmit={handleSubmit}>
                                     <div className='flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 mb-4'>
                                         <div className='md:w-1/2 w-full'>
                                             <label className='block text-red-700 ml-1 text-sm text-center font-josefin'>
-                                                Additional Storage
+                                                <GrStorage className='mx-auto text-gray-800  text-2xl ' />  Additional Storage
                                             </label>
-                                            <div className='flex justify-center items-center space-x-2 mt-2'>
+                                            <div className='flex justify-center  items-center space-x-2 mt-2'>
                                                 <button
                                                     type='button'
-                                                    onClick={decreaseStorage}
-                                                    className='px-4 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 transition-all'
+                                                    onClick={() => handleIncrease('additionalStorage', -1, values, setFieldValue)}
+                                                    className='text-red-600'
                                                 >
-                                                    −
+                                                    <TiMinus />
                                                 </button>
                                                 <input
                                                     type='text'
-                                                    value={form.additionalStorage}
-
-                                                    className='w-10 text-center border-2 border-gray-800 rounded-full'
+                                                    value={values.additionalStorage}
+                                                    readOnly
+                                                    className='w-10 text-center font-bold text-2xl  rounded-full'
                                                 />
                                                 <button
                                                     type='button'
-                                                    onClick={increaseStorage}
-                                                    className='px-4 py-1 bg-green-500 text-white rounded-md hover:bg-green-600 transition-all'
+                                                    onClick={() => handleIncrease('additionalStorage', 1, values, setFieldValue)}
+                                                    className='text-green-600'
                                                 >
-                                                    +
+                                                    <FaPlus />
                                                 </button>
                                             </div>
                                         </div>
 
-                                        {planType === "dedicated" ? <div className='md:w-1/2 w-full'>
-                                            <label className='block text-red-700 ml-1 text-sm text-center font-josefin'>
-                                                Additional Ram
-                                            </label>
-                                            <div className='flex justify-center items-center space-x-2 mt-2'>
-                                                <button
-                                                    type='button'
-                                                    onClick={decreaseAdditionalRAM}
-                                                    className='px-4 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 transition-all'
-                                                >
-                                                    −
-                                                </button>
-                                                <input
-                                                    type='text'
-                                                    value={form.AdditionalRAM}
-
-                                                    className='w-10 text-center border-2 border-gray-800 rounded-full'
-                                                />
-                                                <button
-                                                    type='button'
-                                                    onClick={increaseAdditionalRAM}
-                                                    className='px-4 py-1 bg-green-500 text-white rounded-md hover:bg-green-600 transition-all'
-                                                >
-                                                    +
-                                                </button>
-                                            </div>
-                                        </div> : null}
-
-                                        {selectedPlan.numberUserFrom !== undefined && (
-                                            <div className='md:w-1/2 w-full flex flex-col justify-center'>
-                                                <label className='block text-green-700 font-josefin text-center'>
-                                                    Number of Users
+                                        {planType === "dedicated" && (
+                                            <div className='md:w-1/2 w-full'>
+                                                <label className='block text-blue-700 ml-1 text-sm text-center font-josefin'>
+                                                    <MdSdStorage className='mx-auto text-gray-800  text-2xl' /> Additional Ram
                                                 </label>
                                                 <div className='flex justify-center items-center space-x-2 mt-2'>
                                                     <button
                                                         type='button'
-                                                        onClick={decreaseUsers}
-                                                        className='px-4 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 transition-all'
+                                                        onClick={() => handleIncrease('AdditionalRAM', -1, values, setFieldValue)}
+                                                        className='text-red-600'
                                                     >
-                                                        −
+                                                        <TiMinus />
                                                     </button>
                                                     <input
-                                                        type='number'
-                                                        value={form.noOfUsers}
-
-                                                        className='w-10 text-center border-2 border-gray-800 rounded-full'
+                                                        type='text'
+                                                        value={values.AdditionalRAM}
+                                                        name='AdditionalRAM'
+                                                        readOnly
+                                                        className='w-10 text-center font-bold text-2xl '
                                                     />
                                                     <button
                                                         type='button'
-                                                        onClick={increaseUsers}
-                                                        className='px-4 py-1 bg-green-500 text-white rounded-md hover:bg-green-600 transition-all'
+                                                        onClick={() => handleIncrease('AdditionalRAM', 1, values, setFieldValue)}
+                                                        className='text-green-600 '
                                                     >
-                                                        +
+                                                        <FaPlus />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        {selectedPlan.numberUserFrom !== undefined && (
+                                            <div className='md:w-1/2 w-full flex flex-col justify-center'>
+                                                <label className='block text-green-700 font-josefin text-center'>
+                                                    <FiUsers className='mx-auto text-gray-800  text-2xl ' />  Number of Users
+                                                </label>
+                                                <div className='flex justify-center items-center space-x-2 mt-2'>
+                                                    <button
+                                                        type='button'
+                                                        onClick={() => handleIncrease('noOfUsers', -1, values, setFieldValue)}
+                                                        className='text-red-600'
+                                                    >
+                                                        <TiMinus />
+                                                    </button>
+                                                    <input
+                                                        type='number'
+                                                        value={values.noOfUsers}
+                                                        name='noOfUsers'
+                                                        readOnly
+                                                        className='w-10 text-center font-bold text-2xl'
+                                                    />
+                                                    <button
+                                                        type='button'
+                                                        onClick={() => handleIncrease('noOfUsers', 1, values, setFieldValue)}
+                                                        className='text-green-600'
+                                                    >
+                                                        <FaPlus />
                                                     </button>
                                                 </div>
                                             </div>
@@ -276,8 +274,9 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                                         <label className='block text-gray-700 font-josefin'>Total Price</label>
                                         <input
                                             type='text'
-                                            value={`$${form.totalPrice}`}
+                                            value={`$${values.totalPrice}`}
                                             className='w-full px-4 py-2 border border-gray-300 rounded-lg mt-2'
+                                            name='totalPrice'
                                             readOnly
                                         />
                                     </div>
@@ -323,11 +322,12 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
 
                                     <div className="mb-4">
                                         <label className="block text-gray-700 font-josefin">Phone NO.</label>
-                                        <Field
-                                            name='Phone'
-                                            as={PhoneInput}
-                                            defaultCountry="ua"
-                                            className="w-full sm:w-[500px] py-2 border-gray-300 rounded-lg mt-2 outline-none"
+                                        <PhoneInput
+                                            defaultCountry="in"
+                                            value={values.Phone}
+                                            onChange={(phone: string) => setFieldValue('Phone', phone)}
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
+                                            placeholder="Phone Number*"
                                         />
                                         <ErrorMessage name='Phone' component='div' className='text-red-500 text-sm' />
                                     </div>
@@ -369,7 +369,7 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                                             type='submit'
                                             className='px-4 py-2 font-josefin bg-blue-600 text-white rounded-lg hover:bg-blue-700'
                                         >
-                                            Get 7 Days Free Trial
+                                            {loading ? "Submiting..." : "Get 7 Days Free Trial"}
                                         </button>
                                     </div>
                                 </Form>
@@ -378,7 +378,7 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                     </div>
                 </div>
             </div>
-            <Partner />
+            {/* <Partner /> */}
         </>
     );
 };

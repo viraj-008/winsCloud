@@ -1,4 +1,4 @@
-cd import React from 'react';
+ import React from 'react';
 import { Plan } from './Pricing';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';

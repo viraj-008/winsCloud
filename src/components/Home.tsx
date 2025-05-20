@@ -6,7 +6,7 @@ import Partner from './Partner';
 const Home: React.FC = () => {
   return (
     <>
-      <header className="w-full flex bg-[url('/images/Home/cloude.jpg')] bg-cover bg-center px-5 items-center">
+      {/* <header className="w-full flex bg-[url('/images/Home/cloude.jpg')] bg-cover bg-center px-5 items-center">
         <div className='w-full text-center md:text-left'>
           <motion.h1
             className="text-slate-100 mt-[80px] md:mt-[100px] font-bold font-josefin text-3xl md:text-6xl text-orange-600"
@@ -26,7 +26,65 @@ const Home: React.FC = () => {
             </button>
           </Link>
         </div>
-      </header>
+      </header> */}
+
+   <section className="min-h-[90vh] flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-16">
+      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2  gap-12 items-center mt-8">
+        
+        {/* Left Content */}
+        <div className="text-center md:text-left mt-8">
+          <motion.h1
+            className="text-slate-100 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-4"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.8 }}
+          >
+            Celebrating a Decade of <br /> Powerful Servers
+          </motion.h1>
+
+       <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+  Get the financial tools and insights to <br className="hidden sm:block" />
+  start, build, and grow your business.
+</p>
+
+
+          <button className="bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-black text-white font-mono text-sm px-6 py-3 rounded-lg shadow-md border border-blue-600 transition duration-300 hover:scale-105">
+            <span className="text-green-400">//</span> Request a Free Demo
+          </button>
+        </div>
+
+        {/* Right Image with Animation */}
+     <motion.div
+  animate={{
+    x: [0, -10, 0, 10, 0],
+    y: [0, 10, 0, -10, 0],
+    opacity: 1, // Always fully visible
+  }}
+  transition={{
+    duration: 6,
+    ease: "linear",
+    repeat: Infinity,
+    repeatType: "loop",
+  }}
+  className="w-full flex justify-center"
+>
+  <img
+    src="/images/Home/homePNG.png"
+    alt="Server"
+    className="min-w-[200px] max-w-[500px] w-full min-h-[100px] max-h-[400px] h-auto rounded-lg object-contain"
+  />
+</motion.div>
+
+
+
+      </div>
+    </section>
+
+
+
+
+
 
       <main>
         <section className='px-5 md:px-20'>

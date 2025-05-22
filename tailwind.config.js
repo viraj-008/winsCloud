@@ -9,6 +9,7 @@ export default {
         kanit: ["Kanit", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
+      
     },
   },
   plugins: [],

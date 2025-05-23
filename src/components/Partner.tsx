@@ -17,18 +17,19 @@ const Partner = () => {
       ]
   
 
-const singleItem = {
-  animate: {
-    scale: [1, 1.05, 1],
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-      ease: "easeInOut",
-    },
-  },
-};
-      
-      
+// const singleItem = {
+//   initial: { opacity: 1, y: 0, scale: 1 },
+//   animate: {
+//     y: [0, -5, 0],
+//     scale: [1, 1.05, 1],
+//     transition: {
+//       duration: 4,
+//       repeat: Infinity,
+//       repeatType: "loop", // ✅ correct type
+//       ease: "easeInOut",
+//     },
+//   },
+// };
       
   return (
     <>
@@ -40,7 +41,7 @@ const singleItem = {
           Our Trusted Partners
         </h2>
         <div className="w-20 h-1 mx-auto bg-gradient-to-r from-gray-100 via-gray-500 to-gray-100 rounded-full mb-4" />
-      <div className="bg-blue-100 rounded-xl px-6 py-4 max-w-2xl mx-auto">
+      <div className=" rounded-xl px-6 py-4 max-w-2xl mx-auto">
   <p className="text-sm md:text-base font-josefin text-center">
     Backed by industry leaders in cloud infrastructure, data security, and IT innovation, we ensure seamless service delivery. Our partners help us build a resilient, high-performance environment so you can focus on what matters most — your success.
   </p>
@@ -48,29 +49,30 @@ const singleItem = {
 
       </div>
 
-     <motion.div
-  className="w-[90%] mx-auto my-8 bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-6 rounded-xl shadow-lg"
-  
->
-  
+   <motion.div
+      className="w-[90%] mx-auto my-8 p-6 rounded-xl shadow-lg"
+      initial="initial"
+      animate="animate"
+    >
+      <div className="flex justify-center flex-wrap gap-6 ">
+        {footerLogos.map((logo, index) => (
+          <motion.div
+            key={index}
+            // variants={singleItem}
+            initial="initial"
+            animate="animate"
+            className="w-[90px] sm:w-[110px] md:w-[120px] h-[45px] sm:h-[55px] md:h-[60px] flex items-center justify-center bg-white rounded-lg shadow p-2"
+          >
+            <img
+              src={logo.image}
+              alt={`Logo ${index + 1}`}
+              className="w-full h-full object-contain"
+            />
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
 
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center">
-    {footerLogos.map((logo, index) => (
-      <motion.div
-        key={index}
-        variants={singleItem}
-        animate="animate"
-        className="w-[120px] h-[60px] flex items-center justify-center bg-white rounded-lg shadow p-2"
-      >
-        <img
-          src={logo.image}
-          alt={`Logo ${index + 1}`}
-          className="w-full h-full object-contain"
-        />
-      </motion.div>
-    ))}
-  </div>
-</motion.div>
 
     </div>
 

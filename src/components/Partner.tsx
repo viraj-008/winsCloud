@@ -17,19 +17,7 @@ const Partner = () => {
       ]
   
 
-// const singleItem = {
-//   initial: { opacity: 1, y: 0, scale: 1 },
-//   animate: {
-//     y: [0, -5, 0],
-//     scale: [1, 1.05, 1],
-//     transition: {
-//       duration: 4,
-//       repeat: Infinity,
-//       repeatType: "loop", // ✅ correct type
-//       ease: "easeInOut",
-//     },
-//   },
-// };
+
       
   return (
     <>
@@ -54,14 +42,14 @@ const Partner = () => {
       initial="initial"
       animate="animate"
     >
-      <div className="flex justify-center flex-wrap gap-6 ">
+      <div className="flex justify-center flex-wrap border-2 rounded-md gap-6 ">
         {footerLogos.map((logo, index) => (
           <motion.div
             key={index}
             // variants={singleItem}
             initial="initial"
             animate="animate"
-            className="w-[90px] sm:w-[110px] md:w-[120px] h-[45px] sm:h-[55px] md:h-[60px] flex items-center justify-center bg-white rounded-lg shadow p-2"
+            className="w-[90px] sm:w-[110px] md:w-[120px] h-[45px] sm:h-[55px] md:h-[60px] flex items-center justify-center  p-2"
           >
             <img
               src={logo.image}

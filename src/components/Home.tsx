@@ -137,7 +137,7 @@ const Home: React.FC = () => {
     <>
 
 
-      <section className="min-h-[80vh] flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12">
+      <section className="min-h-[80vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12">
         <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2  gap-12 items-center mt-8">
 
           {/* Left Content */}

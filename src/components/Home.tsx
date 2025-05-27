@@ -2,10 +2,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import Partner from './Partner';
-import { useEffect, useState } from 'react';
-import { FaRegHandshake } from "react-icons/fa6";
-import { FaAward } from "react-icons/fa";
-import { TbDeviceTabletCheck } from "react-icons/tb";
+
 import { FaUnlockAlt } from "react-icons/fa";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { IoIosTimer } from "react-icons/io";
@@ -17,7 +14,9 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { SlGlobe } from "react-icons/sl";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
-import { FaTrophy } from "react-icons/fa";
+
+import Expriance from './Expriance';
+import Awards from './Awards';
 
 
 
@@ -106,32 +105,7 @@ const cards = [
 const Home: React.FC = () => {
 
 
-  const stats = [
-    { label: 'Clients', count: 4670, suffix: '+', icon: <FaRegHandshake /> },
-    { label: 'Years of Experience', count: 10, suffix: '+', icon: <FaAward /> },
-    { label: 'Apps Hosted', count: 400, suffix: '+', icon: <TbDeviceTabletCheck /> },
-  ];
 
-  const [animatedCounts, setAnimatedCounts] = useState<number[]>(stats.map(() => 0));
-
-  useEffect(() => {
-    const maxCount = Math.max(...stats.map(stat => stat.count));
-    const duration = maxCount / 100;
-    const incrementValues = stats.map(stat => Math.ceil(stat.count / (duration / 0.6)));
-
-    const intervals = stats.map((stat, index) => {
-      return setInterval(() => {
-        setAnimatedCounts(prevCounts => {
-          const newCounts = [...prevCounts];
-          newCounts[index] = Math.min(newCounts[index] + incrementValues[index], stat.count);
-          return newCounts;
-        });
-      }, 10);
-    });
-
-    // Cleanup intervals
-    return () => intervals.forEach(clearInterval);
-  }, [])
 
   return (
     <>
@@ -191,47 +165,6 @@ const Home: React.FC = () => {
       </section>
 
 
-      <div className="w-[90%] mx-auto my-8 rounded-xl bg-gradient-to-br from-blue-50 to-gray-100 shadow-xl">
-        <div className="py-12">
-          <div className="max-w-5xl mx-auto px-6 text-center">
-            <img className="mx-auto h-20 mb-4" src="images/logo/rockk.png" alt="Company Logo" />
-            <h2 className="text-4xl font-bold text-gray-800 sm:text-5xl">
-              Precision-Driven Skills, Purposeful Experience
-            </h2>
-            <p className="mt-4 text-lg sm:text-xl text-gray-600">
-              With years of industry experience and modern tools, we deliver precise financial
-              solutions that support your business growth and compliance with confidence.
-            </p>
-          </div>
-
-          <div className="mt-12">
-            <div className="max-w-5xl mx-auto">
-              <dl className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                {stats.map((stat, index) => (
-                  <div
-                    key={stat.label}
-                    className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-                  >
-                    <dd className="text-5xl font-extrabold text-green-600">
-                      {animatedCounts[index]}
-                      {animatedCounts[index] === stat.count && stat.suffix}
-                    </dd>
-                    <div className="mt-2 text-center text-gray-700 text-lg font-semibold flex items-center gap-2">
-                      <span className="text-yellow-400 text-3xl">{stat.icon}</span>
-                      <span>{stat.label}</span>
-                    </div>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
       <main>
         <section className="px-5 md:px-24 py-16 ">
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
@@ -242,7 +175,7 @@ const Home: React.FC = () => {
           </p>
 
           <div className="mt-12 flex flex-col-reverse md:flex-row gap-12 items-center">
-            <article className="text-justify text-gray-800 leading-7 font-josefin text-[17px] ">
+            <article className="text-justify text-gray-800 leading-7 font-montserrat text-[17px] ">
               <p className="mb-6 text-center">
                 At <strong>Winscloud</strong>, we empower businesses with scalable, flexible, and secure cloud hosting. Our around-the-clock support ensures your services never skip a beat—so you can focus on what you do best.
               </p>
@@ -256,13 +189,13 @@ const Home: React.FC = () => {
 
 
           </div>
-          <h1 className="text-3xl md:text-5xl text-center font-bold font-josefin text-blue-900">
+          <h1 className="text-3xl md:text-5xl text-center font-bold font-montserrat text-blue-900">
             Why Choose Winscloud Matrix?
           </h1>
           <p className="text-center text-lg text-gray-700 mt-4 font-medium max-w-3xl mx-auto">
             Winscloud Matrix Cloud Hosting: Fast-track Your Tax and Accounting Practice
           </p>
-          <p className="mt-8 text-gray-700 text-lg text-justify md:text-center font-josefin max-w-5xl mx-auto">
+          <p className="mt-8 text-gray-700 text-lg text-justify md:text-center font-montserrat max-w-5xl mx-auto">
             We simplify tax and accounting workflows by integrating powerful desktop applications with cloud flexibility—helping modern businesses streamline operations effortlessly.
           </p>
 
@@ -296,9 +229,7 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-
-
-
+        <Expriance/>
 
 
         <section className="bg-gradient-to-br from-blue-50 to-gray-100 my-8 text-gray-800 py-16 px-6 md:px-20">
@@ -428,158 +359,11 @@ const Home: React.FC = () => {
         </section>
 
 
-        {/* <div className="px-4  py-12">
-          <div className="mb-10 text-center">
-            <span className="rounded-full px-3 py-1 text-4xl font-semibold uppercase text-blue-800">
-              Pricing
-            </span>
-            <h2 className="mt-4 text-3xl font-bold text-gray-800 ">
-              Fair pricing, unfair advantage.
-            </h2>
-            <p className="mt-2 text-gray-600 ">
-              Get started with Acme today and take your business to the next level.
-            </p>
-            <div className="mt-6 flex justify-center gap-4">
-              <button
-                onClick={() => setBillingCycle('M')}
-                className={clsx(
-                  'rounded-lg px-4 py-2 text-sm font-medium',
-                  billingCycle === 'M'
-                    ? 'bg-blue-700 text-white'
-                    : 'text-gray-700 hover:bg-blue-400'
-                )}
-              >
-                Monthly
-              </button>
-              <button
-                onClick={() => setBillingCycle('A')}
-                className={clsx(
-                  'rounded-lg px-4 py-2 text-sm font-medium',
-                  billingCycle === 'A'
-                    ? 'bg-blue-800 text-white'
-                    : 'text-gray-700 hover:bg-blue-400 '
-                )}
-              >
-                Annual
-              </button>
-            </div>
-          </div>
+       
 
-          <div className="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className="rounded-xl border border-gray-300 p-6 "
-              >
-                <p className="text-xl font-bold uppercase text-blue-900">
-                  {plan.name}
-                </p>
-                <p className="mb-4 text-sm text-gray-600 ">
-                  {plan.description}
-                </p>
+       <Awards />
 
-                <AnimatePresence mode="wait">
-                  <motion.p
-                    key={billingCycle}
-                    initial={{ y: -20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ type: 'spring', stiffness: 120 }}
-                    className="text-3xl font-semibold text-gray-900 "
-                  >
-                    ${billingCycle === 'M' ? plan.monthlyPrice : plan.annualPrice}
-                    <span className="text-sm font-medium text-gray-600 ">
-                      /{billingCycle === 'M' ? 'month' : 'year'}
-                    </span>
-                  </motion.p>
-                </AnimatePresence>
-
-                <button
-                  onClick={() => window.open(plan.link)}
-                  className="mt-6 w-full rounded-lg bg-blue-700 py-2 text-sm font-medium text-white hover:bg-blue-900"
-                >
-                  Get Started
-                </button>
-
-                <ul className="mt-6 space-y-2">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-700 ">
-                      <FaCheck className="mr-2 text-red-500" /> {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div> */}
-
-        <div className="max-w-7xl mx-auto px-4 my-8 w-[90%] rounded-md shadow-lg py-12 border">
-          {/* Heading */}
-
-
-          <div className="flex justify-center bg-white py-6">
-            <div className="relative inline-flex group">
-              {/* Glowing animated gradient border */}
-              <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
-
-              {/* Awards Button-like Heading */}
-
-
-              <div className="relative inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold text-white bg-gray-900 rounded-xl shadow-xl">
-                <FaTrophy className="text-yellow-400 drop-shadow" />
-                Awards
-                <FaTrophy className="text-yellow-400 drop-shadow" />
-              </div>
-            </div>
-          </div>
-
-          {/* Description */}
-          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
-          <p className="text-center text-gray-600 font-montserrat  max-w-2xl mx-auto mb-10">
-  Winscloud has earned widespread acclaim for delivering exceptional hosting solutions, driven by a relentless focus on innovation and customer satisfaction. Our commitment to excellence is reflected in the numerous prestigious awards and accolades we've received, affirming Winscloud's position as a trusted leader in the industry.
-</p>
-
-          </p>
-
-          {/* Award Cards/Images */}
-         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-  {/* Award Card 1 */}
-  <div className="bg-gradient-to-br from-[#d4d3d3] via-[#f5f3f4] to-[#e1dede]  p-4 rounded-xl shadow-lg text-center flex flex-col items-center">
-    <div className="h-28 flex items-center justify-center w-full">
-      <img src="/images/logo/top.webp" alt="Award 1" className="object-contain max-h-full mx-auto" />
-    </div>
-    <p className="font-medium mt-3  font-josefin text-blue-900 ">Top 10 Cloud Hosting Host Advice</p>
-  </div>
-
-  {/* Award Card 2 */}
-  <div className="bg-gradient-to-br from-[#d4d3d3] via-[#f5f3f4] to-[#e1dede] p-4 rounded-xl border-2 shadow-lg text-center flex flex-col items-center">
-    <div className="h-28 flex items-center justify-center w-full">
-      <img src="/images/logo/star.webp" alt="Award 2" className="object-contain max-h-full mx-auto" />
-    </div>
-    <p className=" font-medium mt-3 font-josefin text-blue-900 ">Rising Star Award by Compare Camp</p>
-  </div>
-
-  {/* Award Card 3 */}
-  <div className="bg-gradient-to-br from-[#d4d3d3] via-[#f5f3f4] to-[#e1dede]  p-4 rounded-xl shadow-lg text-center flex flex-col items-center">
-    <div className="h-28 flex items-center justify-center w-full">
-      <img src="/images/logo/great.webp" alt="Award 3" className="object-contain max-h-full mx-auto" />
-    </div>
-    <p className=" font-medium mt-3 font-josefin text-blue-900 ">Great User Experience by Finances Online</p>
-  </div>
-
-  {/* Award Card 4 */}
- <div className=" bg-gradient-to-br from-[#d4d3d3] via-[#f5f3f4] to-[#e1dede]    relative p-[2px] rounded-xl shadow-lg">
-  <div className="p-4 rounded-xl text-center flex flex-col items-center">
-    <div className="h-28 flex items-center justify-center w-full">
-      <img src="/images/logo/exp.webp" alt="Award 4" className="object-contain max-h-full mx-auto" />
-    </div>
-    <p className="font-medium mt-3 text-blue-900 font-josefin">Great Uptime by HostAdvice</p>
-  </div>
-</div>
-
-</div>
-
-
-        </div>
+        {/* Data Centers Section */}
 
 
         <div className="bg-gradient-to-br from-blue-100 via-white to-blue-200 rounded-3xl shadow-2xl p-10 max-w-7xl mx-auto text-gray-800 space-y-10">

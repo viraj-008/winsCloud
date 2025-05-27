@@ -6,12 +6,11 @@ import { motion } from "framer-motion";
 import { MdOutlineSecurity } from "react-icons/md";
 import { RiShakeHandsLine } from "react-icons/ri";
 import { LuClock } from "react-icons/lu";
-import { FaExternalLinkAlt } from "react-icons/fa";
-import { FaAward } from "react-icons/fa";
-import { TbDeviceTabletCheck } from "react-icons/tb";
-import { FaRegHandshake } from "react-icons/fa6";
+
 import { HiLockClosed, HiBolt, HiCheckBadge } from "react-icons/hi2"; 
-import { useEffect} from "react";
+import Expriance from "../Expriance";
+import QuickLinks from "../QuickLinks";
+import Awards from "../Awards";
 
 
 const QickBooks_Hosting = () => {
@@ -55,32 +54,7 @@ const QickBooks_Hosting = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-
-  const stats = [
-      { label: 'Clients', count: 4670, suffix: '+', icon: <FaRegHandshake /> },
-      { label: 'Years of Experience', count: 10, suffix: '+', icon: <FaAward /> },
-      { label: 'Apps Hosted', count: 400, suffix: '+', icon: <TbDeviceTabletCheck /> },
-    ];
-     const [animatedCounts, setAnimatedCounts] = useState<number[]>(stats.map(() => 0));
-    
-      useEffect(() => {
-        const maxCount = Math.max(...stats.map(stat => stat.count));
-        const duration = maxCount / 100;
-        const incrementValues = stats.map(stat => Math.ceil(stat.count / (duration / 0.6)));
-    
-        const intervals = stats.map((stat, index) => {
-          return setInterval(() => {
-            setAnimatedCounts(prevCounts => {
-              const newCounts = [...prevCounts];
-              newCounts[index] = Math.min(newCounts[index] + incrementValues[index], stat.count);
-              return newCounts;
-            });
-          }, 10);
-        });
-    
-        // Cleanup intervals
-        return () => intervals.forEach(clearInterval);
-      }, [])
+     
   return (
     <>
      <section className="min-h-[80vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12">
@@ -151,7 +125,6 @@ const QickBooks_Hosting = () => {
 
 <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
      
-
           {/* Text Content */}
           <div className="flex-1">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">
@@ -216,87 +189,8 @@ const QickBooks_Hosting = () => {
 </div>
 </section>
 
-      
-
-        <section>
-     <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
-  <h2 className="mb-10 text-3xl font-extrabold leading-tight text-gray-900">  
-            Explore Other Versions of QuickBooks Hosted by Winscloud Matrix
-          </h2>
-
-  <div className="w-full">
-    <div className="flex flex-col w-full mb-5 sm:flex-row">
-      <div className="w-full mb-5 sm:mb-0 sm:w-1/2">
-        <div className="relative h-[60px] ml-0 mr-0 sm:mr-10">
-          <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
-          <div className="relative h-full px-2 py-1 bg-white border-2 border-indigo-500 rounded-lg flex items-center">
-       <FaExternalLinkAlt className="text-xl text-blue-800" />
-                     <Link to="/quickbooks-desktop" className="hover:underline font-bold ml-3 ">QuickBooks Desktop 
-</Link> 
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full sm:w-1/2">
-        <div className="relative h-[60px] ml-0 md:mr-10">
-          <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-purple-500 rounded-lg"></span>
-          <div className="relative h-full px-2 py-1 bg-white border-2 border-purple-500 rounded-lg flex items-center">
-                                 <FaExternalLinkAlt className="text-xl text-blue-800" />
- <Link to="/quickbooks-desktop" className="hover:underline font-bold ml-3">QuickBooks Pro</Link> 
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div className="flex flex-col w-full mb-5 sm:flex-row">
-      <div className="w-full mb-5 sm:mb-0 sm:w-1/2">
-        <div className="relative h-[60px] ml-0 mr-0 sm:mr-10">
-          <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
-          <div className="relative h-full px-2 py-1 bg-white border-2 border-blue-400 rounded-lg flex items-center">
-                       <FaExternalLinkAlt className="text-xl text-blue-800" />
-                        <Link to="/quickbooks-desktop" className="hover:underline font-bold ml-3">QuickBooks Premier</Link> 
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full sm:w-1/2">
-        <div className="relative h-[60px] ml-0 mr-0 sm:mr-10">
-          <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-400 rounded-lg"></span>
-          <div className="relative h-full px-2 py-1 bg-white border-2 border-yellow-400 rounded-lg flex items-center">
-                     <FaExternalLinkAlt className="text-xl text-blue-800" />
-                         <Link to="/quickbooks-desktop" className="hover:underline font-bold ml-3">QuickBooks Enterprise</Link> 
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div className="flex flex-col w-full mb-5 sm:flex-row">
-      <div className="w-full mb-5 sm:mb-0 sm:w-1/2">
-        <div className="relative h-[60px] ml-0 md:mr-10">
-          <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-green-500 rounded-lg"></span>
-          <div className="relative h-full px-2 py-1 bg-white border-2 border-green-500 rounded-lg flex items-center">
-                    <FaExternalLinkAlt className="text-xl text-blue-800" />
-                        <Link to="/quickbooks-desktop" className="hover:underline font-bold ml-3">QuickBook POS</Link>  
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full sm:w-1/2">
-        <div className="relative h-[60px] ml-0 md:mr-10">
-          <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-green-500 rounded-lg"></span>
-          <div className="relative h-full px-2 py-1 bg-white border-2 border-green-500  rounded-lg flex items-center">
-          <FaExternalLinkAlt className="text-xl  text-blue-800" />
-             <Link to="/quickbooks-desktop" className="hover:underline  ml-3 font-bold">QuickBooks canada</Link> 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-        </section>
-
-
+   
+<QuickLinks/>
 
 <div className="my-12">
   <h1 className="text-center font-inter font-bold text-3xl my-8 text-textPrimary p-2">Wins Cloud with Top-notch Security
@@ -330,44 +224,10 @@ const QickBooks_Hosting = () => {
       </div>
     </div>
 </div>
-         <div className="w-[90%] mx-auto my-8 rounded-xl bg-gradient-to-br from-blue-50 to-gray-100 shadow-xl">
-        <div className="py-12">
-          <div className="max-w-5xl mx-auto px-6 text-center">
-            <img className="mx-auto h-20 mb-4" src="images/logo/rockk.png" alt="Company Logo" />
-            <h2 className="text-4xl font-bold text-gray-800 sm:text-5xl">
-              Precision-Driven Skills, Purposeful Experience
-            </h2>
-            <p className="mt-4 text-lg sm:text-xl text-gray-600">
-              With years of industry experience and modern tools, we deliver precise financial
-              solutions that support your business growth and compliance with confidence.
-            </p>
-          </div>
+         
+         <Expriance/>
 
-          <div className="mt-12">
-            <div className="max-w-5xl mx-auto">
-              <dl className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                {stats.map((stat, index) => (
-                  <div
-                    key={stat.label}
-                    className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-                  >
-                    <dd className="text-5xl font-extrabold text-green-600">
-                      {animatedCounts[index]}
-                      {animatedCounts[index] === stat.count && stat.suffix}
-                    </dd>
-                    <div className="mt-2 text-center text-gray-700 text-lg font-semibold flex items-center gap-2">
-                      <span className="text-yellow-400 text-3xl">{stat.icon}</span>
-                      <span>{stat.label}</span>
-                    </div>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
+         <Awards/>
           <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">QuickBooks Hosting FAQs</h1>
         <section className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
           {faqs.map((faq, index) => (

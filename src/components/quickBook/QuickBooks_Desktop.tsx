@@ -126,8 +126,7 @@ QuickBooks Desktop Hosting providers take care of all the technical aspects of t
 </section>
 
 <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
-     
-          {/* Text Content */}
+           
           <div className="flex-1">
             <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
   Six Easy Steps to Transition to QuickBooks Desktop Cloud Hosting </h1>
@@ -142,8 +141,6 @@ QuickBooks Desktop Hosting providers take care of all the technical aspects of t
             </button>
              </Link>
           </div>
-
-          {/* React Icon */}
 
         </div>
 

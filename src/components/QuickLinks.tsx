@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const QuickLinks:React.FC = () => {
   return (
       <section>
-         <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
+         <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-8">
       <h2 className="mb-10 text-3xl font-extrabold leading-tight text-gray-900">  
                 Explore Other Versions of QuickBooks by Winscloud Matrix
               </h2>

@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
-import { SlCalender } from "react-icons/sl";
 import Partner from "../Partner";
+import { motion } from "framer-motion";
+import { LuDatabaseBackup } from "react-icons/lu";
+import { FaUsersGear } from "react-icons/fa6";
+import { RiInformation2Fill } from "react-icons/ri";
+import { GiChoice } from "react-icons/gi";
+import { BiDetail } from "react-icons/bi";
+import { GrDocumentTest } from "react-icons/gr";
+import Awards from "../Awards";
+import QuickLinks from "../QuickLinks"; 
+import Expriance from "../Expriance";
 
 const QuickBook_enterprice = () => {
 
@@ -54,187 +63,225 @@ const QuickBook_enterprice = () => {
 
   return (
     <>
-      <header className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center">
-        <div className="w-full text-center md:text-left md:pt-6">
-          <h1 className="text-white font-josefin text-4xl md:text-6xl">
-            QuickBooks Enterprise Hosting
-          </h1>
-          <p className='text-xl md:text-3xl bg-gradient-to-r from-orange-500 via-indigo-100 to-green-100 text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
-            Host your QuickBooks Premier on the cloud and make your critical accounting data easily accessible, anytime, anywhere.
-          </p>
-          <Link to='/trial' aria-label="Contact QuickBooks Expert">
-            <button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-              Call our Expert
+       <section className="min-h-[80vh] rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12">
+        <div className="max-w-6xl mx-auto w-full gap-12 items-center mt-8">
+
+          {/* Left Content */}
+          <div className="text-center md:text-left mt-8">
+            <motion.h1
+              className="text-slate-100 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >
+         QuickBooks Enterprise Hosting
+            </motion.h1>
+
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+Your One-Stop-Solution to all your advanced accounting needs, accessible from anywhere, at any time
+            </p>
+
+            <button className="bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-black text-white font-mono text-sm px-6 py-3 rounded-lg shadow-md border border-blue-600 transition duration-300 hover:scale-105">
+              <span className="text-green-400">//</span>Call our Expert
             </button>
-          </Link>
+          </div>
+
         </div>
-      </header>
+      </section>
 
       <main>
-        <section>
-          <h2 className="text-center font-serif text-lg md:text-3xl font-bold">
-            QuickBooks Enterprise Cloud Hosting: A World Class Solution to Remotely Manage Your Business Operations
+         <div className="">
+          <h2 className='text-3xl text-center py-4 font-bold font-montserrat text-textPrimary'>
+QuickBooks Enterprise Cloud Hosting: A World Class Solution to Remotely Manage Your Business Operations
           </h2>
+      </div>
+
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+  {/* IMAGE on the right (or bottom on mobile) */}
+  <figure className="w-full md:w-1/2 flex justify-center">
+  <img
+  className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
+  src="./images/logo/qb-hosting.webp"
+  alt="QuickBooks Hosting Service"
+/>
+
+  </figure>
+
+  {/* TEXT on the left (or top on mobile) */}
+  <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
+    <h2 className="font-semibold text-textPrimary   text-xl md:text-xl ">All the features of Intuit’s most powerful and advanced accounting software blended with the flexibility of the cloud. Grow your business by focusing on more important tasks with QuickBooks Enterprise cloud hosting by assigning relevant tasks to your team any time, anywhere. 
+ </h2>
+   
+    <p className="font-montserrat text-gray-700 text-sm md:text-base">
+QuickBooks Desktop offers an end-to-end accounting solution to modern businesses. However, businesses today need added flexibility and ease while managing routine functions, such as managing cash flow, generating invoices, and keeping track of inventory. QuickBooks Enterprise Cloud Hosting lets you keep track of all your key tasks on the go. No more sitting tethered to your desktop to access your critical data. With QuickBooks Enterprise hosting, you can stay up to date anytime, anywhere.
+    </p>
+    <p className="font-montserrat text-gray-700 text-sm md:text-base">
+Winscloud’s QuickBooks Enterprise Hosting solution lets you use all of QuickBooks Enterprise’s robust features and simplifies business operations with the flexibility of the cloud. QuickBooks Enterprise hosting is the perfect solution for large businesses that need to manage business from multiple locations, large size of inventory, and heavy daily transactions, such as manufacturing, accounting, and retail businesses.
+    </p>
+  </article>
+</section>
+
+
+   <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+           
+          <div className="flex-1">
+            <h1 className="text-3xl text-center md:text-start md:text-4xl font-bold mb-2">
+Ready to take complete control of your Business Finances? Get QuickBooks Enterprise Hosting Today
+ </h1>
+    <Link to='/trial'>
+            <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition">
+Take a QuickBooks Hosting FREE Trial 
+ </button>
+             </Link>
+          </div>
+
+        </div>
+
+       
+
+<section className="px-5 md:px-24 py-16 ">
+          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
+Winscloud QuickBooks Premier Cloud Hosting: Why should you choose us as your hosting provider?
+       </h1>
+          <p className="text-center text-lg md:text-xl text-gray-700 font-medium max-w-3xl mx-auto">
+Unlock the power of cloud hosting services
+</p>
+    
+   <div className="grid md:grid-cols-2 gap-8 mt-14">
+            {[
+              {
+                title: "More Productivity on the Cloud",
+                desc: "QuickBooks Enterprise Cloud hosting provides businesses with a single cloud platform, facilitating multi-user collaboration in real-time, from anywhere across the globe. This makes accounting seamless for businesses and tax season stress free.",
+              },
+              {
+                title: "Scalability",
+                desc: "Businesses are dynamic, needing to scale up or down frequently. QuickBooks Enterprise hosting offers the freedom to scale as you go, and you don’t have to worry about anything. QuickBooks Cloud Hosting adapts to business needs, promising operative freedom.",
+              },
+              {
+                title: "Add-Ons Integration",
+                desc: "Your top QuickBooks hosting provider will not just host your QuickBooks Enterprise desktop software on the cloud. More than 200 add-ons and third-party apps, including all versions of QuickBooks, MS Excel, etc. are available and can be hosted on the cloud.",
+              },
+              {
+                title: "No Location Barrier",
+                desc: "While QuickBooks Enterprise Desktop needs you to be tethered to your computer, hosting the application on the cloud offers more convenience. Your data is in close proximity, irrespective of your location.",
+              },
+             
+            ].map((feature, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+              >
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">{feature.title}</h3>
+                <p className="text-gray-700 text-[15px] leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
         </section>
 
-        <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
-          {/* Text Section */}
-          <div className="w-full text-justify font-josefin text-gray-600 md:w-[45%]">
+      
+ <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
+   <h2 className="font-bold text-3xl mt-3 mb-12 text-center text-textPrimary">
+Winscloud Matrix Advantage: Why choose us as your QuickBooks cloud hosting provider?
+          </h2>
+        
+  <div className="grid gap-14 md:grid-cols-3 md:gap-8">
+    <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+      <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+   
+     <LuDatabaseBackup />
 
-            <p className=" my-2 md:my-4 text-sm md:text-base">
-              All the features of Intuit’s most powerful and advanced accounting software blended with the flexibility of the cloud.
-              Grow your business by focusing on more important tasks with QuickBooks Enterprise cloud hosting by assigning relevant tasks
-              to your team any time, anywhere.
-            </p>
-            <p className=" text-sm md:text-base">
-              QuickBooks Desktop offers an end-to-end accounting solution to modern businesses. However, businesses today need added flexibility
-              and ease while managing routine functions, such as managing cash flow, generating invoices, and keeping track of inventory. QuickBooks
-              Enterprise Cloud Hosting lets you keep track of all your key tasks on the go. No more sitting tethered to your desktop to access your critical data.
-              With QuickBooks Enterprise hosting, you can stay up to date anytime, anywhere.
-            </p>
-            <p className=" text-sm md:text-base mt-6">
-              Winscloud’s QuickBooks Enterprise Hosting solution lets you use all of QuickBooks Enterprise’s robust features and simplifies business operations with the
-              flexibility of the cloud. QuickBooks Enterprise hosting is the perfect solution for large businesses that need to manage business from multiple locations, large size of inventory, and heavy daily transactions, such as manufacturing, accounting, and retail businesses.
-            </p>
+      </div>
+      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Wait for Data Transfer</h1>
+      <p className="px-4 text-gray-500">
+You can choose to transfer all your data on the cloud. However, it may take a few hours to safely transfer your data, depending on its size.
+      </p>
+    </div>
+    <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+      <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
+      <FaUsersGear />
+
+      </div>
+      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access Using Credentials
+</h1>
+      <p className="px-4 text-gray-500">
+You can access your QuickBooks Desktop cloud hosting using the username and password provided by your hosting provider. You can also choose to add more authorized users to your cloud hosting for QuickBooks desktop.
+      </p>
+    </div>
+
+    <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+      <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
+         <RiInformation2Fill />
+
+      </div>
+      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Provide Your License Information
+</h1>
+      <p className="px-4 text-gray-500">
+Your cloud hosting provider will need you to provide your license information since it is mandatory to share your QuickBooks License details with your hosting provider to host it in the cloud.
+      </p>
+    </div>
+    <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+      <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
+         <GiChoice />
+
+      </div>
+      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Select a Hosting Plan
+</h1>
+      <p className="px-4 text-gray-500">
+At Winscloud, we offer both dedicated and shared hosting plans. You can choose a plan that suits your business needs the best. Enquire quickbooks desktop hosting pricing now.
+      </p>
+    </div>
+    <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+      <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
+         <BiDetail />
+
+      </div>
+      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Provide Your Details
+</h1>
+      <p className="px-4 text-gray-500">
+Contact our cloud expert at Winscloud Matrix and provide your software details, other relevant information and hosting requirements. Your preferred number of users, storage needs, hosting preferences like shared or dedicated hosting should all be conveyed to your cloud expert.
+
+      </p>
+    </div>
+    <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+      <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
+        <GrDocumentTest />
+
+      </div>
+      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Begin Access Testing
+</h1>
+      <p className="px-4 text-gray-500">
+Once you have access to your QuickBooks Desktop cloud hosting, test the platform by using it.
+
+      </p>
+    </div>
+  </div>
+</div>
+        
+
+       
+          
+
+
+             <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+           
+          <div className="flex-1">
+            <h1 className="text-3xl text-center md:text-start md:text-4xl font-bold mb-2">
+Ready to start your cloud hosting journey with Winscloud Matrix?
+ </h1>
+    <Link to='/get-in-touch'>
+            <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition">
+Get in Touch with Us 
+ </button>
+             </Link>
           </div>
 
-          {/* Image Section */}
-          <div className="w-full md:w-[50%] flex justify-center mt-6 md:mt-0">
-            <img className="h-48 md:h-80 border-2 border-black rounded-lg object-cover" src="./images/logo/qb-hosting.webp" alt="QuickBooks Hosting" />
-          </div>
         </div>
 
-        <div className="my-12 w-[90%] mx-auto bg-gray-200 rounded-lg text-center">
-          <h2 className="text-center font-kanit font-semibold text-2xl pt-5 px-2">
-            Ready to take complete control of your Business Finances? Get QuickBooks Enterprise Hosting Today
-          </h2>
-          <div className="flex justify-center">
-            <Link to='/trial'>
-              <button className="border-2 my-6 md:my-6 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-                Take a QuickBooks Hosting FREE Trial
-              </button>
-            </Link>
-          </div>
-        </div>
-
-        <div className="my-12 w-[90%] mx-auto">
-          <h2 className="text-center font-serif font-semibold text-2xl pt-5">
-            Winscloud QuickBooks Premier Cloud Hosting: Why should you choose us as your hosting provider?
-          </h2>
-          <p className="text-gray-600 text-center font-bold ">Unlock the power of cloud hosting services</p>
-
-          <div className="flex flex-col font-montserrat md:flex-row  mt-8">
-
-            <div className="md:w-[50%]  space-y-4  text-sm p-3">
-              <p className=" "><span className=" font-bold ">More Productivity on the Cloud-</span> QuickBooks Enterprise Cloud hosting provides businesses with a single cloud platform, facilitating multi-user collaboration in real-time, from anywhere across the globe. This makes accounting seamless for businesses and tax season stress free.</p>
-              <p className=" "> <span className=" font-bold my-6 ">Scalability-</span>Businesses are dynamic, needing to scale up or down frequently. QuickBooks Enterprise hosting offers the freedom to scale as you go, and you don’t have to worry about anything. QuickBooks Cloud Hosting adapts to business needs, promising operative freedom.</p>
-            </div>
-
-            <div className="md:w-[50%] space-y-4 p-3 font-montserrat text-sm">
-              <p className=""> <span className=" font-bold ">Add-Ons Integration- </span> Your top QuickBooks hosting provider will not just host your QuickBooks Enterprise desktop software on the cloud. More than 200 add-ons and third-party apps, including all versions of QuickBooks, MS Excel, etc. are available and can be hosted on the cloud.</p>
-
-              <p className=" "><span className=" font-bold ">No Location Barriers-</span> While QuickBooks Enterprise Desktop needs you to be tethered to your computer, hosting the application on the cloud offers more convenience. Your data is in close proximity, irrespective of your location.</p>
-
-            </div>
-          </div>
-        </div>
-
-        <div className="my-12 w-[90%] mx-auto bg-gray-200 rounded-lg text-center">
-          <h2 className="text-center font-kanit font-semibold text-2xl pt-5 px-2">
-            Ready to take complete control of your Business Finances? Get QuickBooks Enterprise Hosting Today
-          </h2>
-          <div className="flex justify-center">
-            <Link to='/get-in-touch'>
-              <button className="border-2 my-6 md:my-6 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-                Get in Touch with Us
-              </button>
-            </Link>
-          </div>
-        </div>
-
-        <div className="w-[90%] mx-auto mt-10 flex flex-col items-center">
-          <h2 className="font-bold text-2xl font-kanit">
-            Winscloud Matrix Advantage: Why choose us as your QuickBooks cloud hosting provider?
-          </h2>
-        </div>
-
-        <article className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Card 1 */}
-          <div className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-red-800 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb1.webp"
-              alt="QuickBooks Enterprise Enhanced Mobility Features"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Enhanced Mobility</h3>
-            <p className=" font-montserrat  transition-all duration-300">
-              Our QuickBooks Enterprise hosting service helps you break location barriers and gives you the freedom to access your favorite application, your critical financial data, and collaborate with your team on the go.
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-red-800 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/teamwork.webp"
-              alt="Cost-Effective QuickBooks Enterprise Cloud Solutions"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Cost Effective Cloud Hosting</h3>
-            <p className=" font-montserrat " >
-              Winscloud’s QuickBooks Enterprise cloud hosting solutions help save big on expensive in-house IT infrastructure, maintenance, and support staff. You can also check our plans here.
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-white/20 hover:text-white hover:bg-red-800 transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb2.webp"
-              alt="Bank-level Security for QuickBooks Enterprise"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2  font-kanit">Bank-level Security</h3>
-            <p className=" font-montserrat transition-all duration-300">
-              Your data security is our top-most priority. We have key measures in place, like two-factor authentication, 256-Bit encryption, network firewalls and anti-virus, 24*7 video surveillance, and flood detection systems for your QuickBooks Enterprise cloud hosting.
-            </p>
-          </div>
-
-          {/* Card 4 */}
-          <div className="bg-white/20 hover:text-white hover:bg-red-800 transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <p className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28 text-center" > <SlCalender className="mx-auto text-8xl text-yellow-500" /></p>
-            <h3 className="font-bold text-xl mb-2  font-kanit">Maximum Uptime Guarantee</h3>
-            <p className="font-montserrat transition-all duration-300">
-              We conduct regular maintenance and automated system backups twice a day and our cutting-edge, high-performance servers ensure 99.99% up time to ensure your hosted QuickBooks Enterprise data is always constantly accessible.
-            </p>
-          </div>
-
-          {/* Card 5 */}
-          <div className="bg-white/20 hover:text-white hover:bg-red-800 transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb3.webp"
-              alt="Experienced Tech Team for QuickBooks Enterprise"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2  font-kanit">Experience Tech Team</h3>
-            <p className="font-montserrat transition-all duration-300">
-              We have an in-house team of trained and highly experienced technical support professionals who are available round-the-clock to provide you with end-to-end assistance, whether you need technical guidance or help with troubleshooting.
-            </p>
-          </div>
-          {/* Card 6 */}
-          <div className="bg-white/20 hover:text-white hover:bg-red-800 transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb1.webp"
-              alt="Scalable Pricing Structure for QuickBooks Enterprise"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2  font-kanit">Scalable Pricing Structure</h3>
-            <p className="font-montserrat transition-all duration-300">
-              We believe in offering full control to our customers with our scalable hosting plans. You can pay as you go without any contract boundation or choose from our tailored hosting plans based on YOUR team/business siz
-            </p>
-          </div>
-        </article>
-          <h2 className="font-bold mt-6 font-kanit text-center mb-4">
-            Most Asked QuickBooks Enterprise Hosting Questions
-          </h2>
+         <QuickLinks/>
+     <Expriance/>
+     <Awards/>
+                     <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">QuickBooks Enterprise FAQs</h1>
 
         <section className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
           {faqs.map((faq, index) => (

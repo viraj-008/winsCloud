@@ -194,7 +194,7 @@ const Home: React.FC = () => {
           <p className="text-center text-lg text-gray-700 mt-4 font-medium max-w-3xl mx-auto">
             Winscloud Matrix Cloud Hosting: Fast-track Your Tax and Accounting Practice
           </p>
-          <p className="mt-6 text-gray-700 text-lg  md:text-center font-montserrat max-w-5xl mx-auto">
+          <p className="mt-6 text-gray-700 text-lg  text-center font-montserrat max-w-5xl mx-auto">
             We simplify tax and accounting workflows by integrating powerful desktop applications with cloud flexibility—helping modern businesses streamline operations effortlessly.
           </p>
 

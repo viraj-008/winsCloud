@@ -43,11 +43,11 @@ const Navbar: React.FC = () => {
     {
       name: "Sage Hosting",
       dropdown: [
-        { label: "Sage Hosting", href: "/sage-hosting",icon: "./images/logo/sagenav.png" },
-        { label: "Sage 50 Hosting", href: "/sage-50-hosting", },
-        { label: "Sage 100 Hosting", href: "/sage-100-hosting" },
-        { label: "Sage 300 Hosting", href: "/sage-300-hosting" },
-        { label: "Sage 500 Hosting", href: "/sage-500-hosting" }
+        { label: "Sage Hosting", href: "/sage-hosting",icon: "./images/logo/sageL.png" },
+        { label: "Sage 50 Hosting", href: "/sage-50-hosting",icon: "./images/logo/sageL.png" },
+        { label: "Sage 100 Hosting", href: "/sage-100-hosting",icon: "./images/logo/sageL.png" },
+        { label: "Sage 300 Hosting", href: "/sage-300-hosting",icon: "./images/logo/sageL.png" },
+        { label: "Sage 500 Hosting", href: "/sage-500-hosting" ,icon: "./images/logo/sageL.png"}
       ]
     },
     {

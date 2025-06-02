@@ -80,11 +80,11 @@ const QickBooks_Desktop = () => {
               transition={{ duration: 0.8, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.8 }}
             >
-            QuickBooks Desktop Cloud Hosting
+              QuickBooks Desktop Cloud Hosting
             </motion.h1>
 
             <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
-Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
+              Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
             </p>
 
             <button className="bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-black text-white font-mono text-sm px-6 py-3 rounded-lg shadow-md border border-blue-600 transition duration-300 hover:scale-105">
@@ -102,150 +102,143 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
           </h2>
         </section>
 
-         <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
-  {/* IMAGE on the right (or bottom on mobile) */}
-  <figure className="w-full md:w-1/2 flex justify-center">
-  <img
-  className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
-  src="./images/logo/qb-desktop.webp"
-  alt="QuickBooks Hosting Service"
-/>
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+          {/* IMAGE on the right (or bottom on mobile) */}
+          <figure className="w-full md:w-1/2 flex justify-center">
+            <img
+              className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
+              src="./images/logo/qb-desktop.webp"
+              alt="QuickBooks Hosting Service"
+            />
 
-  </figure>
+          </figure>
 
-  {/* TEXT on the left (or top on mobile) */}
-  <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
-    <h2 className="font-semibold text-textPrimary   text-xl md:text-xl ">
-QuickBooks desktop cloud hosting means accessing the desktop version of QuickBooks software on a remote server with the help of the internet. With only authorized users permitted to access QuickBooks desktop cloud hosting, users can safely access their critical business data, work on the same set of files in real-time, irrespective of where they are located.    </h2>
-   
-    <p className="font-montserrat text-gray-700 text-sm md:text-base">
-QuickBooks Desktop Hosting providers take care of all the technical aspects of transitioning to the cloud. Winscloud Matrix, for instance, provides everything from a safe and secure remote server, the IT infrastructure needed for cloud hosting QuickBooks Desktop software, 100% data backup, security measures to protect data from risks like theft, and technical support. Users who transition to cloud hosting for QuickBooks Desktop enjoy enhanced collaboration with their teams, higher productivity, and safety of their business data, all at a minimal cost.
+          {/* TEXT on the left (or top on mobile) */}
+          <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
+            <h2 className="font-semibold text-textPrimary   text-xl md:text-xl ">
+              QuickBooks desktop cloud hosting means accessing the desktop version of QuickBooks software on a remote server with the help of the internet. With only authorized users permitted to access QuickBooks desktop cloud hosting, users can safely access their critical business data, work on the same set of files in real-time, irrespective of where they are located.    </h2>
 
-    </p>
-  </article>
-</section>
+            <p className="font-montserrat text-gray-700 text-sm md:text-base">
+              QuickBooks Desktop Hosting providers take care of all the technical aspects of transitioning to the cloud. Winscloud Matrix, for instance, provides everything from a safe and secure remote server, the IT infrastructure needed for cloud hosting QuickBooks Desktop software, 100% data backup, security measures to protect data from risks like theft, and technical support. Users who transition to cloud hosting for QuickBooks Desktop enjoy enhanced collaboration with their teams, higher productivity, and safety of their business data, all at a minimal cost.
 
-<div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
-           
+            </p>
+          </article>
+        </section>
+
+        <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+
           <div className="flex-1">
             <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
-  Six Easy Steps to Transition to QuickBooks Desktop Cloud Hosting </h1>
-    <p className="text-gray-100 font-josefin text-center">
-            Migrating to the cloud can be done in a few easy steps. Having the right QuickBooks Desktop Hosting Provider on your side can make the process simpler and faster. With Winscloud, you are assigned a cloud expert right from the start who will assist you with your cloud migration. You can also opt for a one-month Free Trial to get the real experience of running your business from the cloud. To begin your transition, here are the simple steps you need to follow
-          </p>
+              Six Easy Steps to Transition to QuickBooks Desktop Cloud Hosting </h1>
+            <p className="text-gray-100 font-josefin text-center">
+              Migrating to the cloud can be done in a few easy steps. Having the right QuickBooks Desktop Hosting Provider on your side can make the process simpler and faster. With Winscloud, you are assigned a cloud expert right from the start who will assist you with your cloud migration. You can also opt for a one-month Free Trial to get the real experience of running your business from the cloud. To begin your transition, here are the simple steps you need to follow
+            </p>
 
-         
-           <Link to="/trial">
-            <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition">
-              Start FREE Trial - Claim Top hosting Services Today!
-            </button>
-             </Link>
+
+            <Link to="/trial">
+              <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition">
+                Start FREE Trial - Claim Top hosting Services Today!
+              </button>
+            </Link>
           </div>
 
         </div>
 
 
-   <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12 p-4 ">
-  <div className="grid gap-14 md:grid-cols-3 md:gap-8">
-    <div className="rounded-xl bg-white p-6 text-center shadow-xl">
-      <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-   
-     <LuDatabaseBackup />
+        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12 p-4 ">
+          <div className="grid gap-14 md:grid-cols-3 md:gap-8">
+            <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-      </div>
-      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Wait for Data Transfer</h1>
-      <p className="px-4 text-gray-500">
-You can choose to transfer all your data on the cloud. However, it may take a few hours to safely transfer your data, depending on its size.
-      </p>
-    </div>
-    <div className="rounded-xl bg-white p-6 text-center shadow-xl">
-      <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-      <FaUsersGear />
+                <LuDatabaseBackup />
 
-      </div>
-      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access Using Credentials
-</h1>
-      <p className="px-4 text-gray-500">
-You can access your QuickBooks Desktop cloud hosting using the username and password provided by your hosting provider. You can also choose to add more authorized users to your cloud hosting for QuickBooks desktop.
-      </p>
-    </div>
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Wait for Data Transfer</h1>
+              <p className="px-4 text-gray-500">
+                You can choose to transfer all your data on the cloud. However, it may take a few hours to safely transfer your data, depending on its size.
+              </p>
+            </div>
+            <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
+                <FaUsersGear />
 
-    <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
-      <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-         <RiInformation2Fill />
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access Using Credentials
+              </h1>
+              <p className="px-4 text-gray-500">
+                You can access your QuickBooks Desktop cloud hosting using the username and password provided by your hosting provider. You can also choose to add more authorized users to your cloud hosting for QuickBooks desktop.
+              </p>
+            </div>
 
-      </div>
-      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Provide Your License Information
-</h1>
-      <p className="px-4 text-gray-500">
-Your cloud hosting provider will need you to provide your license information since it is mandatory to share your QuickBooks License details with your hosting provider to host it in the cloud.
-      </p>
-    </div>
-    <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
-      <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-         <GiChoice />
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
+                <RiInformation2Fill />
 
-      </div>
-      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Select a Hosting Plan
-</h1>
-      <p className="px-4 text-gray-500">
-At Winscloud, we offer both dedicated and shared hosting plans. You can choose a plan that suits your business needs the best. Enquire quickbooks desktop hosting pricing now.
-      </p>
-    </div>
-    <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
-      <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-         <BiDetail />
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Provide Your License Information
+              </h1>
+              <p className="px-4 text-gray-500">
+                Your cloud hosting provider will need you to provide your license information since it is mandatory to share your QuickBooks License details with your hosting provider to host it in the cloud.
+              </p>
+            </div>
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
+                <GiChoice />
 
-      </div>
-      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Provide Your Details
-</h1>
-      <p className="px-4 text-gray-500">
-Contact our cloud expert at Winscloud Matrix and provide your software details, other relevant information and hosting requirements. Your preferred number of users, storage needs, hosting preferences like shared or dedicated hosting should all be conveyed to your cloud expert.
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Select a Hosting Plan
+              </h1>
+              <p className="px-4 text-gray-500">
+                At Winscloud, we offer both dedicated and shared hosting plans. You can choose a plan that suits your business needs the best. Enquire quickbooks desktop hosting pricing now.
+              </p>
+            </div>
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
+                <BiDetail />
 
-      </p>
-    </div>
-    <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
-      <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-        <GrDocumentTest />
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Provide Your Details
+              </h1>
+              <p className="px-4 text-gray-500">
+                Contact our cloud expert at Winscloud Matrix and provide your software details, other relevant information and hosting requirements. Your preferred number of users, storage needs, hosting preferences like shared or dedicated hosting should all be conveyed to your cloud expert.
 
-      </div>
-      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Begin Access Testing
-</h1>
-      <p className="px-4 text-gray-500">
-Once you have access to your QuickBooks Desktop cloud hosting, test the platform by using it.
+              </p>
+            </div>
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
+                <GrDocumentTest />
 
-      </p>
-    </div>
-  </div>
-</div>
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Begin Access Testing
+              </h1>
+              <p className="px-4 text-gray-500">
+                Once you have access to your QuickBooks Desktop cloud hosting, test the platform by using it.
 
-   <div>
-    <h1 className="text-3xl md:text-4xl text-center font-extrabold font-serif text-blue-900 mb-4">
-         We Host All Versions of Your Most Loved QuickBooks Desktop
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h1 className="text-3xl md:text-4xl text-center font-extrabold font-serif text-blue-900 mb-4">
+            We Host All Versions of Your Most Loved QuickBooks Desktop
           </h1>
           <p className="max-w-[90%] mx-auto text-center font-montserrat">Maximize efficiency in your accounting and tax operations with affordable and secure QuickBooks Desktop Hosting. Let our team handle your QuickBooks Desktop Hosting, so you can focus on what is most important – YOUR Business!</p>
-       <QuickLinks/>
-     </div>
-
-      
-
-
-
-     
-
+          <QuickLinks />
+        </div>
 
 
         <div className="bg-gradient-to-br w-[96%] my-7 mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
-     
+
           {/* Text Content */}
           <div className="flex-1">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">
               Winscloud Matrix: Your Trusted QuickBooks Cloud Hosting Provider</h1>
-             <Link to='/Get-in-Touch'>
-            <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition">
-               Contact QuickBooks Hosting Expert
-            </button>
-             </Link>
+            <Link to='/Get-in-Touch'>
+              <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition">
+                Contact QuickBooks Hosting Expert
+              </button>
+            </Link>
           </div>
 
           {/* React Icon */}
@@ -255,42 +248,40 @@ Once you have access to your QuickBooks Desktop cloud hosting, test the platform
 
 
 
-     <section className="px-5 md:px-24 py-16 ">
+        <section className="px-5 md:px-24 py-16">
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
-           Winscloud Matrix: Your Trusted QuickBooks Cloud Hosting Provider
+            Winscloud Matrix: Your Trusted QuickBooks Cloud Hosting Provider
           </h1>
           <p className="text-center text-lg md:text-xl text-gray-700 font-medium max-w-3xl mx-auto">
-Winscloud, an experienced cloud hosting provider, has helped multiple businesses from an array of domains in their smooth transition to the cloud and growing from there. We do not just offer QuickBooks hosting solutions to small and medium business owners – we offer a commitment to ensure data security, uninterrupted business access that ensures maximum customer satisfaction, and support at any time of day and night. Here are some of the many benefits of QuickBooks desktop cloud hosting with Winscloud Matrix –
-</p>
-
-        
+            Winscloud, an experienced cloud hosting provider, has helped multiple businesses from an array of domains in their smooth transition to the cloud and growing from there. We do not just offer QuickBooks hosting solutions to small and medium business owners – we offer a commitment to ensure data security, uninterrupted business access that ensures maximum customer satisfaction, and support at any time of day and night. Here are some of the many benefits of QuickBooks desktop cloud hosting with Winscloud Matrix –
+          </p>
 
           <div className="grid md:grid-cols-2 gap-8 mt-14">
             {[
               {
                 title: "Flexibility",
-                desc: "Our QuickBooks Cloud hosting solution offers unparalleled flexibility to businesses, facilitating multi-user collaboration across multiple locations. With access to only authorized users, SMBs can safely collaborate on the same set of data, in real-time.",
+                desc: "Our QuickBooks Cloud hosting solution offers unparalleled flexibility to businesses, facilitating multi-user collaboration across multiple locations. With access to only authorized users, SMBs can safely collaborate on the same set of data, in real-time."
               },
               {
                 title: "Customization",
-                desc: "We understand that every business has its own unique needs. Therefore, we ensure that we accommodate all unique needs for the most satisfactory cloud experience. Whether you need more storage, dedicated hosting, scalable quickbooks desktop hosting pricing, we have it all.",
+                desc: "We understand that every business has its own unique needs. Therefore, we ensure that we accommodate all unique needs for the most satisfactory cloud experience. Whether you need more storage, dedicated hosting, scalable quickbooks desktop hosting pricing, we have it all."
               },
               {
                 title: "Cost-efficienc",
-                desc: "Our quickbooks desktop hosting pricing starts at just $23 per month. Not only is it affordable, but our pricing plans are also cost efficient since you only have to pay for hosting services, without worrying about setting up an IT infrastructure or paying separately for tech support",
+                desc: "Our quickbooks desktop hosting pricing starts at just $23 per month. Not only is it affordable, but our pricing plans are also cost efficient since you only have to pay for hosting services, without worrying about setting up an IT infrastructure or paying separately for tech support."
               },
               {
                 title: "Maximum Uptime",
-                desc: "Our state-of-the-art and reliable SSAE-16 Type-II (SOC-2) data centers ensure 99.99% accessibility, helping minimize downtime. With this high availability, users can enjoy high business productivity and uninterrupted business operations.",
+                desc: "Our state-of-the-art and reliable SSAE-16 Type-II (SOC-2) data centers ensure 99.99% accessibility, helping minimize downtime. With this high availability, users can enjoy high business productivity and uninterrupted business operations."
               },
               {
                 title: "Support",
-                desc: "Winscloud’s technical support team is highly trained to tackle all sorts of QuickBooks Desktop Hosting issues that businesses might face before, during or after their transition to the cloud. The team works tirelessly, round-the-clock to troubleshoot.",
+                desc: "Winscloud’s technical support team is highly trained to tackle all sorts of QuickBooks Desktop Hosting issues that businesses might face before, during or after their transition to the cloud. The team works tirelessly, round-the-clock to troubleshoot."
               },
               {
                 title: "Maximum Uptime",
-                desc: "Our top-notch security measures such as network firewall, daily monitoring redundancies, anti-virus, anti-malware, among others to ensure your QuickBooks Desktop Hosting data is protected at all levels, round-the-clock.",
-              },
+                desc: "Our top-notch security measures such as network firewall, daily monitoring redundancies, anti-virus, anti-malware, among others to ensure your QuickBooks Desktop Hosting data is protected at all levels, round-the-clock."
+              }
             ].map((feature, idx) => (
               <div
                 key={idx}
@@ -302,11 +293,11 @@ Winscloud, an experienced cloud hosting provider, has helped multiple businesses
             ))}
           </div>
         </section>
-       <Experience />
+        <Experience />
 
-       <Awards />
+        <Awards />
 
-                    <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">QuickBooks Desktop FAQs</h1>
+        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">QuickBooks Desktop FAQs</h1>
         <section className="max-w-3xl mx-auto my-6 border rounded-lg shadow-lg overflow-hidden">
 
           {faqs.map((faq, index) => (

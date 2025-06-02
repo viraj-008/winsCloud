@@ -2,6 +2,12 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import Partner from "../Partner";
+import { motion } from "framer-motion";
+import { LuDatabaseBackup } from "react-icons/lu";
+import { GiChoice } from "react-icons/gi";
+import { GrDocumentTest } from "react-icons/gr";
+import QuickLinks from "../QuickLinks";
+import Awards from "../Awards";
 const Quick_hosting_canada = () => {
     const faqs = [
         
@@ -44,157 +50,187 @@ const Quick_hosting_canada = () => {
       };
   return (
     <>
-               <div className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center  pt-20 px-5 md:px-20 items-center ">
-                   <div className="w-full text-center md:text-left md:pt-6">
-                       <h1 className="text-white font-josefin text-4xl md:text-6xl">
-                       QuickBooks Hosting Canada
-                       </h1>
-                       <p className='text-xl   md:text-3xl bg-gradient-to-r from-orange-500 via-indigo-100 to-green-100 text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
-                       Business Data at your fingertips with QuickBooks Canada Hosting
-                       </p>
-                        <Link to='/trial'><button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-                        Start Free Trial Now
-                       </button></Link>
-                   </div>
-               </div>
+                <section className="min-h-[80vh] rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12">
+        <div className="max-w-6xl mx-auto w-full gap-12 items-center mt-8">
 
-           <div className="pt-6 p-2">
-               <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
-               QuickBooks POS Cloud Hosting: Conveniently track multi-channel sales and manage your retail inventory from multiple locations
-               </h1>
-           </div>
+          {/* Left Content */}
+          <div className="text-center md:text-left mt-8">
+            <motion.h1
+              className="text-slate-100 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >
+             QuickBooks Hosting Canada
 
-           <div className="flex flex-col md:flex-row justify-between p-4 md:p-8">
- {/* Text Section */}
- <div className="w-full text-justify font-josefin text-gray-600 md:w-[45%]">
-  
-   <p className="my-2 md:my-4 text-sm md:text-base">
-   QuickBooks Canada Hosting is the most sought-after accounting solution by business owners, CPAs, and bookkeepers in Canada. QuickBooks Canada Hosting allows hosting of multiple versions of QuickBooks, offering added flexibility, security, and mobility to business owners who wish to collaborate with their team in real-time and stay up to date with their business operations on-the-go. 
-   </p>
-   <p className=" my-2 md:my-4 text-sm md:text-base">
-   QuickBooks hosting Canada is suitable for small, mid-sized and large businesses. Winscloud provides hosting to multiple QuickBooks versions intended to meet different business needs. We have served tailored QuickBooks Canada hosting solutions and add-ons integration to multiple Canadian businesses like retail, wholesale, not for profit organizations, CPA firms, among others.
-   </p>
-   
- </div>
+            </motion.h1>
 
- {/* Image Section */}
- <div className="w-full md:w-[50%] flex justify-center mt-6 md:mt-0">
-   <img className="h-48 md:h-80 border-2 border-black rounded-lg object-cover" src="./images/logo/qb-canada.webp" alt="QuickBooks Hosting" />
- </div>
-</div>
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+       Business Data at your fingertips with QuickBooks Canada Hosting
+     </p>
 
+            <button className="bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-black text-white font-mono text-sm px-6 py-3 rounded-lg shadow-md border border-blue-600 transition duration-300 hover:scale-105">
+              <span className="text-green-400">//</span>Take a Free Trial Today!
+            </button>
+          </div>
 
-<div className="my-12 w-[90%] mx-auto bg-gray-200 rounded-lg text-center">
-<h1 className="text-center font-kanit font-semibold text-2xl pt-5 px-2">
-Ready to take your retail business to the cloud?
-</h1>
-<div className="flex justify-center">
- <Link to='/get-in-touch'>
-   <button className="border-2 my-6 md:my-6 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-   Get in Touch With an Expert
-   </button>
- </Link>
-</div>
-</div>
+        </div>
+      </section>
 
-<div className="my-12 w-[90%] mx-auto">
-<h1 className="text-center font-serif font-semibold text-2xl pt-5">
-Why Choose Winscloud Matrix for taking your QuickBooks Cloud Hosting?
- </h1>
+           <section>
+        <h2 className='text-3xl text-center py-4 font-bold font-montserrat text-textPrimary'>
+          QuickBooks POS Cloud Hosting: Conveniently track multi-channel sales and manage your retail inventory from multiple locations
+        </h2>
+      </section>
 
+         <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        {/* IMAGE on the right (or bottom on mobile) */}
+        <figure className="w-full md:w-1/2 flex justify-center">
+          <img
+            className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
+            src="./images/logo/qb-canada.webp"
+            alt="QuickBooks Hosting Service"
+          />
 
-   <div className="flex flex-col font-josefin  md:flex-row  mt-8">
+        </figure>
 
-     <div className="md:w-[50%] space-y-4 text-sm p-3">
-     <p className=" "><span className=" font-bold ">Disaster-proof hosting-</span> With Winscloud Matrix, you do not have to worry about the safety of your data. Our comprehensive security protocols are always in place to ensure your data is safe and accessible.</p>
-     <p className=" "> <span className=" font-bold my-6 ">Easy & Quick Migration- </span> Transitioning to the cloud and securely migrating all your data with Winscloud Matrix while ensuring maximum uptime usually takes less than 2 hours.</p>
-     <p className=" "> <span className=" font-bold  ">24/7/365 Support- </span>Be it troubleshooting or technical guidance, our dedicated and trained technical support staff are available round-the-clock to provide you with the necessary help at any time of the day.</p>
-     </div>
-   
-   <div className="md:w-[50%] space-y-4 p-3  text-sm">
-     <p className=""> <span className=" font-bold ">Add-Ons Integration-</span> We are equipped with hosting more than 200 add-ons to go with your QuickBooks desktop application. Our team can also support you with troubleshooting any issues related to these add-ons.</p>
-     <p className=""> <span className=" font-bold ">Flexible Pricing Plans- </span>Our QuickBooks Hosting Canada pricing plans are flexible and customizable. We provide you with complete freedom to choose a plan that best suits your current business needs.</p>
+        {/* TEXT on the left (or top on mobile) */}
+        <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
+          <h2 className="font-semibold text-textPrimary   text-xl md:text-xl ">
+           QuickBooks Canada Hosting is the most sought-after accounting solution by business owners, CPAs, and bookkeepers in Canada. QuickBooks Canada Hosting allows hosting of multiple versions of QuickBooks, offering added flexibility, security, and mobility to business owners who wish to collaborate with their team in real-time and stay up to date with their business operations on-the-go.
 
-     <p className=" "><span className=" font-bold ">Maximum Up Time-</span>We care for your business and understand the importance of being always available to your customers. Hence, our certified SSAE-16 Type-II (SOC-2) data centers ensure 99.99% accessibility.</p>
-    
-   </div>
-   </div>
-</div>   
+          </h2>
+          <p className=" font-montserrat text-gray-600 text-sm md:text-base">
+            QuickBooks hosting Canada is suitable for small, mid-sized and large businesses. Winscloud provides hosting to multiple QuickBooks versions intended to meet different business needs. We have served tailored QuickBooks Canada hosting solutions and add-ons integration to multiple Canadian businesses like retail, wholesale, not for profit organizations, CPA firms, among others.
+          </p>
+
+        </article>
+      </section>
 
 
+   <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
+             <h2 className="font-bold text-3xl mt-3 text-center text-textPrimary">
+    Benefits of Moving from Desktop to QuickBooks Canada Hosting
+             </h2>
+             <p className="font-inter text-gray-800 text-center mt-4 max-w-4xl">
+   Our US-based, superfast data centers and SSD-based HPC servers ensure 99.99% uptime for the most seamless collaboration with teams across multiple locations and devices. Experience unparalleled performance and unmatched flexibility with easy accessibility of your fully backed-up data.
 
-<div className="my-12 w-[90%] mx-auto bg-gray-200 rounded-lg text-center">
-<h1 className="text-center font-kanit font-semibold text-2xl pt-5 px-2">
-Are you ready to begin your One-Month Free Trial of QuickBooks Canada Hosting?
-</h1>
-<div className="flex justify-center">
- <Link to='/get-in-touch'>
-   <button className="border-2 my-6 md:my-6 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-   Get in Touch with Us
-   </button>
- </Link>
-</div>
-</div>
-
-<div className="w-[90%] mx-auto mt-10 flex flex-col items-center">
-               <h1 className="font-bold text-2xl font-kanit text-center">
-               Winscloud Matrix: Your Trusted QuickBooks Canada Hosting Parter
-
-               </h1>
-               <p className="text-center font-montserrat font-semibold text-gray-500">Seamless blend of agility, security, mobility, and productivity</p>
+             </p>
+              <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100  pt-12 p-4 ">
+             <div className="grid gap-14 md:grid-cols-3 md:gap-8">
+               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
               
+                <LuDatabaseBackup />
+           
+                 </div>
+                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Multi-User Collaboration
+   </h1>
+                 <p className="px-4 text-gray-500">
+QuickBooks Canada hosting supports multiple user access to the same set of data, allowing the entire team to work on the document in real-time, from any location in Canada. Whether you are in British Columbia or Vancouver, as a business owner, you can enjoy greater access to your financial data, all the time.   
+                 </p>
+               </div>
+              
+           
+           
+               <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
+                    <GiChoice />
+           
+                 </div>
+                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access On the Go
+           </h1>
+                 <p className="px-4 text-gray-500">
+Need expert help with technical issues related to your QuickBooks or are you simply on the lookout for a certified expert to provide you with the technical know-how of Hosted QuickBooks on the cloud? We promise 24/7 tech support via email, call and text with a 15-minute response time.
+                 </p>
+               </div>
+               
+               <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
+                   <GrDocumentTest />
+           
+                 </div>
+                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Data Security and Recovery
+           </h1>
+                 <p className="px-4 text-gray-500">
+  We understand that modern businesses seek modern solutions when it comes to data security. Our SSAE 16 certified data centers, network firewalls, automated data backups, anti-virus among other security solutions ensure that your hosted QuickBooks data is safe and secure.      
+                 </p>
+               </div>
+             </div>
            </div>
+           </section>
 
-           <p className="text-center font-montserrat my-4">Our US-based, superfast data centers and SSD-based HPC servers ensure 99.99% uptime for the most seamless collaboration with teams across multiple locations and devices. Experience unparalleled performance and unmatched flexibility with easy accessibility of your fully backed-up data</p>
-           <div className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-     {/* Card 1 */}
-     <div  className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-       <img src="images/logo/teamwork.webp" alt="Best-fitting Plans"   className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
-       <h2 className="font-bold text-xl mb-2 font-kanit">
-       Multi-User Collaboration</h2>
-       <p className="text-gray-700 font-montserrat  transition-all duration-300">
-       QuickBooks Canada hosting supports multiple user access to the same set of data, allowing the entire team to work on the document in real-time, from any location in Canada. Whether you are in British Columbia or Vancouver, as a business owner, you can enjoy greater access to your financial data, all the time.
-       </p>
-     </div>
 
-     {/* Card 2 */}
-     <div  className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-       <img src="images/logo/qb3.webp" alt="Round-the-Clock Support"   className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
-       <h2 className="font-bold text-xl mb-2 font-kanit">
-       Access On the Go</h2>
-       <p className="text-gray-700 font-montserrat " >
-       Need expert help with technical issues related to your QuickBooks or are you simply on the lookout for a certified expert to provide you with the technical know-how of Hosted QuickBooks on the cloud? We promise 24/7 tech support via email, call and text with a 15-minute response time
-       </p>
-     </div>
 
-     {/* Card 3 */}
-     <div className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
- <img src="images/logo/qb1.webp" alt="Data Security and Recovery"   className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
- <h2 className="font-bold text-xl mb-2  font-kanit">
- 
-Data Security and Recovery
 
- </h2>
- <p className="text-gray-800 font-montserrat transition-all duration-300">
- Enjoy greater control over your busWe understand that modern businesses seek modern solutions when it comes to data security. Our SSAE 16 certified data centers, network firewalls, automated data backups, anti-virus among other security solutions ensure that your hosted QuickBooks data is safe and secure.iness by connecting all your outlets on the cloud and monitor your retail business with more precision.
- </p>
-</div>
+<section className="px-5 md:px-24 py-16 ">
+        <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
+Winscloud Matrix: Your Trusted QuickBooks Canada Hosting Parter
+        </h1>
+        
+        <div className="grid md:grid-cols-2 gap-8 mt-14">
+          {[
+            {
+              title: "Disaster-proof hosting",
+              desc: "With Winscloud Matrix, you do not have to worry about the safety of your data. Our comprehensive security protocols are always in place to ensure your data is safe and accessible.",
+            },
+            {
+              title: "Easy & Quick Migration",
+              desc: "Transitioning to the cloud and securely migrating all your data with Winscloud Matrix while ensuring maximum uptime usually takes less than 2 hours",
+            },
+            {
+              title: "24/7/365 Support",
+              desc: "Be it troubleshooting or technical guidance, our dedicated and trained technical support staff are available round-the-clock to provide you with the necessary help at any time of the day.",
+            },
+            {
+              title: "Add-Ons Integration ",
+              desc: "We are equipped with hosting more than 200 add-ons to go with your QuickBooks desktop application. Our team can also support you with troubleshooting any issues related to these add-ons.",
+            },
+            {
+              title: "Flexible Pricing Plans",
+              desc: "Our QuickBooks Hosting Canada pricing plans are flexible and customizable. We provide you with complete freedom to choose a plan that best suits your current business needs",
+            },
+            {
+              title: "Maximum Up Time",
+              desc: " We care for your business and understand the importance of being always available to your customers. Hence, our certified SSAE-16 Type-II (SOC-2) data centers ensure 99.99% accessibility",
+            },
+          ].map((feature, idx) => (
+            <div
+              key={idx}
+              className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+            >
+              <h3 className="text-xl font-semibold text-blue-800 mb-2">{feature.title}</h3>
+              <p className="text-gray-700 text-[15px] leading-relaxed">{feature.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section> 
 
-  
 
-</div>
+ <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="flex-1">
+          <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
+            Are you ready to begin your One-Month Free Trial of QuickBooks Canada Hosting?
 
-<h1 className="text-3xl text-center font-bold font-serif mt-8 px-4">We host multiple versions of QuickBooks Desktop for Business Owners and Accountants in Canada</h1>
-<p className="text-blue-500 text-center mt-6 font-bold">
-  <Link to="/quickbooks-desktop" className="hover:underline">QuickBooks Desktop</Link> <span className="text-black">|</span>{' '}
-  <Link to="/quickbooks-pro" className="hover:underline">QuickBooks Pro</Link> <span className="text-black">|</span>{' '}
-  <Link to="/quickbooks-premier" className="hover:underline">QuickBooks Premier</Link> <span className="text-black">|</span>{' '}
-  <Link to="/quickbooks-enterprise" className="hover:underline">QuickBooks Enterprise</Link> <span className="text-black">|</span>{' '}
-  <Link to="/quickbooks-pos" className="hover:underline">QuickBooks POS</Link> <span className="text-black">|</span>{' '}
-  <Link to="/quickbooks-canada" className="hover:underline">QuickBooks Canada</Link>
-</p>
+          </h1>
+          <Link to='/get-in-touch'>
+            <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition block mx-auto">
+              Get in Touch With an Expert
+            </button>
+          </Link>
+        </div>
+      </div>
+<QuickLinks/>
 
-    <h1 className="md:text-xl text-center font-bold font-kanit mt-8 px-4">QuickBooks Hosting Canada Frequently Asked Questions (FAQs) -</h1>
+<Awards/>
+
+
+
+
+
+            <h1 className="text-center font-inter font-bold text-3xl text-textPrimary  p-2">QuickBooks Canada FAQs</h1>
+
            <div className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
                  {faqs.map((faq, index) => (
                    <div key={index} className="border-b last:border-b-0">

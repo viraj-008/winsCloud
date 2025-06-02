@@ -104,7 +104,7 @@ const Partner = () => {
               <motion.img
                 src={logo.image}
                 alt={`Logo ${index + 1}`}
-                className="w-full h-auto max-h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                className="w-full h-auto max-h-16 object-contain  transition-all duration-300"
                 whileHover={{ scale: 1.1 }}
               />
             </motion.div>

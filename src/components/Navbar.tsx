@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { ReactNode } from "react";
 import { RiMenu3Line } from "react-icons/ri";
 import { FaCaretRight } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
+
 
 type NavItem = {
   name: string | ReactNode;
@@ -52,18 +54,18 @@ const Navbar: React.FC = () => {
     },
     {
       name: "Service", dropdown: [
-        { label: "Lacerte_Hostiing", href: "/lacerte_Hosting" },
-        { label: "Proseries-hosting", href: "/proseries-hosting" },
-        { label: "Cloud server hosting", href: "/cloud-server-hosting" },
-        { label: "Drake Hosting", href: "drake-hosting" },
-        { label: "Ultratax Hosting", href: "ultratax-hosting" },
-        { label: "Act Hosting", href: "act-hosting" },
-        { label: "Atx Hosting", href: "atx-hosting" },
-        { label: "Tax wise Hosting", href: "tax-wise-hosting" },
-        { label: "Quicken Hosting", href: "quicken-hosting" },
-        { label: "Myob Hosting", href: "myob-hosting" },
-        { label: "Fishbowl Hosting", href: "fishbowl-hosting" },
-        { label: "Doc IT Hosting", href: "doc-it-hosting" },
+        { label: "Lacerte_Hostiing", href: "/lacerte_Hosting",icon: "./images/logo/serv.png" },
+        { label: "Proseries-hosting", href: "/proseries-hosting",icon: "./images/logo/serv.png"  },
+        { label: "Cloud server hosting", href: "/cloud-server-hosting" ,icon: "./images/logo/serv.png" },
+        { label: "Drake Hosting", href: "drake-hosting" ,icon: "./images/logo/serv.png" },
+        { label: "Ultratax Hosting", href: "ultratax-hosting" ,icon: "./images/logo/serv.png" },
+        { label: "Act Hosting", href: "act-hosting" ,icon: "./images/logo/serv.png" },
+        { label: "Atx Hosting", href: "atx-hosting",icon: "./images/logo/serv.png" },
+        { label: "Tax wise Hosting", href: "tax-wise-hosting",icon: "./images/logo/serv.png"  },
+        { label: "Quicken Hosting", href: "quicken-hosting",icon: "./images/logo/serv.png"  },
+        { label: "Myob Hosting", href: "myob-hosting" ,icon: "./images/logo/serv.png" },
+        { label: "Fishbowl Hosting", href: "fishbowl-hosting",icon: "./images/logo/serv.png"  },
+        { label: "Doc IT Hosting", href: "doc-it-hosting" ,icon: "./images/logo/serv.png" },
       ]
     },
     { name: "Pricing", dropdown: [] },
@@ -143,10 +145,10 @@ const Navbar: React.FC = () => {
         <div className={`w-[90%] lg:w-auto bg-white lg:bg-transparent lg:flex mt-2 rounded-lg lg:items-center transition-all duration-500 ease-in-out
             ${isMobileMenuOpen ? 'block' : 'hidden lg:block'}`}>
           <Link to="/"
-            className="w-full lg:w-auto py-2 px-4 mb-1 hidden font-josefin font-semibold md:block text-black hover:scale-105 transition-all duration-300"
+            className="w-full lg:w-auto py-2 px-4 mb-1 text-3xl text-red-600 hidden font-josefin font-semibold md:block  hover:scale-105 transition-all duration-300"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Home
+            <FaHome />
           </Link>
 
           {navItems.map((item, index) => (
@@ -181,14 +183,15 @@ const Navbar: React.FC = () => {
               )}
 
               {item.dropdown.length > 0 && (
-                <div className={`lg:absolute static w-full lg:w-60  bg-white transition-all duration-300 ease-in-out
+                
+                <div className={`lg:absolute  static w-full lg:w-80  bg-white transition-all duration-300 ease-in-out
                     ${mobileDropdowns[index] ? 'block' : 'hidden'} 
                     lg:hidden lg:group-hover:block lg:top-full 
                     ${index >= navItems.length - 2 ? 'lg:right-0' : 'lg:left-0'}
                     lg:shadow-lg lg:rounded-lg`}>
                   {item.dropdown.map((subItem, subIndex) => (
                     <div key={subIndex} className="font-josefin flex justify-start pl-5 items-center">
-                       {<img src={subItem.icon} className="h-6 rounded-3xl"/>}
+                       {<img src={subItem.icon} className="h-6  rounded-3xl"/>}
                       <Link to={subItem.href}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="block px-4 py-2 text-[16px] font-josefin text-gray-600

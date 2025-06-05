@@ -2,6 +2,13 @@ import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Partner from "../Partner";
+import { motion } from "framer-motion";
+import { MdOutlineSecurity } from "react-icons/md";
+import { RiShakeHandsLine } from "react-icons/ri";
+import { LuClock } from "react-icons/lu";
+import Expriance from "../Expriance";
+import Awards from "../Awards";
+import ServiceLink from "../ServiceLink";
 
 const Lecerte_Hosting = () => {
   const faqs = [
@@ -53,145 +60,180 @@ const Lecerte_Hosting = () => {
 
   return (
     <>
-      <header className="w-full flex bg-[url('/images/Home/server.webp')] bg-cover bg-center pt-20 px-5 md:px-20 items-center min-h-[230px] md:min-h-[430px]">
-        <div className="w-full text-center md:text-left">
-          <h1 className="text-white text-3xl md:text-6xl leading-tight">
-            Lacerte Tax Software Hosting
-          </h1>
-          <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
-            Streamline your workflow and organize your tax operations with Lacerte Hosting
-          </p>
-          <Link to="/trial">
-            <button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-              Start One-month FREE Trial
+       <section className="min-h-[80vh] rounded-b-3xl flex items-center bg-gradient-to-t from-[#6278c0] via-[#102f86] to-black text-white px-6 py-12">
+        <div className="max-w-6xl mx-auto w-full gap-12 items-center mt-8">
+
+          {/* Left Content */}
+          <div className="text-center md:text-left mt-8">
+            <motion.h1
+              className="text-slate-100 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              Real-time Collaboration from
+Anywhere Across the Globe
+            </motion.h1>
+
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+Seamlessly manage your business operations
+with the Best Cloud Hosting Provider</p>
+
+           <Link to='trial'> <button className="bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-black text-white font-mono text-sm px-6 py-3 rounded-lg shadow-md border border-blue-600 transition duration-300 hover:scale-105">
+              <span className="text-green-400">//</span> Request A Free Demo
+            </button></Link>
+          </div>
+
+        </div>
+      </section>
+
+      <main>
+        <section>
+        <h2 className='text-3xl text-center py-4 font-bold font-montserrat text-textPrimary'>
+Remote Access Has Never Been Smoother
+        </h2>
+        <p className="font-montserrat text-xl text-center font-semibold">Scale Your Business Efficiently with Winscloud – Your Top Cloud Hosting Provider
+
+</p>
+</section>
+
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        {/* IMAGE on the right (or bottom on mobile) */}
+        <figure className="w-full md:w-1/2 flex justify-center">
+          <img
+            className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
+            src="./images/logo/lace-hosting.webp"
+            alt="QuickBooks Hosting Service"
+          />
+
+        </figure>
+
+        {/* TEXT on the left (or top on mobile) */}
+        <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
+          <h2 className="font-semibold text-textPrimary   text-xl md:text-xl ">
+       Lacerte Tax Software hosting means accessing the desktop Lacerte application on a virtual server via the internet. Hosting Lacerte Tax Software on the cloud offers immense flexibility to access the software and its data from any remote location. Multiple people can collaborate and work on the same set of data to seamlessly file taxes and prepare reports efficiently, therefore optimizing the workflow and enhancing team’s productivity to a greater extent.
+          </h2>
+           <p className="font-montserrat text-gray-700 text-sm md:text-base">
+           Lacerte Tax Hosting also facilitates easy and timely updates of the desktop application, promotes safety and data security in the cloud environment, and saves time since you do not need to travel to the office every time to work on your data. Lacerte Tax Software hosting can be accessed from anywhere, at any time.
+            </p>
+
+        </article>
+      </section>
+
+       
+
+      <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100">
+               <h2 className="font-bold text-3xl mt-3 text-center text-textPrimary">
+          How to transition to Lacerte Tax Hosting?
+               </h2>
+               <p className="text-gray-800 mt-4 text-center font-semibold">Access When You Need It</p>
+               <p className="font-inter text-gray-800 text-center mt-8">
+                            Winscloud helps businesses transition to the cloud environment with Lacerte Hosting in three simple steps –
+               </p>
+     
+               <div className="h-full my-8 w-full pt-12 p-4">
+                 <div className="grid gap-14 md:grid-cols-3 md:gap-5">
+                   <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+                       <RiShakeHandsLine />
+                     </div>
+                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Best-fitting Plans</h1>
+                     <p className="px-4 text-gray-500">
+                       Our monthly QuickBooks Hosting plans are highly flexible, perfect to accommodate your changing needs. Not sure if Winscloud fits the bill for you? We promise a 30-day money-back guarantee.
+                     </p>
+                   </div>
+                   <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+                       <LuClock />
+                     </div>
+                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Round-the-Clock Support</h1>
+                     <p className="px-4 text-gray-500">
+                       Need expert help with QuickBooks? Our 24/7 tech support via email, call, and text ensures a 15-minute response time.
+                     </p>
+                   </div>
+                   <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
+                       <MdOutlineSecurity />
+                     </div>
+                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Data Security and Recovery</h1>
+                     <p className="px-4 text-gray-500">
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo iure inventore amet modi accusantium vero perspiciatis, incidunt dicta sed aspernatur!
+                     </p>
+                   </div>
+                 </div>
+               </div>
+             </section>
+
+       <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl mt-7 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="flex-1">
+          <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
+    Need our help to decide on the best plan for your business? Take a FREE Trial Before Taking Any Decision
+           </h1>
+          <Link to='/trial'>
+            <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition block mx-auto">
+                  Start Your Free Trial
             </button>
           </Link>
         </div>
-      </header>
+      </div>
 
-      <main>
-        <section className="p-2">
-          <h2 className="text-center font-serif text-lg md:text-3xl font-bold">
-            Lacerte Hosting: A Modern Solution to Facilitate Business Growth, Team Collaboration, and Seamless Tax Filing
-          </h2>
-        </section>
 
-        <section className="flex flex-col md:flex-row justify-between p-4 md:p-8">
-          <article className="w-full md:w-[45%]">
-            <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
-              Lacerte Tax Software hosting means accessing the desktop Lacerte application on a virtual server via the internet. Hosting Lacerte Tax Software on the cloud offers immense flexibility to access the software and its data from any remote location. Multiple people can collaborate and work on the same set of data to seamlessly file taxes and prepare reports efficiently, therefore optimizing the workflow and enhancing team’s productivity to a greater extent.
-            </p>
-            <p className="font-montserrat text-sm md:text-base">
-              Lacerte Tax Hosting also facilitates easy and timely updates of the desktop application, promotes safety and data security in the cloud environment, and saves time since you do not need to travel to the office every time to work on your data. Lacerte Tax Software hosting can be accessed from anywhere, at any time.
-            </p>
-          </article>
+<ServiceLink/>
+       <section className="px-5 md:px-24 py-16 ">
+        <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
+     Winscloud Matrix Lacerte Tax Hosting: Why should you choose Lacerte Hosting with Winscloud for a seamless Tax Season?
+        </h1>
+        <p className="text-center font-montserrat text-gray-800">The advanced accounting and payroll software helps businesses carry out several key operations such as Lacerte Tax Hosting takes your tax practice to the next level. One of the most popular software for tax professionals, firms and business owners, Lacerte Hosting aids you with flexibility, security, and accessibility.  
+</p>
 
-          <figure className="w-full md:w-[50%] flex justify-center mt-6 md:mt-0">
-            <img
-              className="h-48 md:h-80 border-2 border-black rounded-lg object-cover"
-              src="./images/logo/lace-hosting.webp"
-              alt="QuickBooks Hosting"
-            />
-          </figure>
-        </section>
 
-        <section className="my-8 px-4">
-          <h2 className="text-center text-lg md:text-3xl font-bold">
-            How to transition to Lacerte Tax Hosting?
-          </h2>
-          <p className="font-montserrat text-center mt-2">
-            Winscloud helps businesses transition to the cloud environment with Lacerte Hosting in three simple steps –
-          </p>
-        </section>
+        
+        <div className="grid md:grid-cols-2 gap-8 mt-14">
+          {[
+            {
+              title: "Enhanced Bandwidth",
+              desc: "Lacerte Hosting can accommodate multiple users to work on the same set of data for enhanced productivity and collaboration, ensuring higher levels of productivity and efficacy in tax filin",
+            },
+            {
+              title: "Maximum Uptime Guarantee",
+              desc: "We ensure 99.99% up time for your business and tax operations before, during and after transitioning to the cloud so your data saved on the application is always accessible by you and your team.",
+            },
+            {
+              title: "Pay As You Go",
+              desc: "Our flexible pay-as-you-go model allows you to scale up and down as per your business needs. You only pay for your preferred number of users, storage capacity and type of hosting.",
+            },
+            {
+              title: "Data Back-Up",
+              desc: "Your data is backed up across multiple layers so that it is always accessible. It also provides security against threats like theft, accidental deletion of data and breakdown of data centers..",
+            },
+            {
+              title: "Trained Support Staff",
+              desc: "Our technical support team is trained and experienced at hosting all versions of Lacerte for small to large-sized businesses. They can tackle any issue that you may face and assist with troubleshooting.",
+            },
+            {
+              title: "Seamless Cloud Setup",
+              desc: "Setting up Lacerte Hosting with Winscloud Matrix is smooth, fast and takes only around two hours to transition your entire data to the cloud, ensuring easy access to your data and tools.",
+            },
+            
+           
+          ].map((feature, idx) => (
+            <div
+              key={idx}
+              className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+            >
+              <h3 className="text-xl font-semibold text-blue-800 mb-2">{feature.title}</h3>
+              <p className="text-gray-700 text-[15px] leading-relaxed">{feature.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-        <section className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          <article className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb2.webp"
-              alt="Best-fitting Plans"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Choose your preferred hosting plan</h3>
-            <p className="text-gray-700 font-montserrat transition-all duration-300">
-              You can choose among our dedicated and shared hosting plans and select a plan that accommodates your number of users and storage needs.
-            </p>
-          </article>
-
-          <article className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb3.webp"
-              alt="Round-the-Clock Support"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Share your Lacerte application details</h3>
-            <p className="text-gray-700 font-montserrat">
-              Provide your license details and your hosting plan details with our cloud expert so they can progress further with your cloud transition
-            </p>
-          </article>
-
-          <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb1.webp"
-              alt="Data Security and Recovery"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Begin your Lacerte cloud hosting journey</h3>
-            <p className="text-gray-800 font-montserrat transition-all duration-300">
-              Your cloud setup will be done in 120 minutes, and you can effortlessly begin your journey with cloud-integrated Lacerte tax software.
-            </p>
-          </article>
-        </section>
-
-        <section className="bg-gray-200 my-8 w-[90%] mx-auto rounded-lg flex flex-col items-center py-6">
-          <h2 className="text-center font-semibold font-kanit text-2xl px-4">
-            Need our help to decide on the best plan for your business? Take a FREE Trial Before Taking Any Decision
-          </h2>
-          <button className="mt-6 border-2 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-            Start Your Free Trial
-          </button>
-        </section>
-
-        <section className="my-12 w-[90%] mx-auto">
-          <h2 className="text-center font-kanit font-semibold text-2xl pt-5">
-            Winscloud Matrix Lacerte Tax Hosting: Why should you choose Lacerte Hosting with Winscloud for a seamless Tax Season?
-          </h2>
-
-          <p className="font-montserrat px-4 my-2 text-sm text-center">
-            Lacerte Tax Hosting takes your tax practice to the next level. One of the most popular software for tax professionals, firms and business owners, Lacerte Hosting aids you with flexibility, security, and accessibility.–
-          </p>
-
-          <div className="flex flex-col md:flex-row mt-8">
-            <article className="md:w-[50%] space-y-4 font-montserrat text-sm p-3">
-              <p>
-                <strong className="font-kanit font-bold">Enhanced Bandwidth-</strong> Lacerte Hosting can accommodate multiple users to work on the same set of data for enhanced productivity and collaboration, ensuring higher levels of productivity and efficacy in tax filing
-              </p>
-              <p>
-                <strong className="font-kanit font-bold">Maximum Uptime Guarantee-</strong> We ensure 99.99% up time for your business and tax operations before, during and after transitioning to the cloud so your data saved on the application is always accessible by you and your team.
-              </p>
-              <p>
-                <strong className="font-kanit font-bold">Pay As You Go-</strong> Our flexible pay-as-you-go model allows you to scale up and down as per your business needs. You only pay for your preferred number of users, storage capacity and type of hosting.
-              </p>
-            </article>
-
-            <article className="md:w-[50%] space-y-4 p-3 font-montserrat text-sm">
-              <p>
-                <strong className="font-kanit font-bold">Data Back-Up-</strong> Your data is backed up across multiple layers so that it is always accessible. It also provides security against threats like theft, accidental deletion of data and breakdown of data centers.
-              </p>
-              <p>
-                <strong className="font-kanit font-bold">Trained Support Staff-</strong> Our technical support team is trained and experienced at hosting all versions of Lacerte for small to large-sized businesses. They can tackle any issue that you may face and assist with troubleshooting.
-              </p>
-              <p>
-                <strong className="font-kanit font-bold">Seamless Cloud Setup-</strong> Setting up Lacerte Hosting with Winscloud Matrix is smooth, fast and takes only around two hours to transition your entire data to the cloud, ensuring easy access to your data and tools.
-              </p>
-            </article>
-          </div>
-        </section>
+      <Expriance/>
+      <Awards/>
 
         <section>
-          <h2 className="text-2xl text-center font-bold font-kanit mt-8 px-8">
-            Most Asked QuickBooks Enterprise Hosting Questions -
-          </h2>
-
+              <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2"> Sage 50 lecerte Hosting Frequently Asked Questions</h1>
           <div className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
             {faqs.map((faq, index) => (
               <article key={index} className="border-b last:border-b-0">

@@ -128,7 +128,7 @@ Ready for Sage 500 ERP Cloud Hosting?          </h1>
       <SageLinks/>
 
        <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
-                  <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 p-8 mb-4">
+                  <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 p-2 ">
        Who should choose Sage 500 ERP Application Hosting?
                </h1>
               

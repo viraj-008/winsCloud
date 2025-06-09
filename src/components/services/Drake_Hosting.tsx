@@ -2,6 +2,13 @@ import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Partner from "../Partner";
+import { MdOutlineSecurity } from "react-icons/md";
+import { RiShakeHandsLine } from "react-icons/ri";
+import { LuClock } from "react-icons/lu";
+import { motion } from "framer-motion";
+import ServiceLink from "../ServiceLink";
+import Awards from "../Awards";
+import Expriance from "../Expriance";
 
 const Drake_Hosting = () => {
   const faqs = [
@@ -50,181 +57,282 @@ const Drake_Hosting = () => {
 
   return (
     <>
-      <header className="w-full flex bg-[url('/images/Home/server.webp')] bg-cover bg-center pt-20 px-5 md:px-20 items-center min-h-[230px] md:min-h-[430px]">
-        <div className="w-full text-center md:text-left">
-          <h1 className="text-white text-3xl md:text-6xl leading-tight">
-            Drake Tax Software Hosting
-          </h1>
-          <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
-            Professional Tax returns, anytime, anywhere with Drake tax software cloud hosting
-          </p>
-          <Link to="/trial" aria-label="Start One-Month Free Trial for Drake Hosting">
-            <button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-              Start One-Month Free Trial
-            </button>
-          </Link>
+      <section className="min-h-[80vh] rounded-b-3xl flex items-center bg-gradient-to-t from-[#6278c0] via-[#102f86] to-black text-white px-6 py-12">
+        <div className="max-w-6xl mx-auto w-full gap-12 items-center mt-8">
+
+          {/* Left Content */}
+          <div className="text-center md:text-left mt-8">
+            <motion.h1
+              className="text-slate-100 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              Drake Tax Software Hosting
+            </motion.h1>
+
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+              Professional Tax returns, anytime, anywhere with Drake tax software cloud hosting
+            </p>
+
+            <Link to='trial'> <button className="bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-black text-white font-mono text-sm px-6 py-3 rounded-lg shadow-md border border-blue-600 transition duration-300 hover:scale-105">
+              <span className="text-green-400">//</span> Start One-Month Free Trial
+            </button></Link>
+          </div>
+
         </div>
-      </header>
+      </section>
 
       <main>
-        <section className="p-2">
-          <h2 className="text-center font-serif text-gray-600 text-lg md:text-3xl font-bold">
-            Drake Cloud Hosting: How does opting for Drake Tax Hosting Elevate Your Tax Preparation?
+        <section>
+          <h2 className='text-3xl text-center py-4 max-w-6xl mx-auto font-bold font-montserrat text-textPrimary'>
+            Why Choose ProSeries Hosting: Elevate your tax operations and crack the full potential of your ProSeries Tax Software Hosting
           </h2>
-          <p className="text-md md:text-xl text-center text-gray-700 mt-5 font-bold">
-            No more staying tethered to your office computer!
+          <p className="font-montserrat text-xl text-center font-semibold">No more staying tethered to your office computer!
           </p>
+
         </section>
 
-        <section className="flex flex-col md:flex-row justify-between p-4 md:p-8">
-          <article className="w-full md:w-[45%]">
-            <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+          {/* IMAGE on the right (or bottom on mobile) */}
+          <figure className="w-full md:w-1/2 flex justify-center">
+            <img
+              className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
+              src="./images/logo/drake.jpg"
+              alt="QuickBooks Hosting Service"
+            />
+
+          </figure>
+
+          <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
+            <h2 className="font-semibold text-textPrimary text-justify  text-xl md:text-xl ">
               Drake software cloud hosting refers to the freedom of accessing your desktop software on a remote server. With Drake hosting, users can access their Drake software on-the-go, on any device of their choice to carry out their tax preparation process.
-            </p>
-            <p className="font-montserrat text-sm md:text-base">
+            </h2>
+            <p className="font-montserrat text-gray-700 text-sm text-justify md:text-base">
               Winscloud Matrix’s drake cloud hosting solution gives you the freedom to access your key files saved on the desktop software from anywhere, allowing you to work from the comforts of your home, collaborating with your clients and team members to prepare taxes, and enjoy a seamless tax process. Tax preparation on drake tax hosting is also a completely secure solution that keeps the worries of data security at bay.
             </p>
+
           </article>
 
-          <figure className="w-full md:w-[50%] flex justify-center mt-6 md:mt-0">
-            <img
-              className="h-48 md:h-80 border-2 p-2 border-black rounded-lg object-cover"
-              src="./images/logo/drake.jpg"
-              alt="Drake Tax Software Hosting Interface"
-            />
-          </figure>
+
         </section>
 
-        <section>
-          <h2 className="text-center text-lg md:text-2xl my-5 px-4 font-bold">
+
+        <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
+          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 p-2 ">
             Drake Hosting Key Features: How does drake cloud hosting take your tax preparation to the next level?
-          </h2>
-          <div className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            <article className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb2.webp"
-                alt="Anytime, Anywhere Access"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Anytime, Anywhere Access</h3>
-              <p className="text-gray-700 font-montserrat transition-all duration-300">
-                Drake Cloud hosting facilitates anytime, anywhere access to data. File taxes on the go, work with a remote team in collaboration, and file e-forms well before the deadline.
-              </p>
-            </article>
-            <article className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb3.webp"
-                alt="Multi-Device Support"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Multi-Device Support</h3>
-              <p className="text-gray-700 font-montserrat transition-all duration-300">
-                Make your hectic tax season seamless with the flexibility of accessing your key tax files from multiple devices, including your office desktop computer, your personal laptop, cell phone, and tablet.
-              </p>
-            </article>
-            <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb1.webp"
-                alt="Third-Party App Integration"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Third-Party App Integration</h3>
-              <p className="text-gray-800 font-montserrat transition-all duration-300">
-                Not just Drake, the same cloud server can accommodate your other important apps like QuickBooks, Sage and third-party apps that make your tax preparation smooth.
-              </p>
-            </article>
+          </h1>
+
+          <div className="h-full my-8 w-full pt-12 p-4">
+            <div className="grid gap-14 md:grid-cols-3 md:gap-5">
+              <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+                  <RiShakeHandsLine />
+                </div>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Anytime, anywhere Access </h1>
+                <p className="px-4 text-gray-500">
+                  Drake Cloud hosting facilitates anytime, anywhere access to data. File taxes on the go, work with a remote team in collaboration, and file e-forms well before the deadline.
+                </p>
+              </div>
+              <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+                  <LuClock />
+                </div>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Multi-Device Support</h1>
+                <p className="px-4 text-gray-500">
+                  Make your hectic tax season seamless with the flexibility of accessing your key tax files from multiple devices, including your office desktop computer, your personal laptop, cell phone, and tablet.
+                </p>
+              </div>
+              <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
+                  <MdOutlineSecurity />
+                </div>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Third-Party App Integration</h1>
+                <p className="px-4 text-gray-500">
+                  Not just Drake, the same cloud server can accommodate your other important apps like QuickBooks, Sage and third-party apps that make your tax preparation smooth.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
-        <section>
-          <h2 className="text-center text-lg md:text-2xl my-5 px-4 font-bold">
-            How to Set Up Your Drake Tax Software on the Cloud in 3 Simple Steps?
-          </h2>
-          <p className="text-center px-4 font-montserrat">
-            Team Winscloud can help you transition to ProSeries Hosting seamlessly in 3 easy steps –
-          </p>
-          <div className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            <article className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb2.webp"
-                alt="Find the Most Suitable Hosting Plan"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">
-                Find the most suitable hosting plan for your small business
-              </h3>
-              <p className="text-gray-700 font-montserrat transition-all duration-300">
-                As an experienced drake hosting provider, we offer dedicated as well as shared hosting to our clients to accommodate their unique needs. We offer complete freedom to business owners to select the plan that meets their needs, is affordable, and offers flexibility to scale.
-              </p>
-            </article>
-            <article className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb3.webp"
-                alt="Provide Your Drake License Details"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Provide your Drake License details</h3>
-              <p className="text-gray-700 font-montserrat transition-all duration-300">
-                To begin your cloud transition process, you must present your Drake software license to your Drake hosting provider. You might also need to provide additional details like your number of users and the amount of storage you need.
-              </p>
-            </article>
-            <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb1.webp"
-                alt="Access Your Drake Tax Software Cloud Hosting"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Access your drake tax software cloud hosting</h3>
-              <p className="text-gray-800 font-montserrat transition-all duration-300">
-                In just 2-5 hours, depending on the size of your data, your transition to the cloud will be complete. You can then access your favorite software and safely begin your tax preparation process, on the very same day!
-              </p>
-            </article>
+
+
+        <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl mt-7 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+          <div className="flex-1">
+            <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
+              Ready to see how Drake Cloud Hosting helps with tax preparation?
+            </h1>
+            <Link to='/trial'>
+              <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition block mx-auto">
+                Try Drake Hosting for FREE
+              </button>
+            </Link>
           </div>
-        </section>
+        </div>
 
-        <section className="bg-gray-200 my-8 w-[90%] mx-auto rounded-lg flex flex-col items-center py-6">
-          <h2 className="text-center font-semibold font-kanit text-2xl px-4">
-            Ready to see how Drake Cloud Hosting helps with tax preparation?
-          </h2>
-          <button className="mt-6 border-2 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-            Try Drake Hosting for FREE
-          </button>
-        </section>
 
-        <section className="my-12 w-[90%] mx-auto">
-          <h2 className="text-center font-kanit font-semibold text-2xl pt-5">
+        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <h1 className="text-4xl font-bold text-gray-800 font-inter mb-2 text-center">
+              How to Set Up Your Drake Tax Software on the Cloud in 3 Simple Steps?
+            </h1>
+            <p className="font-montserrat max-w-4xl mx-auto text-gray-800 text-center my-6 font-semibold">Winscloud Matrix, one of the top drake hosting providers, helps you transition smoothly to Drake Tax Cloud Hosting in 3 easy steps –
+
+
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+
+              {/* Card 2 */}
+              <div className="flex flex-col h-full">
+                <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg>
+                    </div>
+                    <h2 className="text-gray-100 text-xl font-semibold">
+                      Enhancing Efficiency: The Versatility of Hosted Cloud Servers
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base text-gray-300">
+                      Businesses benefit from hosted cloud servers, which offer efficient and adaptable computing solutions. By utilizing remote servers, hosted cloud servers eliminate the requirement for physical infrastructure.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="flex flex-col h-full">
+                <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg>
+                    </div>
+                    <h2 className="text-gray-100 text-xl font-semibold">
+                      Empowering Efficiency: The Role of Cloud Server Providers in Modern Business
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base text-gray-300">
+                      Cloud server providers deliver dependable and scalable computing resources as needed by businesses. They handle infrastructure management, enabling clients to concentrate on core operations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 4 */}
+              <div className="flex flex-col h-full">
+                <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg>
+                    </div>
+                    <h2 className="text-gray-100 text-xl font-semibold">
+                      Empowering Business Efficiency: The Role of Server Providers in Modern IT
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base text-gray-300">
+                      Server providers deliver essential computing resources, ensuring smooth operations for businesses. They manage infrastructure, freeing clients to prioritize core objectives.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <ServiceLink />
+
+        <section className="px-5 md:px-24 py-16 ">
+          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Why Should You Choose Winscloud for Drake Tax Software Hosting: Tax Preparation Transformed with the Power of Cloud
-          </h2>
-          <div className="flex flex-col md:flex-row mt-8">
-            <article className="md:w-[50%] space-y-4 font-montserrat text-sm p-3">
-              <p>
-                <span className="font-kanit font-bold">Multi-User Collaboration-</span> With Winscloud’s Drake Tax hosting, you can experience maximum productivity with your tax filing operations by remotely collaborating with multiple members of your team, in real time.
-              </p>
-              <p>
-                <span className="font-kanit font-bold">Cost-Effective Hosting-</span> We offer affordable and the most flexible drake tax hosting pricing. Our plans are flexible and provide you with the freedom to choose the services you need and pay only for what you use.
-              </p>
-              <p>
-                <span className="font-kanit font-bold">Highest Level Security-</span> We understand the importance of keeping our client’s data safe, with an array of security measures like a network firewall, end-to-end data encryption, regular backups of your files, etc.
-              </p>
-            </article>
-            <article className="md:w-[50%] space-y-4 p-3 font-montserrat text-sm">
-              <p>
-                <span className="font-kanit font-bold">Multiple Device Compatibility-</span> Drake Cloud hosting allows tax preparers and accountants to access the software and tax data from any device connected with the internet, including laptop, phone, tablet, and desktop.
-              </p>
-              <p>
-                <span className="font-kanit font-bold">24×7 Tech-Support-</span> We have a team of certified IT professionals who work round-the-clock to provide our clients with unparalleled assistance to help keep your system up-and-running.
-              </p>
-              <p>
-                <span className="font-kanit font-bold">High Up Time-</span> Experience minimum downtime uninterrupted access to your Drake hosting and the tax data saved on all your devices with our 99.99% uptime guarantee.
-              </p>
-            </article>
+          </h1>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-14">
+            {[
+              {
+                title: "Multi-User Collaboration",
+                desc: "With Winscloud’s Drake Tax hosting, you can experience maximum productivity with your tax filing operations by remotely collaborating with multiple members of your team, in real time.",
+              },
+              {
+                title: "Cost-Effective Hosting",
+                desc: "We offer affordable and the most flexible drake tax hosting pricing. Our plans are flexible and provide you with the freedom to choose the services you need and pay only for what you use.",
+              },
+              {
+                title: "Highest Level Security",
+                desc: " We understand the importance of keeping our client’s data safe, with an array of security measures like a network firewall, end-to-end data encryption, regular backups of your files, etc.",
+              },
+              {
+                title: "Multiple Device Compatibility",
+                desc: "Drake Cloud hosting allows tax preparers and accountants to access the software and tax data from any device connected with the internet, including laptop, phone, tablet, and desktop.",
+              },
+              {
+                title: "24×7 Tech-Support",
+                desc: "We have a team of certified IT professionals who work round-the-clock to provide our clients with unparalleled assistance to help keep your system up-and-running.",
+              },
+              {
+                title: "High Up Time",
+                desc: " Experience minimum downtime uninterrupted access to your Drake hosting and the tax data saved on all your devices with our 99.99% uptime guarantee.",
+              },
+
+
+            ].map((feature, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+              >
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">{feature.title}</h3>
+                <p className="text-gray-700 text-[15px] leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
+
+        <Expriance />
+        <Awards />
+
+        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">ProSeries Cloud Hosting Frequently Asked Questions (FAQs) -</h1>
         <section className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
-          <h2 className="text-2xl text-center font-bold font-kanit mt-8 px-8">
-            Drake Tax Software Hosting: Frequently Asked Questions (FAQs)
-          </h2>
+
           {faqs.map((faq, index) => (
             <div key={index} className="border-b last:border-b-0">
               <button

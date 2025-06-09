@@ -2,7 +2,13 @@ import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Partner from "../Partner";
-
+import { MdOutlineSecurity } from "react-icons/md";
+import { RiShakeHandsLine } from "react-icons/ri";
+import { LuClock } from "react-icons/lu";
+import { motion } from "framer-motion";
+import ServiceLink from "../ServiceLink";
+import Expriance from "../Expriance";
+import Awards from "../Awards";
 function UltraTaxHosting() {
   const faqs = [
     {
@@ -59,198 +65,269 @@ function UltraTaxHosting() {
 
   return (
     <>
-      <header className="w-full flex bg-[url('/images/Home/server.webp')] bg-cover bg-center pt-20 px-5 md:px-20 items-center min-h-[230px] md:min-h-[430px]">
-        <div className="w-full text-center md:text-left">
-          <h1 className="text-white text-3xl md:text-4xl leading-tight">
-            Work with remote teams & clients, file taxes seamlessly, from any location and any device with UltraTax CS Hosting
-          </h1>
-          <Link to="/trial">
-            <button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-              Start Your Free Trial
-            </button>
-          </Link>
+     <section className="min-h-[80vh] rounded-b-3xl flex items-center bg-gradient-to-t from-[#6278c0] via-[#102f86] to-black text-white px-6 py-12">
+        <div className="max-w-6xl mx-auto w-full gap-12 items-center mt-8">
+
+          {/* Left Content */}
+          <div className="text-center md:text-left mt-12">
+            <motion.h1
+              className="text-slate-100 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight mb-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              Work with remote teams & clients, file taxes seamlessly, from any location and any device with UltraTax CS Hosting
+            </motion.h1>
+
+           <Link to='trial'> <button className="bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-black text-white font-mono text-sm px-6 py-3 rounded-lg shadow-md border border-blue-600 transition duration-300 hover:scale-105">
+              <span className="text-green-400">//</span> Start Your Free Trial
+            </button></Link>
+          </div>
+
         </div>
-      </header>
+      </section>
 
       <main>
-        <section className="p-2">
-          <h2 className="text-center font-serif text-gray-600 text-lg md:text-3xl font-bold">
-            UltraTax Cloud Hosting Service: Perfect solution for tax professionals and accounting firms to enhance productivity
-          </h2>
-        </section>
+         <section>
+        <h2 className='text-3xl text-center py-4 max-w-6xl mx-auto font-bold font-montserrat text-textPrimary'>
+UltraTax Cloud Hosting Service: Perfect solution for tax professionals and accounting firms to enhance productivity
+        </h2>
+      
 
-        <section className="flex flex-col md:flex-row justify-between p-4 md:p-8">
-          <article className="w-full md:w-[45%]">
-            <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
-              UltraTax CS is a professional tax preparation software that helps businesses accomplish more in terms of tax filing by leveraging automation to save their time and enhance efficiency. UltraTax CS hosting means using a high-performing, fast, virtual, remote server to use the UltraTax software and its data on the cloud. UltraTax cloud hosting solution allows tax preparers and accounting firms to collaborate with their clients from any location, saving several hours a day on travelling to and from their location or staying tied up to their work computer.
+</section>
+
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        {/* IMAGE on the right (or bottom on mobile) */}
+        <figure className="w-full md:w-1/2 flex justify-center">
+          <img
+            className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
+            src="./images/logo/ultratax.webp"
+            alt="QuickBooks Hosting Service"
+          />
+
+        </figure>
+
+        <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
+          <h2 className="font-semibold text-textPrimary text-justify  text-xl md:text-xl ">
+UltraTax CS is a professional tax preparation software that helps businesses accomplish more in terms of tax filing by leveraging automation to save their time and enhance efficiency. UltraTax CS hosting means using a high-performing, fast, virtual, remote server to use the UltraTax software and its data on the cloud. UltraTax cloud hosting solution allows tax preparers and accounting firms to collaborate with their clients from any location, saving several hours a day on travelling to and from their location or staying tied up to their work computer.
+          </h2>
+           <p className="font-montserrat text-gray-700 text-sm text-justify md:text-base">
+One of the easiest ways to elevate productivity and have an error-free, stress-free tax season is to opt for UltraTax CS tax hosting. You can still use all the elaborate features of the UltraTax desktop software and enjoy greater flexibility, security, efficiency, and collaboration with UltraTax hosting. With an experienced cloud hosting provider, such as Winscloud Matrix, you can get the most comfortable cloud experience without worrying about incurring additional IT and maintenance costs.
             </p>
-            <p className="font-montserrat text-sm md:text-base">
-              One of the easiest ways to elevate productivity and have an error-free, stress-free tax season is to opt for UltraTax CS tax hosting. You can still use all the elaborate features of the UltraTax desktop software and enjoy greater flexibility, security, efficiency, and collaboration with UltraTax hosting. With an experienced cloud hosting provider, such as Winscloud Matrix, you can get the most comfortable cloud experience without worrying about incurring additional IT and maintenance costs.
+
+        </article>
+      </section>
+
+       <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
+                 <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 p-2 ">
+Simplify Your Tax Preparation with UltraTax Cloud Hosting service
+                 </h1>
+       
+                 <div className="h-full my-8 w-full pt-12 p-4">
+                   <div className="grid gap-14 md:grid-cols-3 md:gap-5">
+                     <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                       <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+                         <RiShakeHandsLine />
+                       </div>
+                       <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Multiple Device Support </h1>
+                       <p className="px-4 text-gray-500">
+    Access UltraTax cloud hosting service from your phone, home or office desktop, or tablet and stay connected with your printers and scanners connected via the internet.
+                       </p>
+                     </div>
+                     <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                       <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+                         <LuClock />
+                       </div>
+                       <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Desktop-like Experience</h1>
+                       <p className="px-4 text-gray-500">
+      Enjoy all features of the desktop software with UltraTax CS tax hosting for the most productive, hassle-free, and easygoing tax preparation season.
+                       </p>
+                     </div>
+                     <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                       <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
+                         <MdOutlineSecurity />
+                       </div>
+                       <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Add-ons Integration</h1>
+                       <p className="px-4 text-gray-500">
+    UltraTax CS Cloud Hosting supports more than 200 add ons and third party apps, helping you integrate all the useful tools to make your tax filing productive.
+                       </p>
+                     </div>
+                   </div>
+                 </div>
+               </section>
+
+
+<section className="px-5 md:px-24 py-16 ">
+          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
+    Simplify Your Tax Preparation with UltraTax Cloud Hosting service
+          </h1>
+           <p className="text-center font-montserrat text-gray-800">At Winscloud, we understand the need for businesses to be available round-the-clock and have helped multiple small and medium-sized businesses with their UltraTax hosting. Our reliable team of cloud experts provide their cloud knowledge, expertise, and 24/7 support to tackle all your hosting related needs and concerns.
+</p>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-14">
+            {[
+              {
+                title: "Multi-User Collaboration",
+                desc: "UltraTax Hosting allows multiple users to collaborate seamlessly, on the same file. This helps take your tax filing to the next level, making your hectic tax season seamless, productive, and  error free",
+              },
+              {
+                title: "99.9% Uptime",
+                desc: "Our state-of-the-art servers ensure 99.99% uptime. Your business is always running, elevating customer satisfaction, and tax season hassle-free.",
+              },
+              {
+                title: "Flexible Pricing",
+                desc: " Our pay-as-you-go model allows our clients to alternate their needs as they go. We readily accommodate all your dynamic business needs and you pay only for what you use.",
+              },
+              {
+                title: "Dedicated Support",
+                desc: "Our cloud experts are well-trained in UltraTax CS Cloud hosting for small to mid-sized businesses. They work dedicatedly to help resolve all sorts of issues faced by businesses",
+              },
+              {
+                title: "Same-day Transitiont",
+                desc: " Our team of experts at Winscloud Matrix vouch for a quick, smooth transition. In just 2 hours, your UltraTax software can be hosted in the cloud. Data transfer, however, may take longer.",
+              },
+              {
+                title: "Data Backup",
+                desc: "  With Winscloud Matrix’s UltraTax cloud hosting service, your client’s critical tax information and other data is kept completely safe under multiple security layers and multiple backups.",
+              },
+
+
+            ].map((feature, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+              >
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">{feature.title}</h3>
+                <p className="text-gray-700 text-[15px] leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+               <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl mt-7 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+          <div className="flex-1">
+            <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
+              Would you like us to help you decide on the best plan for YOUR business? Start a One-Month FREE TRIAL to make an informed decision
+            </h1>
+            <Link to='/trial'>
+              <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition block mx-auto">
+                Start Your Free Trial
+              </button>
+            </Link>
+          </div>
+        </div>
+
+
+<ServiceLink/>
+
+ <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <h1 className="text-4xl font-bold text-gray-800 font-inter mb-2 text-center">
+    Simplify Your Tax Preparation with UltraTax Cloud Hosting service
+            </h1>
+            <p className="font-montserrat max-w-4xl mx-auto text-gray-800 text-center my-6 font-semibold">At Winscloud, we help all small and mid-sized businesses transition to UltraTax CS cloud hosting in three simple steps –
             </p>
-          </article>
 
-          <figure className="w-full md:w-[50%] flex justify-center mt-6 md:mt-0">
-            <img
-              className="h-48 md:h-80 border-2 p-2 border-black rounded-lg object-cover"
-              src="./images/logo/ultratax.webp"
-              alt="UltraTax Hosting Overview"
-            />
-          </figure>
-        </section>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+
+              {/* Card 2 */}
+              <div className="flex flex-col h-full">
+                <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg>
+                    </div>
+                    <h2 className="text-gray-100 text-xl font-semibold">
+                      Enhancing Efficiency: The Versatility of Hosted Cloud Servers
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base text-gray-300">
+                      Businesses benefit from hosted cloud servers, which offer efficient and adaptable computing solutions. By utilizing remote servers, hosted cloud servers eliminate the requirement for physical infrastructure.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="flex flex-col h-full">
+                <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg>
+                    </div>
+                    <h2 className="text-gray-100 text-xl font-semibold">
+                      Empowering Efficiency: The Role of Cloud Server Providers in Modern Business
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base text-gray-300">
+                      Cloud server providers deliver dependable and scalable computing resources as needed by businesses. They handle infrastructure management, enabling clients to concentrate on core operations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 4 */}
+              <div className="flex flex-col h-full">
+                <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg>
+                    </div>
+                    <h2 className="text-gray-100 text-xl font-semibold">
+                      Empowering Business Efficiency: The Role of Server Providers in Modern IT
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base text-gray-300">
+                      Server providers deliver essential computing resources, ensuring smooth operations for businesses. They manage infrastructure, freeing clients to prioritize core objectives.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <Expriance/>
+        <Awards/>
 
         <section>
-          <h2 className="text-center text-lg md:text-2xl my-5 px-4 font-bold">
-            Simplify Your Tax Preparation with UltraTax Cloud Hosting service
-          </h2>
-
-          <div className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Card 1 */}
-            <article className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb2.webp"
-                alt="Multiple Device Support"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Multiple Device Support</h3>
-              <p className="text-gray-700 font-montserrat transition-all duration-300">
-                Access UltraTax cloud hosting service from your phone, home or office desktop, or tablet and stay connected with your printers and scanners connected via the internet.
-              </p>
-            </article>
-
-            {/* Card 2 */}
-            <article className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb3.webp"
-                alt="Desktop-like Experience"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Desktop-like Experience</h3>
-              <p className="text-gray-700 font-montserrat">
-                Enjoy all features of the desktop software with UltraTax CS tax hosting for the most productive, hassle-free, and easygoing tax preparation season.
-              </p>
-            </article>
-
-            {/* Card 3 */}
-            <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb1.webp"
-                alt="Add-ons Integration"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Add-ons Integration</h3>
-              <p className="text-gray-800 font-montserrat transition-all duration-300">
-                UltraTax CS Cloud Hosting supports more than 200 add-ons and third-party apps, helping you integrate all the useful tools to make your tax filing productive.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-center text-lg md:text-2xl my-5 px-4 font-bold">
-            Simplify Your Tax Preparation with UltraTax Cloud Hosting service
-          </h2>
-
-          <p className="text-center px-4 font-montserrat">
-            At Winscloud, we help all small and mid-sized businesses transition to UltraTax CS cloud hosting in three simple steps –
-          </p>
-
-          <div className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Card 1 */}
-            <article className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb2.webp"
-                alt="Select a suitable hosting plan"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Select a suitable hosting plan</h3>
-              <p className="text-gray-700 font-montserrat transition-all duration-300">
-                Check out our hosting plans here and select the plan that best suits your business needs. Our plans are flexible, allowing you to scale up and down as you go.
-              </p>
-            </article>
-
-            {/* Card 2 */}
-            <article className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb3.webp"
-                alt="Provide Key Software Details"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Provide Key Software Details</h3>
-              <p className="text-gray-700 font-montserrat">
-                Your cloud expert will require key information like your license details, your software version, among other details to provide you with a customized cloud setup.
-              </p>
-            </article>
-
-            {/* Card 3 */}
-            <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb1.webp"
-                alt="Start Your Free Demo"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Start Your Free Demo</h3>
-              <p className="text-gray-800 font-montserrat transition-all duration-300">
-                Once the setup is complete with your stated requirements, you can ask your cloud expert to give you a free demo of your UltraTax Cloud Hosting service.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section className="bg-gray-200 my-8 w-[90%] mx-auto rounded-lg flex flex-col items-center py-6">
-          <h2 className="text-center font-semibold font-kanit text-2xl px-4">
-            Would you like us to help you decide on the best plan for YOUR business? Start a One-Month FREE TRIAL to make an informed decision
-          </h2>
-          <button className="mt-6 border-2 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-            Start Your Free Trial
-          </button>
-        </section>
-
-        <section className="my-12 w-[90%] mx-auto">
-          <h2 className="text-center font-kanit font-semibold text-2xl pt-5">
-            Winscloud Matrix UltraTax Hosting: Empower Your Tax Preparation with Your Most Trusted Application Hosting Provider
-          </h2>
-          <p className="text-center font-montserrat pt-5">
-            Winscloud Matrix UltraTax Hosting: Empower Your Tax Preparation with Your Most Trusted Application Hosting Provider
-          </p>
-
-          <div className="flex flex-col md:flex-row mt-8">
-            <article className="md:w-[50%] space-y-4 font-montserrat text-sm p-3">
-              <p>
-                <span className="font-kanit font-bold">Multi-User Collaboration- </span>
-                UltraTax Hosting allows multiple users to collaborate seamlessly, on the same file. This helps take your tax filing to the next level, making your hectic tax season seamless, productive, and error free
-              </p>
-              <p>
-                <span className="font-kanit font-bold my-6">99.9% Uptime-</span>
-                Our state-of-the-art servers ensure 99.99% uptime. Your business is always running, elevating customer satisfaction, and tax season hassle-free.
-              </p>
-              <p>
-                <span className="font-kanit font-bold my-6">Flexible Pricing-</span>
-                Our pay-as-you-go model allows our clients to alternate their needs as they go. We readily accommodate all your dynamic business needs and you pay only for what you use.
-              </p>
-            </article>
-
-            <article className="md:w-[50%] space-y-4 p-3 font-montserrat text-sm">
-              <p>
-                <span className="font-kanit font-bold">Dedicated Support- </span>
-                Our cloud experts are well-trained in UltraTax CS Cloud hosting for small to mid-sized businesses. They work dedicatedly to help resolve all sorts of issues faced by businesses.
-              </p>
-              <p>
-                <span className="font-kanit font-bold">Same-day Transition- </span>
-                Our team of experts at Winscloud Matrix vouch for a quick, smooth transition. In just 2 hours, your UltraTax software can be hosted in the cloud. Data transfer, however, may take longer.
-              </p>
-              <p>
-                <span className="font-kanit font-bold">Data Backup- </span>
-                With Winscloud Matrix’s UltraTax cloud hosting service, your client’s critical tax information and other data is kept completely safe under multiple security layers and multiple backups.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl text-center font-bold font-kanit mt-8 px-8">
-            UltraTax CS hosting Frequently Asked Questions -
-          </h2>
-
+                        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2"> UltraTax CS hosting Frequently Asked Questions -</h1>
           <div className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
             {faqs.map((faq, index) => (
               <div key={index} className="border-b last:border-b-0">

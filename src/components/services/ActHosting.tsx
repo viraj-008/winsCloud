@@ -1,176 +1,359 @@
-import { FaLink } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Partner from "../Partner";
+import { LuDatabaseBackup } from "react-icons/lu";
+import { FaUsersGear } from "react-icons/fa6";
+import { RiInformation2Fill } from "react-icons/ri";
+import { GiChoice } from "react-icons/gi";
+import { BiDetail } from "react-icons/bi";
+import { GrDocumentTest } from "react-icons/gr";
+import { motion } from "framer-motion";
+import Awards from "../Awards";
+import Expriance from "../Expriance";
+import ServiceLink from "../ServiceLink";
 
 const ActHosting = () => {
   return (
     <>
-      <header className="w-full flex bg-[url('/images/Home/server.webp')] bg-cover bg-center pt-20 px-5 md:px-20 items-center min-h-[330px] md:min-h-[430px]">
-        <div className="w-full text-center md:text-left">
-          <h1 className="text-white px-2 p-4 rounded-lg font-kanit text-3xl md:text-6xl leading-tight">
-            ACT Hosting
-          </h1>
+      <section className="min-h-[80vh] rounded-b-3xl flex items-center bg-gradient-to-t from-[#6278c0] via-[#102f86] to-black text-white px-6 py-12">
+        <div className="max-w-6xl mx-auto w-full gap-12 items-center mt-8">
+
+          {/* Left Content */}
+          <div className="text-center flex flex-col justify-center items-center md:text-left mt-12">
+            <motion.h1
+              className="text-slate-100 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight mb-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              Act Hosting
+            </motion.h1>
+
+            <Link to='trial'> <button className="bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-black text-white font-mono text-sm px-6 py-3 rounded-lg shadow-md border border-blue-600 transition duration-300 hover:scale-105">
+              <span className="text-green-400">//</span> Start Your Free Trial
+            </button></Link>
+          </div>
+
         </div>
-      </header>
+      </section>
+
+      <section>
+        <h2 className='text-3xl text-center py-4 max-w-6xl mx-auto font-bold font-montserrat text-textPrimary'>
+ACT Hosting Services offers seamless and powerful CRM management
+
+        </h2>
+
+</section>
 
       <main>
-        <section className="p-2">
-          <h2 className="text-center font-semibold font-serif text-xl">
-            ACT Hosting Services offers seamless and powerful CRM management
-          </h2>
-          <article className="w-[96%] font-semibold text-gray-700 mx-auto">
-            <p className="font-montserrat text-center my-2 md:my-4 text-sm md:text-base">
-              ATX Hosting facilitates financial advisors and accountants in accessing crucial files conveniently online from any location and at any time. With ATX Hosting, accountants and CPAs can efficiently create new accounts online, saving valuable time. Clients benefit from access to their information and updates from any device and location, with seamless assistance available. This hosting solution provides remote access to ATX software across devices and locations, effortlessly integrating with third-party apps. ATX Hosting streamlines business processes, consolidating the entire workforce onto one platform and reducing setup, installation, upgrade, and IT maintenance costs. Winscloud has been a trusted hosting service provider for years, renowned for exceptional customer service, top-notch security features, and a commitment to delivering the best experience to its customers.
-            </p>
-            <p className="font-montserrat text-center text-sm md:text-base">
-              Winscloud has been providing the best ATX hosting services for years. Winscloud provides the best ATX Hosting because of its outstanding customer service, top-notch security features, and its commitment to providing the best possible experience to its customers. Winscloud has a team of highly trained and experienced professionals who are available 24/7 to help you with any issues you may have regarding your ATX Hosting. We also offer a wide range of features to keep your website safe and secure, including daily backups, malware scanning, and DDoS protection to make your ATX hosting experience the best. Winscloud is also constantly updating its infrastructure to ensure that your system is always running smoothly.
+
+
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+          {/* IMAGE on the right (or bottom on mobile) */}
+          <figure className="w-full md:w-1/2 flex justify-center">
+            <img
+              className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
+              src="./images/logo/act-soft.webp"
+              alt="QuickBooks Hosting Service"
+            />
+
+          </figure>
+
+          <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
+            <h2 className="font-semibold text-textPrimary text-justify  text-xl md:text-xl ">
+              ACT Hosting Services cater to federal, state, and local tax needs for organizations, trusts, and enterprises. ACT hosting software ensures precise error detection and rectification, enhancing filing accuracy. Its features streamline processes, reduce IRS rejection risks, and save time on entry cross-checking. Hosting ACT on Winscloud Matrix’s cloud platform, part of ACT Hosting Services, enhances efficiency and accessibility for tax professionals. It provides robust support for collaborative tax estimation and quick returns, empowering teams to work seamlessly on centralized servers. With dedicated technical support available, our experts ensure smooth operations and prompt resolution of any software queries or issues.
+            </h2>
+
+            <p className="font-montserrat text-gray-700 text-sm text-justify md:text-base">
+              We’ve successfully assisted numerous accounting professionals with our fast and efficient ACT hosting services. Our advanced systems empower your entire team to collaborate seamlessly on centralized servers, greatly improving tax estimation accuracy and facilitating quick filing processes. Additionally, our dedicated team of ACT hosting experts is always available to promptly address any technical queries, provide comprehensive support, and ensure smooth operations across various communication channels, ensuring your business runs efficiently and effectively.
             </p>
           </article>
         </section>
 
-        <section className="w-[90%] mx-auto flex justify-center mt-8">
-          <figure>
-            <img
-              className="h-48 md:h-80 border-2 border-black rounded-lg object-cover"
-              src="./images/logo/act-soft.webp"
-              alt="ACT Hosting Interface"
-            />
-          </figure>
-        </section>
 
-        <section>
-          <h2 className="text-center text-lg md:text-2xl my-5 px-4 font-bold">
+
+        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
+          <h2 className="font-bold text-3xl md:text-5xl mt-3 font-serif  my-5  text-center text-textPrimary">
             Rely on Our ATX Hosting Solutions for Unmatched Cloud Server Performance
           </h2>
-          <p className="text-center px-4 font-montserrat">
-            ATX Hosting: Simplify finances, access anywhere, anytime, for peace of mind
+          <p className="text-center font-montserrat mb-10 text-gray-800 max-w-6xl mx-auto">ATX Hosting: Simplify finances, access anywhere, anytime, for peace of mind
+
           </p>
-        </section>
 
-        <section className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          <article className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb2.webp"
-              alt="Well-equipped Data Centers"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Well-equipped Data Centers</h3>
-            <p className="text-gray-700 font-montserrat transition-all duration-300">
-              Winscloud Cloud Server Hosting Providers offers hosting services that utilize state-of-the-art cloud technology allowing them to provide you with world-class service.
-            </p>
-          </article>
-          <article className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb3.webp"
-              alt="High-performance servers"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">High-performance servers</h3>
-            <p className="text-gray-700 font-montserrat transition-all duration-300">
-              Winscloud Cloud Server Hosting Providers also offer high-performance cloud servers based on Solid State Drives (SSD). These servers are designed to give the best possible performance compared to traditional hard servers.
-            </p>
-          </article>
-          <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb1.webp"
-              alt="Data security"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Data security</h3>
-            <p className="text-gray-800 font-montserrat transition-all duration-300">
-              Cross-device compatibility The systems are supportive to various devices such as desktops, laptops, smartphones and tablets. Protect from any threads
-            </p>
-          </article>
-          <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb1.webp"
-              alt="Error Checking and Validation"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Error Checking and Validation</h3>
-            <p className="text-gray-800 font-montserrat transition-all duration-300">
-              Built-in error-checking and validation tools helped ensure accurate calculations and minimized the risk of common tax preparation errors.
-            </p>
-          </article>
-          <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb1.webp"
-              alt="Online support 24/7"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Online support 24/7</h3>
-            <p className="text-gray-800 font-montserrat transition-all duration-300">
-              Access our round-the-clock support for QuickBooks Premier Hosting, ensuring assistance whenever you need it, day or night.
-            </p>
-          </article>
-          <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb1.webp"
-              alt="Updates and Compliance"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Updates and Compliance</h3>
-            <p className="text-gray-800 font-montserrat transition-all duration-300">
-              ATX typically provided regular updates to keep the software in compliance with changing tax laws and regulations, helping tax professionals stay current and avoid potential compliance issues.
-            </p>
-          </article>
-        </section>
+          <div className="grid gap-14 md:grid-cols-3 md:gap-8">
+            <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-        <section>
-          <h2 className="text-center text-lg md:text-2xl my-5 mt-12 underline px-4 font-bold">
-            What can you do with us
-          </h2>
-          <div className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-            <article className="bg-white/20 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <h3 className="font-bold text-xl mb-2 bg-red-600 text-white font-josefin py-3 rounded-lg">
-                Effortless Tax Management: ATX Cloud Hosting Solutions
-              </h3>
-              <p className="text-gray-700 p-2 rounded-md shadow-lg font-montserrat transition-all duration-300">
-                ATX Cloud Hosting transforms tax preparation for financial professionals by providing seamless access to ATX tax software from any location. This solution streamlines workflows and boosts efficiency. Accountants and CPAs can securely access important files and client information at any time and from any device. With robust encryption and backup measures, ATX Cloud Hosting ensures data security. Its scalable infrastructure adapts to diverse business needs. Simplify tax preparation with ATX Cloud Hosting, empowering financial professionals to excel.
+                <LuDatabaseBackup />
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Well-equipped Data Centers
+
+              </h1>
+              <p className="px-4 text-gray-500">
+                Winscloud Cloud Server Hosting Providers offers hosting services that utilize state-of-the-art cloud technology allowing them to provide you with world-class service.
               </p>
-            </article>
-            <article className="bg-white/20 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <h3 className="font-bold text-xl mb-2 bg-red-600 text-white font-josefin py-3 rounded-lg">
-                Seamless Tax Management Anywhere: Explore ATX Remote Access
-              </h3>
-              <p className="text-gray-700 p-2 rounded-md shadow-lg font-montserrat transition-all duration-300">
-                ATX Remote Access provides financial professionals with convenient access to their tax software from anywhere. This remote solution facilitates seamless management of tax files and client data on-the-go. Secure encryption and backup protocols ensure the protection of sensitive information with ATX Remote Access. The platform’s versatility enables easy adaptation to changing needs, enhancing productivity and flexibility. Streamlining workflow processes, ATX Remote Access empowers users to deliver top-tier services to their clients efficiently, contributing to improved business outcomes.
+            </div>
+            <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
+                <FaUsersGear />
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">High-performance servers
+              </h1>
+              <p className="px-4 text-gray-500">
+               Winscloud Cloud Server Hosting Providers also offer high-performance cloud servers based on Solid State Drives (SSD). These servers are designed to give the best possible performance compared to traditional hard servers.
               </p>
-            </article>
-            <article className="bg-white/20 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <h3 className="font-bold text-xl mb-2 bg-red-600 text-white font-josefin py-3 rounded-lg">
-                Unlock Flexibility with ACT Efficient Tax Preparation Made Easy with Hosted ATX Software
-              </h3>
-              <p className="text-gray-700 p-2 rounded-md shadow-lg font-montserrat transition-all duration-300">
-                Experience a revolution in tax preparation with Hosted ATX Software for financial professionals. This cloud-based solution offers secure access to Hosted ATX Software from anywhere, streamlining the management of tax files and client data. Enhancing productivity and flexibility, Hosted ATX Software ensures robust encryption and backup measures for data protection. The scalable infrastructure of Hosted ATX Software caters to diverse business needs, optimizing cost-effectiveness. Empower your financial practice with simplified tax preparation, delivering top-tier services effortlessly and efficiently.
+            </div>
+
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
+                <RiInformation2Fill />
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Data security
+              </h1>
+              <p className="px-4 text-gray-500">
+                Cross-device compatibility The systems are supportive to various devices such as desktops, laptops, smartphones and tablets. Protect from any threads
               </p>
-            </article>
-            <article className="bg-white/20 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <h3 className="font-bold text-xl mb-2 bg-red-600 text-white font-josefin py-3 rounded-lg">
-                Optimize CRM Operations with Top-Tier Tax Solutions: ATX Hosting in the USA
-              </h3>
-              <p className="text-gray-700 p-2 rounded-md shadow-lg font-montserrat transition-all duration-300">
-                ATX Hosting services in the USA provide tax professionals with streamlined solutions for efficient tax preparation. Offering secure cloud-based access, users can conveniently utilize ATX software from any location. This facilitates seamless management of tax files and client data, enhancing productivity and flexibility. Robust encryption and backup measures ensure the security of sensitive information. The scalable infrastructure of ATX Hosting in the USA adapts to diverse business needs, optimizing cost-effectiveness. Elevate your tax preparation process with ATX Hosting in the USA for top-tier services with ease.
+            </div>
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
+                <GiChoice />
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Error Checking and Validation
+
+
+              </h1>
+              <p className="px-4 text-gray-500">
+Built-in error-checking and validation tools helped ensure accurate calculations and minimized the risk of common tax preparation errors.
               </p>
-            </article>
+            </div>
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
+                <BiDetail />
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Online support 24/7
+
+              </h1>
+              <p className="px-4 text-gray-500">
+Access our round-the-clock support for QuickBooks Premier Hosting, ensuring assistance whenever you need it, day or night.
+              </p>
+            </div>
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
+                <GrDocumentTest />
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Updates and Compliance
+              </h1>
+              <p className="px-4 text-gray-500">
+                ATX typically provided regular updates to keep the software in compliance with changing tax laws and regulations, helping tax professionals stay current and avoid potential compliance issues.
+              </p>
+            </div>
           </div>
-        </section>
+        </div>
+
+        
+        <Expriance/>
+        <ServiceLink />
+
+         <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+  <div className="max-w-7xl mx-auto">
+    <h1 className="text-4xl font-bold text-gray-800 font-inter mb-12 text-center">
+      What can you do with us
+    </h1>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Card 1 */}
+      <div className="flex flex-col h-full">
+        <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+            <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                className="w-6 h-6"
+                viewBox="0 0 24 24"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <h2 className="text-gray-100 text-xl font-semibold">
+Effortless Tax Management: ATX Cloud Hosting Solutions
+            </h2>
+          </div>
+          <div className="flex-grow">
+            <p className="leading-relaxed text-base text-gray-300 ">
+              ATX Cloud Hosting transforms tax preparation for financial professionals by providing seamless access to ATX tax software from any location. This solution streamlines workflows and boosts efficiency. Accountants and CPAs can securely access important files and client information at any time and from any device. With robust encryption and backup measures, ATX Cloud Hosting ensures data security. Its scalable infrastructure adapts to diverse business needs. Simplify tax preparation with ATX Cloud Hosting, empowering financial professionals to excel.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 2 */}
+      <div className="flex flex-col h-full">
+        <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+            <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                className="w-6 h-6"
+                viewBox="0 0 24 24"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <h2 className="text-gray-100 text-xl font-semibold">
+Seamless Tax Management Anywhere: Explore ATX Remote Access
+            </h2>
+          </div>
+          <div className="flex-grow">
+            <p className="leading-relaxed text-base text-gray-300">
+             ATX Remote Access provides financial professionals with convenient access to their tax software from anywhere. This remote solution facilitates seamless management of tax files and client data on-the-go. Secure encryption and backup protocols ensure the protection of sensitive information with ATX Remote Access. The platform’s versatility enables easy adaptation to changing needs, enhancing productivity and flexibility. Streamlining workflow processes, ATX Remote Access empowers users to deliver top-tier services to their clients efficiently, contributing to improved business outcomes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 3 */}
+      <div className="flex flex-col h-full">
+        <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+            <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                className="w-6 h-6"
+                viewBox="0 0 24 24"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <h2 className="text-gray-100 text-xl font-semibold">
+Unlock Flexibility with ACT Efficient Tax Preparation Made Easy with Hosted ATX Software
+            </h2>
+          </div>
+          <div className="flex-grow">
+            <p className="leading-relaxed text-base text-gray-300">
+             Experience a revolution in tax preparation with Hosted ATX Software for financial professionals. This cloud-based solution offers secure access to Hosted ATX Software from anywhere, streamlining the management of tax files and client data. Enhancing productivity and flexibility, Hosted ATX Software ensures robust encryption and backup measures for data protection. The scalable infrastructure of Hosted ATX Software caters to diverse business needs, optimizing cost-effectiveness. Empower your financial practice with simplified tax preparation, delivering top-tier services effortlessly and efficiently.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 4 */}
+      <div className="flex flex-col h-full">
+        <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+            <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                className="w-6 h-6"
+                viewBox="0 0 24 24"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <h2 className="text-gray-100 text-xl font-semibold">
+Optimize CRM Operations with Top-Tier Tax Solutions: ATX Hosting in the USA            </h2>
+          </div>
+          <div className="flex-grow">
+            <p className="leading-relaxed text-base text-gray-300">
+              ATX Hosting services in the USA provide tax professionals with streamlined solutions for efficient tax preparation. Offering secure cloud-based access, users can conveniently utilize ATX software from any location. This facilitates seamless management of tax files and client data, enhancing productivity and flexibility. Robust encryption and backup measures ensure the security of sensitive information. The scalable infrastructure of ATX Hosting in the USA adapts to diverse business needs, optimizing cost-effectiveness. Elevate your tax preparation process with ATX Hosting in the USA for top-tier services with ease.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
 
         <section className="flex flex-col md:flex-row justify-around mt-10 px-4">
           <Link to="https://www.act.com/products/" aria-label="Try ACT Hosting from Winscloud">
-            <button className="bg-green-500 flex items-center justify-center gap-2 md:gap-3 rounded-lg font-josefin font-semibold p-4 text-white mb-4 md:mb-0">
-              <FaLink className="text-2xl mb-auto text-blue-800" />
-              <span>Try ACT Hosting from Winscloud by Clicking Here.</span>
-            </button>
+             <div className="relative inline-flex my-4 md:my-0 items-center justify-center gap-4 group">
+      <div className="absolute inset-0 duration-1000 opacity-60 transition-all bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-400 rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
+      <a
+        role="button"
+        className="group relative inline-flex items-center justify-center text-base rounded-xl bg-gray-900 px-8 py-3 font-semibold text-white transition-all duration-200 hover:bg-gray-800 hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30"
+        title="payment"
+        href="#"
+      >
+        Try ACT Hosting from Winscloud by Clicking Here.
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 10 10"
+          height="10"
+          width="10"
+          fill="none"
+          className="mt-0.5 ml-2 -mr-1 stroke-white stroke-2"
+        >
+          <path
+            d="M0 5h7"
+            className="transition opacity-0 group-hover:opacity-100"
+          />
+          <path
+            d="M1 1l4 4-4 4"
+            className="transition group-hover:translate-x-[3px]"
+          />
+        </svg>
+      </a>
+    </div>
           </Link>
 
           <Link to="https://www.act.com/products/" aria-label="Check Out ACT Product">
-            <button className="bg-green-500 flex items-center justify-center gap-2 md:gap-3 rounded-lg font-josefin font-semibold p-4 text-white">
-              <FaLink className="text-2xl mb-auto text-blue-800" />
-              <span>Here is the ACT Product for you to Check Out</span>
-            </button>
+             <div className="relative inline-flex items-center justify-center gap-4 group">
+      <div className="absolute inset-0 duration-1000 opacity-60 transition-all bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-400 rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
+      <a
+        role="button"
+        className="group relative inline-flex items-center justify-center text-base rounded-xl bg-gray-900 px-8 py-3 font-semibold text-white transition-all duration-200 hover:bg-gray-800 hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30"
+        title="payment"
+        href="#"
+      >
+       Here is the ACT Product for you to Check 0ut
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 10 10"
+          height="10"
+          width="10"
+          fill="none"
+          className="mt-0.5 ml-2 -mr-1 stroke-white stroke-2"
+        >
+          <path
+            d="M0 5h7"
+            className="transition opacity-0 group-hover:opacity-100"
+          />
+          <path
+            d="M1 1l4 4-4 4"
+            className="transition group-hover:translate-x-[3px]"
+          />
+        </svg>
+      </a>
+    </div>
           </Link>
         </section>
+
+
+<Awards/>
+        
       </main>
 
       <footer>

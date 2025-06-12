@@ -19,7 +19,7 @@ const QuickenHosting = () => {
           {/* Left Content */}
           <div className="text-center flex flex-col justify-center items-center md:text-left mt-12">
             <motion.h1
-              className="text-slate-100 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight mb-4"
+              className="text-slate-100 font-bold font-josefin text-3xl sm:text-4xl md:text-8xl leading-tight mb-4"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}

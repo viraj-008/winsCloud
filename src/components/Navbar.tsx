@@ -54,18 +54,18 @@ const Navbar: React.FC = () => {
     },
     {
       name: "Service", dropdown: [
-        { label: "Lacerte_Hostiing", href: "/lacerte_Hosting",icon: "./images/logo/serv.png" },
-        { label: "Proseries-hosting", href: "/proseries-hosting",icon: "./images/logo/serv.png"  },
-        { label: "Cloud server hosting", href: "/cloud-server-hosting" ,icon: "./images/logo/serv.png" },
-        { label: "Drake Hosting", href: "drake-hosting" ,icon: "./images/logo/serv.png" },
-        { label: "Ultratax Hosting", href: "ultratax-hosting" ,icon: "./images/logo/serv.png" },
-        { label: "Act Hosting", href: "act-hosting" ,icon: "./images/logo/serv.png" },
-        { label: "Atx Hosting", href: "atx-hosting",icon: "./images/logo/serv.png" },
-        { label: "Tax wise Hosting", href: "tax-wise-hosting",icon: "./images/logo/serv.png"  },
-        { label: "Quicken Hosting", href: "quicken-hosting",icon: "./images/logo/serv.png"  },
-        { label: "Myob Hosting", href: "myob-hosting" ,icon: "./images/logo/serv.png" },
-        { label: "Fishbowl Hosting", href: "fishbowl-hosting",icon: "./images/logo/serv.png"  },
-        { label: "Doc IT Hosting", href: "doc-it-hosting" ,icon: "./images/logo/serv.png" },
+        { label: "Lacerte_Hostiing", href: "/lacerte_Hosting",icon: "./images/logo/serLogo.png" },
+        { label: "Proseries-hosting", href: "/proseries-hosting",icon: "./images/logo/serLogo.png"  },
+        { label: "Cloud server hosting", href: "/cloud-server-hosting" ,icon: "./images/logo/serLogo.png" },
+        { label: "Drake Hosting", href: "drake-hosting" ,icon: "./images/logo/serLogo.png" },
+        { label: "Ultratax Hosting", href: "ultratax-hosting" ,icon: "./images/logo/serLogo.png" },
+        { label: "Act Hosting", href: "act-hosting" ,icon: "./images/logo/serLogo.png" },
+        { label: "Atx Hosting", href: "atx-hosting",icon: "./images/logo/serLogo.png" },
+        { label: "Tax wise Hosting", href: "tax-wise-hosting",icon: "./images/logo/serLogo.png"  },
+        { label: "Quicken Hosting", href: "quicken-hosting",icon: "./images/logo/serLogo.png"  },
+        { label: "Myob Hosting", href: "myob-hosting" ,icon: "./images/logo/serLogo.png" },
+        { label: "Fishbowl Hosting", href: "fishbowl-hosting",icon: "./images/logo/serLogo.png"  },
+        { label: "Doc IT Hosting", href: "doc-it-hosting" ,icon: "./images/logo/serLogo.png" },
       ]
     },
     { name: "Pricing", dropdown: [] },
@@ -191,7 +191,7 @@ const Navbar: React.FC = () => {
                     lg:shadow-lg lg:rounded-lg`}>
                   {item.dropdown.map((subItem, subIndex) => (
                     <div key={subIndex} className="font-josefin flex justify-start pl-5 items-center">
-                       {<img src={subItem.icon} className="h-6  rounded-3xl"/>}
+                       {<img src={subItem.icon} className="h-6  "/>}
                       <Link to={subItem.href}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="block px-4 py-2 text-[16px] font-josefin text-gray-600

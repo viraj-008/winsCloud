@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import Partner from './Partner';
 
@@ -13,7 +13,6 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 import { SlGlobe } from "react-icons/sl";
 import { FaMapMarkerAlt } from "react-icons/fa";
-
 
 import Expriance from './Expriance';
 import Awards from './Awards';
@@ -132,9 +131,9 @@ const Home: React.FC = () => {
             </p>
 
 
-            <button className="bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-black text-white font-mono text-sm px-6 py-3 rounded-lg shadow-md border border-blue-600 transition duration-300 hover:scale-105">
+           <Link to="/trial"><button className="bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-black text-white font-mono text-sm px-6 py-3 rounded-lg shadow-md border border-blue-600 transition duration-300 hover:scale-105">
               <span className="text-green-400">//</span> Request a Free Demo
-            </button>
+            </button></Link>
           </div>
 
           <motion.div

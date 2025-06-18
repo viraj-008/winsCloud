@@ -115,7 +115,7 @@ const Navbar: React.FC = () => {
         ${showNavbar ? "translate-y-0" : "-translate-y-[150px]"} transform`}>
       <div className="flex flex-wrap justify-between  items-center lg:justify-around">
         <Link to="/">
-          <img className="px-2  h-6 md:h-10 rounded-lg" src="./images/logo/wins.png" alt="Logo" />
+          <img className="px-2 my-1 h-6 md:h-10  rounded-lg" src="./images/logo/wins.png" alt="Logo" />
         </Link>
 
         {/* Mobile Menu Button */}

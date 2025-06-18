@@ -93,7 +93,7 @@ const Partner = () => {
         whileInView="show"
         viewport={{ once: true }}
       >
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {footerLogos.map((logo, index) => (
             <motion.div
               key={index}
@@ -104,7 +104,7 @@ const Partner = () => {
               <motion.img
                 src={logo.image}
                 alt={`Logo ${index + 1}`}
-                className="w-full h-auto max-h-16 object-contain  transition-all duration-300"
+                className="w-full h-auto max-h-12 object-contain  transition-all duration-300"
                 whileHover={{ scale: 1.1 }}
               />
             </motion.div>

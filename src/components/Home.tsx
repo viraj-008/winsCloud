@@ -111,7 +111,7 @@ const Home: React.FC = () => {
 
 
      <section className="min-h-screen rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12">
-  <div className="max-w-6xl mx-auto  w-full grid md:grid-cols-2 items-center gap-12">
+  <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
     
     {/* Left Content */}
     <div className="text-center md:text-left lg:w-[800px]">
@@ -130,10 +130,26 @@ const Home: React.FC = () => {
       </p>
 
       <Link to="/trial">
-        <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition">
-              Start FREE Trial - Claim Top hosting Services Today!
-            </button>
-      </Link>
+  <button className="relative group overflow-hidden">
+        <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
+                    translate-y-[-2px] 
+                    group-active:translate-y-0 transition-transform"></span>
+        <span className="relative flex items-center justify-center gap-2 px-6 py-3 
+                    text-white font-semibold tracking-wide">
+      Start FREE Trial - Claim Top Hosting Services Today!
+      <svg 
+        className="w-5 h-5 transition-transform group-hover:translate-x-1" 
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24" 
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+    </span>
+  </button>
+</Link>
+
     </div>
 
     {/* Right Image */}

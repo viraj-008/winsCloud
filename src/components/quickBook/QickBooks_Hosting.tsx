@@ -56,31 +56,76 @@ const QickBooks_Hosting = () => {
 
   return (
     <>
-      <section className="min-h-[80vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12">
-        <div className="max-w-6xl mx-auto w-full gap-12 items-center mt-8">
-          <div className="text-center md:text-left mt-8">
-            <motion.h1
-              className="text-slate-100 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-4"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              viewport={{ once: true, amount: 0.8 }}
-            >
-              Trusted QuickBooks Hosting Provider
-            </motion.h1>
-            <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
-              Make your accounting operations more secure and collaborate with your team anytime, from anywhere with Winscloud’s QuickBooks Hosting Services.
-            </p>
-            <button className="bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-black text-white font-mono text-sm px-6 py-3 rounded-lg shadow-md border border-blue-600 transition duration-300 hover:scale-105">
-              <span className="text-green-400">//</span>Start FREE Trial - Claim Top hosting Services Today!
-            </button>
-          </div>
-        </div>
-      </section>
+      <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+       <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
+         
+         {/* Left Content */}
+         <div className="text-center md:text-left lg:w-[800px]">
+           <motion.h1
+             className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight mb-8"
+             initial={{ opacity: 0, y: 30 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.8, ease: 'easeOut' }}
+             viewport={{ once: true, amount: 0.8 }}
+           >
+Trusted QuickBooks Hosting Provider
+           </motion.h1>
+     
+           <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+Make your accounting operations more secure and collaborate with your team anytime, from anywhere with Winscloud’s QuickBooks Hosting Services.
+           </p>
+     
+          <Link to="/trial">
+  <button className="relative group overflow-hidden">
+        <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
+                    translate-y-[-2px] 
+                    group-active:translate-y-0 transition-transform"></span>
+        <span className="relative flex items-center justify-center gap-2 px-6 py-3 
+                    text-white font-semibold tracking-wide">
+      Start FREE Trial - Claim Top Hosting Services Today!
+      <svg 
+        className="w-5 h-5 transition-transform group-hover:translate-x-1" 
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24" 
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+    </span>
+  </button>
+</Link>
+         </div>
+     
+         {/* Right Image */}
+         <motion.div
+           animate={{
+             x: [0, -10, 0, 10, 0],
+             y: [0, 10, 0, -10, 0],
+             opacity: 1,
+           }}
+           transition={{
+             duration: 6,
+             ease: "linear",
+             repeat: Infinity,
+             repeatType: "loop",
+           }}
+           className="flex mt-12 md:justify-end"
+         >
+           <img
+             src="/images/Home/homePNG.png"
+             alt="Server"
+             className="w-full max-w-md md:h-[400px] rounded-lg object-contain"
+           />
+         </motion.div>
+     
+       </div>
+     </section>
+     
 
       <main>
-        <section className="p-4">
-          <h1 className="text-3xl text-center py-4 font-bold font-montserrat text-textPrimary">
+        <section className="md:px-12 px-2">
+          <h1 className="md:text-3xl text-2xl text-center max-w-8xl py-4 font-bold font-montserrat text-textPrimary">
             QuickBooks Hosting: Desktop-like experience on any device, from any part of the globe
           </h1>
         </section>
@@ -94,10 +139,10 @@ const QickBooks_Hosting = () => {
             />
           </figure>
           <article className="w-full md:w-1/2 text-center md:text-start space-y-4">
-            <h2 className="font-semibold text-textPrimary text-xl md:text-xl">
+            <h2 className="font-semibold text-textPrimary text-xl text-justify md:text-xl">
               Want to experience the synergy between your most loved QuickBooks Desktop application and the power of the cloud? Tap into the efficacy and efficiency of cloud infrastructure with Winscloud Matrix – your authorized QuickBooks hosting provider.
             </h2>
-            <p className="font-montserrat text-gray-700 text-sm md:text-base">
+            <p className="font-montserrat text-gray-700 text-justify  text-sm md:text-base">
               QuickBooks Desktop Cloud Hosting is an advanced solution that enhances the functionality of the desktop application by moving it to the cloud. Users can access all the features of their favorite QuickBooks application, along with their key data with only a working internet connection, from any device of their choice – laptop, desktop, cell phone, or tablet.
             </p>
           </article>

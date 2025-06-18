@@ -53,32 +53,70 @@ const Sage_500Hosting = () => {
 
   return (
     <>
-      <section className="min-h-[80vh] rounded-b-3xl flex items-center bg-gradient-to-br from-[#b5b6b9] via-[#102f86] to-black text-white px-6 py-12">
-        <div className="max-w-6xl mx-auto w-full gap-12 items-center mt-8">
-
-          {/* Left Content */}
-          <div className="text-center md:text-left mt-8">
-            <motion.h1
-              className="text-slate-100 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-4"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              viewport={{ once: true, amount: 0.8 }}
-            >
-              Sage 500 ERP Hosting
-            </motion.h1>
-
-            <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+        <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+       <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
+         
+         {/* Left Content */}
+         <div className="text-center md:text-left lg:w-[800px]">
+           <motion.h1
+             className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-8"
+             initial={{ opacity: 0, y: 30 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.8, ease: 'easeOut' }}
+             viewport={{ once: true, amount: 0.8 }}
+           >Sage 500 ERP Hosting
+           </motion.h1>
+     
+           <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
 Anytime, anywhere accounting & high productivity with Sage 500 ERP Hosting
-            </p>
-
-           <Link to='trial'> <button className="bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-black text-white font-mono text-sm px-6 py-3 rounded-lg shadow-md border border-blue-600 transition duration-300 hover:scale-105">
-              <span className="text-green-400">//</span>Try Sage 500 Hosting for FREE
-            </button></Link>
-          </div>
-
-        </div>
-      </section>
+           </p>
+     
+          <Link to="/trial">
+  <button className="relative group overflow-hidden">
+        <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
+                    translate-y-[-2px] 
+                    group-active:translate-y-0 transition-transform"></span>
+        <span className="relative flex items-center justify-center gap-2 px-6 py-3 
+                    text-white font-semibold tracking-wide">
+     get a free trial
+      <svg 
+        className="w-5 h-5 transition-transform group-hover:translate-x-1" 
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24" 
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+    </span>
+  </button>
+</Link>
+         </div>
+     
+         {/* Right Image */}
+         <motion.div
+           animate={{
+             x: [0, -10, 0, 10, 0],
+             y: [0, 10, 0, -10, 0],
+             opacity: 1,
+           }}
+           transition={{
+             duration: 6,
+             ease: "linear",
+             repeat: Infinity,
+             repeatType: "loop",
+           }}
+           className="flex mt-12 md:justify-end"
+         >
+           <img
+             src="/images/Home/homePNG.png"
+             alt="Server"
+             className="w-full max-w-md md:h-[400px] rounded-lg object-contain"
+           />
+         </motion.div>
+     
+       </div>
+     </section>
 
       <main>
         <section>
@@ -103,10 +141,10 @@ Business Operations Simplified with Sage 500 Cloud Hosting
 
         {/* TEXT on the left (or top on mobile) */}
         <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
-          <h2 className="font-semibold text-textPrimary   text-xl md:text-xl ">
+          <h2 className="font-semibold text-textPrimary text-justify   text-xl md:text-xl ">
         Sage 500 hosting is business management software blended with the cloud which helps businesses drive productivity, add efficacy to their day-to-day operations, and minimize costs with its robust features. Businesses from multiple domains find Sage 500 a valuable addition to their routine operations, helping them make informed decisions that promote profitability.
           </h2>
-           <p className="font-montserrat text-gray-700 text-sm md:text-base">
+           <p className="font-montserrat text-gray-700 text-justify text-sm md:text-base">
             Sage 500 offers customization to accommodate individual business needs. Retail businesses can stay on track with their sales and inventory, ensuring that they always have product availability. The automated supply chain feature of Sage 500 and inventory management contributes to customer satisfaction, forecasts consumer behavior, and maximizes profits. With Sage 500 hosting, these features are amplified 10x. Multiple teams can collaborate in real time to stay on top of these features and ensure seamless business operations round-the-clock.
             </p>
         </article>

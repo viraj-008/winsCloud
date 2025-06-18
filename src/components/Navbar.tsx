@@ -103,7 +103,7 @@ const Navbar: React.FC = () => {
     w-[90%]              
     max-w-[1440px]      
     xs:max-w-[340px]      
-    lg:max-w-[1040px]    
+    lg:max-w-[1240px]    
     mx-auto
     rounded-lg
     z-50
@@ -113,9 +113,9 @@ const Navbar: React.FC = () => {
     transition-all
     duration-200
         ${showNavbar ? "translate-y-0" : "-translate-y-[150px]"} transform`}>
-      <div className="flex flex-wrap justify-between p-2 items-center lg:justify-around">
+      <div className="flex flex-wrap justify-between  items-center lg:justify-around">
         <Link to="/">
-          <img className="px-2  h-6 md:h-8 rounded-lg" src="./images/logo/wins.png" alt="Logo" />
+          <img className="px-2  h-6 md:h-10 rounded-lg" src="./images/logo/wins.png" alt="Logo" />
         </Link>
 
         {/* Mobile Menu Button */}
@@ -142,7 +142,7 @@ const Navbar: React.FC = () => {
 </button>
 
         {/* Nav Menu */}
-        <div className={`w-[90%] lg:w-auto bg-white lg:bg-transparent lg:flex mt-2 rounded-lg lg:items-center transition-all duration-500 ease-in-out
+        <div className={`w-[90%]  lg:w-auto bg-white lg:bg-transparent lg:flex mt-2 rounded-lg lg:items-center transition-all duration-500 ease-in-out
             ${isMobileMenuOpen ? 'block' : 'hidden lg:block'}`}>
           <Link to="/"
             className="w-full lg:w-auto py-2 px-4 mb-1 text-3xl text-red-600 hidden font-josefin font-semibold md:block  hover:scale-105 transition-all duration-300"

@@ -41,7 +41,7 @@ const Policy = () => {
       <div className="relative bg-gradient-to-br from-blue-900 to-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-500 mix-blend-screen filter blur-3xl animate-float1"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-72 h-72 rounded-full bg-blue-600 mix-blend-screen filter blur-3xl animate-float2"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-72 h-72 pagerounded-full bg-blue-600 mix-blend-screen filter blur-3xl animate-float2"></div>
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center">

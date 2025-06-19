@@ -12,6 +12,7 @@ import { RiCloseLargeFill } from "react-icons/ri";
 import { GrStorage } from "react-icons/gr";
 import { MdSdStorage } from "react-icons/md";
 import { FiUsers } from "react-icons/fi";
+import Partner from '../Partner';
 
 const validationSchema = Yup.object({
     FullName: Yup.string()
@@ -37,11 +38,16 @@ interface Props {
     selectedPlan: Plan;
     setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
     planType: string;
+    sharedPlans?: Plan[];
+    dedicatedPlans?: Plan[];
+    onSwitchPlan?: (plan: Plan) => void;
 }
 
-const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
+const PriceForm = ({ selectedPlan, setShowForm, planType, sharedPlans, dedicatedPlans, onSwitchPlan }: Props) => {
 
     const [loading, setLoading] = useState<boolean>(false);
+    const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+    const [nextPlan, setNextPlan] = useState<Plan | null>(null);
 
     const initialValues = {
         AdditionalRAM: 0,
@@ -61,32 +67,18 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
     };
 
 
-    // const handleIncrease = (field: string, increment: number, values: any, setFieldValue: any) => {
-    //     const newValue = values[field] + increment;
-    //     setFieldValue(field, Math.max(newValue, 0));
-    //     if (field === 'AdditionalRAM' || field === 'additionalStorage') {
-    //         setFieldValue('totalPrice', values.totalPrice + increment);
-    //     } else if (field === 'noOfUsers') {
-    //         let newTotalPrice = 0;
-    //         if (planType === "shared") {
-    //             newTotalPrice = newValue * (selectedPlan.userMonth ?? 0);
-    //         } else {
-    //             const basePrice = selectedPlan.packageMonth ?? 0;
-    //             const defaultUsers = selectedPlan.default ?? 0;
-    //             const extraPerUser = selectedPlan.AdditionalAccount ?? 0;
-    //             const extraUsers = Math.max(0, newValue - defaultUsers);
-    //             newTotalPrice = basePrice + extraUsers * extraPerUser;
-    //         }
-    //         setFieldValue('totalPrice', newTotalPrice);
-    //     }
-    //     console.log('Updated Value:', initialValues);
-    // };
+    const findNextPlan = (currentPlan: Plan) => {
+        const plans = planType === "shared" ? sharedPlans : dedicatedPlans;
+        if (!plans) return null;
+        const currentIndex = plans.findIndex(p => p.keyName === currentPlan.keyName);
+        return currentIndex < plans.length - 1 ? plans[currentIndex + 1] : null;
+    };
 
     const handleIncrease = (
         field: string,
         increment: number,
-        values: any,
-        setFieldValue: any
+        values: Record<string, any>,
+        setFieldValue: (field: string, value: any) => void
     ) => {
         let newValue = values[field] + increment;
 
@@ -94,16 +86,19 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
             const minUsers = selectedPlan.numberUserFrom ?? 1;
             const maxUsers = selectedPlan.numberUserto ?? 100;
 
-            // Apply limits
-            if (newValue < minUsers) {
+            // Check if we're about to exceed the max users
+            if (newValue > maxUsers) {
+                const next = findNextPlan(selectedPlan);
+                if (next) {
+                    setNextPlan(next);
+                    setShowUpgradeModal(true);
+                }
+                newValue = maxUsers; // Keep at max for current plan
+            } else if (newValue < minUsers) {
                 newValue = minUsers;
-            } else if (newValue > maxUsers) {
-                newValue = maxUsers;
             }
 
-            setFieldValue(field, newValue);
-
-            let newTotalPrice = 0;
+            setFieldValue(field, newValue); let newTotalPrice = 0;
             if (planType === "shared") {
                 newTotalPrice = newValue * (selectedPlan.userMonth ?? 0);
             } else {
@@ -111,27 +106,123 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                 const defaultUsers = selectedPlan.default ?? 0;
                 const extraPerUser = selectedPlan.AdditionalAccount ?? 0;
                 const extraUsers = Math.max(0, newValue - defaultUsers);
-                newTotalPrice = basePrice + extraUsers * extraPerUser;
+                const addRamPrice = values.AdditionalRAM * 10; // Assuming RAM costs $10 per unit
+                const addStoragePrice = values.additionalStorage * 5; // Assuming storage costs $5 per unit
+                newTotalPrice = basePrice + extraUsers * extraPerUser + addRamPrice + addStoragePrice;
             }
 
             setFieldValue('totalPrice', newTotalPrice);
-
         } else {
-            // For fields like AdditionalRAM or additionalStorage
-            newValue = Math.max(newValue, 0);
+            // For AdditionalRAM or additionalStorage, prevent going below 0
+            if (newValue < 0) {
+                newValue = 0;
+                // Don't modify the total price if we can't decrease further
+                return;
+            }
+
             setFieldValue(field, newValue);
 
             if (field === 'AdditionalRAM' || field === 'additionalStorage') {
-                setFieldValue('totalPrice', values.totalPrice + increment);
+                const basePrice = planType === "shared"
+                    ? values.noOfUsers * (selectedPlan.userMonth ?? 0)
+                    : selectedPlan.packageMonth ?? 0;
+                const extraUsers = planType === "dedicated"
+                    ? Math.max(0, values.noOfUsers - (selectedPlan.default ?? 0)) * (selectedPlan.AdditionalAccount ?? 0)
+                    : 0;
+                const addRamPrice = (field === 'AdditionalRAM' ? newValue : values.AdditionalRAM) * 10;
+                const addStoragePrice = (field === 'additionalStorage' ? newValue : values.additionalStorage) * 5;
+                const newTotalPrice = basePrice + extraUsers + addRamPrice + addStoragePrice;
+                setFieldValue('totalPrice', newTotalPrice);
             }
         }
 
-        console.log('Updated Value:', initialValues);
+        console.log('Updated Value:', values);
     };
 
 
     return (
         <>
+           {showUpgradeModal && nextPlan && (
+  <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm">
+    <div className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-2xl max-w-md w-full border border-gray-200 transform transition-all duration-300 scale-95 hover:scale-100">
+      {/* Modal Header */}
+      <div className="flex items-center mb-6">
+        <div className={`p-3 rounded-lg ${
+          planType === "shared" 
+            ? "bg-green-100 text-green-600" 
+            : "bg-pink-100 text-pink-600"
+        }`}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </div>
+        <h3 className="text-2xl font-bold text-gray-800 ml-4">Plan Upgrade Available</h3>
+      </div>
+
+      {/* Modal Content */}
+      <div className="mb-6">
+        <p className="text-gray-600 mb-3">
+          You've reached the maximum capacity for your current <span className="font-semibold text-gray-800">{selectedPlan.keyName}</span> plan.
+        </p>
+        <div className="flex items-center justify-center my-4">
+          <div className={`px-4 py-2 rounded-lg ${
+            planType === "shared" 
+              ? "bg-green-50 border border-green-200" 
+              : "bg-pink-50 border border-pink-200"
+          }`}>
+            <span className="font-medium">{selectedPlan.numberUserFrom}-{selectedPlan.numberUserto} Users</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mx-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+          </svg>
+          <div className={`px-4 py-2 rounded-lg ${
+            planType === "shared" 
+              ? "bg-green-100 border-2 border-green-300" 
+              : "bg-pink-100 border-2 border-pink-300"
+          }`}>
+            <span className="font-bold">{nextPlan.numberUserFrom}-{nextPlan.numberUserto} Users</span>
+          </div>
+        </div>
+        <p className="text-gray-600 mt-4">
+          Upgrade to <span className="font-semibold text-gray-800">{nextPlan.keyName}</span> for more resources and features.
+        </p>
+      </div>
+
+      {/* Modal Actions */}
+      <div className="flex justify-end space-x-4">
+        <button
+          onClick={() => setShowUpgradeModal(false)}
+          className={`px-5 py-2.5 rounded-lg font-medium border ${
+            planType === "shared" 
+              ? "border-green-300 text-green-600 hover:bg-green-50" 
+              : "border-pink-300 text-pink-600 hover:bg-pink-50"
+          } transition-colors`}
+        >
+          Stay on Current Plan
+        </button>
+        <button
+          onClick={() => {
+            if (nextPlan && onSwitchPlan) {
+              setShowForm(false);
+              setShowUpgradeModal(false);
+              setTimeout(() => {
+                onSwitchPlan(nextPlan);
+              }, 100);
+            }
+          }}
+          className={`px-5 py-2.5 rounded-lg font-medium text-white ${
+            planType === "shared" 
+              ? "bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700" 
+              : "bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700"
+          } shadow-md transition-all transform hover:scale-105`}
+        >
+          View {nextPlan.keyName} Plan
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
             <div className='fixed top-3 px-4 shadow-xl inset-0 z-50 flex items-center justify-center bg-opacity-90'>
                 <div className='rounded-lg w-full max-w-4xl'> {/* Added responsive width */}
                     <div className='bg-white w-full sm:w-[600px] mx-auto border-4 border-green-500 p-6 rounded-lg max-h-[90vh] overflow-y-auto shadow-lg'>
@@ -170,8 +261,7 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                                         },
                                     );
 
-                                // console.log("Submitted Form Data:", form);
-                                // (Object.prototype.hasOwnProperty.call(values, 'AdditionalRAM') && delete values.AdditionalRAM);
+
 
                                 console.log('Form Submitted:', values);
                             }}
@@ -186,7 +276,7 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                                             <div className='flex justify-center  items-center space-x-2 mt-2'>
                                                 <button
                                                     type='button'
-                                                    onClick={() => handleIncrease('additionalStorage', -1, values, setFieldValue)}
+                                                    onClick={() => handleIncrease('additionalStorage', -5, values, setFieldValue)}
                                                     className='text-red-600'
                                                 >
                                                     <TiMinus />
@@ -199,7 +289,7 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                                                 />
                                                 <button
                                                     type='button'
-                                                    onClick={() => handleIncrease('additionalStorage', 1, values, setFieldValue)}
+                                                    onClick={() => handleIncrease('additionalStorage', 5, values, setFieldValue)}
                                                     className='text-green-600'
                                                 >
                                                     <FaPlus />
@@ -215,7 +305,7 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                                                 <div className='flex justify-center items-center space-x-2 mt-2'>
                                                     <button
                                                         type='button'
-                                                        onClick={() => handleIncrease('AdditionalRAM', -1, values, setFieldValue)}
+                                                        onClick={() => handleIncrease('AdditionalRAM', -5, values, setFieldValue)}
                                                         className='text-red-600'
                                                     >
                                                         <TiMinus />
@@ -229,7 +319,7 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                                                     />
                                                     <button
                                                         type='button'
-                                                        onClick={() => handleIncrease('AdditionalRAM', 1, values, setFieldValue)}
+                                                        onClick={() => handleIncrease('AdditionalRAM', 5, values, setFieldValue)}
                                                         className='text-green-600 '
                                                     >
                                                         <FaPlus />
@@ -247,7 +337,8 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                                                     <button
                                                         type='button'
                                                         onClick={() => handleIncrease('noOfUsers', -1, values, setFieldValue)}
-                                                        className='text-red-600'
+                                                        disabled={values.noOfUsers <= (planType === "dedicated" ? (selectedPlan.default ?? 1) : selectedPlan.numberUserFrom)}
+                                                        className={`${values.noOfUsers <= (planType === "dedicated" ? (selectedPlan.default ?? 1) : selectedPlan.numberUserFrom) ? 'text-gray-400 cursor-not-allowed' : 'text-red-600'}`}
                                                     >
                                                         <TiMinus />
                                                     </button>
@@ -378,7 +469,7 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
                     </div>
                 </div>
             </div>
-            {/* <Partner /> */}
+            <Partner />
         </>
     );
 };

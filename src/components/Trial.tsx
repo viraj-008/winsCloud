@@ -236,18 +236,25 @@ const FreeTrialForm = () => {
       </div>
       
       <div className="space-y-1">
-        <select
-          name="software"
-          value={form.software}
-          onChange={handleChange}
-          className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm appearance-none font-montserrat text-blue-600 font-semibold transition-all duration-200 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM0ZjQ2ZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWRvd24iPjxwYXRoIGQ9Im02IDkgNiA2IDYtNiIvPjwvc3ZnPg==')] bg-no-repeat bg-[center_right_1rem]"
-          required
-        >
-          <option className="text-blue-600">QuickBooks</option>
-          <option className="text-blue-600">Sage</option>
-          <option className="text-blue-600">Drake</option>
-          <option className="text-blue-600">Other</option>
-        </select>
+       <select
+  name="software"
+  value={form.software}
+  onChange={handleChange}
+  className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm appearance-none font-montserrat text-blue-600 font-semibold transition-all duration-200 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM0ZjQ2ZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWRvd24iPjxwYXRoIGQ9Im02IDkgNiA2IDYtNiIvPjwvc3ZnPg==')] bg-no-repeat bg-[center_right_1rem]"
+  required
+>
+  <option 
+    value="" 
+    disabled 
+    className="text-gray-400/80 font-normal"
+  >
+    Choose your plan
+  </option>
+  <option value="QuickBooks" className="text-blue-600">QuickBook Hosting</option>
+  <option value="Sage" className="text-blue-600">Sage Hosting</option>
+  <option value="Drake" className="text-blue-600">Drake Hosting</option>
+  <option value="Other" className="text-blue-600">Other Applications</option>
+</select>
       </div>
       
       <div className="space-y-1">

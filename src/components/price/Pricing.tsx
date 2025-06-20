@@ -2,6 +2,23 @@ import { useState } from "react";
 import PriceForm from "./PriceForm";
 import Partner from "../Partner";
 import { motion } from "framer-motion";
+import { 
+  FaHeadset, 
+  FaDatabase, 
+  FaExchangeAlt, 
+  FaShieldAlt, 
+  FaPrint, 
+  FaFileWord 
+} from 'react-icons/fa';
+
+const features = [
+    { icon: <FaHeadset className="text-blue-500" />, text: "24 x 7 Tech Support" },
+    { icon: <FaDatabase className="text-green-500" />, text: "Daily Data Backup" },
+    { icon: <FaExchangeAlt className="text-purple-500" />, text: "Data Migration" },
+    { icon: <FaShieldAlt className="text-red-500" />, text: "Firewall Protection" },
+    { icon: <FaPrint className="text-yellow-500" />, text: "Universal Printing" },
+    { icon: <FaFileWord className="text-blue-600" />, text: "MS Word" }
+  ];
 
 export type Plan = {
   keyName: string;
@@ -64,28 +81,28 @@ function Pricing() {
 
   <div className="pt-5 px-2 md:pt-8  mx-auto">
     {/* Toggle Buttons */}
-    <div className="mb-8 flex gap-4 justify-center">
-      <button
-        onClick={() => setPlanType("shared")}
-        className={`px-6 transition duration-300 ease-in-out py-3 rounded-full font-josefin font-bold text-lg shadow-md ${
-          planType === "shared" 
-            ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white" 
-            : "bg-gray-100 hover:bg-gray-200"
-        }`}
-      >
-        Shared Hosting Plans
-      </button>
-      <button
-        onClick={() => setPlanType("dedicated")}
-        className={`px-6 py-3 transition duration-300 ease-in-out rounded-full font-josefin font-bold md:text-lg shadow-md ${
-          planType === "dedicated" 
-            ? "bg-gradient-to-r from-pink-500 to-rose-600 text-white" 
-            : "bg-gray-100 hover:bg-gray-200"
-        }`}
-      >
-        Dedicated Hosting Plans
-      </button>
-    </div>
+   <div className="mb-6 md:mb-8 flex  sm:flex-row gap-3 sm:gap-4 justify-center">
+  <button
+    onClick={() => setPlanType("shared")}
+    className={`px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 transition duration-300 ease-in-out rounded-full font-josefin font-semibold text-base md:text-lg shadow-md ${
+      planType === "shared" 
+        ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white" 
+        : "bg-gray-100 hover:bg-gray-200"
+    }`}
+  >
+    Shared Hosting
+  </button>
+  <button
+    onClick={() => setPlanType("dedicated")}
+    className={`px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 transition duration-300 ease-in-out rounded-full font-josefin font-semibold text-base md:text-lg shadow-md ${
+      planType === "dedicated" 
+        ? "bg-gradient-to-r from-green-700 to-emerald-800 text-white" 
+        : "bg-gray-100 hover:bg-gray-200"
+    }`}
+  >
+    Dedicated Hosting
+  </button>
+</div>
 
     <div className="relative mb-12">
       <div className="absolute inset-0 flex items-center">
@@ -99,7 +116,7 @@ function Pricing() {
     </div>
 
     {/* Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 px-5 lg:grid-cols-4 gap-8">
       {plans.map((plan, index) => (
         <div
           key={index}
@@ -113,7 +130,7 @@ function Pricing() {
           <div className={`py-4 px-6 ${
             planType === "shared" 
               ? "bg-gradient-to-r from-green-500 to-emerald-600" 
-              : "bg-gradient-to-r from-pink-500 to-rose-600"
+              : "bg-gradient-to-r from-green-700 to-emerald-800"
           }`}>
             <h3 className="text-xl text-center font-josefin font-bold text-white">
               {plan.keyName}
@@ -182,7 +199,7 @@ function Pricing() {
                 className={`px-6 py-3 rounded-lg font-josefin font-bold text-white shadow-md transition-all ${
                   planType === "shared" 
                     ? "bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700" 
-                    : "bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700"
+                    : "bg-gradient-to-r from-green-400 to-emerald-700 hover:from-green-600 hover:to-emerald-800"
                 }`}
                 onClick={() => {
                   setSelectedPlan(plan);
@@ -200,19 +217,43 @@ function Pricing() {
 
   {/* Form Modal */}
   {showForm && selectedPlan && (
-    <PriceForm
-      selectedPlan={selectedPlan}
-      setShowForm={setShowForm}
-      planType={planType}
-      sharedPlans={sharedPlans}
-      dedicatedPlans={dedicatedPlans}
-      onSwitchPlan={(plan) => {
-        setSelectedPlan(plan);
-        setShowForm(true);
-      }}
-    />
+   <PriceForm
+  key={selectedPlan.keyName} // <-- add this line
+  selectedPlan={selectedPlan}
+  setShowForm={setShowForm}
+  planType={planType}
+  sharedPlans={sharedPlans}
+  dedicatedPlans={dedicatedPlans}
+  onSwitchPlan={(plan) => {
+    setSelectedPlan(plan);
+    setShowForm(true);
+  }}
+/>
   )}
 </div>
+
+<div className="bg-white rounded-xl  p-6 mt-8 mx-auto">
+      <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center font-josefin">
+        Our Features
+      </h2>
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+  {features.map((feature, index) => (
+    <div 
+      key={index}
+      className="flex items-center justify-center p-4 bg-gray-50 rounded-lg  transition-colors"
+    >
+      <div className="text-2xl mr-3 text-center">
+        {feature.icon}
+      </div>
+      <div className="text-center">
+        <h3 className="font-medium text-gray-800 font-josefin">
+          {feature.text}
+        </h3>
+      </div>
+    </div>
+  ))}
+</div>
+    </div>
       <Partner />
     </>
   );

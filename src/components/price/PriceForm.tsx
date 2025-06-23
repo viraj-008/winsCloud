@@ -199,10 +199,12 @@ const PriceForm = ({ selectedPlan, setShowForm, planType, sharedPlans, dedicated
                                                 () => {
                                                     toast.success('Request sent successfully!');
                                                     setLoading(false);
+                                                    setShowForm(false);
                                                 },
                                                 () => {
                                                     toast.error('Something went wrong!');
                                                     setLoading(false);
+                                                     setShowForm(false);
                                                 },
                                             );
                                     }}
@@ -353,7 +355,7 @@ const PriceForm = ({ selectedPlan, setShowForm, planType, sharedPlans, dedicated
                                                 <div>
                                                     <label className="block text-xs text-gray-500 font-josefin mb-1">Phone*</label>
                                                     <PhoneInput
-                                                        defaultCountry="in"
+                                                        defaultCountry="us"
                                                         value={values.Phone}
                                                         onChange={(phone: string) => setFieldValue('Phone', phone)}
                                                         className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500"

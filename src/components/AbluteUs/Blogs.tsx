@@ -725,44 +725,70 @@ export  const blogData: BlogData[] = [
 const Blogs = () => {
 
       
-            
-    
-    
   return (
     <>
-    <div className="pt-[100px] bg-pink-800">
-        <h1 className="text-2xl  font-semibold font-josefin text-center   w-[90%] mx-auto rounded-lg text-white border bg-pink-500 shadow-lg mb-2">BLOG POST</h1>
-        
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-8">
-
-      {blogData.map((blog) => (
-        <div
-          key={blog.id}
-          className="border-2 bg-[#fdf5e6]  rounded-2xl shadow-lg overflow-hidden   p-4 hover:scale-[1.02] hover:shadow-2xl transition duration-300"
-        >
+   <div className="min-h-screen  pt-24 pb-12 px-4 sm:px-6">
+  {/* Header */}
+  <div className="max-w-4xl mx-auto mb-12 text-center">
+    <h1 className="text-4xl md:text-5xl font-bold font-josefin text-black mb-6">
+      Latest Blog Posts
+    </h1>
+    <p className="text-xl text-gray-700 font-montserrat max-w-2xl mx-auto">
+      Discover insightful articles and creative ideas from our team
+    </p>
+  </div>
+  
+  {/* Blog Grid */}
+  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+    {blogData.map((blog) => (
+      <div
+        key={blog.id}
+        className="bg-white rounded-xl overflow-hidden shadow-2xl hover:shadow-pink-500/20 transition-all duration-300 hover:-translate-y-2 group"
+      >
+        {/* Image */}
+        <div className="relative overflow-hidden h-60">
           <img
             src={blog.images}
             alt={blog.TopHeading}
-            className="w-full h-48 object-cover border-2 border-black rounded-xl mb-4"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          <h2 className="text-lg font-semibold font-josefin text-red-600 mb-2">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80" />
+        </div>
+        
+        {/* Content */}
+        <div className="p-6">
+          <div className="flex items-center mb-3">
+            <span className="text-sm font-montserrat text-pink-600 font-semibold">
+              { "Featured"}
+            </span>
+            <span className="mx-2 text-gray-400">•</span>
+            <span className="text-sm text-gray-500 font-montserrat">
+              {"Jun 23, 2023"}
+            </span>
+          </div>
+          
+          <h2 className="text-xl font-bold font-josefin text-gray-800 mb-3 leading-tight">
             {blog.sections[0].heading}
           </h2>
-
-          <p className="text-gray-700 font-montserrat   mb-4">
-            {blog.sections[0]?.paragraph?.slice(0, 100)}...
+          
+          <p className="text-gray-600 font-montserrat mb-6 line-clamp-3">
+            {blog.sections[0]?.paragraph?.slice(0, 150)}...
           </p>
-
+          
           <Link
             to={`/blog/${blog.id}`}
-            className="text-white border p-2 font-josefin rounded-lg bg-blue-600 font-semibold hover:underline"
+            className="inline-flex items-center px-5 py-2.5 rounded-lg bg-green-800 text-white font-josefin font-medium hover:bg-green-700 transition-colors duration-300"
           >
-            Read More →
+            Read More
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
           </Link>
         </div>
-      ))}
-    </div>
-    </div>
+      </div>
+    ))}
+  </div>
+</div>
 
     <Partner/>
     </>

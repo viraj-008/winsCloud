@@ -180,8 +180,8 @@ const Home: React.FC = () => {
 
 
       <main>
-        <section className="px-5 md:px-24 py-16 ">
-          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
+        <section className="px-5 md:px-24 py-6 ">
+          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-2">
             Remote Access Has Never Been Smoother
           </h1>
           <p className="text-center text-lg md:text-xl text-gray-700 font-medium max-w-3xl mx-auto">
@@ -189,7 +189,7 @@ const Home: React.FC = () => {
           </p>
 
           <div className="mt-12 flex flex-col-reverse md:flex-row gap-12 items-center">
-            <article className="text-justify text-gray-800 leading-7 font-montserrat text-[17px] ">
+            {/* <article className="text-justify text-gray-800 leading-7 font-montserrat text-[17px] ">
               <p className="mb-6 text-center">
                 At <strong>Winscloud</strong>, we empower businesses with scalable, flexible, and secure cloud hosting. Our around-the-clock support ensures your services never skip a beat—so you can focus on what you do best.
               </p>
@@ -199,17 +199,17 @@ const Home: React.FC = () => {
               <p className="mb-6 text-center">
                 Our infrastructure dynamically adjusts to your growth, offering seamless cloud adoption. With <strong>Winscloud</strong>, you're always ready for what’s next—no lag, no stress.
               </p>
-            </article>
+            </article> */}
 
 
           </div>
-          <h1 className="text-3xl md:text-5xl text-center font-bold font-montserrat text-blue-900">
+          <h1 className="text-3xl md:text-3xl text-center font-bold font-montserrat text-blue-900">
             Why Choose Winscloud Matrix?
           </h1>
-          <p className="text-center text-lg text-gray-700 mt-4 font-medium max-w-3xl mx-auto">
+          <p className="text-center text-lg text-gray-700 mt-2 font-medium max-w-3xl mx-auto">
             Winscloud Matrix Cloud Hosting: Fast-track Your Tax and Accounting Practice
           </p>
-          <p className="mt-6 text-gray-700 text-lg  text-center font-montserrat max-w-5xl mx-auto">
+          <p className="mt-3 max-w-3xl text-gray-700 text-lg  text-center font-montserrat  mx-auto">
             We simplify tax and accounting workflows by integrating powerful desktop applications with cloud flexibility—helping modern businesses streamline operations effortlessly.
           </p>
 
@@ -306,9 +306,9 @@ const Home: React.FC = () => {
             <p className="mb-6">
               As a proud provider of cutting-edge cloud solutions, Wins Cloud helps businesses collaborate seamlessly, securely, and efficiently — anywhere, anytime.
             </p>
-            <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition">
+           <Link to="/trial"><button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition">
               Start FREE Trial - Claim Top hosting Services Today!
-            </button>
+            </button></Link> 
           </div>
 
           {/* React Icon */}

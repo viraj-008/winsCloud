@@ -243,6 +243,44 @@ const FreeTrialForm = () => {
                 />
               </div>
 
+            
+
+              <div className="space-y-1">
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Email*"
+                  className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70"
+                  required
+                />
+              </div>
+
+              <div className="space-y-1">
+                <input
+                  type="text"
+                  name="company"
+                  value={form.company}
+                  onChange={handleChange}
+                  placeholder="Company*"
+                  className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70"
+                  required
+                />
+              </div>
+            <div className="">
+              <PhoneInput
+                defaultCountry="us"
+                value={form.phone}
+                onChange={(phone: string) => setForm((prev) => ({ ...prev, phone }))}
+                placeholder="Phone Number*"
+                className=" my-2 ml-2 md:ml-0 "
+              />
+            </div>
+            </div>
+
+
+
               <div className="space-y-1">
                 <select
                   name="software"
@@ -275,41 +313,6 @@ const FreeTrialForm = () => {
                     />
                   )}
               </div>
-
-              <div className="space-y-1">
-                <input
-                  type="email"
-                  name="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  placeholder="Email*"
-                  className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70"
-                  required
-                />
-              </div>
-
-              <div className="space-y-1">
-                <input
-                  type="text"
-                  name="company"
-                  value={form.company}
-                  onChange={handleChange}
-                  placeholder="Company*"
-                  className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70"
-                  required
-                />
-              </div>
-            </div>
-
-            <div className="space-y-1">
-              <PhoneInput
-                defaultCountry="us"
-                value={form.phone}
-                onChange={(phone: string) => setForm((prev) => ({ ...prev, phone }))}
-                placeholder="Phone Number*"
-                className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200"
-              />
-            </div>
 
             <div className="space-y-1">
               <textarea

@@ -38,6 +38,7 @@ import Introduction from "./components/AbluteUs/Introduction";
 import Policy from "./components/AbluteUs/Policy"
 import Blogs from "./components/AbluteUs/Blogs";
 import BlogDetail from "./components/AbluteUs/BlogDetail";
+import Offers from './components/Offers';
 function App() {
   return (
     <BrowserRouter> 
@@ -80,6 +81,7 @@ function App() {
         <Route path="/blog/:id" element={<BlogDetail/>} />
       </Routes>
       <ToastContainer position="top-right" autoClose={3000} />
+      <Offers />
       <Footer />
 
       </div>

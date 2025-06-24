@@ -90,50 +90,48 @@ function FAQ() {
       Frequently Asked Questions
     </h2>
     
-    <div className="space-y-4">
-      {faqs.map((faq, index) => (
-        <article 
-          key={index} 
-          className="rounded-lg overflow-hidden transition-all duration-200"
-          style={{
-            boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-            backgroundColor: openIndex === index ? '#f9fafb' : 'white'
-          }}
+ <section className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">
+  {faqs.map((faq, index) => (
+    <div key={index} className="border-b border-gray-100 last:border-b-0">
+      <button
+        className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
+        onClick={() => toggleFAQ(index)}
+      >
+        <span className="font-josefin text-gray-800 text-lg font-medium">
+          {faq.question}
+        </span>
+        <div
+          className={`flex items-center justify-center h-8 w-8 rounded-full ${
+            openIndex === index ? "bg-red-100" : "bg-gray-100"
+          } transition-all duration-300`}
         >
-          <button
-            className={`w-full text-left flex justify-between items-center p-6 transition-colors duration-200 ${
-              openIndex === index ? 'bg-gray-50' : 'hover:bg-gray-50'
-            }`}
-            onClick={() => toggleFAQ(index)}
-          >
-            <span className="font-josefin text-lg text-gray-800 font-medium">
-              {faq.question}
-            </span>
-            {openIndex === index ? (
-              <FaMinus className="text-red-600 h-4 w-4 transition-transform duration-200" />
-            ) : (
-              <FaPlus className="text-red-600 h-4 w-4 transition-transform duration-200" />
-            )}
-          </button>
+          {openIndex === index ? (
+            <FaMinus className="text-red-600 h-3 w-4" />
+          ) : (
+            <FaPlus className="text-gray-600 h-3 w-4" />
+          )}
+        </div>
+      </button>
 
-          <div
-            className={`transition-all duration-300 ease-in-out overflow-hidden ${
-              openIndex === index 
-                ? "max-h-96 opacity-100 pb-6 px-6" 
-                : "max-h-0 opacity-0"
-            }`}
-          >
-            <div className="text-gray-600 font-montserrat text-sm leading-relaxed">
-              {faq.answer && (
-                <p className="animate-fadeIn">
-                  {faq.answer}
-                </p>
-              )}
-            </div>
-          </div>
-        </article>
-      ))}
+      <div
+        className={`transition-all duration-300 ease-in-out overflow-hidden ${
+          openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="p-5 bg-gray-50 text-gray-700">
+          {faq.answer && (
+            <p className="font-montserrat text-sm md:text-base leading-relaxed">
+              {faq.answer}
+            </p>
+          )}
+        </div>
+      </div>
     </div>
+  ))}
+</section>
+
+
+
   </div>
 </main>
       <Partner />

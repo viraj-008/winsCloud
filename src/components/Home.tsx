@@ -189,19 +189,7 @@ const Home: React.FC = () => {
           </p>
 
           <div className="mt-12 flex flex-col-reverse md:flex-row gap-12 items-center">
-            {/* <article className="text-justify text-gray-800 leading-7 font-montserrat text-[17px] ">
-              <p className="mb-6 text-center">
-                At <strong>Winscloud</strong>, we empower businesses with scalable, flexible, and secure cloud hosting. Our around-the-clock support ensures your services never skip a beat—so you can focus on what you do best.
-              </p>
-              <h2 className="text-2xl text-center md:text-3xl font-bold text-blue-800 mb-4">
-                We absolutely love to see your business scale!
-              </h2>
-              <p className="mb-6 text-center">
-                Our infrastructure dynamically adjusts to your growth, offering seamless cloud adoption. With <strong>Winscloud</strong>, you're always ready for what’s next—no lag, no stress.
-              </p>
-            </article> */}
-
-
+           
           </div>
           <h1 className="text-3xl md:text-3xl text-center font-bold font-montserrat text-blue-900">
             Why Choose Winscloud Matrix?
@@ -246,45 +234,45 @@ const Home: React.FC = () => {
         <Expriance/>
 
 
-        <section className="bg-gradient-to-br from-blue-50 to-gray-100 my-8 text-gray-800 py-16 px-6 md:px-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* LEFT SIDE TEXT */}
-            <div>
-              <h2 className="text-3xl text-blue-700 md:text-4xl font-bold mb-6">
-                How Wins Cloud Helps You Make a Difference
-              </h2>
-              <p className="text-lg text-gray-700 font-serif">
-                Over <strong>15,000+</strong> clients have chosen to place their confidence in us.
-                We believe in the synergy between tax and accounting applications and the cloud.
-                That's why we blend highly efficient virtual workspace solutions with extensive
-                experience and technical proficiency to build dependable infrastructure and deliver
-                favorable business outcomes.
-              </p>
-            </div>
+        <section className="bg-gradient-to-br from-blue-50 to-gray-100 my-8 text-gray-800 py-16 px-4 sm:px-8 md:px-12 lg:px-20">
+  <div className="max-w-7xl mx-auto">
+    <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+      {/* LEFT SIDE TEXT */}
+      <div className="px-4 sm:px-0">
+        <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] text-blue-700 font-bold mb-6 leading-tight">
+          How Wins Cloud Helps You Make a Difference
+        </h2>
+        <p className="text-lg text-gray-700 font-serif leading-relaxed">
+          Over <strong>15,000+</strong> clients have chosen to place their confidence in us.
+          We believe in the synergy between tax and accounting applications and the cloud.
+          That's why we blend highly efficient virtual workspace solutions with extensive
+          experience and technical proficiency to build dependable infrastructure and deliver
+          favorable business outcomes.
+        </p>
+      </div>
 
-            {/* RIGHT SIDE CARDS */}
-            <div className="grid sm:grid-cols-2 gap-6">
-              {cards.map((card, index) => (
-                <div
-                  key={index}
-                  className={`
-        rounded-xl p-5 shadow-md hover:shadow-xl transition duration-300
-        border border-white text-white
-        ${index % 2 === 0 ? "translate-y-4 mb-3 rotate-[-2deg]" : "-translate-y-2 rotate-[1deg]"}
-        sm:${index === 1 ? "translate-y-6" : index === 2 ? "-translate-y-4" : ""}
-        bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black
-      `}
-                >
-                  <span className="text-3xl mb-3 text-yellow-300 inline-block">{card.icon}</span>
-                  <h3 className="text-xl text-gray-200 font-bold mb-2">{card.title}</h3>
-                  <p className="text-sm font-josefin">{card.content}</p>
-                </div>
-              ))}
-            </div>
-
-
+      {/* RIGHT SIDE CARDS - Adjusted for iPad responsiveness */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 lg:gap-6 px-4 sm:px-0">
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className={`
+              rounded-xl p-5 shadow-md hover:shadow-xl transition duration-300
+              border border-white text-white min-h-[200px]
+              ${index % 2 === 0 ? "translate-y-4 mb-4  md:rotate-[-4deg]" : "-translate-y-2 md:rotate-[-4deg]"}
+              ${index === 1 ? "sm:translate-y-6" : index === 2 ? "sm:-translate-y-8" : ""}
+              bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black
+            `}
+          >
+            <span className="text-3xl mb-3 text-yellow-300 inline-block">{card.icon}</span>
+            <h3 className="text-xl text-gray-200 font-bold mb-2">{card.title}</h3>
+            <p className="text-sm font-josefin">{card.content}</p>
           </div>
-        </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
         <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
           {/* Logo or Badge */}
           <div className="  rounded-lg shadow-md">

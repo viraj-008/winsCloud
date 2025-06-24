@@ -57,23 +57,23 @@ const Offers = () => {
               </motion.button>
             ) : (
               <div className="p-6 border-2 border-indigo-200/30 min-h-[300px] rounded-xl bg-gradient-to-br from-[#6a4cb5]/90 via-[#4f46e5]/90 to-[#1e3a8a]/90 backdrop-blur-sm">
+      <button
+        onClick={toggleMinimize}
+        className="text-white relative float-right  hover:text-gray-200 transition-colors p-1"
+      >
+        <FaTimes className="text-xl" />
+      </button>
   <div className="h-full flex flex-col justify-between">
     {/* Header with gift icon and close button */}
+        <FaGift className="text-yellow-300 text-4xl animate-bounce" />
     <div className="flex justify-between items-start">
       <div className="flex items-center space-x-3">
-        <FaGift className="text-yellow-300 text-2xl animate-bounce" />
         <span className="text-white font-bold text-lg leading-tight">
           <span className="text-yellow-300">Experience Our Services Free for 2 Months</span>
           <br />
           <span className="text-white/90">Join the Trial Now!</span>
         </span>
       </div>
-      <button
-        onClick={toggleMinimize}
-        className="text-white hover:text-gray-200 transition-colors p-1"
-      >
-        <FaTimes className="text-xl" />
-      </button>
     </div>
 
     {/* Content area with centered CTA */}
@@ -90,7 +90,7 @@ const Offers = () => {
         className="w-full max-w-xs"
         onClick={toggleMinimize}
       >
-        <button className="w-full flex items-center justify-center bg-white text-indigo-700 hover:bg-indigo-50 transition-all px-6 py-3 rounded-full text-base font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+        <button className="w-full flex items-center justify-center bg-white text-indigo-700 hover:bg-indigo-50 transition-all px-6  rounded-full text-base font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
           Start Free Trial <FaArrowRight className="ml-3 text-lg" />
         </button>
       </Link>

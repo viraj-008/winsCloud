@@ -240,38 +240,42 @@ Make your accounting operations more secure and collaborate with your team anyti
         <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">
           QuickBooks Hosting FAQs
         </h1>
-        <section className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
-          {faqs.map((faq, index) => (
-            <div key={index} className="border-b last:border-b-0">
-              <button
-                className="w-full text-left flex justify-between items-center p-4 text-lg font-semibold hover:bg-gray-100"
-                onClick={() => toggleFAQ(index)}
-              >
-                <span className="font-josefin">{faq.question}</span>
-                {openIndex === index ? (
-                  <FaMinus className="text-red-900 min-h-[12px] min-w-[12px] m-4" />
-                ) : (
-                  <FaPlus className="text-red-600 min-h-[12px] min-w-[28px] m-4" />
-                )}
-              </button>
-              <div
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
-              >
-                <div className="p-4 bg-gray-50 text-gray-600">
-                  {faq.Head && <p className="font-bold text-xs md:text-xl">{faq.Head}</p>}
-                  {faq.Head2 && <p className="font-bold mt-2 text-xs md:text-xl">{faq.Head2}</p>}
-                  {faq.answer && <p className="font-montserrat text-[10px] md:text-sm">{faq.answer}</p>}
-                  {faq.Head3 && <p className="font-bold mt-4 text-xs md:text-xl">{faq.Head3}</p>}
-                  {faq.answer2 && <p className="font-montserrat text-[10px] md:text-sm">{faq.answer2}</p>}
-                  {faq.Head4 && <p className="font-bold mt-4 text-xs md:text-xl">{faq.Head4}</p>}
-                  {faq.answer3 && <p className="font-montserrat text-[10px] md:text-sm">{faq.answer3}</p>}
-                  {faq.Head5 && <p className="font-bold mt-4 text-xs md:text-xl">{faq.Head5}</p>}
-                  {faq.answer4 && <p className="font-montserrat text-[10px] md:text-sm">{faq.answer4}</p>}
-                </div>
-              </div>
-            </div>
-          ))}
-        </section>
+        <section className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-xl shadow-lg overflow-hidden bg-white">
+  {faqs.map((faq, index) => (
+    <div key={index} className="border-b border-gray-100 last:border-b-0">
+      <button
+        className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
+        onClick={() => toggleFAQ(index)}
+      >
+        <span className="font-josefin text-gray-800 text-lg font-medium">
+          {faq.question}
+        </span>
+        <div className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? 'bg-red-100' : 'bg-gray-100'} transition-all duration-300`}>
+          {openIndex === index ? (
+            <FaMinus className="text-red-600 text-xs" />
+          ) : (
+            <FaPlus className="text-gray-600 text-xs" />
+          )}
+        </div>
+      </button>
+      <div
+        className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}
+      >
+        <div className="p-5 bg-gray-50 text-gray-700 space-y-4">
+          {faq.Head && <p className="font-bold text-gray-800 text-lg">{faq.Head}</p>}
+          {faq.Head2 && <p className="font-bold text-gray-700 text-lg">{faq.Head2}</p>}
+          {faq.answer && <p className="font-montserrat text-gray-600 text-sm leading-relaxed">{faq.answer}</p>}
+          {faq.Head3 && <p className="font-bold text-gray-700 text-lg mt-4">{faq.Head3}</p>}
+          {faq.answer2 && <p className="font-montserrat text-gray-600 text-sm leading-relaxed">{faq.answer2}</p>}
+          {faq.Head4 && <p className="font-bold text-gray-700 text-lg mt-4">{faq.Head4}</p>}
+          {faq.answer3 && <p className="font-montserrat text-gray-600 text-sm leading-relaxed">{faq.answer3}</p>}
+          {faq.Head5 && <p className="font-bold text-gray-700 text-lg mt-4">{faq.Head5}</p>}
+          {faq.answer4 && <p className="font-montserrat text-gray-600 text-sm leading-relaxed">{faq.answer4}</p>}
+        </div>
+      </div>
+    </div>
+  ))}
+</section>
       </main>
 
       <footer>

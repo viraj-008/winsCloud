@@ -2,12 +2,17 @@ import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Partner from "../Partner";
-import { LuDatabaseBackup } from "react-icons/lu";
 import { FaUsersGear } from "react-icons/fa6";
-import { RiInformation2Fill } from "react-icons/ri";
-import { GiChoice } from "react-icons/gi";
 import { BiDetail } from "react-icons/bi";
-import { GrDocumentTest } from "react-icons/gr";
+import { SiOpenaccess } from "react-icons/si";
+import { IoMdClock } from "react-icons/io";
+import { RiSecurePaymentFill } from "react-icons/ri";
+import { GiReceiveMoney } from "react-icons/gi";
+
+
+
+
+
 import { motion } from "framer-motion";
 import Expriance from "../Expriance";
 import Awards from "../Awards";
@@ -222,13 +227,13 @@ Better organize projects, and optimize business operations from anywhere, anytim
                        <h2 className="font-bold text-3xl mt-3  my-5  text-center text-textPrimary">
                         Benefits of Sage Hosting: What does the cloud have to offer?
                                   </h2>
-                                  <p className="text-center font-montserrat mb-10 text-gray-800 max-w-6xl mx-auto">Migrating your Sage 300 desktop application to the cloud is quite easy. Follow the given 3 steps to host Sage 300 on the cloud to make your transition quick and easy –</p>
+                                  <p className="text-center font-montserrat mb-10 text-gray-800 max-w-4xl mx-auto">Migrating your Sage 300 desktop application to the cloud is quite easy. Follow the given 3 steps to host Sage 300 on the cloud to make your transition quick and easy –</p>
                             
                       <div className="grid gap-14 md:grid-cols-3 md:gap-8">
                         <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                           <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
                        
-                         <LuDatabaseBackup />
+                         <BiDetail />
                     
                           </div>
                           <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Know Your Needs</h1>
@@ -252,8 +257,7 @@ Better organize projects, and optimize business operations from anywhere, anytim
                     
                         <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                           <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                             <RiInformation2Fill />
-                    
+                             <SiOpenaccess />                    
                           </div>
                           <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access the Cloud  
                     </h1>
@@ -264,7 +268,7 @@ Better organize projects, and optimize business operations from anywhere, anytim
                         </div>
                         <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                           <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                             <GiChoice />
+                             <IoMdClock />
                     
                           </div>
                           <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Anytime, anywhere access
@@ -275,7 +279,7 @@ Better organize projects, and optimize business operations from anywhere, anytim
                         </div>
                         <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                           <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                             <BiDetail />
+                           <RiSecurePaymentFill />
                     
                           </div>
                           <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Bank-grade Security
@@ -286,7 +290,7 @@ Better organize projects, and optimize business operations from anywhere, anytim
                         </div>
                         <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                           <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                            <GrDocumentTest />
+                            <GiReceiveMoney />
                     
                           </div>
                           <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Cost-effective Solution

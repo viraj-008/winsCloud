@@ -1,11 +1,11 @@
 import Partner from "../Partner";
 import { motion } from "framer-motion";
-import { LuDatabaseBackup } from "react-icons/lu";
+import { BiSupport } from "react-icons/bi";
 import { FaUsersGear } from "react-icons/fa6";
-import { RiInformation2Fill } from "react-icons/ri";
-import { GiChoice } from "react-icons/gi";
-import { BiDetail } from "react-icons/bi";
-import { GrDocumentTest } from "react-icons/gr";
+import { TiDeviceLaptop } from "react-icons/ti";
+import { IoMdClock } from "react-icons/io";
+import { GrServices } from "react-icons/gr";
+import { MdOutlineSettingsBackupRestore } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Expriance from "../Expriance";
 import ServiceLink from "../ServiceLink";
@@ -109,17 +109,17 @@ const QuickenHosting = () => {
         </section>
 
         <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
-          <h2 className="font-bold text-3xl md:text-5xl mt-3 font-serif  my-5  text-center text-textPrimary">
+          <h2 className="font-bold text-3xl md:text-4xl mt-3 font-inter  my-5  text-center text-textPrimary">
        Advantages of Winscloud Quicken Hosting Solutions
            </h2>
-          <p className="text-center font-montserrat mb-10 text-gray-800 max-w-6xl mx-auto">TaxWise hosting: Simplify finances, access Quicken Hosting: Simplify finances, access anywhere, anytime, for peace of mind
+          <p className="text-center font-montserrat mb-10 text-gray-800 max-w-4xl mx-auto">TaxWise hosting: Simplify finances, access Quicken Hosting: Simplify finances, access anywhere, anytime, for peace of mind
           </p>
 
           <div className="grid gap-14 md:grid-cols-3 md:gap-8">
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <LuDatabaseBackup />
+                <BiSupport />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Expert Support
@@ -143,7 +143,7 @@ const QuickenHosting = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <RiInformation2Fill />
+                <TiDeviceLaptop />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Cross-Device Functionality
@@ -154,7 +154,7 @@ const QuickenHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <GiChoice />
+                <IoMdClock />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">99.99% uptime
@@ -164,7 +164,7 @@ const QuickenHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <BiDetail />
+                <GrServices />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Reliable Services
@@ -175,7 +175,7 @@ The cloud hosting services offered by Winscloud are SSAE-18 Type II (SOC-2) cert
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <GrDocumentTest />
+                <MdOutlineSettingsBackupRestore />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Backup & Recovery

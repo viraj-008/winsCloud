@@ -3,9 +3,13 @@ import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import Partner from "../Partner";
 import { motion } from "framer-motion";
-import { LuDatabaseBackup } from "react-icons/lu";
-import { GiChoice } from "react-icons/gi";
-import { GrDocumentTest } from "react-icons/gr";
+
+import { BsSaveFill } from "react-icons/bs";
+import { BsDatabaseFillUp } from "react-icons/bs";
+import { AiTwotoneControl } from "react-icons/ai";
+
+
+
 import QuickLinks from "../QuickLinks";
 import Experience from "../Expriance";
 import Awards from "../Awards";
@@ -224,7 +228,7 @@ Running a retail business has never been easier. With contemporary solutions lik
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
            
-             <LuDatabaseBackup />
+             <BsSaveFill />
         
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Cost Savings
@@ -240,7 +244,7 @@ QuickBooks POS hosting is compatible with most hardware solutions at brick-and-m
         
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                 <GiChoice />
+                 <BsDatabaseFillUp />
         
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Synchronized Data
@@ -252,7 +256,7 @@ QuickBooks POS hosting is compatible with most hardware solutions at brick-and-m
             
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <GrDocumentTest />
+                <AiTwotoneControl />
         
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">More Control Over Business

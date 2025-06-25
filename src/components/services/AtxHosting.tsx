@@ -1,12 +1,12 @@
 import Partner from "../Partner";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { LuDatabaseBackup } from "react-icons/lu";
-import { FaUsersGear } from "react-icons/fa6";
-import { RiInformation2Fill } from "react-icons/ri";
-import { GiChoice } from "react-icons/gi";
-import { BiDetail } from "react-icons/bi";
-import { GrDocumentTest } from "react-icons/gr";
+import { FaMapLocationDot } from "react-icons/fa6";
+import { GiServerRack } from "react-icons/gi";
+import { BsDatabaseCheck } from "react-icons/bs";
+import { MdFactCheck } from "react-icons/md";
+import { BsPersonLinesFill } from "react-icons/bs";
+import { MdBrowserUpdated } from "react-icons/md";
 import Expriance from "../Expriance";
 import ServiceLink from "../ServiceLink";
 import Awards from "../Awards";
@@ -110,7 +110,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
         </section>
 
          <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
-                <h2 className="font-bold text-3xl md:text-5xl mt-3 font-serif  my-5  text-center text-textPrimary">
+                <h2 className="font-bold text-3xl md:text-5xl mt-3 font-inter  my-5  text-center text-textPrimary">
       Rely on Our ATX Hosting Solutions for Unmatched Cloud Server Performance
                 </h2>
                 <p className="text-center font-montserrat mb-10 text-gray-800 max-w-6xl mx-auto">ATX Hosting: Simplify finances, access ATX Hosting: Simplify finances, access anywhere, anytime, for peace of mind
@@ -121,7 +121,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
                   <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
       
-                      <LuDatabaseBackup />
+                      <FaMapLocationDot />
       
                     </div>
                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Well-equipped Data centers
@@ -132,7 +132,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
                   </div>
                   <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                      <FaUsersGear />
+                      <GiServerRack />
       
                     </div>
                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">High-performance servers
@@ -144,7 +144,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
       
                   <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                      <RiInformation2Fill />
+                      <BsDatabaseCheck />
       
                     </div>
                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Data security
@@ -155,7 +155,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
                   </div>
                   <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                      <GiChoice />
+                      <MdFactCheck />
       
                     </div>
                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Error Checking and Validation
@@ -165,7 +165,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
                   </div>
                   <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                      <BiDetail />
+                      <BsPersonLinesFill />
       
                     </div>
                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Online support 24/7
@@ -177,7 +177,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
                   </div>
                   <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                      <GrDocumentTest />
+                      <MdBrowserUpdated />
       
                     </div>
                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Updates and Compliance

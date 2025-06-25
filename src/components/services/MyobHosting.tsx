@@ -1,12 +1,12 @@
 import Partner from "../Partner";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { LuDatabaseBackup } from "react-icons/lu";
-import { FaUsersGear } from "react-icons/fa6";
-import { RiInformation2Fill } from "react-icons/ri";
-import { GiChoice } from "react-icons/gi";
-import { BiDetail } from "react-icons/bi";
-import { GrDocumentTest } from "react-icons/gr";
+import { RiAccountPinCircleFill } from "react-icons/ri";
+import { BsCalendarCheckFill } from "react-icons/bs";
+import { MdOutlineManageHistory } from "react-icons/md";
+import { IoMdClock } from "react-icons/io";
+import { GrServices } from "react-icons/gr";
+import { MdOutlineSettingsBackupRestore } from "react-icons/md";
 import Expriance from "../Expriance";
 import ServiceLink from "../ServiceLink";
 import Awards from "../Awards";
@@ -106,7 +106,7 @@ The best is the access to data which can be done from any corner of the globe th
         </section>
 
          <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
-                        <h2 className="font-bold text-3xl md:text-5xl mt-3 font-serif  my-5  text-center text-textPrimary">
+                        <h2 className="font-bold text-3xl md:text-4xl mt-3 font-inter  my-5  text-center text-textPrimary">
 Advantages of Winscloud MYOB Hosting Solutions
                         </h2>
                         <p className="text-center font-montserrat mb-10 text-gray-800 max-w-6xl mx-auto">MYOB Hosting: Simplify finances, access anywhere, anytime, for peace of mind
@@ -116,7 +116,7 @@ Advantages of Winscloud MYOB Hosting Solutions
                           <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                             <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
               
-                              <LuDatabaseBackup />
+                              <RiAccountPinCircleFill />
               
                             </div>
                             <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Streamlined Accounting
@@ -127,7 +127,7 @@ Advantages of Winscloud MYOB Hosting Solutions
                           </div>
                           <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                             <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                              <FaUsersGear />
+                              <BsCalendarCheckFill />
               
                             </div>
                             <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Scalability
@@ -139,7 +139,7 @@ Advantages of Winscloud MYOB Hosting Solutions
               
                           <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                             <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                              <RiInformation2Fill />
+                              <MdOutlineManageHistory />
               
                             </div>
                             <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Inventory Management
@@ -150,7 +150,7 @@ Advantages of Winscloud MYOB Hosting Solutions
                           </div>
                           <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                             <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                              <GiChoice />
+                              <IoMdClock />
               
                             </div>
                             <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">99.99% uptime
@@ -161,7 +161,7 @@ Advantages of Winscloud MYOB Hosting Solutions
                           </div>
                           <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                             <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                              <BiDetail />
+                              <GrServices />
               
                             </div>
                             <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Reliable Services              
@@ -172,7 +172,7 @@ Advantages of Winscloud MYOB Hosting Solutions
                           </div>
                           <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                             <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                              <GrDocumentTest />
+                              <MdOutlineSettingsBackupRestore />
               
                             </div>
                             <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Backup & Recovery

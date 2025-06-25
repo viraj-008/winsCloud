@@ -1,12 +1,12 @@
 import Partner from "../Partner";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { LuDatabaseBackup } from "react-icons/lu";
-import { FaUsersGear } from "react-icons/fa6";
-import { RiInformation2Fill } from "react-icons/ri";
-import { GiChoice } from "react-icons/gi";
-import { BiDetail } from "react-icons/bi";
-import { GrDocumentTest } from "react-icons/gr";
+import { RiAccountPinCircleFill } from "react-icons/ri";
+import { BsCalendarCheckFill } from "react-icons/bs";
+import { MdOutlineManageHistory } from "react-icons/md";
+import { IoMdClock } from "react-icons/io";
+import { GrServices } from "react-icons/gr";
+import { MdOutlineSettingsBackupRestore } from "react-icons/md";
 import Expriance from "../Expriance";
 import ServiceLink from "../ServiceLink";
 import Awards from "../Awards";
@@ -15,7 +15,7 @@ const FishbowlHosting = () => {
   console.log("Fishbowl Hosting Page Loaded");
   return (
     <>
-     <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+      <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
         <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
 
           {/* Left Content */}
@@ -81,7 +81,7 @@ const FishbowlHosting = () => {
 
         <section>
           <h2 className='text-3xl text-center py-4 max-w-6xl mx-auto font-bold font-montserrat text-textPrimary'>
-Fishbowl Hosting Services: Streamlining Inventory Management for Businesses
+            Fishbowl Hosting Services: Streamlining Inventory Management for Businesses
           </h2>
 
         </section>
@@ -113,7 +113,7 @@ Fishbowl Hosting Services: Streamlining Inventory Management for Businesses
 
 
         <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
-          <h2 className="font-bold text-3xl md:text-5xl mt-3 font-serif  my-5  text-center text-textPrimary">
+          <h2 className="font-bold text-3xl md:text-5xl mt-3 font-inter  my-5  text-center text-textPrimary">
             Best Features of Fishbowl Hosting with Winscloud
           </h2>
           <p className="text-center font-montserrat mb-10 text-gray-800 max-w-6xl mx-auto">TaxWise hosting: Simplify Fishbowl Hosting: Simplify finances, access anywhere, anytime, for peace of mind
@@ -124,7 +124,7 @@ Fishbowl Hosting Services: Streamlining Inventory Management for Businesses
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <LuDatabaseBackup />
+                <RiAccountPinCircleFill />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Inventory Tracking
@@ -136,52 +136,52 @@ Fishbowl Hosting Services: Streamlining Inventory Management for Businesses
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                <FaUsersGear />
+                <BsCalendarCheckFill />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Scalability
               </h1>
               <p className="px-4 text-gray-500">
-Fishbowl software is scalable to accommodate your business growth. As your operations expand, easily add more features and users to meet your evolving needs.
+                Fishbowl software is scalable to accommodate your business growth. As your operations expand, easily add more features and users to meet your evolving needs.
               </p>
             </div>
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <RiInformation2Fill />
+                <MdOutlineManageHistory />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Inventory Management
               </h1>
               <p className="px-4 text-gray-500">
-Fishbowl aids businesses in inventory management, tracking stock levels, sales, and facilitating product reordering as required, thereby reducing instances of stockouts and overstock.
+                Fishbowl aids businesses in inventory management, tracking stock levels, sales, and facilitating product reordering as required, thereby reducing instances of stockouts and overstock.
               </p>
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <GiChoice />
+                <IoMdClock />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">99.99% uptime
               </h1>
               <p className="px-4 text-gray-500">
                 With regularly available servers, you can work on your finances without any service breakdown.
-                  </p>
+              </p>
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <BiDetail />
+                <GrServices />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Reliable Services
               </h1>
               <p className="px-4 text-gray-500">
-The cloud hosting services offered by Winscloud are SSAE-18 Type II (SOC-2) certified safe, for using maximum security on its servers.
+                The cloud hosting services offered by Winscloud are SSAE-18 Type II (SOC-2) certified safe, for using maximum security on its servers.
               </p>
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <GrDocumentTest />
+                <MdOutlineSettingsBackupRestore />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Backup & Recovery
@@ -193,135 +193,135 @@ The cloud hosting services offered by Winscloud are SSAE-18 Type II (SOC-2) cert
           </div>
         </div>
 
-         <Expriance/>
-    <ServiceLink />
+        <Expriance />
+        <ServiceLink />
 
-            <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-  <div className="max-w-7xl mx-auto">
-    <h1 className="text-4xl font-bold text-gray-800 font-inter mb-12 text-center">
-      What can you do with us
-    </h1>
+        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <h1 className="text-4xl font-bold text-gray-800 font-inter mb-12 text-center">
+              What can you do with us
+            </h1>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {/* Card 1 */}
-      <div className="flex flex-col h-full">
-        <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-            <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-6 h-6"
-                viewBox="0 0 24 24"
-              >
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-              </svg>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Card 1 */}
+              <div className="flex flex-col h-full">
+                <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg>
+                    </div>
+                    <h2 className="text-gray-100 text-xl font-semibold">
+                      Efficient Inventory Management: Explore Fishbowl Hosting Solutions
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base text-gray-300 ">
+                      Unlock streamlined inventory management solutions with Fishbowl hosting. Efficiently manage stock levels, track sales, and reorder products to minimize stock outs and overstock. Our Fishbowl hosting services provide secure access to inventory management software from anywhere, ensuring flexibility for your business operations. Collaborate seamlessly with team members and protect sensitive inventory data with robust encryption protocols. Experience heightened efficiency and productivity with Fishbowl hosting, empowering your business to achieve its inventory management goals effortlessly.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="flex flex-col h-full">
+                <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg>
+                    </div>
+                    <h2 className="text-gray-100 text-xl font-semibold">
+                      Stay Connected, Stay Productive: Experience Fishbowl Remote Access Today
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base text-gray-300">
+                      Effortlessly manage your inventory with Fishbowl remote access. Conveniently track sales, place orders, and collaborate with your team from any location. With robust encryption measures, your inventory data remains secure. Fishbowl remote access solution offers flexibility and convenience, helping your business streamline operations and boost productivity. Stay ahead of the competition with Fishbowl’s remote inventory management capabilities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="flex flex-col h-full">
+                <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg>
+                    </div>
+                    <h2 className="text-gray-100 text-xl font-semibold">
+                      Streamline Operations Anywhere: Explore Fishbowl's Cloud Hosting Solutions
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base text-gray-300">
+                      Unlock exceptional inventory management capabilities with Fishbowl’s cloud hosting. Track sales, manage stock levels, and streamline reordering processes seamlessly from any location. Our secure cloud hosting ensures data protection while providing flexibility and accessibility for your business operations. Collaborate effortlessly with team members and scale your inventory management as your business expands. With Fishbowl’s cloud hosting, empower your business with efficient inventory management solutions that drive productivity and growth. Experience the power of cloud-based inventory management with Fishbowl today.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 4 */}
+              <div className="flex flex-col h-full">
+                <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
+                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg>
+                    </div>
+                    <h2 className="text-gray-100 text-xl font-semibold">
+                      Efficient Inventory Management Made Easy: Hosted Fishbowl Solutions
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base text-gray-300">
+                      Experience enhanced inventory management with Hosted Fishbowl solutions. Track sales, manage stock levels, and optimize reordering processes seamlessly from any location. Our secure hosting guarantees data protection while providing flexibility for your business operations. Collaborate effortlessly with team members and scale your inventory management as your business expands. With Hosted Fishbowl, empower your business with efficient solutions that drive productivity and growth. Unlock the potential of hosted inventory management with Fishbowl today.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h2 className="text-gray-100 text-xl font-semibold">
-Efficient Inventory Management: Explore Fishbowl Hosting Solutions 
- </h2>
-          </div>
-          <div className="flex-grow">
-            <p className="leading-relaxed text-base text-gray-300 ">
-Unlock streamlined inventory management solutions with Fishbowl hosting. Efficiently manage stock levels, track sales, and reorder products to minimize stock outs and overstock. Our Fishbowl hosting services provide secure access to inventory management software from anywhere, ensuring flexibility for your business operations. Collaborate seamlessly with team members and protect sensitive inventory data with robust encryption protocols. Experience heightened efficiency and productivity with Fishbowl hosting, empowering your business to achieve its inventory management goals effortlessly.
-            </p>
           </div>
         </div>
-      </div>
-
-      {/* Card 2 */}
-      <div className="flex flex-col h-full">
-        <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-            <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-6 h-6"
-                viewBox="0 0 24 24"
-              >
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-              </svg>
-            </div>
-            <h2 className="text-gray-100 text-xl font-semibold">
-Stay Connected, Stay Productive: Experience Fishbowl Remote Access Today
-            </h2>
-          </div>
-          <div className="flex-grow">
-            <p className="leading-relaxed text-base text-gray-300">
-Effortlessly manage your inventory with Fishbowl remote access. Conveniently track sales, place orders, and collaborate with your team from any location. With robust encryption measures, your inventory data remains secure. Fishbowl remote access solution offers flexibility and convenience, helping your business streamline operations and boost productivity. Stay ahead of the competition with Fishbowl’s remote inventory management capabilities.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Card 3 */}
-      <div className="flex flex-col h-full">
-        <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-            <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-6 h-6"
-                viewBox="0 0 24 24"
-              >
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-              </svg>
-            </div>
-            <h2 className="text-gray-100 text-xl font-semibold">
-Streamline Operations Anywhere: Explore Fishbowl's Cloud Hosting Solutions
-            </h2>
-          </div>
-          <div className="flex-grow">
-            <p className="leading-relaxed text-base text-gray-300">
-Unlock exceptional inventory management capabilities with Fishbowl’s cloud hosting. Track sales, manage stock levels, and streamline reordering processes seamlessly from any location. Our secure cloud hosting ensures data protection while providing flexibility and accessibility for your business operations. Collaborate effortlessly with team members and scale your inventory management as your business expands. With Fishbowl’s cloud hosting, empower your business with efficient inventory management solutions that drive productivity and growth. Experience the power of cloud-based inventory management with Fishbowl today.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Card 4 */}
-      <div className="flex flex-col h-full">
-        <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-            <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-6 h-6"
-                viewBox="0 0 24 24"
-              >
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-              </svg>
-            </div>
-            <h2 className="text-gray-100 text-xl font-semibold">
-Efficient Inventory Management Made Easy: Hosted Fishbowl Solutions
-   </h2>
-          </div>
-          <div className="flex-grow">
-            <p className="leading-relaxed text-base text-gray-300">
-            Experience enhanced inventory management with Hosted Fishbowl solutions. Track sales, manage stock levels, and optimize reordering processes seamlessly from any location. Our secure hosting guarantees data protection while providing flexibility for your business operations. Collaborate effortlessly with team members and scale your inventory management as your business expands. With Hosted Fishbowl, empower your business with efficient solutions that drive productivity and growth. Unlock the potential of hosted inventory management with Fishbowl today.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<Awards />
+        <Awards />
       </main>
 
       <footer>

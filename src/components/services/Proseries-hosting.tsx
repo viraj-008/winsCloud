@@ -3,9 +3,11 @@ import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Partner from "../Partner";
 import { motion } from "framer-motion";
-import { MdOutlineSecurity } from "react-icons/md";
 import { RiShakeHandsLine } from "react-icons/ri";
-import { LuClock } from "react-icons/lu";
+import { IoLogoSoundcloud } from "react-icons/io5";
+
+import { TbListDetails } from "react-icons/tb";
+
 import ServiceLink from "../ServiceLink"; 
 import Expriance from "../Expriance";
 import Awards from "../Awards";
@@ -278,7 +280,7 @@ Key Features: What makes ProSeries Cloud Hosting stand out?
     <ServiceLink />
 
         <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
-                         <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 p-2 ">
+                         <h1 className="text-3xl md:text-5xl text-center font-extrabold font-inter text-blue-900 p-2 ">
               Who should choose Sage 500 ERP Application Hosting?
                       </h1>
                      <p className="text-xl mt-2 font-montserrat text-center">Team Winscloud can help you transition to ProSeries Hosting seamlessly in 3 easy steps –
@@ -298,7 +300,7 @@ Key Features: What makes ProSeries Cloud Hosting stand out?
                                     </div>
                                     <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                                       <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-                                        <LuClock />
+                                        <TbListDetails />
                                       </div>
                                       <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Share your ProSeries License and other details</h1>
                                       <p className="px-4 text-gray-500">
@@ -307,7 +309,7 @@ Key Features: What makes ProSeries Cloud Hosting stand out?
                                     </div>
                                     <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                                       <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
-                                        <MdOutlineSecurity />
+                                        <IoLogoSoundcloud />
                                       </div>
                                       <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Start Your Tax Preparation Process in the Cloud</h1>
                                       <p className="px-4 text-gray-500">

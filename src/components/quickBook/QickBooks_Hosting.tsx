@@ -215,21 +215,21 @@ Make your accounting operations more secure and collaborate with your team anyti
                 <HiLockClosed className="w-14 h-14 text-current" />
               </div>
               <h3 className="text-3xl font-bold">Safe</h3>
-              <p>Our products are secure and private out-of-the-box</p>
+              <p> Safe, Reliable, and Fully Secured Cloud Hosting.</p>
             </div>
             <div className="grid gap-4 justify-items-center text-center md:flex-1">
               <div className="rounded-full border-8 border-amber-400 p-4">
                 <HiBolt className="w-14 h-14 text-current" />
               </div>
               <h3 className="text-3xl font-bold">Efficient</h3>
-              <p>Feel good about your wallet and the environment</p>
+              <p>Proven Performance with Maximum Efficiency</p>
             </div>
             <div className="grid gap-4 justify-items-center text-center md:flex-1">
               <div className="rounded-full border-8 border-amber-400 p-4">
                 <HiCheckBadge className="w-14 h-14 text-current" />
               </div>
               <h3 className="text-3xl font-bold">Proven</h3>
-              <p>Leading the Smart Home world for 10 years</p>
+              <p>Trusted by Businesses for Hassle-Free Scaling</p>
             </div>
           </div>
         </div>

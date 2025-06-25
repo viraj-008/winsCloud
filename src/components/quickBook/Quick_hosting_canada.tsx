@@ -3,9 +3,10 @@ import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import Partner from "../Partner";
 import { motion } from "framer-motion";
-import { LuDatabaseBackup } from "react-icons/lu";
+import { GrSecure } from "react-icons/gr";
 import { GiChoice } from "react-icons/gi";
-import { GrDocumentTest } from "react-icons/gr";
+import { FaUsersGear } from "react-icons/fa6";
+
 import QuickLinks from "../QuickLinks";
 import Awards from "../Awards";
 const Quick_hosting_canada = () => {
@@ -158,7 +159,7 @@ QuickBooks Canada Hosting: Remote Access to All Versions QuickBooks Desktop for 
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <LuDatabaseBackup />
+                <FaUsersGear />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Multi-User Collaboration
@@ -184,7 +185,7 @@ QuickBooks Canada Hosting: Remote Access to All Versions QuickBooks Desktop for 
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <GrDocumentTest />
+                <GrSecure />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Data Security and Recovery

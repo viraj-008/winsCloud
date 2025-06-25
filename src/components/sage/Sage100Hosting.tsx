@@ -2,9 +2,10 @@ import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Partner from "../Partner";
-import { MdOutlineSecurity } from "react-icons/md";
-import { RiShakeHandsLine } from "react-icons/ri";
 import { LuClock } from "react-icons/lu";
+import { LiaUsersSolid } from "react-icons/lia";
+import { MdPriceCheck } from "react-icons/md";
+
 import { motion } from "framer-motion";
 import SageLinks from "../SageLinks";
 import Expriance from "../Expriance";
@@ -211,18 +212,18 @@ Why should you choose Winscloud Matrix for Sage 100 cloud hosting?
        <SageLinks/>
 
          <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
-           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 p-8 mb-4">
+           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-inter text-blue-900 p-8 mb-4">
 Who should choose Sage 100 ERP Application Hosting?
         </h1>
-        <p className="text-center font-montserrat text-gray-800 max-w-6xl">Sage 100 is an accounting software for small and mid-sized businesses, particularly suitable for those that are growing. Sage 100 cloud hosting services are perfect for businesses like manufacturing, chemical substances, construction, healthcare, retail, food and beverage, not for profit organizations, distribution, and professional services.
+        <p className="text-center max-w-5xl font-montserrat text-gray-800 ">Sage 100 is an accounting software for small and mid-sized businesses, particularly suitable for those that are growing. Sage 100 cloud hosting services are perfect for businesses like manufacturing, chemical substances, construction, healthcare, retail, food and beverage, not for profit organizations, distribution, and professional services.
 </p>
-<p className="text-center mt-4 font-montserrat text-gray-800 max-w-6xl">Sage 100 ERP application hosting can manage accounting, manufacturing, sales, inventory, and warehouse. It also helps businesses by generating insights which can help predict customer behaviors, ultimately helping meet their changing demands. While the desktop software is a perfect solution to manage the day-to-day business operations, Sage 100 cloud hosting blends it with the power of cloud – allowing businesses to grow seamlessly.
+<p className="text-center mt-4 font-montserrat text-gray-800 max-w-5xl">Sage 100 ERP application hosting can manage accounting, manufacturing, sales, inventory, and warehouse. It also helps businesses by generating insights which can help predict customer behaviors, ultimately helping meet their changing demands. While the desktop software is a perfect solution to manage the day-to-day business operations, Sage 100 cloud hosting blends it with the power of cloud – allowing businesses to grow seamlessly.
 </p>
                 <div className="h-full my-8 w-full pt-12 p-4">
                     <div className="grid gap-14 md:grid-cols-3 md:gap-5">
                       <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                         <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-                          <RiShakeHandsLine />
+                          <LuClock />
                         </div>
                         <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Round-the-Clock Accessibility</h1>
                         <p className="px-4 text-gray-500">
@@ -232,7 +233,7 @@ Who should choose Sage 100 ERP Application Hosting?
                       </div>
                       <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                         <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-                          <LuClock />
+                          <LiaUsersSolid />
                         </div>
                         <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Multi-User Collaboration</h1>
                         <p className="px-4 text-gray-500">
@@ -242,7 +243,7 @@ Who should choose Sage 100 ERP Application Hosting?
                       </div>
                       <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                         <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
-                          <MdOutlineSecurity />
+                          <MdPriceCheck />
                         </div>
                         <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">No Upfront Costs</h1>
                         <p className="px-4 text-gray-500">

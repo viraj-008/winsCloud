@@ -3,9 +3,11 @@ import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import Partner from "../Partner";
 import { motion } from "framer-motion";
-import { LuDatabaseBackup } from "react-icons/lu";
-import { GiChoice } from "react-icons/gi";
-import { GrDocumentTest } from "react-icons/gr";
+import { MdOutlineAddTask } from "react-icons/md";
+import { MdOutlineSecurity } from "react-icons/md";
+import { GiSpeedometer } from "react-icons/gi";
+
+
 import QuickLinks from "../QuickLinks";
 import Expriance from "../Expriance";
 import Awards from "../Awards";
@@ -173,7 +175,7 @@ Benefits of taking advantage of cloud hosting your QuickBooks Pro Desktop
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
            
-             <LuDatabaseBackup />
+             <MdOutlineAddTask  />
         
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Unlimited Add-Ons Integrations
@@ -187,7 +189,7 @@ Need multiple add-ons and/or third-party apps to go along with QuickBooks Pro Ho
            
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                 <GiChoice />
+                 <MdOutlineSecurity />
         
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Industry Standard Security
@@ -200,7 +202,7 @@ Need multiple add-ons and/or third-party apps to go along with QuickBooks Pro Ho
             
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <GrDocumentTest />
+                <GiSpeedometer />
         
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Optimal Performance

@@ -3,12 +3,15 @@ import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Partner from "../Partner";
-import { LuDatabaseBackup } from "react-icons/lu";
 import { FaUsersGear } from "react-icons/fa6";
-import { RiInformation2Fill } from "react-icons/ri";
 import { GiChoice } from "react-icons/gi";
 import { BiDetail } from "react-icons/bi";
-import { GrDocumentTest } from "react-icons/gr";
+import { IoIosDesktop } from "react-icons/io";
+import { SiOpenaccess } from "react-icons/si";
+import { MdOutlineUpdate } from "react-icons/md";
+
+
+
 import SageLinks from "../SageLinks";
 import Awards from "../Awards";
 import Expriance from "../Expriance";
@@ -170,7 +173,7 @@ Elevate your accounting experience with cloud-based Sage ERP & CRM applications 
           <div className="rounded-xl bg-white p-6 text-center shadow-xl">
             <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
          
-           <LuDatabaseBackup />
+           <IoIosDesktop />
       
             </div>
             <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Desktop-like Features
@@ -181,7 +184,7 @@ Elevate your accounting experience with cloud-based Sage ERP & CRM applications 
           </div>
           <div className="rounded-xl bg-white p-6 text-center shadow-xl">
             <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-            <FaUsersGear />
+            <SiOpenaccess />
       
             </div>
             <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access On-the-Go
@@ -193,7 +196,7 @@ Elevate your accounting experience with cloud-based Sage ERP & CRM applications 
       
           <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
             <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-               <RiInformation2Fill />
+               <FaUsersGear />
       
             </div>
             <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Multi-User Collaboration
@@ -227,7 +230,7 @@ Elevate your accounting experience with cloud-based Sage ERP & CRM applications 
           </div>
           <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
             <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-              <GrDocumentTest />
+              <MdOutlineUpdate />
       
             </div>
             <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Automatic Updates

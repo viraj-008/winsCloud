@@ -5,18 +5,18 @@ import { GrServices } from "react-icons/gr";
 const ServiceLink = () => {
 
       const items = [
-    { label: "Lacerte Hostiing", color: "indigo-500", border: "border-indigo-500", link: "/quickbooks-desktop" },
-    { label: "Proseries-hosting", color: "purple-500", border: "border-purple-500", link: "/quickbooks-pro" },
-    { label: "Cloud server hosting", color: "blue-400", border: "border-blue-400", link: "/quickbooks-premier" },
-    { label: "Drake Hosting", color: "yellow-400", border: "border-yellow-400", link: "/quickbooks-enterprise" },
-    { label: "Ultratax Hostingg", color: "green-500", border: "border-green-500", link: "/quickbooks-pos" },
-    { label: "Act Hosting", color: "green-500", border: "border-green-500", link: "/quickbooks-canada" },
-    { label: "Atx Hosting", color: "red-400", border: "border-red-400", link: "/quickbooks-uk" },
-    { label: "Tax wise Hosting", color: "cyan-500", border: "border-cyan-500", link: "/quickbooks-mac" },
-    { label: "Quicken Hosting", color: "pink-500", border: "border-pink-500", link: "/quickbooks-payroll" },
-    { label: "Myob Hosting", color: "teal-500", border: "border-teal-500", link: "/quickbooks-accountant" },
-    { label: "Fishbowl Hosting", color: "orange-400", border: "border-orange-400", link: "/quickbooks-online" },
-    { label: "Doc IT Hosting", color: "amber-400", border: "border-amber-400", link: "/quickbooks-premier-plus" },
+    { label: "Lacerte Hostiing", color: "indigo-500", border: "border-indigo-500", link: "/lacerte_Hosting" },
+    { label: "Proseries-hosting", color: "purple-500", border: "border-purple-500", link: "/proseries-hosting" },
+    { label: "Cloud server hosting", color: "blue-400", border: "border-blue-400", link: "/cloud-server-hosting" },
+    { label: "Drake Hosting", color: "yellow-400", border: "border-yellow-400", link: "/drake-hosting" },
+    { label: "Ultratax Hostingg", color: "green-500", border: "border-green-500", link: "/ultratax-hosting" },
+    { label: "Act Hosting", color: "green-500", border: "border-green-500", link: "/act-hosting" },
+    { label: "Atx Hosting", color: "red-400", border: "border-red-400", link: "/atx-hosting" },
+    { label: "Tax wise Hosting", color: "cyan-500", border: "border-cyan-500", link: "/tax-wise-hosting" },
+    { label: "Quicken Hosting", color: "pink-500", border: "border-pink-500", link: "/quicken-hosting" },
+    { label: "Myob Hosting", color: "teal-500", border: "border-teal-500", link: "/myob-hosting" },
+    { label: "Fishbowl Hosting", color: "orange-400", border: "border-orange-400", link: "/fishbowl-hosting" },
+    { label: "Doc IT Hosting", color: "amber-400", border: "border-amber-400", link: "/doc-it-hosting" },
   ];
   return (
   <section>

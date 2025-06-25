@@ -69,7 +69,6 @@ export default function Footer() {
                 { text: "About Us", to: "introduction" },
                 { text: "Pricing", to: "pricing" },
                 { text: "Blogs", to: "blogs" },
-                { text: "Careers", to: "careers" }
               ].map((item, index) => (
                 <motion.li
                   key={index}
@@ -102,7 +101,6 @@ export default function Footer() {
                 { text: "FAQs", to: "faq" },
                 { text: "Policy", to: "policy" },
                 { text: "Contact Us", to: "Get-in-Touch" },
-                { text: "Documentation", to: "docs" }
               ].map((item, index) => (
                 <motion.li
                   key={index}

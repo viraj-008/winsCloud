@@ -16,7 +16,7 @@ const SageLinks = () => {
                   <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
                   <div className="relative h-full px-2 py-1 bg-white border-2 border-indigo-500 rounded-lg flex items-center">
                <FaExternalLinkAlt className="text-xl text-blue-800" />
-                             <Link to="/quickbooks-desktop" className="hover:underline font-bold ml-3 ">Sage 50 
+                             <Link to="/sage-50-hosting" className="hover:underline font-bold ml-3 ">Sage 50 
         </Link> 
                   </div>
                 </div>
@@ -27,7 +27,7 @@ const SageLinks = () => {
                   <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-purple-500 rounded-lg"></span>
                   <div className="relative h-full px-2 py-1 bg-white border-2 border-purple-500 rounded-lg flex items-center">
                                          <FaExternalLinkAlt className="text-xl text-blue-800" />
-         <Link to="/quickbooks-desktop" className="hover:underline font-bold ml-3">Sage 100</Link> 
+         <Link to="/sage-100-hosting" className="hover:underline font-bold ml-3">Sage 100</Link> 
                   </div>
                 </div>
               </div>
@@ -39,7 +39,7 @@ const SageLinks = () => {
                   <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
                   <div className="relative h-full px-2 py-1 bg-white border-2 border-blue-400 rounded-lg flex items-center">
                                <FaExternalLinkAlt className="text-xl text-blue-800" />
-                                <Link to="/quickbooks-desktop" className="hover:underline font-bold ml-3">Sage 300</Link> 
+                                <Link to="/sage-300-hosting" className="hover:underline font-bold ml-3">Sage 300</Link> 
                   </div>
                 </div>
               </div>
@@ -49,7 +49,7 @@ const SageLinks = () => {
                   <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-400 rounded-lg"></span>
                   <div className="relative h-full px-2 py-1 bg-white border-2 border-yellow-400 rounded-lg flex items-center">
                              <FaExternalLinkAlt className="text-xl text-blue-800" />
-                                 <Link to="/quickbooks-desktop" className="hover:underline font-bold ml-3">Sage 500</Link> 
+                                 <Link to="/sage-500-hosting" className="hover:underline font-bold ml-3">Sage 500</Link> 
                   </div>
                 </div>
               </div>

@@ -76,6 +76,16 @@ const FreeTrialForm = () => {
       .then(
         () => {
           toast.success("Request sent successfully!");
+          setForm(
+            {
+              fullName: "",
+              email: "",
+              company: "",
+              software: "",
+              phone: "",
+              licenseDetails: "",
+            }
+          )
           setLoading(false);
         },
         () => {
@@ -232,167 +242,167 @@ const FreeTrialForm = () => {
             <div className="absolute -right-10 -top-10 w-24 h-24 bg-white/10 rounded-full filter blur-md"></div>
           </div>
 
-           <form onSubmit={handleSubmit} className="mt-8 space-y-6 relative z-10">
-      <div className="space-y-1">
-        <p className="text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600 font-semibold font-josefin text-lg">
-          Get Started in Seconds
-        </p>
-        <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-indigo-500 mx-auto rounded-full"></div>
-      </div>
+          <form onSubmit={handleSubmit} className="mt-8 space-y-6 relative z-10">
+            <div className="space-y-1">
+              <p className="text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600 font-semibold font-josefin text-lg">
+                Get Started in Seconds
+              </p>
+              <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-indigo-500 mx-auto rounded-full"></div>
+            </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <div className="space-y-1">
-          <input
-            type="text"
-            name="fullName"
-            value={form.fullName}
-            onChange={handleChange}
-            placeholder="Full Name*"
-            className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70"
-            required
-          />
-        </div>
-
-        <div className="space-y-1">
-          <input
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder="Email*"
-            className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70"
-            required
-          />
-        </div>
-
-        <div className="space-y-1">
-          <input
-            type="text"
-            name="company"
-            value={form.company}
-            onChange={handleChange}
-            placeholder="Company*"
-            className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70"
-            required
-          />
-        </div>
-
-        <div className="">
-          <PhoneInput
-            defaultCountry="us"
-            value={form.phone}
-            onChange={(phone: string) => setForm((prev) => ({ ...prev, phone }))}
-            placeholder="Phone Number*"
-            className="my-2 ml-2 md:ml-0"
-          />
-        </div>
-      </div>
-
-      <div className="space-y-1">
-        <select
-          name="softwareDropdown"
-          value={
-            ["QuickBooks", "Sage", "Drake"].includes(softwareOption)
-              ? softwareOption
-              : softwareOption === "__other__"
-              ? "__other__"
-              : ""
-          }
-          onChange={handleChange}
-          className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm appearance-none font-montserrat text-blue-600 font-semibold transition-all duration-200 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM0ZjQ2ZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWRvd24iPjxwYXRoIGQ9Im02IDkgNiA2IDYtNiIvPjwvc3ZnPg==')] bg-no-repeat bg-[center_right_1rem]"
-          required
-        >
-          <option value="" disabled>
-            Choose your plan
-          </option>
-          <option value="QuickBooks">QuickBook Hosting</option>
-          <option value="Sage">Sage Hosting</option>
-          <option value="Drake">Drake Hosting</option>
-          <option value="__other__">Other Applications</option>
-        </select>
-
-        {softwareOption === "__other__" && (
-          <input
-            type="text"
-            name="software"
-            value={form.software}
-            onChange={handleChange}
-            placeholder="Type application name"
-            className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70 mt-2"
-            required
-            autoFocus
-          />
-        )}
-      </div>
-
-      <div className="space-y-1">
-        <textarea
-          name="licenseDetails"
-          value={form.licenseDetails}
-          onChange={handleChange}
-          placeholder="License Details*"
-          className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70 min-h-[120px]"
-          required
-        />
-      </div>
-
-      {err && (
-        <div className="bg-red-50 border-l-4 border-red-500 p-3 rounded-r-lg animate-[fadeIn_0.3s_ease-out]">
-          <p className="text-red-600 font-medium">{err}</p>
-        </div>
-      )}
-
-      <button
-        type="submit"
-        disabled={loading}
-        className="w-full group relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white font-bold font-josefin py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-      >
-        <span className="relative z-10 flex items-center justify-center">
-          {loading ? (
-            <>
-              <svg
-                className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                ></path>
-              </svg>
-              Processing...
-            </>
-          ) : (
-            <>
-              <span>Get 30 Days Free Trial</span>
-              <svg
-                className="ml-2 -mr-1 w-5 h-5 transition-transform group-hover:translate-x-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div className="space-y-1">
+                <input
+                  type="text"
+                  name="fullName"
+                  value={form.fullName}
+                  onChange={handleChange}
+                  placeholder="Full Name*"
+                  className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70"
+                  required
                 />
-              </svg>
-            </>
-          )}
-        </span>
-        <span className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 mix-blend-overlay transition-opacity duration-300 opacity-0 group-hover:opacity-100"></span>
-      </button>
-    </form>
+              </div>
+
+              <div className="space-y-1">
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Email*"
+                  className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70"
+                  required
+                />
+              </div>
+
+              <div className="space-y-1">
+                <input
+                  type="text"
+                  name="company"
+                  value={form.company}
+                  onChange={handleChange}
+                  placeholder="Company*"
+                  className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70"
+                  required
+                />
+              </div>
+
+              <div className="">
+                <PhoneInput
+                  defaultCountry="us"
+                  value={form.phone}
+                  onChange={(phone: string) => setForm((prev) => ({ ...prev, phone }))}
+                  placeholder="Phone Number*"
+                  className="my-2 ml-2 md:ml-0"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-1">
+              <select
+                name="softwareDropdown"
+                value={
+                  ["QuickBooks", "Sage", "Drake"].includes(softwareOption)
+                    ? softwareOption
+                    : softwareOption === "__other__"
+                      ? "__other__"
+                      : ""
+                }
+                onChange={handleChange}
+                className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm appearance-none font-montserrat text-blue-600 font-semibold transition-all duration-200 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM0ZjQ2ZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWRvd24iPjxwYXRoIGQ9Im02IDkgNiA2IDYtNiIvPjwvc3ZnPg==')] bg-no-repeat bg-[center_right_1rem]"
+                required
+              >
+                <option value="" disabled>
+                  Choose your plan
+                </option>
+                <option value="QuickBooks">QuickBook Hosting</option>
+                <option value="Sage">Sage Hosting</option>
+                <option value="Drake">Drake Hosting</option>
+                <option value="__other__">Other Applications</option>
+              </select>
+
+              {softwareOption === "__other__" && (
+                <input
+                  type="text"
+                  name="software"
+                  value={form.software}
+                  onChange={handleChange}
+                  placeholder="Type application name"
+                  className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70 mt-2"
+                  required
+                  autoFocus
+                />
+              )}
+            </div>
+
+            <div className="space-y-1">
+              <textarea
+                name="licenseDetails"
+                value={form.licenseDetails}
+                onChange={handleChange}
+                placeholder="License Details*"
+                className="w-full px-4 py-3 bg-white/90 border border-gray-200/80 rounded-xl focus:ring-2 focus:ring-blue-300/50 focus:border-blue-400 shadow-sm transition-all duration-200 placeholder-gray-400/70 min-h-[120px]"
+                required
+              />
+            </div>
+
+            {err && (
+              <div className="bg-red-50 border-l-4 border-red-500 p-3 rounded-r-lg animate-[fadeIn_0.3s_ease-out]">
+                <p className="text-red-600 font-medium">{err}</p>
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full group relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white font-bold font-josefin py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <span className="relative z-10 flex items-center justify-center">
+                {loading ? (
+                  <>
+                    <svg
+                      className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+                    Processing...
+                  </>
+                ) : (
+                  <>
+                    <span>Get 30 Days Free Trial</span>
+                    <svg
+                      className="ml-2 -mr-1 w-5 h-5 transition-transform group-hover:translate-x-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </>
+                )}
+              </span>
+              <span className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 mix-blend-overlay transition-opacity duration-300 opacity-0 group-hover:opacity-100"></span>
+            </button>
+          </form>
         </div>
       </div>
 

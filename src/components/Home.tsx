@@ -11,8 +11,6 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-import { SlGlobe } from "react-icons/sl";
-import { FaMapMarkerAlt } from "react-icons/fa";
 
 import Expriance from './Expriance';
 import Awards from './Awards';
@@ -368,7 +366,7 @@ const Home: React.FC = () => {
         {/* Data Centers Section */}
 
 
-        <div className="bg-gradient-to-br from-blue-100 via-white to-blue-200 rounded-3xl shadow-2xl p-10 max-w-7xl mx-auto text-gray-800 space-y-10">
+        <div className="bg-gradient-to-br from-blue-800 via-white to-blue-300  shadow-2xl p-10  mx-auto w-[98%] rounded-md text-gray-800 space-y-10">
 
           {/* Header */}
           <h2 className="text-4xl font-extrabold text-center text-blue-900 drop-shadow-sm">
@@ -401,45 +399,33 @@ const Home: React.FC = () => {
               ))}
             </ul>
 
-
-
-
-
-
             {/* RIGHT SIDE: Globe with Pins */}
-            <div className="relative w-full h-[400px] rounded-xl  flex items-center justify-center">
+      <div className="relative w-full h-[500px] rounded-xl flex items-center justify-center">
+  {/* Container for Globe and Pins - Increased size */}
+<div className="relative w-[400px] h-[400px]">
+  {/* Custom Globe Image */}
+  <img 
+    src="images/logo/map.png" 
+    alt="World Map" 
+    className="w-full h-full object-contain opacity-90 absolute top-0 left-0 z-0" 
+  />
+  
+  {/* Best Locations - Properly positioned on the globe */}
 
-              {/* Container for Globe and Pins */}
-              <div className="relative w-[300px] h-[300px]">
-                {/* Globe Icon */}
-                <SlGlobe className="text-blue-500 text-[300px] opacity-90 absolute top-0 left-0 z-0" />
-                <p className='text-white px-4 py-1 rounded-md gap-2 flex z-50 absolute font-josefin bg-blue-700'><FaMapMarkerAlt /> U.s.a</p>
-                <p className='text-white px-4 py-1 rounded-md gap-2 flex z-50 absolute top-12 font-josefin bg-blue-800'><FaMapMarkerAlt /> India</p>
-
-                {/* Pins on the Globe */}
-                {[
-                  { top: "60%", left: "18%", label: "Delhi, India" },
-                  { top: "50%", left: "35%", label: "New York, USA" },
-                  { top: "38%", left: "52%", label: "London, UK" },
-                  { top: "55%", left: "75%", label: "Tokyo, Japan" },
-                ].map((loc, idx) => (
-                  <div
-                    key={idx}
-                    className="absolute flex flex-col items-center cursor-pointer group z-10"
-                    style={{ top: loc.top, left: loc.left }}
-                  >
-                    {/* Glowing Ping Effect */}
-                    <div className="relative flex items-center justify-center">
-                      <div className="absolute w-6 h-6 rounded-full bg-red-400 opacity-50 animate-ping"></div>
-                      <div className="absolute w-6 h-6 rounded-full border-2 border-red-600"></div>
-                      <div className="w-4 h-4 bg-red-700 rounded-full relative z-10"></div>
-                    </div>
-                    {/* Label */}
-
-                  </div>
-                ))}
-              </div>
-            </div>
+  
+  {/* Key Locations Highlight */}
+ <div className="absolute bottom-0 left-0 right-0 flex flex-col lg:flex-row items-center justify-center gap-2 md:gap-4 p-2">
+  {['Phoenix,AZ,USA', 'Dallas,TX,USA', 'Ashburn,VA,USA', 'Atlanta,GA,USA'].map((city) => (
+    <span 
+      key={city} 
+      className="bg-blue-200 text-gray-900 px-3 py-1 rounded-full text-sm md:text-md font-medium whitespace-nowrap"
+    >
+      {city}
+    </span>
+  ))}
+</div>
+</div>
+</div>
           </div>
         </div>
 

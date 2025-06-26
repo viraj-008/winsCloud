@@ -223,8 +223,8 @@ const Home: React.FC = () => {
           <p className="text-center text-lg text-gray-700 mt-2 font-medium max-w-3xl mx-auto">
             Winscloud Matrix Cloud Hosting: Fast-track Your Tax and Accounting Practice
           </p>
-          <p className="mt-3 text-center text-gray-700 text-lg max-w-6xl  font-montserrat  mx-auto">
-            We simplify tax and accounting workflows by integrating powerful desktop applications with cloud flexibility—helping modern businesses streamline operations effortlessly.
+          <p className="mt-3  text-gray-700 text-lg max-w-6xl text-justify  font-montserrat  mx-auto">
+            At Winscloud, we believe in ironing out the challenges that modern businesses face in handling their tax and accounting operations with the help of technology. Our cloud hosting services help our business owners seamlessly transition to the cloud, combining the robust features of desktop applications with the cloud infrastructure.
           </p>
 
         </section>
@@ -232,19 +232,19 @@ const Home: React.FC = () => {
           {[
             {
               title: "Secure and Reliable Hosting",
-              desc: "Your data is protected with top-tier security against cyber threats. Focus on growth—we'll handle the protection.",
+              desc: "Data Security is our top priority when it comes to our operations. At Winscloud Matrix, we protect your data from all sorts of cyber threats so you can put away your data theft worries and focus on more productive areas.",
             },
             {
-              title: "Efficiency for YOUR Business",
-              desc: "Experience 99.99% uptime with ultra-reliable servers. Collaborate with ease—whether from the office or a vacation spot.",
+              title: "Adding Efficiency to Running YOUR Business",
+              desc: "We promise 99.99% uptime, around-the-clock. Our heavy-duty, reliable and state-of-the-art servers ensure industry standard performance, so that you can collaborate with your team from the comfort of your home or when you are on holiday.",
             },
             {
               title: "24/7 Technical Assistance",
-              desc: "Get round-the-clock help from expert support. Issues are solved swiftly so you can run your business uninterrupted.",
+              desc: " Our team of technical experts are available at your beck and call 24/7 to provide you with the best technical assistance to troubleshoot issues and keep your system running smoothly.",
             },
             {
-              title: "Affordable Cloud Hosting",
-              desc: "Our shared and dedicated plans are built to scale with your business—and your budget.",
+              title: "Affordable Cloud Hosting, Tailored for YOUR Business Needs",
+              desc: "Our hosting plans can be customized to your business needs and are easy on the pocket. You can choose between our Shared and Dedicated Hosting Plans.",
             },
           ].map((feature, idx) => (
             <div
@@ -291,7 +291,7 @@ const Home: React.FC = () => {
             `}
                   >
                     <span className="text-3xl mb-3 text-yellow-300 inline-block">{card.icon}</span>
-                    <h3 className="text-xl text-gray-200 font-bold mb-2">{card.title}jjj</h3>
+                    <h3 className="text-xl text-gray-200 font-bold mb-2">{card.title}</h3>
                     <p className="text-sm font-josefin">{card.content}</p>
                   </div>
                 ))}

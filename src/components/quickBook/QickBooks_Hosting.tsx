@@ -57,71 +57,71 @@ const QickBooks_Hosting = () => {
   return (
     <>
       <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
-       <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
-         
-         {/* Left Content */}
-         <div className="text-center md:text-left lg:w-[800px]">
-           <motion.h1
-             className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight mb-8"
-             initial={{ opacity: 0, y: 30 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             transition={{ duration: 0.8, ease: 'easeOut' }}
-             viewport={{ once: true, amount: 0.8 }}
-           >
-Trusted QuickBooks Hosting Provider
-           </motion.h1>
-     
-           <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
-Make your accounting operations more secure and collaborate with your team anytime, from anywhere with Winscloud’s QuickBooks Hosting Services.
-           </p>
-     
-          <Link to="/trial">
-  <button className="relative group overflow-hidden">
-        <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
+        <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
+
+          {/* Left Content */}
+          <div className="text-center md:text-left lg:w-[800px]">
+            <motion.h1
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              Trusted QuickBooks Hosting Provider
+            </motion.h1>
+
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+              Make your accounting operations more secure and collaborate with your team anytime, from anywhere with Winscloud’s QuickBooks Hosting Services.
+            </p>
+
+            <Link to="/trial">
+              <button className="relative group overflow-hidden">
+                <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
                     translate-y-[-2px] 
                     group-active:translate-y-0 transition-transform"></span>
-        <span className="relative flex items-center justify-center gap-2 px-6 py-3 
+                <span className="relative flex items-center justify-center gap-2 px-6 py-3 
                     text-white font-semibold tracking-wide">
-      Start FREE Trial - Claim Top Hosting Services Today!
-      <svg 
-        className="w-5 h-5 transition-transform group-hover:translate-x-1" 
-        fill="none" 
-        stroke="currentColor" 
-        viewBox="0 0 24 24" 
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-      </svg>
-    </span>
-  </button>
-</Link>
-         </div>
-     
-         {/* Right Image */}
-         <motion.div
-           animate={{
-             x: [0, -10, 0, 10, 0],
-             y: [0, 10, 0, -10, 0],
-             opacity: 1,
-           }}
-           transition={{
-             duration: 6,
-             ease: "linear",
-             repeat: Infinity,
-             repeatType: "loop",
-           }}
-           className="flex mt-12 md:justify-end"
-         >
-           <img
-             src="/images/Home/homePNG.png"
-             alt="Server"
-             className="w-full max-w-md md:h-[400px] rounded-lg object-contain"
-           />
-         </motion.div>
-     
-       </div>
-     </section>
-     
+                  Start FREE Trial - Claim Top Hosting Services Today!
+                  <svg
+                    className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+              </button>
+            </Link>
+          </div>
+
+          {/* Right Image */}
+          <motion.div
+            animate={{
+              x: [0, -10, 0, 10, 0],
+              y: [0, 10, 0, -10, 0],
+              opacity: 1,
+            }}
+            transition={{
+              duration: 6,
+              ease: "linear",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className="flex mt-12 md:justify-end"
+          >
+            <img
+              src="/images/Home/homePNG.png"
+              alt="Server"
+              className="w-full max-w-md md:h-[400px] rounded-lg object-contain"
+            />
+          </motion.div>
+
+        </div>
+      </section>
+
 
       <main>
         <section className="md:px-12 px-2">
@@ -142,6 +142,10 @@ Make your accounting operations more secure and collaborate with your team anyti
             <h2 className="font-semibold text-textPrimary text-xl text-justify md:text-xl">
               Want to experience the synergy between your most loved QuickBooks Desktop application and the power of the cloud? Tap into the efficacy and efficiency of cloud infrastructure with Winscloud Matrix – your authorized QuickBooks hosting provider.
             </h2>
+            <p className="font-montserrat text-gray-700 text-justify  text-sm md:text-base">
+              Businesses today need technological solutions that are flexible, secure and scalable to accommodate their altering, day-to-day business requirements. At Winscloud, our QuickBooks Hosting solution lets you safely access your company data, from the comforts of your home or your office, and promotes secure collaboration with your teams across multiple locations.
+
+            </p>
             <p className="font-montserrat text-gray-700 text-justify  text-sm md:text-base">
               QuickBooks Desktop Cloud Hosting is an advanced solution that enhances the functionality of the desktop application by moving it to the cloud. Users can access all the features of their favorite QuickBooks application, along with their key data with only a working internet connection, from any device of their choice – laptop, desktop, cell phone, or tablet.
             </p>
@@ -166,9 +170,9 @@ Make your accounting operations more secure and collaborate with your team anyti
             Why Choose Winscloud Matrix for QuickBooks Hosting Service?
           </h2>
           <p className="text-gray-800 mt-4 text-center font-semibold">Access When You Need It</p>
-          <p className="font-inter text-gray-800 text-center mt-8">
-            Our US-based, superfast data centers and SSD-based HPC servers ensure 99.99% uptime for the most seamless collaboration with teams across multiple locations and devices. Experience unparalleled performance and unmatched flexibility with easy accessibility of your fully backed-up data.
-          </p>
+          <p className="font-inter max-w-4xl text-gray-800 text-center mt-8">
+           Our US-based, superfast data centers and SSD-based HPC servers ensure 99.99% uptime for the most seamless collaboration with teams across multiple locations and devices. Experience unparalleled performance and unmatched flexibility with easy accessibility of your fully backed-up data.
+        </p>
 
           <div className="h-full my-8 w-full pt-12 p-4">
             <div className="grid gap-14 md:grid-cols-3 md:gap-5">
@@ -178,7 +182,7 @@ Make your accounting operations more secure and collaborate with your team anyti
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Best-fitting Plans</h1>
                 <p className="px-4 text-gray-500">
-                  Our monthly QuickBooks Hosting plans are highly flexible, perfect to accommodate your changing needs. Not sure if Winscloud fits the bill for you? We promise a 30-day money-back guarantee.
+               Our monthly QuickBooks Hosting plans are highly flexible, perfect to accommodate your changing needs. Not sure if Winscloud fits the bill for you? We promise a 30-day money back guarantee to ensure full value for your investments.                  .
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
@@ -187,7 +191,7 @@ Make your accounting operations more secure and collaborate with your team anyti
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Round-the-Clock Support</h1>
                 <p className="px-4 text-gray-500">
-                  Need expert help with QuickBooks? Our 24/7 tech support via email, call, and text ensures a 15-minute response time.
+                Need expert help with technical issues related to your QuickBooks or are you simply on the lookout for a certified expert to provide you with the technical know-how of Hosted QuickBooks on the cloud? We promise 24/7 tech support via email, call and text with a 15-minute response time.
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
@@ -196,7 +200,7 @@ Make your accounting operations more secure and collaborate with your team anyti
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Data Security and Recovery</h1>
                 <p className="px-4 text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo iure inventore amet modi accusantium vero perspiciatis, incidunt dicta sed aspernatur!
+                 We understand that modern businesses seek modern solutions when it comes to data security. Our SSAE 16 certified data centers, network firewalls, automated data backups, anti-virus among other security solutions ensure that your hosted QuickBooks data is safe and secure.
                 </p>
               </div>
             </div>
@@ -237,45 +241,45 @@ Make your accounting operations more secure and collaborate with your team anyti
         <Expriance />
         <Awards />
 
-        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">
+        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary mt-3 pt-2">
           QuickBooks Hosting FAQs
         </h1>
-        <section className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-xl shadow-lg overflow-hidden bg-white">
-  {faqs.map((faq, index) => (
-    <div key={index} className="border-b border-gray-100 last:border-b-0">
-      <button
-        className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
-        onClick={() => toggleFAQ(index)}
-      >
-        <span className="font-josefin text-gray-800 text-lg font-medium">
-          {faq.question}
-        </span>
-        <div className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? 'bg-red-100' : 'bg-gray-100'} transition-all duration-300`}>
-          {openIndex === index ? (
-            <FaMinus className="text-red-600 text-xs" />
-          ) : (
-            <FaPlus className="text-gray-600 text-xs" />
-          )}
-        </div>
-      </button>
-      <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}
-      >
-        <div className="p-5 bg-gray-50 text-gray-700 space-y-4">
-          {faq.Head && <p className="font-bold text-gray-800 text-lg">{faq.Head}</p>}
-          {faq.Head2 && <p className="font-bold text-gray-700 text-lg">{faq.Head2}</p>}
-          {faq.answer && <p className="font-montserrat text-gray-600 text-sm leading-relaxed">{faq.answer}</p>}
-          {faq.Head3 && <p className="font-bold text-gray-700 text-lg mt-4">{faq.Head3}</p>}
-          {faq.answer2 && <p className="font-montserrat text-gray-600 text-sm leading-relaxed">{faq.answer2}</p>}
-          {faq.Head4 && <p className="font-bold text-gray-700 text-lg mt-4">{faq.Head4}</p>}
-          {faq.answer3 && <p className="font-montserrat text-gray-600 text-sm leading-relaxed">{faq.answer3}</p>}
-          {faq.Head5 && <p className="font-bold text-gray-700 text-lg mt-4">{faq.Head5}</p>}
-          {faq.answer4 && <p className="font-montserrat text-gray-600 text-sm leading-relaxed">{faq.answer4}</p>}
-        </div>
-      </div>
-    </div>
-  ))}
-</section>
+        <section className="max-w-3xl mx-auto mt-8 border border-gray-200 rounded-xl shadow-lg overflow-hidden bg-white">
+          {faqs.map((faq, index) => (
+            <div key={index} className="border-b border-gray-100 last:border-b-0">
+              <button
+                className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
+                onClick={() => toggleFAQ(index)}
+              >
+                <span className="font-josefin text-gray-800 text-lg font-medium">
+                  {faq.question}
+                </span>
+                <div className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? 'bg-red-100' : 'bg-gray-100'} transition-all duration-300`}>
+                  {openIndex === index ? (
+                    <FaMinus className="text-red-600 text-xs" />
+                  ) : (
+                    <FaPlus className="text-gray-600 text-xs" />
+                  )}
+                </div>
+              </button>
+              <div
+                className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}
+              >
+                <div className="p-5 bg-gray-50 text-gray-700 space-y-4">
+                  {faq.Head && <p className="font-bold text-gray-800 text-lg">{faq.Head}</p>}
+                  {faq.Head2 && <p className="font-bold text-gray-700 text-lg">{faq.Head2}</p>}
+                  {faq.answer && <p className="font-montserrat text-gray-600 text-sm leading-relaxed">{faq.answer}</p>}
+                  {faq.Head3 && <p className="font-bold text-gray-700 text-lg mt-4">{faq.Head3}</p>}
+                  {faq.answer2 && <p className="font-montserrat text-gray-600 text-sm leading-relaxed">{faq.answer2}</p>}
+                  {faq.Head4 && <p className="font-bold text-gray-700 text-lg mt-4">{faq.Head4}</p>}
+                  {faq.answer3 && <p className="font-montserrat text-gray-600 text-sm leading-relaxed">{faq.answer3}</p>}
+                  {faq.Head5 && <p className="font-bold text-gray-700 text-lg mt-4">{faq.Head5}</p>}
+                  {faq.answer4 && <p className="font-montserrat text-gray-600 text-sm leading-relaxed">{faq.answer4}</p>}
+                </div>
+              </div>
+            </div>
+          ))}
+        </section>
       </main>
 
       <footer>

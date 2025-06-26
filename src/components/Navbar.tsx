@@ -33,23 +33,23 @@ const Navbar: React.FC = () => {
     {
       name: "QuickBooks Hosting",
       dropdown: [
-        { label: "QuickBook Hosting", href: "/qickBooks-Hosting", icon: "./images/logo/qbnav.png" },
-        { label: "QuickBooks Desktop", href: "/quickbooks-desktop", icon: "./images/logo/qbnav.png" },
-        { label: "QuickBooks Pro", href: "/quickbooks-pro", icon: "./images/logo/qbnav.png" },
-        { label: "QuickBooks Premier", href: "/quickbooks-premier", icon: "./images/logo/qbnav.png" },
-        { label: "QuickBooks Enterprise", href: "/quickbooks-enterprise", icon: "./images/logo/qbnav.png" },
-        { label: "QuickBooks POS", href: "/quickbooks-pos", icon: "./images/logo/qbnav.png" },
-        { label: "QuickBooks Canada", href: "/quickbooks-hosting-canada", icon: "./images/logo/qbnav.png" }
+        { label: "Quickbooks Hosting", href: "/quickbooks-Hosting", icon: "./images/logo/qb-logo.png" },
+        { label: "QuickBooks Desktop", href: "/quickbooks-desktop", icon: "./images/logo/qb-logo.png" },
+        { label: "QuickBooks Pro", href: "/quickbooks-pro", icon: "./images/logo/qb-logo.png" },
+        { label: "QuickBooks Premier", href: "/quickbooks-premier", icon: "./images/logo/qb-logo.png" },
+        { label: "QuickBooks Enterprise", href: "/quickbooks-enterprise", icon: "./images/logo/qb-logo.png" },
+        { label: "QuickBooks POS", href: "/quickbooks-pos", icon: "./images/logo/qb-logo.png" },
+        { label: "QuickBooks Canada", href: "/quickbooks-hosting-canada", icon: "./images/logo/qb-logo.png" }
       ]
     },
     {
       name: "Sage Hosting",
       dropdown: [
-        { label: "Sage Hosting", href: "/sage-hosting", icon: "./images/logo/sageL.png" },
-        { label: "Sage 50 Hosting", href: "/sage-50-hosting", icon: "./images/logo/sageL.png" },
-        { label: "Sage 100 Hosting", href: "/sage-100-hosting", icon: "./images/logo/sageL.png" },
-        { label: "Sage 300 Hosting", href: "/sage-300-hosting", icon: "./images/logo/sageL.png" },
-        { label: "Sage 500 Hosting", href: "/sage-500-hosting", icon: "./images/logo/sageL.png" }
+        { label: "Sage Hosting", href: "/sage-hosting", icon: "./images/logo/sage-logo.jpg" },
+        { label: "Sage 50 Hosting", href: "/sage-50-hosting", icon: "./images/logo/sage-logo.jpg" },
+        { label: "Sage 100 Hosting", href: "/sage-100-hosting", icon: "./images/logo/sage-logo.jpg" },
+        { label: "Sage 300 Hosting", href: "/sage-300-hosting", icon: "./images/logo/sage-logo.jpg" },
+        { label: "Sage 500 Hosting", href: "/sage-500-hosting", icon: "./images/logo/sage-logo.jpg" }
       ]
     },
     {

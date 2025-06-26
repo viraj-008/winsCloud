@@ -47,7 +47,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/trial" element={<FreeTrialForm />} />
-        <Route path="/qickBooks-Hosting" element={<QickBooks_Hosting/>} />
+        <Route path="/quickbooks-Hosting" element={<QickBooks_Hosting/>} />
         <Route path="/quickbooks-desktop" element={<QickBooks_Desktop/>} />
         <Route path="/quickbooks-pro" element={<QuickBook_pro/>} />
         <Route path="/quickbooks-premier" element={<QuickBook_prem />} />

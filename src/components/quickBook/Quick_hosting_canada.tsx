@@ -154,8 +154,8 @@ QuickBooks Canada Hosting: Remote Access to All Versions QuickBooks Desktop for 
           Our US-based, superfast data centers and SSD-based HPC servers ensure 99.99% uptime for the most seamless collaboration with teams across multiple locations and devices. Experience unparalleled performance and unmatched flexibility with easy accessibility of your fully backed-up data.
 
         </p>
-        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100  pt-12 p-4 ">
-          <div className="grid gap-14 md:grid-cols-3 md:gap-8">
+        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100  pt-12 ">
+          <div className="grid gap-14 md:grid-cols-3 w-[90%] mx-auto md:gap-8">
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
@@ -201,12 +201,12 @@ QuickBooks Canada Hosting: Remote Access to All Versions QuickBooks Desktop for 
 
 
 
-      <section className="px-5 md:px-24 py-16 ">
+      <section className=" md:px-24 py-16 ">
         <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
           Winscloud Matrix: Your Trusted QuickBooks Canada Hosting Parter
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-14">
+        <div className="grid md:grid-cols-2 w-[98%] mx-auto gap-8 mt-14">
           {[
             {
               title: "Disaster-proof hosting",
@@ -245,7 +245,7 @@ QuickBooks Canada Hosting: Remote Access to All Versions QuickBooks Desktop for 
       </section>
 
 
-      <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+      <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
         <div className="flex-1">
           <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
             Are you ready to begin your One-Month Free Trial of QuickBooks Canada Hosting?

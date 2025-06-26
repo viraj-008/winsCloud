@@ -3,7 +3,7 @@ import { FaTrophy, FaAward, FaMedal, FaStar, FaCrown } from "react-icons/fa";
 
 const Awards:React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 my-16 w-[90%] rounded-md py-12 bg-gradient-to-b from-gray-50 to-white">
+    <div className="max-w-7xl mx-auto px-4  w-[90%] rounded-md py-4 ">
       {/* Header with animated gradient */}
       <div className="flex justify-center py-6">
         <div className="relative inline-flex group">
@@ -99,9 +99,7 @@ const Awards:React.FC = () => {
       </div>
 
       {/* Decorative elements */}
-      <div className="mt-16 text-center">
-       
-      </div>
+      
     </div>
   )
 }

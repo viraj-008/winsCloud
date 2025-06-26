@@ -87,13 +87,13 @@ const Partner = () => {
       </div>
 
       <motion.div
-        className="w-[90%] mx-auto my-12"
+        className="w-[90%] mx-auto "
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
       >
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 -mb-8 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {footerLogos.map((logo, index) => (
             <motion.div
               key={index}

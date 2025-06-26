@@ -21,6 +21,7 @@ type Feature = {
   name: string
   description: string
   icon: React.ElementType
+  images: string
 }
 
 const features: Feature[] = [
@@ -28,46 +29,55 @@ const features: Feature[] = [
     name: 'QuickBooks Hosting',
     description: 'Seamlessly migrate and remotely access your preferred QuickBooks Software, be it QuickBooks Pro, QuickBooks Premier, and QuickBooks Enterprise anytime, anywhere.',
     icon: AiOutlineThunderbolt,
+    images: "images/Home/QuickBooks.webp"
   },
   {
     name: ' Sage Hosting',
     description: 'Whether you are using Sage 50, Sage 100, Sage 300, and Sage 500 , our Sage Hosting solution streamlines your accounting processes seamlessly.',
     icon: AiOutlineThunderbolt,
+    images: "images/Home/Sage1.webp"
   },
   {
     name: 'Drake Hosting',
     description: 'Wish tax filing was more efficient, quicker, and secure? Our cloud-based Drake Hosting solutions are perfect to make tax preparation smoother for both you and your team..',
     icon: AiOutlineThunderbolt,
+    images: "images/Home/Drake.webp"
   },
   {
     name: ' ProSeries Hosting',
     description: 'Experience productive, accurate, and hassle-free tax preparation on-the-go, with our ProSeries Hosting solution.',
     icon: AiOutlineThunderbolt,
+    images: "images/Home/ProSeries.webp"
   },
   {
     name: 'Lacerte Hosting',
     description: 'GWinscloud Matrix’s Lacerte Hosting solutions let you experience faster data transfer that is secure and saves time and helps you modernize your accounting operations.',
     icon: AiOutlineThunderbolt,
+    images: "images/Home/Lacerte.webp"
   },
   {
     name: ' ATX Hosting',
     description: 'Maximize efficiency in tax compliance with one of our top hosting services, ATX Hosting – a powerful solution for both tax professionals as well as accounting firms.',
     icon: AiOutlineThunderbolt,
+    images: "images/Home/ATX.webp"
   },
   {
     name: 'UltraTax Hosting',
     description: 'Our UltraTax Hosting solution helps increase user collaboration across multiple devices, making tax filing reliable, fast and hassle-free.',
     icon: AiOutlineThunderbolt,
+    images: "images/Home/UltraTax.webp"
   },
   {
     name: ' ACT Hosting',
     description: 'Make tax season stress-free and add more power to your tax preparation with ACT Hosting by Winscloud.',
     icon: AiOutlineThunderbolt,
+    images: "images/Home/ACT.webp"
   },
   {
     name: '    TaxWise Hosting',
     description: 'Facing a busy tax season? Our TaxWise hosting offers real-time collaboration, secure and fast data transfer, allowing you to handle your workload with ease.',
     icon: AiOutlineThunderbolt,
+    images: "images/Home/TaxWise.webp"
   },
 
 ]
@@ -101,93 +111,111 @@ const cards = [
 
 const Home: React.FC = () => {
 
-
-
-
   return (
     <>
 
 
-     <section className="min-h-screen rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12">
-  <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
-    
-    {/* Left Content */}
-    <div className="text-center md:text-left lg:w-[800px]">
-      <motion.h1
-        className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-8"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-        viewport={{ once: true, amount: 0.8 }}
-      >
-        Celebrating a Decade of Powerful Servers
-      </motion.h1>
+      <section className="min-h-screen rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12">
+        <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
 
-      <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
-        Get the financial tools and insights to start, build, and grow your business.
-      </p>
+          {/* Left Content */}
+          <div className="text-center md:text-left lg:w-[800px]">
+            <motion.h1
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              Celebrating a Decade of Powerful Servers
+            </motion.h1>
 
-      <Link to="/trial">
-  <button className="relative group overflow-hidden">
-        <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+              Get the financial tools and insights to start, build, and grow your business.
+            </p>
+
+            <Link to="/trial">
+              <button className="relative group overflow-hidden">
+                <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
                     translate-y-[-2px] 
                     group-active:translate-y-0 transition-transform"></span>
-        <span className="relative flex items-center justify-center gap-2 px-6 py-3 
+                <span className="relative flex items-center justify-center gap-2 px-6 py-3 
                     text-white font-semibold tracking-wide">
-      Start FREE Trial - Claim Top Hosting Services Today!
-      <svg 
-        className="w-5 h-5 transition-transform group-hover:translate-x-1" 
-        fill="none" 
-        stroke="currentColor" 
-        viewBox="0 0 24 24" 
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-      </svg>
-    </span>
-  </button>
-</Link>
+                  Start FREE Trial - Claim Top Hosting Services Today!
+                  <svg
+                    className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+              </button>
+            </Link>
 
-    </div>
+          </div>
 
-    {/* Right Image */}
-    <motion.div
-      animate={{
-        x: [0, -10, 0, 10, 0],
-        y: [0, 10, 0, -10, 0],
-        opacity: 1,
-      }}
-      transition={{
-        duration: 6,
-        ease: "linear",
-        repeat: Infinity,
-        repeatType: "loop",
-      }}
-      className="flex mt-12 md:justify-end"
-    >
-      <img
-        src="/images/Home/homePNG.png"
-        alt="Server"
-        className="w-full max-w-md h-auto rounded-lg object-contain"
-      />
-    </motion.div>
+          {/* Right Image */}
+          <motion.div
+            animate={{
+              x: [0, -10, 0, 10, 0],
+              y: [0, 10, 0, -10, 0],
+              opacity: 1,
+            }}
+            transition={{
+              duration: 6,
+              ease: "linear",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className="flex mt-12 md:justify-end"
+          >
+            <img
+              src="/images/Home/homePNG.png"
+              alt="Server"
+              className="w-full max-w-md h-auto rounded-lg object-contain"
+            />
+          </motion.div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
 
 
       <main>
-        <section className="px-5 md:px-24 py-6 ">
-          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-2">
+        <section className="px-5 md:px-24  ">
+          <h1 className="text-3xl md:text-5xl mt-2 text-center font-extrabold  max-w-6xl  font-serif text-blue-900 mb-2">
             Remote Access Has Never Been Smoother
           </h1>
           <p className="text-center text-lg md:text-xl text-gray-700 font-medium max-w-3xl mx-auto">
             Scale Your Business Efficiently with <span className="text-blue-700 font-semibold">Winscloud</span> – Your Top Cloud Hosting Provider
           </p>
 
-          <div className="mt-12 flex flex-col-reverse md:flex-row gap-12 items-center">
-           
+          <section className="max-w-6xl mx-auto px-4 py-6">
+            <div className="text-center ">
+
+              <p className="text-3xl font-bold font-inter text-blue-900 black  mx-auto">
+                We absolutely love to see your business scale!
+              </p>
+            </div>
+
+            <div className="bg-white max-w-6xl text-justify mx-auto  pt-1 ">
+
+              <p className="text-gray-700 font-montserrat ">
+                At Winscloud, we help businesses transform securely with our reliable, scalable, and flexible cloud hosting solutions. Right from the get-go, we work around-the-clock to ensure your business is up and running, acting as your partners in growth. To make that happen, we pay due attention to ensure that our advanced cloud infrastructure adapts to your business needs and promotes easy scalability.
+                To make that happen, we pay due attention to ensure that our advanced cloud infrastructure adapts to your business needs and promotes easy scalability. With Winscloud as your application hosting provider, scaling up and adapting to your dynamic business needs will be the least of your worries.
+              </p>
+            </div>
+
+
+
+
+          </section>
+
+
+          <div className=" flex flex-col-reverse md:flex-row gap-12 items-center">
           </div>
           <h1 className="text-3xl md:text-3xl text-center font-bold font-montserrat text-blue-900">
             Why Choose Winscloud Matrix?
@@ -195,83 +223,83 @@ const Home: React.FC = () => {
           <p className="text-center text-lg text-gray-700 mt-2 font-medium max-w-3xl mx-auto">
             Winscloud Matrix Cloud Hosting: Fast-track Your Tax and Accounting Practice
           </p>
-          <p className="mt-3 max-w-3xl text-gray-700 text-lg  text-center font-montserrat  mx-auto">
+          <p className="mt-3 text-center text-gray-700 text-lg max-w-6xl  font-montserrat  mx-auto">
             We simplify tax and accounting workflows by integrating powerful desktop applications with cloud flexibility—helping modern businesses streamline operations effortlessly.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 mt-14">
-            {[
-              {
-                title: "Secure and Reliable Hosting",
-                desc: "Your data is protected with top-tier security against cyber threats. Focus on growth—we'll handle the protection.",
-              },
-              {
-                title: "Efficiency for YOUR Business",
-                desc: "Experience 99.99% uptime with ultra-reliable servers. Collaborate with ease—whether from the office or a vacation spot.",
-              },
-              {
-                title: "24/7 Technical Assistance",
-                desc: "Get round-the-clock help from expert support. Issues are solved swiftly so you can run your business uninterrupted.",
-              },
-              {
-                title: "Affordable Cloud Hosting",
-                desc: "Our shared and dedicated plans are built to scale with your business—and your budget.",
-              },
-            ].map((feature, idx) => (
-              <div
-                key={idx}
-                className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
-              >
-                <h3 className="text-xl font-semibold text-blue-800 mb-2">{feature.title}</h3>
-                <p className="text-gray-700 text-[15px] leading-relaxed">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
         </section>
+        <div className="grid md:grid-cols-2 max-w-6xl mx-auto gap-6 p-4 mt-14">
+          {[
+            {
+              title: "Secure and Reliable Hosting",
+              desc: "Your data is protected with top-tier security against cyber threats. Focus on growth—we'll handle the protection.",
+            },
+            {
+              title: "Efficiency for YOUR Business",
+              desc: "Experience 99.99% uptime with ultra-reliable servers. Collaborate with ease—whether from the office or a vacation spot.",
+            },
+            {
+              title: "24/7 Technical Assistance",
+              desc: "Get round-the-clock help from expert support. Issues are solved swiftly so you can run your business uninterrupted.",
+            },
+            {
+              title: "Affordable Cloud Hosting",
+              desc: "Our shared and dedicated plans are built to scale with your business—and your budget.",
+            },
+          ].map((feature, idx) => (
+            <div
+              key={idx}
+              className="bg-gradient-to-br from-blue-50 to-white border border-blue-100  p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+            >
+              <h3 className="text-xl font-semibold text-blue-800 mb-2">{feature.title}</h3>
+              <p className="text-gray-700 text-[15px] leading-relaxed">{feature.desc}</p>
+            </div>
+          ))}
+        </div>
 
-        <Expriance/>
+        <Expriance />
 
 
         <section className="bg-gradient-to-br from-blue-50 to-gray-100 my-8 text-gray-800 py-16 px-4 sm:px-8 md:px-12 lg:px-20">
-  <div className="max-w-7xl mx-auto">
-    <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-      {/* LEFT SIDE TEXT */}
-      <div className="px-4 sm:px-0">
-        <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] text-blue-700 font-bold mb-6 leading-tight">
-          How Wins Cloud Helps You Make a Difference
-        </h2>
-        <p className="text-lg text-gray-700 font-serif leading-relaxed">
-          Over <strong>15,000+</strong> clients have chosen to place their confidence in us.
-          We believe in the synergy between tax and accounting applications and the cloud.
-          That's why we blend highly efficient virtual workspace solutions with extensive
-          experience and technical proficiency to build dependable infrastructure and deliver
-          favorable business outcomes.
-        </p>
-      </div>
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* LEFT SIDE TEXT */}
+              <div className="px-4 sm:px-0">
+                <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] text-blue-700 font-bold mb-6 leading-tight">
+                  How Wins Cloud Helps You Make a Difference
+                </h2>
+                <p className="text-lg text-gray-700 font-serif leading-relaxed">
+                  Over <strong>15,000+</strong> clients have chosen to place their confidence in us.
+                  We believe in the synergy between tax and accounting applications and the cloud.
+                  That's why we blend highly efficient virtual workspace solutions with extensive
+                  experience and technical proficiency to build dependable infrastructure and deliver
+                  favorable business outcomes.
+                </p>
+              </div>
 
-      {/* RIGHT SIDE CARDS - Adjusted for iPad responsiveness */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 lg:gap-6 px-4 sm:px-0">
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className={`
+              {/* RIGHT SIDE CARDS - Adjusted for iPad responsiveness */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 lg:gap-6 px-4 sm:px-0">
+                {cards.map((card, index) => (
+                  <div
+                    key={index}
+                    className={`
               rounded-xl p-5 shadow-md hover:shadow-xl transition duration-300
               border border-white text-white min-h-[200px]
               ${index % 2 === 0 ? "translate-y-4 mb-4  md:rotate-[-4deg]" : "-translate-y-2 md:rotate-[-4deg]"}
               ${index === 1 ? "sm:translate-y-6" : index === 2 ? "sm:-translate-y-8" : ""}
               bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black
             `}
-          >
-            <span className="text-3xl mb-3 text-yellow-300 inline-block">{card.icon}</span>
-            <h3 className="text-xl text-gray-200 font-bold mb-2">{card.title}</h3>
-            <p className="text-sm font-josefin">{card.content}</p>
+                  >
+                    <span className="text-3xl mb-3 text-yellow-300 inline-block">{card.icon}</span>
+                    <h3 className="text-xl text-gray-200 font-bold mb-2">{card.title}jjj</h3>
+                    <p className="text-sm font-josefin">{card.content}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
-        <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        </section>
+        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
           {/* Logo or Badge */}
           <div className="  rounded-lg shadow-md">
             <img
@@ -292,16 +320,16 @@ const Home: React.FC = () => {
             <p className="mb-6">
               As a proud provider of cutting-edge cloud solutions, Wins Cloud helps businesses collaborate seamlessly, securely, and efficiently — anywhere, anytime.
             </p>
-           <Link to="/trial"><button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition">
+            <Link to="/trial"><button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition">
               Start FREE Trial - Claim Top hosting Services Today!
-            </button></Link> 
+            </button></Link>
           </div>
 
           {/* React Icon */}
 
         </div>
 
-        <section className=" w-[96%] mx-auto  p-6 rounded-lg   py-16">
+        <section className=" w-[96%] mx-auto  p-6 rounded-lg   py-">
           <div className="">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900  sm:text-4xl">
@@ -312,72 +340,71 @@ const Home: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature) => (
-                <div className="relative  rounded-2xl p-[2px] transition-all duration-500">
-                  <div className="relative bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg ">
-                    {/* Top Right External Link Button */}
-                    <button
-                      type="button"
-                      className="absolute top-4 right-4 hover:scale-125 transition-transform duration-300 z-10"
-                    >
-                      <FaExternalLinkAlt />
-                    </button>
+            <div className="grid grid-cols-1 sm:grid-cols-2 p-4 lg:grid-cols-3 gap-8">
+  {features.map((feature) => {
+   
+    
+    
+    return (
+     <div 
+  key={feature.name} 
+  className="relative rounded-2xl transition-transform duration-300 group"
+>
+  <div className="relative bg-blue-300 rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg h-full flex flex-col border-[4px] border-transparent hover:border-green-500">
+    {/* Card Image - Cover Style */}
+    <div className="w-full h-48 overflow-hidden">
+      <img
+        src={feature.images}
+        alt={feature.name}
+        className="w-full h-full rounded-lg border object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+    </div>
 
-                    {/* Card Image */}
-                    <img
-                      src="https://api.datalemur.com/assets/0f1e55eb-d6ee-4d7a-a0bf-8e192e98c4c0.png"
-                      alt={feature.name}
-                      className="w-full h-48 object-cover"
-                    />
+    {/* Card Content */}
+    <div className="p-5 flex-grow">
+      <div className="flex justify-center mb-3 mt-4">
+        <button
+          type="button"
+          className="hover:scale-125 transition-transform duration-300 z-10 bg-white/80 backdrop-blur-sm rounded-full p-2"
+        >
+          <FaExternalLinkAlt className="text-gray-700" />
+        </button>
+      </div>
 
-                    {/* Card Content */}
-                    <div className="p-5">
-                      <div className="flex justify-center mb-3 mt-4">
-                        <feature.icon className="h-8 w-8 text-yellow-600" />
-                      </div>
+      <h3 className="text-xl font-bold text-center text-gray-800">
+        {feature.name}
+      </h3>
 
-                      <h3 className="text-xl font-bold text-center text-gray-800">
-                        {feature.name}
-                      </h3>
-
-                      <p className="text-sm text-center text-gray-600 mt-2 leading-relaxed">
-                        {feature.description}
-                      </p>
-
-
-                    </div>
-                  </div>
-
-
-                </div>
-
-              ))}
-
-            </div>
+      <p className="text-sm text-center text-gray-600 mt-2 leading-relaxed">
+        {feature.description}
+      </p>
+    </div>
+  </div>
+</div>
+    );
+  })}
+</div>
           </div>
         </section>
 
 
-       
-
-       <Awards />
-
-        {/* Data Centers Section */}
 
 
-        <div className="bg-gradient-to-br from-blue-800 via-white to-blue-300  shadow-2xl p-10  mx-auto w-[98%] rounded-md text-gray-800 space-y-10">
+        <Awards />
+
+
+
+        <div className="px-6 md:px-10 pt-16 -my-8 mx-auto rounded-md text-gray-800 max-w-6xl">
 
           {/* Header */}
-          <h2 className="text-4xl font-extrabold text-center text-blue-900 drop-shadow-sm">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center text-blue-900 drop-shadow-sm mb-10">
             Our Global Data Centers
           </h2>
 
-          {/* Grid layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
             {/* LEFT SIDE: Data Center List */}
-            <ul className="space-y-5 text-lg leading-relaxed">
+            <ul className="space-y-6 text-lg leading-relaxed">
               {[
                 { text: 'To ensure', highlight: 'seamless access for all users.' },
                 { text: 'We offer', highlight: 'high data availability and uptime.' },
@@ -400,34 +427,43 @@ const Home: React.FC = () => {
             </ul>
 
             {/* RIGHT SIDE: Globe with Pins */}
-      <div className="relative w-full h-[500px] rounded-xl flex items-center justify-center">
-  {/* Container for Globe and Pins - Increased size */}
-<div className="relative w-[400px] h-[400px]">
-  {/* Custom Globe Image */}
-  <img 
-    src="images/logo/map.png" 
-    alt="World Map" 
-    className="w-full h-full object-contain opacity-90 absolute top-0 left-0 z-0" 
-  />
-  
-  {/* Best Locations - Properly positioned on the globe */}
+            <div className="relative w-full h-[400px] rounded-xl flex items-center justify-center">
+              {/* Container for Globe and Pins */}
+              <div className="relative w-[350px] h-[350px]">
 
-  
-  {/* Key Locations Highlight */}
- <div className="absolute bottom-0 left-0 right-0 flex flex-col lg:flex-row items-center justify-center gap-2 md:gap-4 p-2">
-  {['Phoenix,AZ,USA', 'Dallas,TX,USA', 'Ashburn,VA,USA', 'Atlanta,GA,USA'].map((city) => (
-    <span 
-      key={city} 
-      className="bg-blue-200 text-gray-900 px-3 py-1 rounded-full text-sm md:text-md font-medium whitespace-nowrap"
-    >
-      {city}
-    </span>
-  ))}
-</div>
-</div>
-</div>
+                {/* Custom Globe Image */}
+                <img
+                  src="images/logo/map.png"
+                  alt="World Map"
+                  className="w-full h-full object-contain absolute top-0 left-0 z-0"
+                />
+
+                {/* Key Locations Highlight */}
+                <div className="absolute top-0 left-0 w-full h-full">
+                  {[
+                    { city: 'Phoenix,AZ,USA', top: '20%', left: '25%' },
+                    { city: 'Dallas,TX,USA', top: '30%', left: '30%' },
+                    { city: 'Ashburn,VA,USA', top: '25%', left: '40%' },
+                    { city: 'Atlanta,GA,USA', top: '35%', left: '35%' }
+                  ].map((location) => (
+                    <span
+                      key={location.city}
+                      style={{
+                        top: location.top,
+                        left: location.left,
+                      }}
+                      className="absolute bg-blue-500/80 text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap shadow-md transform -translate-x-1/2 -translate-y-1/2"
+                    >
+                      {location.city}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
+
 
 
       </main>

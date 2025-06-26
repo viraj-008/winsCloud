@@ -26,7 +26,7 @@ const CloudServerHosting = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.8 }}
-            >Coude Server Hosting
+            >Cloud Server Hosting
             </motion.h1>
             {/* 
             <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
@@ -105,10 +105,13 @@ const CloudServerHosting = () => {
           {/* TEXT on the left (or top on mobile) */}
           <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
             <h2 className="font-semibold text-textPrimary text-justify  text-xl md:text-xl ">
-              ProSeries Tax Software Hosting is professional tax software based on the cloud. It helps tax pros and accountants carry out key tasks for their clients like preparing and monitoring returns, filing e-forms, and tracking errors from anywhere, at any time, with efficiency. With the power of cloud, accountants and tax professionals can give their clients peace of mind since ProSeries Hosting keeps their data safe and secure, with bank grade security measures like encrypted servers, network firewalls, and anti-virus.
+              Winscloud, a leading dedicated server hosting provider, offers top-notch cloud hosting solutions. With cutting-edge technology, we deliver reliable and efficient services tailored to businesses of all sizes. From small enterprises to large organizations, we have the right cloud hosting solution for you.
+
             </h2>
             <p className="font-montserrat text-gray-700   text-sm text-justify md:text-base">
-              With ProSeries Cloud Hosting, tax preparers can experience easy tax filing, enjoy the robust features of the popular tax software, gain 24/7 access to tax data so they can stay on top of their clients’ tax filing anytime, anywhere, and remotely collaborate with their clients and team. This added flexibility, security, and productivity that comes with ProSeries Cloud Hosting significantly elevates the entire tax preparation process.
+              We assist with cloud hosting solutions for applications, enabling seamless management and deployment in a cloud-based environment. Our services help cut costs by allowing users to pay only for the resources utilized. Public clouds, easily scalable to meet evolving needs, offer flexible pay-as-you-go pricing models, ensuring cost savings. Moreover, public clouds provide enhanced security and compliance measures, further solidifying Winscloud’s position as a trusted cloud server provider.
+
+
             </p>
 
           </article>

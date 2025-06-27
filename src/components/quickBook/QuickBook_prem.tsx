@@ -158,7 +158,7 @@ const QuickBook_prem = () => {
         </section>
 
 
-        <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
+        <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
           <h2 className="font-bold text-3xl mt-3 text-center text-textPrimary">
             QuickBooks Premier Cloud Hosting: Why should you opt for
           </h2>
@@ -213,7 +213,7 @@ const QuickBook_prem = () => {
         <QuickLinks />
 
 
-        <section className="px-5 md:px-24 py-16 ">
+        <section className="w-[90%] mx-auto py-16 ">
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Winscloud QuickBooks Premier Cloud Hosting: Why should you choose us as your hosting provider?          </h1>
 

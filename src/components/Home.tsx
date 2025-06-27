@@ -185,7 +185,7 @@ const Home: React.FC = () => {
 
 
       <main>
-        <section className="px-5 md:px-24  ">
+        <section className="px-2 md:px-24  ">
           <h1 className="text-3xl md:text-5xl mt-2 text-center font-extrabold  max-w-6xl  font-serif text-blue-900 mb-2">
             Remote Access Has Never Been Smoother
           </h1>
@@ -193,7 +193,7 @@ const Home: React.FC = () => {
             Scale Your Business Efficiently with <span className="text-blue-700 font-semibold">Winscloud</span> – Your Top Cloud Hosting Provider
           </p>
 
-          <section className="max-w-6xl mx-auto px-4 py-6">
+          <section className="max-w-6xl mx-auto px-2 py-6">
             <div className="text-center ">
 
               <p className="text-3xl font-bold font-inter text-blue-900 black  mx-auto">
@@ -208,27 +208,24 @@ const Home: React.FC = () => {
                 To make that happen, we pay due attention to ensure that our advanced cloud infrastructure adapts to your business needs and promotes easy scalability. With Winscloud as your application hosting provider, scaling up and adapting to your dynamic business needs will be the least of your worries.
               </p>
             </div>
-
-
-
-
           </section>
 
+         
+        <div className='px-2'>
 
-          <div className=" flex flex-col-reverse md:flex-row gap-12 items-center">
-          </div>
           <h1 className="text-3xl md:text-3xl text-center font-bold font-montserrat text-blue-900">
             Why Choose Winscloud Matrix?
           </h1>
           <p className="text-center text-lg text-gray-700 mt-2 font-medium max-w-3xl mx-auto">
             Winscloud Matrix Cloud Hosting: Fast-track Your Tax and Accounting Practice
           </p>
-          <p className="mt-3  text-gray-700 text-lg max-w-6xl text-justify  font-montserrat  mx-auto">
+          <p className="mt-3  text-gray-700   max-w-6xl text-justify  font-montserrat  mx-auto">
             At Winscloud, we believe in ironing out the challenges that modern businesses face in handling their tax and accounting operations with the help of technology. Our cloud hosting services help our business owners seamlessly transition to the cloud, combining the robust features of desktop applications with the cloud infrastructure.
           </p>
+        </div>
 
         </section>
-        <div className="grid md:grid-cols-2 max-w-6xl mx-auto gap-6 p-4 mt-14">
+        <div className="grid md:grid-cols-2 max-w-6xl mx-auto gap-6 p-4 mt-4">
           {[
             {
               title: "Secure and Reliable Hosting",

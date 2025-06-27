@@ -220,7 +220,7 @@ const QuickBook_pro = () => {
 
 
 
-      <section className="px-5 w-[90%] mx-auto py-16 ">
+      <section className=" w-[90%] mx-auto py-16 ">
         <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
           WinsCloud: The Best QuickBooks Pro Hosting Provider for Your Business Accounting Needs
         </h1>

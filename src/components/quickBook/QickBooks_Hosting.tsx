@@ -152,7 +152,7 @@ const QickBooks_Hosting = () => {
           </article>
         </section>
 
-        <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
           <div className="flex-1">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">
               Do away with saving and sharing your desktop files via VPN, email, or cloud storage today!
@@ -165,16 +165,16 @@ const QickBooks_Hosting = () => {
           </div>
         </div>
 
-        <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100">
+        <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100">
           <h2 className="font-bold text-3xl mt-3 text-center text-textPrimary">
             Why Choose Winscloud Matrix for QuickBooks Hosting Service?
           </h2>
           <p className="text-gray-800 mt-4 text-center font-semibold">Access When You Need It</p>
-          <p className="font-inter max-w-4xl text-gray-800 text-center mt-8">
+          <p className="font-inter w-[90%] text-gray-800 text-center mt-8">
            Our US-based, superfast data centers and SSD-based HPC servers ensure 99.99% uptime for the most seamless collaboration with teams across multiple locations and devices. Experience unparalleled performance and unmatched flexibility with easy accessibility of your fully backed-up data.
         </p>
 
-          <div className="h-full my-8 w-full pt-12 p-4">
+          <div className="h-full my-8 w-[90%] pt-12 ">
             <div className="grid gap-14 md:grid-cols-3 md:gap-5">
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">

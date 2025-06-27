@@ -187,19 +187,17 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
 
 
         <div className="h-full my-8 mx-auto bg-gradient-to-br from-blue-50 to-gray-100   pt-12">
-              <h2 className="font-bold text-3xl mt-3 font-inter text-center text-textPrimary">
+              <h2 className="font-bold text-3xl mt-3 w-[90%] font-inter text-center text-textPrimary">
             Six Easy Steps to Transition to QuickBooks Desktop Cloud Hosting
           </h2>
-          <p className="font-montserrat max-w-4xl mx-auto mb-12 text-gray-800 text-center mt-8">
+          <p className="font-montserrat text-justify  w-[90%] mx-auto mb-12 text-gray-800 md:text-center mt-8">
           Migrating to the cloud can be done in a few easy steps. Having the right QuickBooks Desktop Hosting Provider on your side can make the process simpler and faster. With Winscloud, you are assigned a cloud expert right from the start who will assist you with your cloud migration. You can also opt for a one-month Free Trial to get the real experience of running your business from the cloud. To begin your transition, here are the simple steps you need to follow –
         </p>
           <div className="grid gap-14 md:grid-cols-3 pb-8 w-[90%] mx-auto md:gap-8">
 
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-
                 <LuDatabaseBackup />
-
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Wait for Data Transfer</h1>
               <p className="px-4 text-gray-500">
@@ -267,11 +265,11 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
           </div>
         </div>
 
-        <div>
-          <h1 className="text-3xl md:text-4xl text-center font-extrabold font-serif text-blue-900 mb-4">
+        <div className="">
+          <h1 className="text-3xl w-[90%] mx-auto md:text-4xl text-center font-extrabold font-serif text-blue-900 mb-4">
             We Host All Versions of Your Most Loved QuickBooks Desktop
           </h1>
-          <p className="max-w-[90%] mx-auto text-center font-montserrat">Maximize efficiency in your accounting and tax operations with affordable and secure QuickBooks Desktop Hosting. Let our team handle your QuickBooks Desktop Hosting, so you can focus on what is most important – YOUR Business!</p>
+          <p className="max-w-[90%] mx-auto text-justify md:text-center font-montserrat">Maximize efficiency in your accounting and tax operations with affordable and secure QuickBooks Desktop Hosting. Let our team handle your QuickBooks Desktop Hosting, so you can focus on what is most important – YOUR Business!</p>
           <QuickLinks />
         </div>
 
@@ -296,11 +294,11 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
 
 
 
-        <section className="px-5 max-w-8xl mx-auto py-16">
+        <section className="w-[90%] mx-auto py-16">
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Winscloud Matrix: Your Trusted QuickBooks Cloud Hosting Provider
           </h1>
-          <p className="text-center text-lg md:text-lg text-gray-700 font-montserrat max-w-5xl mx-auto">
+          <p className="text-justify md:text-center  md:text-lg text-gray-700 font-montserrat max-w-5xl mx-auto">
             Winscloud, an experienced cloud hosting provider, has helped multiple businesses from an array of domains in their smooth transition to the cloud and growing from there. We do not just offer QuickBooks hosting solutions to small and medium business owners – we offer a commitment to ensure data security, uninterrupted business access that ensures maximum customer satisfaction, and support at any time of day and night. Here are some of the many benefits of QuickBooks desktop cloud hosting with Winscloud Matrix –
           </p>
 

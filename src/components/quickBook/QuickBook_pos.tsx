@@ -166,7 +166,7 @@ const QuickBook_pos = () => {
 
 
 
-      <section className="px-5 md:px-24 py-16 ">
+      <section className="w-[90%] mx-auto py-16 ">
         <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
           Why Choose Winscloud Matrix for taking your QuickBooks Cloud Hosting?
         </h1>

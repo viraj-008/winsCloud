@@ -176,7 +176,7 @@ const QuickBook_enterprice = () => {
 
 
 
-        <section className="px-5 w-[90%] mx-auto py-16 ">
+        <section className=" w-[90%] mx-auto py-16 ">
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Winscloud QuickBooks Premier Cloud Hosting: Why should you choose us as your hosting provider?
           </h1>
@@ -216,7 +216,7 @@ const QuickBook_enterprice = () => {
         </section>
 
 
-        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
+        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100    py-12  ">
           <h2 className="font-bold text-3xl mt-3 mb-12 text-center text-textPrimary">
             Winscloud Matrix Advantage: Why choose us as your QuickBooks cloud hosting provider?
           </h2>

@@ -146,11 +146,11 @@ QuickBooks Canada Hosting: Remote Access to All Versions QuickBooks Desktop for 
       </section>
 
 
-      <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
+      <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
         <h2 className="font-bold text-3xl mt-3 text-center text-textPrimary">
           Benefits of Moving from Desktop to QuickBooks Canada Hosting
         </h2>
-        <p className="font-inter text-gray-800 text-center mt-4 max-w-4xl">
+        <p className="font-inter w-[90%] text-gray-800 text-center mt-4 max-w-4xl">
           Our US-based, superfast data centers and SSD-based HPC servers ensure 99.99% uptime for the most seamless collaboration with teams across multiple locations and devices. Experience unparalleled performance and unmatched flexibility with easy accessibility of your fully backed-up data.
 
         </p>
@@ -201,7 +201,7 @@ QuickBooks Canada Hosting: Remote Access to All Versions QuickBooks Desktop for 
 
 
 
-      <section className=" md:px-24 py-16 ">
+      <section className=" w-[90%] mx-auto py-16 ">
         <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
           Winscloud Matrix: Your Trusted QuickBooks Canada Hosting Parter
         </h1>

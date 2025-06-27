@@ -129,7 +129,7 @@ const QuickBook_enterprice = () => {
       </section>
 
       <main>
-        <h2 className='text-3xl w-[90%] mx-auto text-center px-2 py-4 font-bold font-montserrat text-textPrimary'>
+        <h2 className='text-3xl w-[90%] mx-auto text-center font-inter py-4 font-bold  text-textPrimary'>
           QuickBooks Enterprise Cloud Hosting: A World Class Solution to Remotely Manage Your Business Operations
         </h2>
 
@@ -146,7 +146,7 @@ const QuickBook_enterprice = () => {
 
           {/* TEXT on the left (or top on mobile) */}
           <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
-            <h2 className="font-semibold text-textPrimary text-justify  text-xl md:text-xl ">All the features of Intuit’s most powerful and advanced accounting software blended with the flexibility of the cloud. Grow your business by focusing on more important tasks with QuickBooks Enterprise cloud hosting by assigning relevant tasks to your team any time, anywhere.
+            <h2 className="font-semibold text-textPrimary  text-justify  text-xl md:text-xl ">All the features of Intuit’s most powerful and advanced accounting software blended with the flexibility of the cloud. Grow your business by focusing on more important tasks with QuickBooks Enterprise cloud hosting by assigning relevant tasks to your team any time, anywhere.
             </h2>
 
             <p className="font-montserrat text-justify text-gray-700 text-sm md:text-base">
@@ -217,7 +217,7 @@ const QuickBook_enterprice = () => {
 
 
         <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100    py-12  ">
-          <h2 className="font-bold text-3xl mt-3 mb-12 text-center text-textPrimary">
+          <h2 className="font-bold font-inter w-[90%] mx-auto text-3xl mt-3 mb-12 text-center text-textPrimary">
             Winscloud Matrix Advantage: Why choose us as your QuickBooks cloud hosting provider?
           </h2>
 
@@ -319,7 +319,7 @@ const QuickBook_enterprice = () => {
         <QuickLinks />
         <Expriance />
         <Awards />
-        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">QuickBooks Enterprise FAQs</h1>
+        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary pt-4">QuickBooks Enterprise FAQs</h1>
 
         <section className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">
           {faqs.map((faq, index) => (

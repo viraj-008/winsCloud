@@ -170,7 +170,7 @@ const QuickBook_pos = () => {
         <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
           Why Choose Winscloud Matrix for taking your QuickBooks Cloud Hosting?
         </h1>
-        <p className="text-center text-lg md:text-xl text-gray-700 font-montserrat  max-w-4xl mx-auto">
+        <p className="text-justify md:text-center text-lg md:text-xl text-gray-700 font-montserrat  w-[90%] mx-auto">
           Retail businesses need to stay updated with their inventory and sales to ensure maximum customer satisfaction. QuickBooks POS is a fantastic solution that allows retail business owners and its employees to stay on the same page and work together in sync, irrespective of their physical location. Winscloud Matrix allows businesses to host their highly efficient and useful QuickBooks POS desktop on the cloud, adding another level of efficacy in managing a retail business. Issues like low inventory, order placement, return requests, sales can be managed in real-time, helping customer satisfaction reach an all-time high. Here’s how Winscloud can help seamlessly achieve this success –
         </p>
 
@@ -217,10 +217,10 @@ const QuickBook_pos = () => {
       <Experience />
 
       <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
-        <h2 className="font-bold text-3xl mt-3 text-center text-textPrimary">
+        <h2 className="font-bold font-inter text-3xl mt-3 text-center text-textPrimary">
           Hosting QuickBooks POS on the Cloud: Benefits for Your Retail Business
         </h2>
-        <p className="font-inter text-gray-800 text-center mt-4 max-w-4xl">
+        <p className="font-inter text-gray-800 text-justify  md:text-center mt-4 w-[90%]">
           Running a retail business has never been easier. With contemporary solutions like cloud hosting QuickBooks POS, business owners can manage multiple retail stores across different locations in real-time.
         </p>
         <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100  pt-12  ">

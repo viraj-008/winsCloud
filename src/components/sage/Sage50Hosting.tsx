@@ -127,10 +127,10 @@ const Sage50Hosting = () => {
 
       <main>
         <section>
-          <h2 className='text-3xl text-center py-4 max-w-6xl mx-auto font-bold font-montserrat text-textPrimary'>
-            QuickBooks POS Cloud Hosting: Conveniently track multi-channel sales and manage your retail inventory from multiple locations
+          <h2 className='text-3xl text-center py-4 w-[90%] mx-auto font-bold font-montserrat text-textPrimary'>
+How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
           </h2>
-          <p className="font-montserrat text-xl text-center font-semibold">Host Your Sage Desktop & Experience the Power of the Cloud
+          <p className="font-montserrat text-xl text-center font-semibold">The power of Cloud Hosting Blended with Sage 50
           </p>
         </section>
 
@@ -158,7 +158,7 @@ const Sage50Hosting = () => {
         </section>
 
 
-        <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
           <div className="flex-1">
             <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
               Is your business ready to move to the cloud with Sage 50 hosting service?
@@ -171,13 +171,13 @@ const Sage50Hosting = () => {
           </div>
         </div>
 
-        <section className="px-5 md:px-24 py-16 ">
+        <section className=" w-[90%] mx-auto py-16 ">
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Why Choose Sage 50 Cloud hosting?
           </h1>
-          <p className="text-center font-montserrat text-gray-800">The advanced accounting and payroll software helps businesses carry out several key operations such as managing cash flows, sales, invoices, and monitoring payments. The powerful features of the Sage 50 application facilitate handling of a plethora of accounting operations like monitoring revenue, day-to-day expenses, and anticipating future cash flows. Sage 50 hosting is a perfect solution for accountants & bookkeepers, and for small and medium firms operating in manufacturing, construction, retail and wholesale businesses, IT services, law firms, food and beverage, etc. Certain large size businesses also find Sage 50 useful.
+          <p className="text-justify md:text-center font-montserrat text-gray-800">The advanced accounting and payroll software helps businesses carry out several key operations such as managing cash flows, sales, invoices, and monitoring payments. The powerful features of the Sage 50 application facilitate handling of a plethora of accounting operations like monitoring revenue, day-to-day expenses, and anticipating future cash flows. Sage 50 hosting is a perfect solution for accountants & bookkeepers, and for small and medium firms operating in manufacturing, construction, retail and wholesale businesses, IT services, law firms, food and beverage, etc. Certain large size businesses also find Sage 50 useful.
           </p>
-          <p className="text-center mt-4 font-montserrat text-gray-800">In today’s world where businesses need to be caught up with the technological advances, Sage 50 hosting plays a key role in their survival. Cloud computing saves these small businesses time, money and effort to stay updated with their business needs and significantly enhances productivity.
+          <p className="text-justify md:text-center mt-4 font-montserrat text-gray-800">In today’s world where businesses need to be caught up with the technological advances, Sage 50 hosting plays a key role in their survival. Cloud computing saves these small businesses time, money and effort to stay updated with their business needs and significantly enhances productivity.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mt-14">
@@ -213,12 +213,12 @@ const Sage50Hosting = () => {
         </section>
 
 
-        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
-          <h2 className="font-bold text-3xl mt-3 mb-12 text-center text-textPrimary">
+        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100    pt-12  ">
+          <h2 className="font-bold font-inter text-3xl mt-3 mb-12 text-center px-4 text-textPrimary">
             Why is Winscloud Matrix the best hosting provider for your business?
           </h2>
 
-          <div className="grid gap-14 md:grid-cols-3 md:gap-8">
+          <div className="grid gap-14 w-[90%] mx-auto md:grid-cols-3 py-6 md:gap-8">
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
@@ -296,7 +296,7 @@ const Sage50Hosting = () => {
         <SageLinks />
         <Expriance />
         <Awards />
-        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2"> Sage 50 Cloud Hosting Frequently Asked Questions</h1>
+        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary px-4 mt-3 md:pt-4"> Sage 50 Cloud Hosting Frequently Asked Questions</h1>
         <section className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">
           {faqs.map((faq, index) => (
             <div key={index} className="border-b border-gray-100 last:border-b-0">

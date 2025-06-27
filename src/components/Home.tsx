@@ -39,7 +39,7 @@ const features: Feature[] = [
   },
   {
     name: 'Drake Hosting',
-    description: 'Wish tax filing was more efficient, quicker, and secure? Our cloud-based Drake Hosting solutions are perfect to make tax preparation smoother for both you and your team..',
+    description: 'Wish tax filing was more efficient, quicker, and secure? Our cloud-based Drake Hosting solutions are perfect to make tax preparation smoother for both you and your team.',
     icon: AiOutlineThunderbolt,
     images: "images/Home/Drake.webp"
   },
@@ -204,8 +204,10 @@ const Home: React.FC = () => {
             <div className="bg-white max-w-6xl text-justify mx-auto  pt-1 ">
 
               <p className="text-gray-700 font-montserrat ">
-                At Winscloud, we help businesses transform securely with our reliable, scalable, and flexible cloud hosting solutions. Right from the get-go, we work around-the-clock to ensure your business is up and running, acting as your partners in growth. To make that happen, we pay due attention to ensure that our advanced cloud infrastructure adapts to your business needs and promotes easy scalability.
-                To make that happen, we pay due attention to ensure that our advanced cloud infrastructure adapts to your business needs and promotes easy scalability. With Winscloud as your application hosting provider, scaling up and adapting to your dynamic business needs will be the least of your worries.
+               At Winscloud, we help businesses transform securely with our reliable, scalable, and flexible cloud hosting solutions. Right from the get-go, we work around-the-clock to ensure your business is up and running, acting as your partners in growth. To make that happen, we pay due attention to ensure that our advanced cloud infrastructure adapts to your business needs and promotes easy scalability.
+              </p>
+              <p className="text-gray-700 mt-3 font-montserrat ">
+             To make that happen, we pay due attention to ensure that our advanced cloud infrastructure adapts to your business needs and promotes easy scalability. With Winscloud as your application hosting provider, scaling up and adapting to your dynamic business needs will be the least of your worries.
               </p>
             </div>
           </section>
@@ -326,18 +328,18 @@ const Home: React.FC = () => {
 
         </div>
 
-        <section className=" w-[96%] mx-auto  p-6 rounded-lg   py-">
+        <section className=" w-[90%] mx-auto   rounded-lg   py-">
           <div className="">
-            <div className="text-center mb-12">
+            <div className="text-justify md:text-center pt-4 mb-12">
               <h2 className="text-3xl font-bold text-gray-900  sm:text-4xl">
                 Our Cloud Hosting Services
               </h2>
-              <p className="mt-4 text-lg text-gray-700 font-josefin max-w-2xl mx-auto">
+              <p className="mt-4 text-justify text-lg text-gray-700 font-josefin max-w-2xl mx-auto">
                 We help set-up a practical, secure, and flexible workspace to help you stay ahead of competition. Our holistic set of top hosting services includes a range of tax and accounting software, with 99.99% uptime, cutting-edge cloud infrastructure, and 24/7 support from Winscloud’s in-house team of experts.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 p-4 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-8">
   {features.map((feature) => {
    
     

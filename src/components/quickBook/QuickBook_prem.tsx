@@ -128,7 +128,7 @@ const QuickBook_prem = () => {
       <main>
 
         <div className="">
-          <h2 className='text-3xl text-center py-4 px-6 font-bold font-montserrat text-textPrimary'>
+          <h2 className='text-3xl font-inter text-center py-4 px-6 font-bold  text-textPrimary'>
             Seamless Accounting for your Business with QuickBooks Premier Plus Hosting
           </h2>
         </div>
@@ -146,7 +146,7 @@ const QuickBook_prem = () => {
 
           {/* TEXT on the left (or top on mobile) */}
           <article className="w-full md:w-1/2 text-center  md:text-start  space-y-4">
-            <h2 className="font-semibold text-textPrimary text-justify  text-xl md:text-xl ">
+            <h2 className="font-semibold text-textPrimary text-justify   text-xl md:text-xl ">
               QuickBooks Premier Plus is one of the most popular accounting software used by CPAs, accountants, and small businesses. Hosting the QuickBooks Premier Plus can transform your accounting workflow, boost productivity, and promote multi-user collaboration.
 
             </h2>
@@ -159,10 +159,10 @@ const QuickBook_prem = () => {
 
 
         <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
-          <h2 className="font-bold text-3xl mt-3 text-center text-textPrimary">
+          <h2 className="font-bold  text-3xl mt-3 text-center text-textPrimary">
             QuickBooks Premier Cloud Hosting: Why should you opt for
           </h2>
-          <p className="font-inter text-gray-800 text-center mt-4">
+          <p className="font-montserrat w-[90%] text-gray-800 text-center mt-4">
             Automate Everyday Accounting Tasks and Focus on Other Important Productive Business Operations
           </p>
           <div className="h-full my-8 w-[90%] bg-gradient-to-br from-blue-50 to-gray-100    pt-12  ">

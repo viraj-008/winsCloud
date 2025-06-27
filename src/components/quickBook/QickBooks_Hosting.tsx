@@ -124,8 +124,8 @@ const QickBooks_Hosting = () => {
 
 
       <main>
-        <section className="md:px-12 px-2">
-          <h1 className="md:text-3xl text-2xl text-center max-w-8xl py-4 font-bold font-montserrat text-textPrimary">
+        <section className="md:px-12 px-2 w-[90%] mx-auto">
+          <h1 className="md:text-3xl font-inter text-2xl text-center pt-4 font-bold text-textPrimary">
             QuickBooks Hosting: Desktop-like experience on any device, from any part of the globe
           </h1>
         </section>
@@ -138,7 +138,7 @@ const QickBooks_Hosting = () => {
               alt="QuickBooks Hosting Service"
             />
           </figure>
-          <article className="w-full md:w-1/2 text-center md:text-start space-y-4">
+          <article className="w-full md:w-1/2  text-center md:text-start space-y-4">
             <h2 className="font-semibold text-textPrimary text-xl text-justify md:text-xl">
               Want to experience the synergy between your most loved QuickBooks Desktop application and the power of the cloud? Tap into the efficacy and efficiency of cloud infrastructure with Winscloud Matrix – your authorized QuickBooks hosting provider.
             </h2>
@@ -159,18 +159,18 @@ const QickBooks_Hosting = () => {
             </h1>
             <Link to="/trial">
               <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition">
-                Start FREE Trial - Claim Top hosting Services Today!
+                Start Your One-Month Free Trial
               </button>
             </Link>
           </div>
         </div>
 
         <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100">
-          <h2 className="font-bold text-3xl mt-3 text-center text-textPrimary">
+          <h2 className="font-bold font-inter text-3xl mt-3 text-center text-textPrimary">
             Why Choose Winscloud Matrix for QuickBooks Hosting Service?
           </h2>
           <p className="text-gray-800 mt-4 text-center font-semibold">Access When You Need It</p>
-          <p className="font-inter w-[90%] text-gray-800 text-center mt-8">
+          <p className="font-inter w-[90%] text-gray-800 text-justify md:text-center mt-8">
            Our US-based, superfast data centers and SSD-based HPC servers ensure 99.99% uptime for the most seamless collaboration with teams across multiple locations and devices. Experience unparalleled performance and unmatched flexibility with easy accessibility of your fully backed-up data.
         </p>
 

@@ -117,8 +117,8 @@ const QuickBook_pro = () => {
         </div>
       </section>
 
-      <div className="">
-        <h2 className='text-3xl max-w-6xl mx-auto text-center py-4 font-bold font-montserrat text-textPrimary'>
+      <div className="w-[90%] mx-auto">
+        <h2 className='text-3xl  mx-auto text-center py-4 font-bold font-montserrat text-textPrimary'>
           QuickBooks Pro Cloud Hosting: Take your favorite QuickBooks Pro to the cloud and add more power to your accounting operations
         </h2>
       </div>
@@ -163,11 +163,11 @@ const QuickBook_pro = () => {
       </div>
 
 
-      <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
-        <h2 className="font-bold text-3xl mt-3 text-center text-textPrimary">
+      <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
+        <h2 className="font-bold font-inter text-3xl mt-3 text-center text-textPrimary">
           Why opt for QuickBooks Pro Cloud hosting?
         </h2>
-        <p className="font-inter text-gray-800 text-center mt-4">
+        <p className="font-montserrat w-[90%] text-gray-800 text-center mt-4">
           Benefits of taking advantage of cloud hosting your QuickBooks Pro Desktop
         </p>
         <div className="h-full my-8 w-[90%] bg-gradient-to-br from-blue-50 to-gray-100   pt-12">
@@ -224,7 +224,7 @@ const QuickBook_pro = () => {
         <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
           WinsCloud: The Best QuickBooks Pro Hosting Provider for Your Business Accounting Needs
         </h1>
-        <p className="text-center text-lg md:text-lg text-gray-700 font-montserrat max-w-4xl mx-auto">
+        <p className="text-justify md:text-center text-lg md:text-lg text-gray-700 font-montserrat  mx-auto">
           As a small business, we understand that your biggest priority is to always be up and running. Using a desktop application comes with its own limitations – you cannot collaborate with your remote team, storage is limited, and performance may not be optimum. With Winscloud’s QuickBooks Pro Plus hosting solution, you experience enhanced performance of your QuickBooks Pro Plus –
         </p>
 

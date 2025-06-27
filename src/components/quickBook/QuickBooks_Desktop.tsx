@@ -135,8 +135,8 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
      </section>
 
       <main>
-        <section>
-          <h2 className='text-3xl text-center py-4 font-bold font-montserrat text-textPrimary'>
+        <section className="w-[90%] mx-auto">
+          <h2 className='text-3xl font-inter text-center py-4 font-bold  text-textPrimary'>
             QuickBooks Desktop Hosting: Run your favorite QuickBooks Desktop Application from Anywhere, at Anytime
           </h2>
         </section>
@@ -187,10 +187,10 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
 
 
         <div className="h-full my-8 mx-auto bg-gradient-to-br from-blue-50 to-gray-100   pt-12">
-              <h2 className="font-bold text-3xl mt-3 w-[90%] font-inter text-center text-textPrimary">
+              <h2 className="font-bold mx-auto text-3xl mt-3 w-[90%] font-inter text-center text-textPrimary">
             Six Easy Steps to Transition to QuickBooks Desktop Cloud Hosting
           </h2>
-          <p className="font-montserrat text-justify  w-[90%] mx-auto mb-12 text-gray-800 md:text-center mt-8">
+          <p className="font-montserrat text-justify  w-[90%] md:w-[80%] mx-auto mb-12 text-gray-800 md:text-center mt-8">
           Migrating to the cloud can be done in a few easy steps. Having the right QuickBooks Desktop Hosting Provider on your side can make the process simpler and faster. With Winscloud, you are assigned a cloud expert right from the start who will assist you with your cloud migration. You can also opt for a one-month Free Trial to get the real experience of running your business from the cloud. To begin your transition, here are the simple steps you need to follow –
         </p>
           <div className="grid gap-14 md:grid-cols-3 pb-8 w-[90%] mx-auto md:gap-8">

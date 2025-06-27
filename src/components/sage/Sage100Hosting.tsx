@@ -118,7 +118,7 @@ Access and manage your small and mid-sized business from anywhere, at any time w
 
       <main>
         <section>
-        <h2 className='text-3xl text-center py-4 font-bold font-montserrat text-textPrimary'>
+        <h2 className='text-3xl text-center py-4 w-[90%] mx-auto font-bold font-inter text-textPrimary'>
     Sage 100 Cloud Hosting to Elevate Your Accounting Experience
         </h2>
         <p className="font-montserrat text-xl text-center font-semibold">Top Reasons to Move Your Sage 100 ERP to the Cloud
@@ -138,10 +138,10 @@ Access and manage your small and mid-sized business from anywhere, at any time w
 
         {/* TEXT on the left (or top on mobile) */}
         <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
-          <h2 className="font-semibold text-textPrimary   text-xl md:text-xl ">
+          <h2 className="font-semibold text-textPrimary text-justify  text-xl md:text-xl ">
           Sage 100 ERP is one of the most sought-after and user-friendly accounting software for small businesses. However, sticking to the traditional software has its own set of cons. With the increased need for businesses to stay online and accessible round-the-clock, it is important to move to the cloud. Sage 100 ERP hosting helps install and set up the desktop software on virtual servers, making it accessible on any device, from any location, and at any time of day, via the internet.
           </h2>
-           <p className="font-montserrat text-gray-700 text-sm md:text-base">
+           <p className="font-montserrat text-gray-700 text-justify text-sm md:text-base">
              Sage 10 ERP hosting is an exceptional solution for small and mid-sized businesses as it adds a greater level of flexibility and scalability. Business owners can still enjoy all the powerful features of their most used accounting software with Sage 100 cloud hosting allowing their business to scale at a pace that they desire. Taking the productivity of Sage 100 hosting further, SMBs can also host an array of add-ons on the cloud.
             </p>
         </article>
@@ -149,7 +149,7 @@ Access and manage your small and mid-sized business from anywhere, at any time w
 
        
 
-        <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
         <div className="flex-1">
           <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
 Ready for Sage 100 ERP Cloud Hosting?          </h1>
@@ -163,7 +163,7 @@ Ready for Sage 100 ERP Cloud Hosting?          </h1>
 
 
 
-      <section className="px-5 md:px-24 py-16 ">
+      <section className="w-[90%] mx-auto py-16 ">
        
 
        <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
@@ -209,18 +209,18 @@ Why should you choose Winscloud Matrix for Sage 100 cloud hosting?
         </div>
       </section>
 
-       <SageLinks/>
+       <SageLinks/> 
 
-         <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
-           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-inter text-blue-900 p-8 mb-4">
+         <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
+           <h1 className="text-3xl md:text-4xl text-center font-extrabold font-inter text-blue-900 p-8 ">
 Who should choose Sage 100 ERP Application Hosting?
         </h1>
-        <p className="text-center max-w-5xl font-montserrat text-gray-800 ">Sage 100 is an accounting software for small and mid-sized businesses, particularly suitable for those that are growing. Sage 100 cloud hosting services are perfect for businesses like manufacturing, chemical substances, construction, healthcare, retail, food and beverage, not for profit organizations, distribution, and professional services.
+        <p className="text-justify md:text-center w-[90%] font-montserrat text-gray-800 ">Sage 100 is an accounting software for small and mid-sized businesses, particularly suitable for those that are growing. Sage 100 cloud hosting services are perfect for businesses like manufacturing, chemical substances, construction, healthcare, retail, food and beverage, not for profit organizations, distribution, and professional services.
 </p>
-<p className="text-center mt-4 font-montserrat text-gray-800 max-w-5xl">Sage 100 ERP application hosting can manage accounting, manufacturing, sales, inventory, and warehouse. It also helps businesses by generating insights which can help predict customer behaviors, ultimately helping meet their changing demands. While the desktop software is a perfect solution to manage the day-to-day business operations, Sage 100 cloud hosting blends it with the power of cloud – allowing businesses to grow seamlessly.
+<p className="text-justify md:text-center mt-4 font-montserrat w-[90%]  text-gray-800 max-w-5xl">Sage 100 ERP application hosting can manage accounting, manufacturing, sales, inventory, and warehouse. It also helps businesses by generating insights which can help predict customer behaviors, ultimately helping meet their changing demands. While the desktop software is a perfect solution to manage the day-to-day business operations, Sage 100 cloud hosting blends it with the power of cloud – allowing businesses to grow seamlessly.
 </p>
-                <div className="h-full my-8 w-full pt-12 p-4">
-                    <div className="grid gap-14 md:grid-cols-3 md:gap-5">
+                <div className=" my-8 pt-12 ">
+                    <div className="grid gap-14 md:grid-cols-3 w-[90%] mx-auto md:gap-5">
                       <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                         <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
                           <LuClock />

@@ -116,12 +116,12 @@ const Quick_hosting_canada = () => {
       </section>
 
       <section>
-        <h2 className='text-3xl text-center max-w-8xl mx-auto px-3  py-4 font-bold font-montserrat text-textPrimary'>
-QuickBooks Canada Hosting: Remote Access to All Versions QuickBooks Desktop for Canadian Businesses
+        <h2 className='text-3xl text-center max-w-8xl mx-auto px-3  py-4 font-bold font-inter text-textPrimary'>
+          QuickBooks Canada Hosting: Remote Access to All Versions QuickBooks Desktop for Canadian Businesses
         </h2>
       </section>
 
-      <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+      <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-2 md:px-16 md:py-12">
         {/* IMAGE on the right (or bottom on mobile) */}
         <figure className="w-full md:w-1/2 flex justify-center">
           <img
@@ -147,10 +147,10 @@ QuickBooks Canada Hosting: Remote Access to All Versions QuickBooks Desktop for 
 
 
       <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
-        <h2 className="font-bold text-3xl mt-3 text-center text-textPrimary">
+        <h2 className="font-bold font-inter text-3xl mt-3 text-center text-textPrimary">
           Benefits of Moving from Desktop to QuickBooks Canada Hosting
         </h2>
-        <p className="font-inter w-[90%] text-gray-800 text-center mt-4 max-w-4xl">
+        <p className="font-montserrat text-justify w-[90%] text-gray-800 md:text-center mt-4 max-w-4xl">
           Our US-based, superfast data centers and SSD-based HPC servers ensure 99.99% uptime for the most seamless collaboration with teams across multiple locations and devices. Experience unparalleled performance and unmatched flexibility with easy accessibility of your fully backed-up data.
 
         </p>
@@ -266,39 +266,39 @@ QuickBooks Canada Hosting: Remote Access to All Versions QuickBooks Desktop for 
 
 
 
-      <h1 className="text-center font-inter font-bold text-3xl text-textPrimary  p-2">QuickBooks Canada FAQs</h1>
+      <h1 className="text-center font-inter font-bold text-3xl text-textPrimary  pt-5">QuickBooks Canada FAQs</h1>
 
       <div className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-xl shadow-lg overflow-hidden">
-  {faqs.map((faq, index) => (
-    <div key={index} className="border-b border-gray-100 last:border-b-0">
-      <button
-        className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
-        onClick={() => toggleFAQ(index)}
-      >
-        <span className="font-josefin text-gray-800 text-lg font-medium">
-          {faq.question}
-        </span>
-        <div className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? 'bg-red-100' : 'bg-gray-100'} transition-all duration-300`}>
-          {openIndex === index ? (
-            <FaMinus className="text-red-600 text-xs" />
-          ) : (
-            <FaPlus className="text-gray-600 text-xs" />
-          )}
-        </div>
-      </button>
-      
-      <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}
-      >
-        <div className="p-5 bg-gray-50">
-          <p className="font-montserrat text-gray-800 text-sm leading-relaxed">
-            {faq.answer}
-          </p>
-        </div>
+        {faqs.map((faq, index) => (
+          <div key={index} className="border-b border-gray-100 last:border-b-0">
+            <button
+              className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
+              onClick={() => toggleFAQ(index)}
+            >
+              <span className="font-josefin text-gray-800 text-lg font-medium">
+                {faq.question}
+              </span>
+              <div className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? 'bg-red-100' : 'bg-gray-100'} transition-all duration-300`}>
+                {openIndex === index ? (
+                  <FaMinus className="text-red-600 text-xs" />
+                ) : (
+                  <FaPlus className="text-gray-600 text-xs" />
+                )}
+              </div>
+            </button>
+
+            <div
+              className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}
+            >
+              <div className="p-5 bg-gray-50">
+                <p className="font-montserrat text-gray-800 text-sm leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
       <Partner />
 
     </>

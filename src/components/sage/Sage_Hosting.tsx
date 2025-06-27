@@ -119,10 +119,10 @@ const Sage_Hosting = () => {
 
       <main>
         <section>
-          <h2 className='text-3xl text-center px-2 py-4 max-w-6xl mx-auto font-bold font-montserrat text-textPrimary'>
+          <h2 className='text-3xl text-center  py-4 w-[90%] mx-auto font-bold font-inter text-textPrimary'>
             QuickBooks POS Cloud Hosting: Conveniently track multi-channel sales and manage your retail inventory from multiple locations
           </h2>
-          <p className="font-montserrat text-xl text-center font-semibold">Host Your Sage Desktop & Experience the Power of the Cloud
+          <p className="font-montserrat text-xl w-[90%] mx-auto text-center font-semibold">Host Your Sage Desktop & Experience the Power of the Cloud
           </p>
         </section>
 
@@ -163,12 +163,12 @@ const Sage_Hosting = () => {
 
 
 
-        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
-          <h2 className="font-bold text-3xl mt-3 mb-12 text-center text-textPrimary">
+        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100    pt-12  ">
+          <h2 className="font-bold font-inter text-3xl w-[90%] mx-auto mt-3 mb-12 text-center text-textPrimary">
             Benefits of Sage Hosting: What does the cloud have to offer?
           </h2>
 
-          <div className="grid gap-14 md:grid-cols-3 md:gap-8">
+          <div className="grid gap-14 w-[90%] mx-auto py-6 md:grid-cols-3 md:gap-8">
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
@@ -246,7 +246,7 @@ const Sage_Hosting = () => {
         <SageLinks />
 
 
-        <section className="px-5 md:px-24 py-16 ">
+        <section className="w-[90%] mx-auto py-16 ">
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Winscloud QuickBooks Enterprise Cloud Hosting: Powerful Features That Help Your Business Grow
           </h1>
@@ -291,7 +291,7 @@ const Sage_Hosting = () => {
         <Expriance />
         <Awards />
 
-        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">Sage Hosting Frequently Asked Questions (FAQs) -</h1>
+        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary px-4 md:pt-4">Sage Hosting Frequently Asked Questions (FAQs) -</h1>
 
         <section className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">
           {faqs.map((faq, index) => (

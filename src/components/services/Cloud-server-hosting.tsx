@@ -82,7 +82,7 @@ const CloudServerHosting = () => {
 
       <main>
         <section>
-          <h2 className='text-3xl text-center py-4 max-w-6xl mx-auto font-bold font-montserrat text-textPrimary'>
+          <h2 className='text-3xl text-center py-4 w-[90%] mx-auto font-bold font-inter text-textPrimary'>
             Dedicated Server Hosting for Optimal Performance and Security
           </h2>
 
@@ -120,12 +120,12 @@ const CloudServerHosting = () => {
         </section>
 
 
-        <p className="font-montserrat text-gray-700 text-sm text-justify md:text-base p-6 rounded-lg  shadow-md bg-white hover:shadow-lg mx-8 transition-shadow duration-300">At Winscloud, we pride ourselves on being the best cloud server provider in the business. We are always looking for new ways to improve our service and make our customers’ lives easier. To provide flexible and scalable Cloud Hosting solutions we are constantly innovating and expanding services so that our customers can always rely on us.Winscloud’s Cloud server providers are a reliable and trusted name when it comes to providing cloud hosting services. We have a team of experts who are always available to take care of all the technical issues that may arise. The company has a wide range of services that it offers, from maintaining infrastructure to managing the software hassle. This makes Winscloud’s flexible and scalable Cloud Hosting the perfect partner for any business that wants to move to the cloud.
+        <p className="font-montserrat text-gray-700 text-sm text-justify md:text-base p-6 rounded-lg  shadow-md bg-white hover:shadow-lg w-[90%] mx-auto transition-shadow duration-300">At Winscloud, we pride ourselves on being the best cloud server provider in the business. We are always looking for new ways to improve our service and make our customers’ lives easier. To provide flexible and scalable Cloud Hosting solutions we are constantly innovating and expanding services so that our customers can always rely on us.Winscloud’s Cloud server providers are a reliable and trusted name when it comes to providing cloud hosting services. We have a team of experts who are always available to take care of all the technical issues that may arise. The company has a wide range of services that it offers, from maintaining infrastructure to managing the software hassle. This makes Winscloud’s flexible and scalable Cloud Hosting the perfect partner for any business that wants to move to the cloud.
 
         </p>
 
 
-        <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl mt-7 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl mt-7 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
           <div className="flex-1">
             <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
               Ready to see how  Cloud Server Hosting helps with tax preparation?
@@ -139,13 +139,13 @@ const CloudServerHosting = () => {
         </div>
 
         <ServiceLink />
-        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
-          <h2 className="font-bold text-3xl md:text-4xl mt-3 font-inter  my-5  text-center text-textPrimary">
+        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100  py-6  pt-12  ">
+          <h2 className="font-bold font-inter text-3xl px-3 md:text-4xl mt-3  my-5  text-center text-textPrimary">
             We are reliable cloud dedicated server hosting provider
           </h2>
           <p className="text-center font-montserrat mb-10 text-gray-800 max-w-6xl mx-auto">Cloud Dedicated Server Hosting: Simplify finances, access anywhere, anytime, for peace of mind</p>
 
-          <div className="grid gap-14 md:grid-cols-3 md:gap-8">
+          <div className="grid gap-14 w-[90%] mx-auto py-6 md:grid-cols-3 md:gap-8">
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
@@ -226,7 +226,7 @@ const CloudServerHosting = () => {
 
 
 
-        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="py-16 w-[90%] mx-auto   bg-white">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl font-bold text-gray-800 font-inter mb-12 text-center">
               What can you do with us
@@ -256,7 +256,7 @@ const CloudServerHosting = () => {
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300 ">
-                      Cloud server hosting revolutionizes digital infrastructure, offering adaptable, scalable, and dependable solutions. By leveraging remote servers, it eliminates the need for physical hardware, reducing expenses and maintenance.
+                     Cloud server hosting revolutionizes digital infrastructure, offering adaptable, scalable, and dependable solutions. By leveraging remote servers, it eliminates the need for physical hardware, reducing expenses and maintenance. This ensures consistent uptime, meeting fluctuating demands without hardware upgrades. With features like data redundancy and automated backups, cloud server hosting prioritizes security and disaster recovery. Its pay-as-you-go model optimizes cost efficiency, allowing businesses to scale resources. Ultimately, cloud server hosting empowers organizations with agile, resilient IT infrastructure.
                     </p>
                   </div>
                 </div>
@@ -285,7 +285,7 @@ const CloudServerHosting = () => {
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300">
-                      Businesses benefit from hosted cloud servers, which offer efficient and adaptable computing solutions. By utilizing remote servers, hosted cloud servers eliminate the requirement for physical infrastructure.
+                     Businesses benefit from hosted cloud servers, which offer efficient and adaptable computing solutions. By utilizing remote servers, hosted cloud servers eliminate the requirement for physical infrastructure, thereby lowering costs and maintenance efforts. This facilitates seamless scalability to accommodate changing demands without the necessity for hardware upgrades. Prioritizing security and disaster recovery, hosted cloud servers come equipped with features like automated backups and data redundancy. Their pay-as-you-go model ensures cost efficiency, enabling businesses to scale resources based on usage. Ultimately, hosted cloud servers provide modern organizations with agile and resilient IT solutions.
                     </p>
                   </div>
                 </div>
@@ -314,7 +314,7 @@ const CloudServerHosting = () => {
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300">
-                      Cloud server providers deliver dependable and scalable computing resources as needed by businesses. They handle infrastructure management, enabling clients to concentrate on core operations.
+                     Cloud server providers deliver dependable and scalable computing resources as needed by businesses. They handle infrastructure management, enabling clients to concentrate on core operations. Flexible pricing models and robust security features enable businesses to manage costs and protect their data effectively. With high uptime and adaptable scalability, hosted cloud server providers adjust to changing demands seamlessly. Their services equip businesses with the agility and efficiency required to excel in today’s digital realm, establishing them as essential partners in modern IT infrastructure.
                     </p>
                   </div>
                 </div>
@@ -343,7 +343,7 @@ const CloudServerHosting = () => {
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300">
-                      Server providers deliver essential computing resources, ensuring smooth operations for businesses. They manage infrastructure, freeing clients to prioritize core objectives.
+                     Server providers deliver essential computing resources, ensuring smooth operations for businesses. They manage infrastructure, freeing clients to prioritize core objectives. Through flexible pricing and robust security, server providers boost cost efficiency and safeguard data integrity. With dependable uptime and scalable solutions, server providers effortlessly adapt to evolving business needs. Their offerings provide the reliability and agility crucial for thriving in today’s competitive landscape, cementing the server provider’s role as indispensable partners in modern IT infrastructure.
                     </p>
                   </div>
                 </div>

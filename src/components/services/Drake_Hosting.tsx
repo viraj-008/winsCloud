@@ -2,9 +2,11 @@ import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Partner from "../Partner";
-import { MdOutlineSecurity } from "react-icons/md";
 import { RiShakeHandsLine } from "react-icons/ri";
-import { LuClock } from "react-icons/lu";
+import { MdSupportAgent } from "react-icons/md";
+import { IoMdAppstore } from "react-icons/io";
+
+
 import { motion } from "framer-motion";
 import ServiceLink from "../ServiceLink";
 import Awards from "../Awards";
@@ -123,11 +125,11 @@ const Drake_Hosting = () => {
       </section>
 
       <main>
-        <section>
-          <h2 className='text-3xl text-center py-4 max-w-6xl mx-auto font-bold font-montserrat text-textPrimary'>
-            Why Choose ProSeries Hosting: Elevate your tax operations and crack the full potential of your ProSeries Tax Software Hosting
+        <section className="w-[90%] mx-auto">
+          <h2 className='text-3xl text-center py-4  font-inter  font-bold  text-textPrimary'>
+            Drake Cloud Hosting: How does opting for Drake Tax Hosting Elevate Your Tax Preparation?
           </h2>
-          <p className="font-montserrat text-xl text-center font-semibold">No more staying tethered to your office computer!
+          <p className="font-montserrat text-xl  text-center font-semibold">No more staying tethered to your office computer!
           </p>
 
         </section>
@@ -157,13 +159,13 @@ const Drake_Hosting = () => {
         </section>
 
 
-        <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
-          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 p-2 ">
+        <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
+          <h1 className="text-3xl md:text-4xl w-[90%] text-center font-bold font-inter text-blue-900 p-2 ">
             Drake Hosting Key Features: How does drake cloud hosting take your tax preparation to the next level?
           </h1>
 
-          <div className="h-full my-8 w-full pt-12 p-4">
-            <div className="grid gap-14 md:grid-cols-3 md:gap-5">
+          <div className="h-full my-8 w-full pt-12 ">
+            <div className="grid gap-14 md:grid-cols-3 w-[90%] mx-auto md:gap-5">
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
                   <RiShakeHandsLine />
@@ -175,7 +177,7 @@ const Drake_Hosting = () => {
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-                  <LuClock />
+                  <MdSupportAgent />
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Multi-Device Support</h1>
                 <p className="px-4 text-gray-500">
@@ -184,7 +186,7 @@ const Drake_Hosting = () => {
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
-                  <MdOutlineSecurity />
+                  < IoMdAppstore />
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Third-Party App Integration</h1>
                 <p className="px-4 text-gray-500">
@@ -197,7 +199,7 @@ const Drake_Hosting = () => {
 
 
 
-        <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl mt-7 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl mt-7 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
           <div className="flex-1">
             <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
               Ready to see how Drake Cloud Hosting helps with tax preparation?
@@ -211,8 +213,8 @@ const Drake_Hosting = () => {
         </div>
 
 
-        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
+        <div className="py-16 w-[90%] mx-auto  bg-white">
+          <div className=" mx-auto">
             <h1 className="text-4xl font-bold text-gray-800 font-inter mb-2 text-center">
               How to Set Up Your Drake Tax Software on the Cloud in 3 Simple Steps?
             </h1>
@@ -227,27 +229,29 @@ const Drake_Hosting = () => {
               {/* Card 2 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <div className="w-10 h-10 mb-4 md:mb-2 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      className="w-6 h-6"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                  </div>
                   <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        className="w-6 h-6"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                      </svg>
-                    </div>
                     <h2 className="text-gray-100 text-xl font-semibold">
-                      Enhancing Efficiency: The Versatility of Hosted Cloud Servers
+                      Find the most suitable hosting plan for your small business
                     </h2>
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300">
-                      Businesses benefit from hosted cloud servers, which offer efficient and adaptable computing solutions. By utilizing remote servers, hosted cloud servers eliminate the requirement for physical infrastructure.
+                      As an experienced drake hosting provider, we offer dedicated as well as shared hosting to our clients to accommodate their unique needs. We offer complete freedom to business owners to select the plan that meets their needs, is affordable, and offers flexibility to scale.
+
+
                     </p>
                   </div>
                 </div>
@@ -256,27 +260,29 @@ const Drake_Hosting = () => {
               {/* Card 3 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      className="w-6 h-6"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                  </div>
                   <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        className="w-6 h-6"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                      </svg>
-                    </div>
                     <h2 className="text-gray-100 text-xl font-semibold">
-                      Empowering Efficiency: The Role of Cloud Server Providers in Modern Business
+                      Provide your Drake License details
                     </h2>
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300">
-                      Cloud server providers deliver dependable and scalable computing resources as needed by businesses. They handle infrastructure management, enabling clients to concentrate on core operations.
+                      To begin your cloud transition process, you must present your Drake software license to your Drake hosting provider. You might also need to provide additional details like your number of users and the amount of storage you need.
+
+
                     </p>
                   </div>
                 </div>
@@ -285,27 +291,29 @@ const Drake_Hosting = () => {
               {/* Card 4 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      className="w-6 h-6"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                  </div>
                   <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        className="w-6 h-6"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                      </svg>
-                    </div>
                     <h2 className="text-gray-100 text-xl font-semibold">
-                      Empowering Business Efficiency: The Role of Server Providers in Modern IT
+                      Access your drake tax software cloud hosting
                     </h2>
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300">
-                      Server providers deliver essential computing resources, ensuring smooth operations for businesses. They manage infrastructure, freeing clients to prioritize core objectives.
+                      In just 2-5 hours, depending on the size of your data, your transition to the cloud will be complete. You can then access your favorite software and safely begin your tax preparation process, on the very same day!
+
+
                     </p>
                   </div>
                 </div>
@@ -319,7 +327,7 @@ const Drake_Hosting = () => {
 
         <ServiceLink />
 
-        <section className="px-5 md:px-24 py-16 ">
+        <section className="w-[90%] mx-auto py-16 ">
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Why Should You Choose Winscloud for Drake Tax Software Hosting: Tax Preparation Transformed with the Power of Cloud
           </h1>
@@ -368,46 +376,44 @@ const Drake_Hosting = () => {
         <Expriance />
         <Awards />
 
-        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">ProSeries Cloud Hosting Frequently Asked Questions (FAQs) -</h1>
+        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary  mt-5 px-4 p-2">ProSeries Cloud Hosting Frequently Asked Questions (FAQs) -</h1>
         <section className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">
-  {faqs.map((faq, index) => (
-    <div key={index} className="border-b border-gray-100 last:border-b-0">
-      <button
-        className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
-        onClick={() => toggleFAQ(index)}
-      >
-        <span className="font-josefin text-gray-800 text-lg font-medium">
-          {faq.question}
-        </span>
-        <div
-          className={`flex items-center justify-center h-8 w-8 rounded-full ${
-            openIndex === index ? "bg-red-100" : "bg-gray-100"
-          } transition-all duration-300`}
-        >
-          {openIndex === index ? (
-            <FaMinus className="text-red-600 h-3 w-4" />
-          ) : (
-            <FaPlus className="text-gray-600 h-3 w-4" />
-          )}
-        </div>
-      </button>
+          {faqs.map((faq, index) => (
+            <div key={index} className="border-b border-gray-100 last:border-b-0">
+              <button
+                className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
+                onClick={() => toggleFAQ(index)}
+              >
+                <span className="font-josefin text-gray-800 text-lg font-medium">
+                  {faq.question}
+                </span>
+                <div
+                  className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? "bg-red-100" : "bg-gray-100"
+                    } transition-all duration-300`}
+                >
+                  {openIndex === index ? (
+                    <FaMinus className="text-red-600 h-3 w-4" />
+                  ) : (
+                    <FaPlus className="text-gray-600 h-3 w-4" />
+                  )}
+                </div>
+              </button>
 
-      <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${
-          openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="p-5 bg-gray-50 text-gray-700">
-          {faq.answer && (
-            <p className="font-montserrat text-sm md:text-base leading-relaxed">
-              {faq.answer}
-            </p>
-          )}
-        </div>
-      </div>
-    </div>
-  ))}
-</section>
+              <div
+                className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                  }`}
+              >
+                <div className="p-5 bg-gray-50 text-gray-700">
+                  {faq.answer && (
+                    <p className="font-montserrat text-sm md:text-base leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </section>
 
       </main>
 

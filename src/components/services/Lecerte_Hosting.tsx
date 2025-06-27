@@ -3,7 +3,6 @@ import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Partner from "../Partner";
 import { motion } from "framer-motion";
-import { MdOutlineSecurity } from "react-icons/md";
 import { RiShakeHandsLine } from "react-icons/ri";
 import { LuClock } from "react-icons/lu";
 import Expriance from "../Expriance";
@@ -127,10 +126,10 @@ const Lecerte_Hosting = () => {
 
       <main>
         <section>
-          <h2 className='text-3xl text-center py-4 font-bold font-montserrat text-textPrimary'>
+          <h2 className='text-3xl w-[90%] mx-auto text-center pt-4 font-bold font-montserrat text-textPrimary'>
             Lacerte Hosting: A Modern Solution to Facilitate Business Growth, Team Collaboration, and Seamless Tax Filing
           </h2>
-          
+
         </section>
 
         <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
@@ -158,49 +157,53 @@ const Lecerte_Hosting = () => {
 
 
 
-        <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100">
-          <h2 className="font-bold text-3xl mt-3 text-center text-textPrimary">
+        <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100">
+          <h2 className="font-bold font-inter text-4xl px-3 mt-3 text-center text-textPrimary">
             How to transition to Lacerte Tax Hosting?
           </h2>
           <p className="text-gray-800 mt-4 text-center font-semibold">Access When You Need It</p>
-          <p className="font-inter text-gray-800 text-center mt-8">
+          <p className="font-inter text-gray-800 px-3 text-center mt-8">
             Winscloud helps businesses transition to the cloud environment with Lacerte Hosting in three simple steps –
           </p>
 
-          <div className="h-full my-8 w-full pt-12 p-4">
-            <div className="grid gap-14 md:grid-cols-3 md:gap-5">
+          <div className="h-full my-8 w-full pt-12 ">
+            <div className="grid gap-14 w-[90%] mx-auto md:grid-cols-3 md:gap-5">
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
                   <RiShakeHandsLine />
                 </div>
-                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Best-fitting Plans</h1>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Choose your preferred hosting plan</h1>
                 <p className="px-4 text-gray-500">
-                  Our monthly QuickBooks Hosting plans are highly flexible, perfect to accommodate your changing needs. Not sure if Winscloud fits the bill for you? We promise a 30-day money-back guarantee.
+                  You can choose among our dedicated and shared hosting plans and select a plan that accommodates your number of users and storage needs.
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
                   <LuClock />
                 </div>
-                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Round-the-Clock Support</h1>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Share your Lacerte application details
+                </h1>
                 <p className="px-4 text-gray-500">
-                  Need expert help with QuickBooks? Our 24/7 tech support via email, call, and text ensures a 15-minute response time.
+                  Provide your license details and your hosting plan details with our cloud expert so they can progress further with your cloud transition
+
+
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
-                  <MdOutlineSecurity />
+                 <LuClock />
                 </div>
-                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Data Security and Recovery</h1>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Begin your Lacerte cloud hosting journey
+                </h1>
                 <p className="px-4 text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo iure inventore amet modi accusantium vero perspiciatis, incidunt dicta sed aspernatur!
+                  Your cloud setup will be done in 120 minutes, and you can effortlessly begin your journey with cloud-integrated Lacerte tax software.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl mt-7 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl mt-7 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
           <div className="flex-1">
             <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
               Need our help to decide on the best plan for your business? Take a FREE Trial Before Taking Any Decision
@@ -215,7 +218,7 @@ const Lecerte_Hosting = () => {
 
 
         <ServiceLink />
-        <section className="px-5 md:px-24 py-16 ">
+        <section className="w-[90%] mx-auto py-16 ">
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Winscloud Matrix Lacerte Tax Hosting: Why should you choose Lacerte Hosting with Winscloud for a seamless Tax Season?
           </h1>
@@ -224,7 +227,7 @@ const Lecerte_Hosting = () => {
 
 
 
-          <div className="grid md:grid-cols-2 gap-8 mt-14">
+          <div className="grid md:grid-cols-2  gap-8 mt-14">
             {[
               {
                 title: "Enhanced Bandwidth",
@@ -268,46 +271,44 @@ const Lecerte_Hosting = () => {
         <Awards />
 
         <section>
-          <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2"> Sage 50 lecerte Hosting Frequently Asked Questions</h1>
+          <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">  Lecerte Hosting Frequently Asked Questions</h1>
           <section className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">
-  {faqs.map((faq, index) => (
-    <article key={index} className="border-b border-gray-100 last:border-b-0">
-      <button
-        className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
-        onClick={() => toggleFAQ(index)}
-      >
-        <span className="font-josefin text-gray-800 text-lg font-medium">
-          {faq.question}
-        </span>
-        <div
-          className={`flex items-center justify-center h-8 w-8 rounded-full ${
-            openIndex === index ? "bg-red-100" : "bg-gray-100"
-          } transition-all duration-300`}
-        >
-          {openIndex === index ? (
-            <FaMinus className="text-red-600 h-3 w-4" />
-          ) : (
-            <FaPlus className="text-gray-600 h-3 w-4" />
-          )}
-        </div>
-      </button>
+            {faqs.map((faq, index) => (
+              <article key={index} className="border-b border-gray-100 last:border-b-0">
+                <button
+                  className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <span className="font-josefin text-gray-800 text-lg font-medium">
+                    {faq.question}
+                  </span>
+                  <div
+                    className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? "bg-red-100" : "bg-gray-100"
+                      } transition-all duration-300`}
+                  >
+                    {openIndex === index ? (
+                      <FaMinus className="text-red-600 h-3 w-4" />
+                    ) : (
+                      <FaPlus className="text-gray-600 h-3 w-4" />
+                    )}
+                  </div>
+                </button>
 
-      <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${
-          openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="p-5 bg-gray-50">
-          {faq.answer && (
-            <p className="font-montserrat text-sm md:text-base leading-relaxed text-gray-800">
-              {faq.answer}
-            </p>
-          )}
-        </div>
-      </div>
-    </article>
-  ))}
-</section>
+                <div
+                  className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                >
+                  <div className="p-5 bg-gray-50">
+                    {faq.answer && (
+                      <p className="font-montserrat text-sm md:text-base leading-relaxed text-gray-800">
+                        {faq.answer}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </section>
 
         </section>
       </main>

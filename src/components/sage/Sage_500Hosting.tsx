@@ -166,7 +166,7 @@ const Sage_500Hosting = () => {
 
         <SageLinks />
 
-        <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
+        <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
           <h1 className="text-3xl md:text-4xl  mt-4 text-center font-extrabold font-inter text-blue-900 p-2 ">
             Who should choose Sage 500 ERP Application Hosting?
           </h1>
@@ -214,7 +214,7 @@ const Sage_500Hosting = () => {
               Simple Steps to Migrate to the Cloud with Sage 500 Cloud Hosting
             </h2>
 
-            <p className="px-4 font-montserrat text-gray-600 mb-6 text-lg leading-relaxed">
+            <p className="px-4 font-montserrat text-gray-600 mb-6 text-center text-lg leading-relaxed">
               If you are ready to embrace the cloud, you can migrate your financial data and your desktop-based Sage 500 ERP application to the cloud in the following steps:
             </p>
 
@@ -253,7 +253,7 @@ const Sage_500Hosting = () => {
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Why Choose Winscloud Matrix for your Sage 300 ERP cloud hosting services?
           </h1>
-          <p className="max-w-4xl font-montserrat text-xl mx-auto text-center">The right Sage 500 ERP cloud hosting services provider is critical when migrating your business to the cloud. Winscloud Matrix comes with the right experience, success stories, and features that make them the perfect choice for Sage 500 hosting –
+          <p className="w-[90%] font-montserrat text-xl mx-auto text-justify">The right Sage 500 ERP cloud hosting services provider is critical when migrating your business to the cloud. Winscloud Matrix comes with the right experience, success stories, and features that make them the perfect choice for Sage 500 hosting –
 
           </p>
 

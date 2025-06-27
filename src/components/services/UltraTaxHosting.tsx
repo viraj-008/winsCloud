@@ -132,7 +132,7 @@ function UltraTaxHosting() {
 
       <main>
         <section>
-          <h2 className='text-3xl text-center py-4 max-w-6xl mx-auto font-bold font-montserrat text-textPrimary'>
+          <h2 className='text-3xl text-center py-4 w-[88%] mx-auto font-bold font-inter text-textPrimary'>
             UltraTax Cloud Hosting Service: Perfect solution for tax professionals and accounting firms to enhance productivity
           </h2>
 
@@ -161,13 +161,13 @@ function UltraTaxHosting() {
           </article>
         </section>
 
-        <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
-          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-inter text-blue-900 p-2 ">
+        <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
+          <h1 className="text-3xl md:text-4xl text-center font-bold font-inter text-blue-900 p-2 ">
             Simplify Your Tax Preparation with UltraTax Cloud Hosting service
           </h1>
 
-          <div className="h-full my-8 w-full pt-12 p-4">
-            <div className="grid gap-14 md:grid-cols-3 md:gap-5">
+          <div className="h-full my-8 w-full pt-12 ">
+            <div className="grid gap-14 md:grid-cols-3 w-[90%] mx-auto md:gap-5">
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
                   <MdDevices />
@@ -200,11 +200,11 @@ function UltraTaxHosting() {
         </section>
 
 
-        <section className="px-5 md:px-24 py-16 ">
+        <section className="w-[90%] mx-auto py-16 ">
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Simplify Your Tax Preparation with UltraTax Cloud Hosting service
           </h1>
-          <p className="text-center font-montserrat text-gray-800">At Winscloud, we understand the need for businesses to be available round-the-clock and have helped multiple small and medium-sized businesses with their UltraTax hosting. Our reliable team of cloud experts provide their cloud knowledge, expertise, and 24/7 support to tackle all your hosting related needs and concerns.
+          <p className="text-justify md:text-center font-montserrat text-gray-800">At Winscloud, we understand the need for businesses to be available round-the-clock and have helped multiple small and medium-sized businesses with their UltraTax hosting. Our reliable team of cloud experts provide their cloud knowledge, expertise, and 24/7 support to tackle all your hosting related needs and concerns.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mt-14">
@@ -247,7 +247,7 @@ function UltraTaxHosting() {
           </div>
         </section>
 
-        <div className="bg-gradient-to-br w-[96%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl mt-7 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl mt-7 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
           <div className="flex-1">
             <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
               Would you like us to help you decide on the best plan for YOUR business? Start a One-Month FREE TRIAL to make an informed decision
@@ -263,7 +263,7 @@ function UltraTaxHosting() {
 
         <ServiceLink />
 
-        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="py-16 w-[90%] mx-auto bg-white">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl font-bold text-gray-800 font-inter mb-2 text-center">
               Simplify Your Tax Preparation with UltraTax Cloud Hosting service
@@ -277,8 +277,7 @@ function UltraTaxHosting() {
               {/* Card 2 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -291,13 +290,15 @@ function UltraTaxHosting() {
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     </div>
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
                     <h2 className="text-gray-100 text-xl font-semibold">
-                      Enhancing Efficiency: The Versatility of Hosted Cloud Servers
+Select a suitable hosting plan
                     </h2>
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300">
-                      Businesses benefit from hosted cloud servers, which offer efficient and adaptable computing solutions. By utilizing remote servers, hosted cloud servers eliminate the requirement for physical infrastructure.
+Check out our hosting plans here and select the plan that best suits your business needs. Our plans are flexible, allowing you to scale up and down as you go.
+
                     </p>
                   </div>
                 </div>
@@ -306,8 +307,7 @@ function UltraTaxHosting() {
               {/* Card 3 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -320,13 +320,15 @@ function UltraTaxHosting() {
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     </div>
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
                     <h2 className="text-gray-100 text-xl font-semibold">
-                      Empowering Efficiency: The Role of Cloud Server Providers in Modern Business
+Provide Key Software Details
                     </h2>
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300">
-                      Cloud server providers deliver dependable and scalable computing resources as needed by businesses. They handle infrastructure management, enabling clients to concentrate on core operations.
+Your cloud expert will require key information like your license details, your software version, among other details to provide you with a customized cloud setup.
+
                     </p>
                   </div>
                 </div>
@@ -335,8 +337,7 @@ function UltraTaxHosting() {
               {/* Card 4 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -349,13 +350,15 @@ function UltraTaxHosting() {
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     </div>
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
                     <h2 className="text-gray-100 text-xl font-semibold">
-                      Empowering Business Efficiency: The Role of Server Providers in Modern IT
+Start Your Free Demo
                     </h2>
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300">
-                      Server providers deliver essential computing resources, ensuring smooth operations for businesses. They manage infrastructure, freeing clients to prioritize core objectives.
+Once the setup is complete with your stated requirements, you can ask your cloud expert to give you a free demo of your UltraTax Cloud Hosting service.
+
                     </p>
                   </div>
                 </div>

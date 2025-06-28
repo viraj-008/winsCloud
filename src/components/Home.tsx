@@ -186,7 +186,7 @@ const Home: React.FC = () => {
 
       <main>
         <section className="px-2 md:px-24  ">
-          <h1 className="text-3xl md:text-5xl mt-2 text-center font-extrabold  max-w-6xl  font-serif text-blue-900 mb-2">
+          <h1 className="text-3xl md:text-5xl mt-2 text-center font-bold  max-w-6xl  font-inter text-blue-900 mb-2">
             Remote Access Has Never Been Smoother
           </h1>
           <p className="text-center text-lg md:text-xl text-gray-700 font-medium max-w-3xl mx-auto">
@@ -196,7 +196,7 @@ const Home: React.FC = () => {
           <section className="max-w-6xl mx-auto px-2 py-6">
             <div className="text-center ">
 
-              <p className="text-3xl font-bold font-inter text-blue-900 black  mx-auto">
+              <p className="text-3xl font-semibold font-inter text-blue-900 black  mx-auto">
                 We absolutely love to see your business scale!
               </p>
             </div>
@@ -215,7 +215,7 @@ const Home: React.FC = () => {
          
         <div className='px-2'>
 
-          <h1 className="text-3xl md:text-3xl text-center font-bold font-montserrat text-blue-900">
+          <h1 className="text-3xl  text-center font-semibold font-inter text-blue-900">
             Why Choose Winscloud Matrix?
           </h1>
           <p className="text-center text-lg text-gray-700 mt-2 font-medium max-w-3xl mx-auto">

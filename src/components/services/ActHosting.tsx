@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import Partner from "../Partner";
-import { FaMapLocationDot } from "react-icons/fa6";
 import { GiServerRack } from "react-icons/gi";
 import { BsDatabaseCheck } from "react-icons/bs";
 import { MdFactCheck } from "react-icons/md";
 import { BsPersonLinesFill } from "react-icons/bs";
-import { MdBrowserUpdated } from "react-icons/md";
+import { MdOutlineSecurity } from "react-icons/md";
+import { GiPayMoney } from "react-icons/gi";
+
+
 
 import { motion } from "framer-motion";
 import Awards from "../Awards";
@@ -78,7 +80,7 @@ const ActHosting = () => {
       </section>
 
       <section>
-        <h2 className='text-3xl text-center py-4 max-w-6xl mx-auto font-bold font-montserrat text-textPrimary'>
+        <h2 className='text-3xl text-center mt-4  mx-auto font-bold font-montserrat text-textPrimary'>
           ACT Hosting Services offers seamless and powerful CRM management
 
         </h2>
@@ -88,7 +90,7 @@ const ActHosting = () => {
       <main>
 
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -112,26 +114,24 @@ const ActHosting = () => {
 
 
 
-        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
-          <h2 className="font-bold text-3xl md:text-4xl mt-3 font-inter  my-5  text-center text-textPrimary">
-            Rely on Our ATX Hosting Solutions for Unmatched Cloud Server Performance
+        <div className="h-full my-8 w-full py-8 bg-gradient-to-br from-blue-50 to-gray-100   pt-12  ">
+          <h2 className="font-bold text-3xl md:text-4xl mt-3 font-inter px-4  my-5  text-center text-textPrimary">
+Simplified ACT Hosting: Our Cloud, Your Financial Data
           </h2>
-          <p className="text-center font-montserrat mb-10 text-gray-800 max-w-6xl mx-auto">ATX Hosting: Simplify finances, access anywhere, anytime, for peace of mind
-
+          <p className="text-center text-xl font-montserrat mb-10 px-4 text-gray-800  mx-auto">ACT! Hosting: Simplify finances, access anywhere, anytime, for peace of mind
           </p>
 
-          <div className="grid gap-14 md:grid-cols-3 md:gap-8">
+          <div className="grid w-[90%] mx-auto gap-14 md:grid-cols-3 md:gap-8">
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <FaMapLocationDot />
+                <GiPayMoney/>
 
               </div>
-              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Well-equipped Data Centers
-
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Reduce Expenses
               </h1>
               <p className="px-4 text-gray-500">
-                Winscloud Cloud Server Hosting Providers offers hosting services that utilize state-of-the-art cloud technology allowing them to provide you with world-class service.
+                With our dedicated server, you can save your cost to establish an IT infrastructure.
               </p>
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
@@ -139,10 +139,10 @@ const ActHosting = () => {
                 <GiServerRack />
 
               </div>
-              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">High-performance servers
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">All Add-ons
               </h1>
               <p className="px-4 text-gray-500">
-                Winscloud Cloud Server Hosting Providers also offer high-performance cloud servers based on Solid State Drives (SSD). These servers are designed to give the best possible performance compared to traditional hard servers.
+                We are reducing your work on finding the respective plug-ins by providing all ACT add-ons at once.
               </p>
             </div>
 
@@ -154,7 +154,7 @@ const ActHosting = () => {
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Data security
               </h1>
               <p className="px-4 text-gray-500">
-                Cross-device compatibility The systems are supportive to various devices such as desktops, laptops, smartphones and tablets. Protect from any threads
+               Cross-device compatibility The systems are supportive to various devices such as desktops, laptops, smartphones and tablets.Protect from any threds
               </p>
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
@@ -162,12 +162,10 @@ const ActHosting = () => {
                 <MdFactCheck />
 
               </div>
-              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Error Checking and Validation
-
-
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Every Time Support
               </h1>
               <p className="px-4 text-gray-500">
-                Built-in error-checking and validation tools helped ensure accurate calculations and minimized the risk of common tax preparation errors.
+                The team at Winscloud is always ready to help you even during holidays by live chat.
               </p>
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
@@ -184,13 +182,13 @@ const ActHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <MdBrowserUpdated />
+                <MdOutlineSecurity />
 
               </div>
-              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Updates and Compliance
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">High security
               </h1>
               <p className="px-4 text-gray-500">
-                ATX typically provided regular updates to keep the software in compliance with changing tax laws and regulations, helping tax professionals stay current and avoid potential compliance issues.
+               Multiple security measures are in place to protect your data and applications on the cloud. These include multiple layers of authentication, strong encryption, and multi-factor authentication (MFA).
               </p>
             </div>
           </div>
@@ -200,7 +198,7 @@ const ActHosting = () => {
         <Expriance />
         <ServiceLink />
 
-        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="py-16  w-[90%] mx-auto bg-white">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl font-bold text-gray-800 font-inter mb-12 text-center">
               What can you do with us
@@ -225,12 +223,12 @@ const ActHosting = () => {
                       </svg>
                     </div>
                     <h2 className="text-gray-100 text-xl font-semibold">
-                      Effortless Tax Management: ATX Cloud Hosting Solutions
+                      Elevate CRM Efficiency with ACT Hosting Solutions
                     </h2>
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300 ">
-                      ATX Cloud Hosting transforms tax preparation for financial professionals by providing seamless access to ATX tax software from any location. This solution streamlines workflows and boosts efficiency. Accountants and CPAs can securely access important files and client information at any time and from any device. With robust encryption and backup measures, ATX Cloud Hosting ensures data security. Its scalable infrastructure adapts to diverse business needs. Simplify tax preparation with ATX Cloud Hosting, empowering financial professionals to excel.
+                      ACT Hosting offers efficient solutions for customer relationship management. Utilizing cloud-based services, businesses can seamlessly access and utilize ACT software from any location. The platform emphasizes data security through robust encryption and backup protocols, ensuring sensitive customer information remains protected. Its scalable infrastructure caters to diverse business needs, optimizing cost-effectiveness. With ACT Hosting, businesses can enhance customer relationship management, boost productivity, and remain competitive in the modern market landscape.
                     </p>
                   </div>
                 </div>
@@ -254,12 +252,12 @@ const ActHosting = () => {
                       </svg>
                     </div>
                     <h2 className="text-gray-100 text-xl font-semibold">
-                      Seamless Tax Management Anywhere: Explore ATX Remote Access
+                      Optimize CRM Efficiency with ACT Hosting Providers
                     </h2>
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300">
-                      ATX Remote Access provides financial professionals with convenient access to their tax software from anywhere. This remote solution facilitates seamless management of tax files and client data on-the-go. Secure encryption and backup protocols ensure the protection of sensitive information with ATX Remote Access. The platform’s versatility enables easy adaptation to changing needs, enhancing productivity and flexibility. Streamlining workflow processes, ATX Remote Access empowers users to deliver top-tier services to their clients efficiently, contributing to improved business outcomes.
+                      ACT Hosting Providers offer customized solutions for customer relationship management. By leveraging cloud-based services, businesses can access ACT software seamlessly from any location. These providers prioritize data security with robust encryption and backup protocols, ensuring the protection of sensitive customer information. Their scalable infrastructure meets diverse business needs, optimizing cost-effectiveness. Collaborating with ACT Hosting Providers empowers businesses to enhance customer relationship management, increase productivity, and maintain competitiveness in today’s dynamic market landscape.
                     </p>
                   </div>
                 </div>
@@ -283,12 +281,12 @@ const ActHosting = () => {
                       </svg>
                     </div>
                     <h2 className="text-gray-100 text-xl font-semibold">
-                      Unlock Flexibility with ACT Efficient Tax Preparation Made Easy with Hosted ATX Software
+Unlock Flexibility with ACT Remote Access Solutions
                     </h2>
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300">
-                      Experience a revolution in tax preparation with Hosted ATX Software for financial professionals. This cloud-based solution offers secure access to Hosted ATX Software from anywhere, streamlining the management of tax files and client data. Enhancing productivity and flexibility, Hosted ATX Software ensures robust encryption and backup measures for data protection. The scalable infrastructure of Hosted ATX Software caters to diverse business needs, optimizing cost-effectiveness. Empower your financial practice with simplified tax preparation, delivering top-tier services effortlessly and efficiently.
+                     ACT Remote Access facilitates convenient management of customer relationships from anywhere, ensuring seamless operations on-the-go. With robust encryption and backup protocols, sensitive data remains securely protected. The platform’s versatile features empower businesses to effortlessly adapt to changing needs, streamline workflow processes, and significantly enhance overall productivity. Ultimately, ACT Remote Access plays a pivotal role in improving customer service and organizational efficiency by providing users with the flexibility and accessibility needed to achieve sustained success in today’s competitive landscape.
                     </p>
                   </div>
                 </div>
@@ -312,11 +310,12 @@ const ActHosting = () => {
                       </svg>
                     </div>
                     <h2 className="text-gray-100 text-xl font-semibold">
-                      Optimize CRM Operations with Top-Tier Tax Solutions: ATX Hosting in the USA            </h2>
+                     Optimize CRM Operations with ACT Cloud Hosting Solutions
+           </h2>
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base text-gray-300">
-                      ATX Hosting services in the USA provide tax professionals with streamlined solutions for efficient tax preparation. Offering secure cloud-based access, users can conveniently utilize ATX software from any location. This facilitates seamless management of tax files and client data, enhancing productivity and flexibility. Robust encryption and backup measures ensure the security of sensitive information. The scalable infrastructure of ATX Hosting in the USA adapts to diverse business needs, optimizing cost-effectiveness. Elevate your tax preparation process with ATX Hosting in the USA for top-tier services with ease.
+                     ACT Cloud Hosting offers streamlined CRM solutions. By leveraging cloud-based services, users gain convenient access to ACT software from anywhere, ensuring seamless operations. The platform emphasizes data security with robust encryption and backup protocols to protect sensitive customer information. Its scalable infrastructure meets diverse business needs, optimizing cost-effectiveness. With ACT Cloud Hosting, businesses can enhance CRM efficiency, increase productivity, and maintain competitiveness in today’s dynamic market landscape.
                     </p>
                   </div>
                 </div>

@@ -100,9 +100,9 @@ const Navbar: React.FC = () => {
   inset-x-0
     mt-5
     w-[90%]              
-    max-w-[1440px]      
+          
     xs:max-w-[340px]      
-    lg:max-w-[1240px]    
+     xl:max-w-[1440px]
     mx-auto
     rounded-lg
     z-50

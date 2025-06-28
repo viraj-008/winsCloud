@@ -80,7 +80,7 @@ const TextWiseHost = () => {
 
       <main>
         <section>
-          <h2 className='text-3xl text-center py-4 max-w-6xl mx-auto font-bold font-montserrat text-textPrimary'>
+          <h2 className='text-3xl text-center py-4 w-[90%] mx-auto font-bold font-montserrat text-textPrimary'>
             TaxWise Hosting Software Simplifies Tax Preparation with Precision
           </h2>
 
@@ -108,14 +108,14 @@ const TextWiseHost = () => {
           </article>
         </section>
 
-        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
-          <h2 className="font-bold text-3xl md:text-5xl mt-3 font-inter  my-5  text-center text-textPrimary">
+        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 py-6 pt-12  ">
+          <h2 className="font-bold  text-4xl mt-3 font-inter w-[90%] mx-auto my-5  text-center text-textPrimary">
             Benefits of Winscloud TaxWise Hosting Software
           </h2>
-          <p className="text-center font-montserrat mb-10 text-gray-800 max-w-6xl mx-auto">TaxWise hosting: Simplify finances, access anywhere, anytime, for peace of mind
+          <p className="text-center text-xl font-montserrat mb-10 text-gray-800 max-w-6xl px-4 mx-auto">TaxWise hosting: Simplify finances, access anywhere, anytime, for peace of mind
           </p>
 
-          <div className="grid gap-14 md:grid-cols-3 md:gap-8">
+          <div className="grid gap-14 w-[90%] mx-auto md:grid-cols-3 md:gap-8">
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
@@ -190,9 +190,9 @@ const TextWiseHost = () => {
         <Expriance />
         <ServiceLink />
 
-        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="pt-8 w-[90%] mx-auto bg-white">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl font-bold text-gray-800 font-inter mb-12 text-center">
+            <h1 className="text-4xl font-bold text-gray-800 font-inter mb-8 text-center">
               What can you do with us
             </h1>
 
@@ -200,8 +200,7 @@ const TextWiseHost = () => {
               {/* Card 1 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -214,6 +213,7 @@ const TextWiseHost = () => {
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     </div>
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
                     <h2 className="text-gray-100 text-xl font-semibold">
                       Driving Growth: Impact of Reliable Tax Software Hosting Providers
                     </h2>
@@ -229,8 +229,7 @@ const TextWiseHost = () => {
               {/* Card 2 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -243,6 +242,7 @@ const TextWiseHost = () => {
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     </div>
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
                     <h2 className="text-gray-100 text-xl font-semibold">
                       Elevating Tax Efficiency: Embracing Tax Software Cloud Hosting
                     </h2>
@@ -258,8 +258,7 @@ const TextWiseHost = () => {
               {/* Card 3 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -272,6 +271,7 @@ const TextWiseHost = () => {
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     </div>
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
                     <h2 className="text-gray-100 text-xl font-semibold">
                       Efficiency Redefined: Premier Tax Software Hosting Insights
                     </h2>
@@ -287,8 +287,7 @@ const TextWiseHost = () => {
               {/* Card 4 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -301,6 +300,7 @@ const TextWiseHost = () => {
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     </div>
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
                     <h2 className="text-gray-100 text-xl font-semibold">
                       Top-Tier Tax Solutions: ATX Hosting in the USA
                     </h2>

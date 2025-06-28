@@ -77,7 +77,7 @@ const AxtHosting = () => {
 
 
       <section>
-        <h2 className='text-3xl text-center py-4 max-w-6xl mx-auto font-bold font-montserrat text-textPrimary'>
+        <h2 className='text-3xl text-center py-4 w-[90%] mx-auto font-bold font-montserrat text-textPrimary'>
 ATX Hosting: Stay ahead of the competition with Winscloud Solutions
         </h2>
 
@@ -109,15 +109,15 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
           </article>
         </section>
 
-         <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
-                <h2 className="font-bold text-3xl md:text-5xl mt-3 font-inter  my-5  text-center text-textPrimary">
+         <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100  py-6    ">
+                <h2 className="font-bold text-4xl mt-3 w-[90%] mx-auto font-inter  my-5  text-center text-textPrimary">
       Rely on Our ATX Hosting Solutions for Unmatched Cloud Server Performance
                 </h2>
-                <p className="text-center font-montserrat mb-10 text-gray-800 max-w-6xl mx-auto">ATX Hosting: Simplify finances, access ATX Hosting: Simplify finances, access anywhere, anytime, for peace of mind
+                <p className="text-center text-xl max-w-4xl font-montserrat mb-10 px-4 text-gray-800  mx-auto">ATX Hosting: Simplify finances, access ATX Hosting: Simplify finances, access anywhere, anytime, for peace of mind
       
                 </p>
       
-                <div className="grid gap-14 md:grid-cols-3 md:gap-8">
+                <div className="grid gap-14 w-[90%] mx-auto md:grid-cols-3 md:gap-8">
                   <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
       
@@ -192,9 +192,9 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
   <Expriance/>
     <ServiceLink />
 
-         <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+         <div className="mt-12 w-[90%] mx-auto bg-white">
   <div className="max-w-7xl mx-auto">
-    <h1 className="text-4xl font-bold text-gray-800 font-inter mb-12 text-center">
+    <h1 className="text-4xl font-bold text-gray-800 font-inter mb-6 text-center">
       What can you do with us
     </h1>
 
@@ -202,8 +202,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
       {/* Card 1 */}
       <div className="flex flex-col h-full">
         <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-            <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+            <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
               <svg
                 fill="none"
                 stroke="currentColor"
@@ -216,6 +215,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
               </svg>
             </div>
+          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
             <h2 className="text-gray-100 text-xl font-semibold">
 Effortless Tax Management: ATX Cloud Hosting Solutions
             </h2>
@@ -231,8 +231,7 @@ Effortless Tax Management: ATX Cloud Hosting Solutions
       {/* Card 2 */}
       <div className="flex flex-col h-full">
         <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-            <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+            <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
               <svg
                 fill="none"
                 stroke="currentColor"
@@ -245,6 +244,7 @@ Effortless Tax Management: ATX Cloud Hosting Solutions
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
               </svg>
             </div>
+          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
             <h2 className="text-gray-100 text-xl font-semibold">
 Seamless Tax Management Anywhere: Explore ATX Remote Access            </h2>
           </div>
@@ -259,8 +259,7 @@ Seamless Tax Management Anywhere: Explore ATX Remote Access            </h2>
       {/* Card 3 */}
       <div className="flex flex-col h-full">
         <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-            <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+            <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
               <svg
                 fill="none"
                 stroke="currentColor"
@@ -273,6 +272,7 @@ Seamless Tax Management Anywhere: Explore ATX Remote Access            </h2>
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
               </svg>
             </div>
+          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
             <h2 className="text-gray-100 text-xl font-semibold">
 Efficient Tax Preparation Made Easy with Hosted ATX Software
             </h2>
@@ -288,8 +288,7 @@ Efficient Tax Preparation Made Easy with Hosted ATX Software
       {/* Card 4 */}
       <div className="flex flex-col h-full">
         <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-            <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+            <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
               <svg
                 fill="none"
                 stroke="currentColor"
@@ -302,6 +301,7 @@ Efficient Tax Preparation Made Easy with Hosted ATX Software
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
               </svg>
             </div>
+          <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
             <h2 className="text-gray-100 text-xl font-semibold">
 Top-Tier Tax Solutions: ATX Hosting in the USA
    </h2>

@@ -1,12 +1,13 @@
 import Partner from "../Partner";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { RiAccountPinCircleFill } from "react-icons/ri";
 import { BsCalendarCheckFill } from "react-icons/bs";
 import { MdOutlineManageHistory } from "react-icons/md";
 import { IoMdClock } from "react-icons/io";
 import { GrServices } from "react-icons/gr";
 import { MdOutlineSettingsBackupRestore } from "react-icons/md";
+import { MdOutlineSpatialTracking } from "react-icons/md";
+
 import Expriance from "../Expriance";
 import ServiceLink from "../ServiceLink";
 import Awards from "../Awards";
@@ -88,7 +89,7 @@ const FishbowlHosting = () => {
 
 
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -112,19 +113,19 @@ const FishbowlHosting = () => {
 
 
 
-        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100 p-4   pt-12  ">
-          <h2 className="font-bold text-3xl md:text-5xl mt-3 font-inter  my-5  text-center text-textPrimary">
+        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100  py-6  ">
+          <h2 className="font-bold w-[90%] mx-auto text-4xl mt-3 font-inter  my-5  text-center text-textPrimary">
             Best Features of Fishbowl Hosting with Winscloud
           </h2>
-          <p className="text-center font-montserrat mb-10 text-gray-800 max-w-6xl mx-auto">TaxWise hosting: Simplify Fishbowl Hosting: Simplify finances, access anywhere, anytime, for peace of mind
+          <p className="text-center text-xl px-3 font-montserrat mb-10 text-gray-800 max-w-3xl mx-auto">TaxWise hosting: Simplify Fishbowl Hosting: Simplify finances, access anywhere, anytime, for peace of mind
 
           </p>
 
-          <div className="grid gap-14 md:grid-cols-3 md:gap-8">
+          <div className="grid gap-14 w-[90%] mx-auto md:grid-cols-3 md:gap-8">
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <RiAccountPinCircleFill />
+                <MdOutlineSpatialTracking className="text-3xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Inventory Tracking
@@ -136,7 +137,7 @@ const FishbowlHosting = () => {
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                <BsCalendarCheckFill />
+                <BsCalendarCheckFill className="text-3xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Scalability
@@ -148,7 +149,7 @@ const FishbowlHosting = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <MdOutlineManageHistory />
+                <MdOutlineManageHistory className="text-3xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Inventory Management
@@ -159,7 +160,7 @@ const FishbowlHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <IoMdClock />
+                <IoMdClock className="text-3xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">99.99% uptime
@@ -170,7 +171,7 @@ const FishbowlHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <GrServices />
+                <GrServices className="text-3xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Reliable Services
@@ -181,7 +182,7 @@ const FishbowlHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <MdOutlineSettingsBackupRestore />
+                <MdOutlineSettingsBackupRestore className="text-3xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Backup & Recovery
@@ -196,9 +197,9 @@ const FishbowlHosting = () => {
         <Expriance />
         <ServiceLink />
 
-        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="py-6 w-[90%] mx-auto bg-white">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl font-bold text-gray-800 font-inter mb-12 text-center">
+            <h1 className="text-4xl font-bold text-gray-800 font-inter mb-8 text-center">
               What can you do with us
             </h1>
 
@@ -206,8 +207,7 @@ const FishbowlHosting = () => {
               {/* Card 1 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -220,6 +220,7 @@ const FishbowlHosting = () => {
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     </div>
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
                     <h2 className="text-gray-100 text-xl font-semibold">
                       Efficient Inventory Management: Explore Fishbowl Hosting Solutions
                     </h2>
@@ -235,8 +236,7 @@ const FishbowlHosting = () => {
               {/* Card 2 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -249,6 +249,7 @@ const FishbowlHosting = () => {
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     </div>
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
                     <h2 className="text-gray-100 text-xl font-semibold">
                       Stay Connected, Stay Productive: Experience Fishbowl Remote Access Today
                     </h2>
@@ -264,8 +265,7 @@ const FishbowlHosting = () => {
               {/* Card 3 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -278,6 +278,7 @@ const FishbowlHosting = () => {
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     </div>
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
                     <h2 className="text-gray-100 text-xl font-semibold">
                       Streamline Operations Anywhere: Explore Fishbowl's Cloud Hosting Solutions
                     </h2>
@@ -293,8 +294,7 @@ const FishbowlHosting = () => {
               {/* Card 4 */}
               <div className="flex flex-col h-full">
                 <div className="flex rounded-xl h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
-                    <div className="w-10 h-10 mb-4 md:mb-0 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <div className="w-10 h-10 mb-4 md:mb-3 md:mr-4 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -307,6 +307,7 @@ const FishbowlHosting = () => {
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     </div>
+                  <div className="flex flex-col md:flex-row items-start md:items-center mb-4">
                     <h2 className="text-gray-100 text-xl font-semibold">
                       Efficient Inventory Management Made Easy: Hosted Fishbowl Solutions
                     </h2>

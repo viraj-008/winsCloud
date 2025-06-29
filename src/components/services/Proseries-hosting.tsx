@@ -130,14 +130,14 @@ const ProseriesHosting = () => {
 
       <main>
         <section>
-          <h2 className='text-3xl text-center py-4 w-[96%] md:w-[90%] mx-auto font-bold font-montserrat text-textPrimary'>
+          <h2 className='text-3xl text-center py-4 w-[96%] md:w-[90%] mx-auto font-bold font-inter text-textPrimary'>
             Why Choose ProSeries Hosting: Elevate your tax operations and crack the full potential of your ProSeries Tax Software Hosting
 
           </h2>
 
         </section>
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -280,7 +280,7 @@ const ProseriesHosting = () => {
         <ServiceLink />
 
         <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
-          <h1 className="text-3xl md:text-4xl text-center font-bold font-inter text-blue-900 p-2 ">
+          <h1 className="text-4xl md:text-4xl text-center font-bold font-inter text-blue-900 p-2 ">
             How to Set Up Your ProSeries Tax Software on the Cloud in 3 Simple Steps?
           </h1>
           <p className="text-xl mt-2 font-montserrat text-center">Team Winscloud can help you transition to ProSeries Hosting seamlessly in 3 easy steps –
@@ -290,7 +290,7 @@ const ProseriesHosting = () => {
             <div className="grid gap-14 md:grid-cols-3 md:gap-5">
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-                  <RiShakeHandsLine />
+                  <RiShakeHandsLine className="text-2xl"/>
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Choose a hosting plan that best suits your business
                 </h1>
@@ -300,7 +300,7 @@ const ProseriesHosting = () => {
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-                  <TbListDetails />
+                  <TbListDetails className="text-2xl"/>
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Share your ProSeries License and other details</h1>
                 <p className="px-4 text-gray-500">
@@ -309,7 +309,7 @@ const ProseriesHosting = () => {
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
-                  <IoLogoSoundcloud />
+                  <IoLogoSoundcloud className="text-2xl"/>
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Start Your Tax Preparation Process in the Cloud</h1>
                 <p className="px-4 text-gray-500">

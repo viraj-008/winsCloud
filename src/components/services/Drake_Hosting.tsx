@@ -134,7 +134,7 @@ const Drake_Hosting = () => {
 
         </section>
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -160,11 +160,11 @@ const Drake_Hosting = () => {
 
 
         <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
-          <h1 className="text-3xl md:text-4xl w-[90%] text-center font-bold font-inter text-blue-900 p-2 ">
+          <h1 className="text-4xl w-[90%] text-center font-bold font-inter text-blue-900 p-2 ">
             Drake Hosting Key Features: How does drake cloud hosting take your tax preparation to the next level?
           </h1>
 
-          <div className="h-full my-8 w-full pt-12 ">
+          <div className="h-full my-8 w-full  ">
             <div className="grid gap-14 md:grid-cols-3 w-[90%] mx-auto md:gap-5">
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">

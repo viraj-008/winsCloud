@@ -118,12 +118,12 @@ const QuickBook_pro = () => {
       </section>
 
       <div className="w-[90%] mx-auto">
-        <h2 className='text-3xl  mx-auto text-center py-4 font-bold font-montserrat text-textPrimary'>
+        <h2 className='text-3xl  mx-auto text-center py-4 font-bold font-inter text-textPrimary'>
           QuickBooks Pro Cloud Hosting: Take your favorite QuickBooks Pro to the cloud and add more power to your accounting operations
         </h2>
       </div>
 
-      <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+      <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-6">
         {/* IMAGE on the right (or bottom on mobile) */}
         <figure className="w-full md:w-1/2 flex justify-center">
           <img
@@ -163,19 +163,19 @@ const QuickBook_pro = () => {
       </div>
 
 
-      <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
-        <h2 className="font-bold font-inter text-3xl mt-3 text-center text-textPrimary">
+      <section className=" pt-3 mx-auto mt-10 flex flex-col   items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
+        <h2 className="font-bold font-inter text-4xl mt-3 px-3 text-center text-textPrimary">
           Why opt for QuickBooks Pro Cloud hosting?
         </h2>
-        <p className="font-montserrat w-[90%] text-gray-800 text-center mt-4">
+        <p className="font-montserrat w-[90%] text-xl text-gray-800 text-center mt-4">
           Benefits of taking advantage of cloud hosting your QuickBooks Pro Desktop
         </p>
-        <div className="h-full my-8 w-[90%] bg-gradient-to-br from-blue-50 to-gray-100   pt-12">
+        <div className="h-full my-8 w-[90%] bg-gradient-to-br from-blue-50 to-gray-100 ">
           <div className="grid gap-14 md:grid-cols-3 md:gap-8">
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <MdOutlineAddTask />
+                <MdOutlineAddTask className="text-3xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Unlimited Add-Ons Integrations
@@ -189,7 +189,7 @@ const QuickBook_pro = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <MdOutlineSecurity />
+                <MdOutlineSecurity className="text-3xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Industry Standard Security
@@ -202,7 +202,7 @@ const QuickBook_pro = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <GiSpeedometer />
+                <GiSpeedometer className="text-3xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Optimal Performance

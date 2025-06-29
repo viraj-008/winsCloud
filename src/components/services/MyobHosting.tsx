@@ -116,7 +116,7 @@ const MyobHosting = () => {
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <RiAccountPinCircleFill />
+                <RiAccountPinCircleFill className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Streamlined Accounting
@@ -127,7 +127,7 @@ const MyobHosting = () => {
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                <BsCalendarCheckFill />
+                <BsCalendarCheckFill className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Scalability
@@ -139,7 +139,7 @@ const MyobHosting = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <MdOutlineManageHistory />
+                <MdOutlineManageHistory className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Inventory Management
@@ -150,7 +150,7 @@ const MyobHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <IoMdClock />
+                <IoMdClock className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">99.99% uptime
@@ -161,7 +161,7 @@ const MyobHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <GrServices />
+                <GrServices className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Reliable Services
@@ -172,7 +172,7 @@ const MyobHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <MdOutlineSettingsBackupRestore />
+                <MdOutlineSettingsBackupRestore className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Backup & Recovery

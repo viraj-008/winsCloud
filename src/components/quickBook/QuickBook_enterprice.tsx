@@ -133,7 +133,7 @@ const QuickBook_enterprice = () => {
           QuickBooks Enterprise Cloud Hosting: A World Class Solution to Remotely Manage Your Business Operations
         </h2>
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -216,8 +216,8 @@ const QuickBook_enterprice = () => {
         </section>
 
 
-        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100    py-12  ">
-          <h2 className="font-bold font-inter w-[90%] mx-auto text-3xl mt-3 mb-12 text-center text-textPrimary">
+        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100    p-6  ">
+          <h2 className="font-bold font-inter w-[90%] mx-auto text-4xl mt-3 mb-12 text-center text-textPrimary">
             Winscloud Matrix Advantage: Why choose us as your QuickBooks cloud hosting provider?
           </h2>
 
@@ -225,7 +225,7 @@ const QuickBook_enterprice = () => {
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <LuDatabaseBackup />
+                <LuDatabaseBackup className="text-2xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Enhanced Mobility
@@ -236,7 +236,7 @@ const QuickBook_enterprice = () => {
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                <FaUsersGear />
+                <FaUsersGear className="text-2xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Cost Effective Cloud Hosting
@@ -248,7 +248,7 @@ const QuickBook_enterprice = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <RiInformation2Fill />
+                <RiInformation2Fill className="text-2xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Bank-level Security
@@ -259,7 +259,7 @@ const QuickBook_enterprice = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <GiChoice />
+                <GiChoice className="text-2xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Maximum Uptime Guarantee
@@ -270,7 +270,7 @@ const QuickBook_enterprice = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <BiDetail />
+                <BiDetail className="text-2xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Experience Tech Team
@@ -282,7 +282,7 @@ const QuickBook_enterprice = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <GrDocumentTest />
+                <GrDocumentTest className="text-2xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Scalable Pricing Structure

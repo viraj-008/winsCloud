@@ -136,12 +136,12 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
 
       <main>
         <section className="w-[90%] mx-auto">
-          <h2 className='text-3xl font-inter text-center py-4 font-bold  text-textPrimary'>
+          <h2 className='text-3xl w-[90%] font-inter text-center py-4 font-bold  text-textPrimary'>
             QuickBooks Desktop Hosting: Run your favorite QuickBooks Desktop Application from Anywhere, at Anytime
           </h2>
         </section>
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -186,18 +186,18 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
         </div>
 
 
-        <div className="h-full my-8 mx-auto bg-gradient-to-br from-blue-50 to-gray-100   pt-12">
-              <h2 className="font-bold mx-auto text-3xl mt-3 w-[90%] font-inter text-center text-textPrimary">
+        <div className="h-full my-8 mx-auto bg-gradient-to-br from-blue-50 to-gray-100   py-6">
+              <h2 className="font-bold mx-auto text-4xl mt-3 w-[90%] font-inter text-center text-textPrimary">
             Six Easy Steps to Transition to QuickBooks Desktop Cloud Hosting
           </h2>
-          <p className="font-montserrat text-justify  w-[90%] md:w-[80%] mx-auto mb-12 text-gray-800 md:text-center mt-8">
+          <p className="font-montserrat text-justify  w-[90%] md:w-[80%] text-xl mx-auto mb-12 text-gray-800 md:text-center mt-4">
           Migrating to the cloud can be done in a few easy steps. Having the right QuickBooks Desktop Hosting Provider on your side can make the process simpler and faster. With Winscloud, you are assigned a cloud expert right from the start who will assist you with your cloud migration. You can also opt for a one-month Free Trial to get the real experience of running your business from the cloud. To begin your transition, here are the simple steps you need to follow –
         </p>
-          <div className="grid gap-14 md:grid-cols-3 pb-8 w-[90%] mx-auto md:gap-8">
+          <div className="grid gap-14 md:grid-cols-3  w-[90%] mx-auto md:gap-8">
 
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-                <LuDatabaseBackup />
+                <LuDatabaseBackup className="text-3xl"/>
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Wait for Data Transfer</h1>
               <p className="px-4 text-gray-500">
@@ -206,7 +206,7 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                <FaUsersGear />
+                <FaUsersGear className="text-3xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access Using Credentials
@@ -218,7 +218,7 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <RiInformation2Fill />
+                <RiInformation2Fill className="text-3xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Provide Your License Information
@@ -229,7 +229,7 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <GiChoice />
+                <GiChoice className="text-3xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Select a Hosting Plan
@@ -240,7 +240,7 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <BiDetail />
+                <BiDetail className="text-3xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Provide Your Details
@@ -252,7 +252,7 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <GrDocumentTest />
+                <GrDocumentTest className="text-3xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Begin Access Testing
@@ -269,7 +269,7 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
           <h1 className="text-3xl w-[90%] mx-auto md:text-4xl text-center font-extrabold font-serif text-blue-900 mb-4">
             We Host All Versions of Your Most Loved QuickBooks Desktop
           </h1>
-          <p className="max-w-[90%] mx-auto text-justify md:text-center font-montserrat">Maximize efficiency in your accounting and tax operations with affordable and secure QuickBooks Desktop Hosting. Let our team handle your QuickBooks Desktop Hosting, so you can focus on what is most important – YOUR Business!</p>
+          <p className="max-w-[90%] text-xl mx-auto text-justify md:text-center font-montserrat">Maximize efficiency in your accounting and tax operations with affordable and secure QuickBooks Desktop Hosting. Let our team handle your QuickBooks Desktop Hosting, so you can focus on what is most important – YOUR Business!</p>
           <QuickLinks />
         </div>
 

@@ -89,7 +89,7 @@ const FishbowlHosting = () => {
 
 
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-6">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -125,7 +125,7 @@ const FishbowlHosting = () => {
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <MdOutlineSpatialTracking className="text-3xl" />
+                <MdOutlineSpatialTracking className="text-2xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Inventory Tracking
@@ -137,7 +137,7 @@ const FishbowlHosting = () => {
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                <BsCalendarCheckFill className="text-3xl" />
+                <BsCalendarCheckFill className="text-2xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Scalability
@@ -149,7 +149,7 @@ const FishbowlHosting = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <MdOutlineManageHistory className="text-3xl"/>
+                <MdOutlineManageHistory className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Inventory Management
@@ -160,7 +160,7 @@ const FishbowlHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <IoMdClock className="text-3xl"/>
+                <IoMdClock className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">99.99% uptime
@@ -171,7 +171,7 @@ const FishbowlHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <GrServices className="text-3xl"/>
+                <GrServices className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Reliable Services
@@ -182,7 +182,7 @@ const FishbowlHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <MdOutlineSettingsBackupRestore className="text-3xl"/>
+                <MdOutlineSettingsBackupRestore className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Backup & Recovery

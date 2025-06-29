@@ -116,12 +116,12 @@ const Quick_hosting_canada = () => {
       </section>
 
       <section>
-        <h2 className='text-3xl text-center max-w-8xl mx-auto px-3  py-4 font-bold font-inter text-textPrimary'>
+        <h2 className='text-3xl w-[90%] font-inter   text-center max-w-8xl mx-auto px-3  py-4 font-bold  text-textPrimary'>
           QuickBooks Canada Hosting: Remote Access to All Versions QuickBooks Desktop for Canadian Businesses
         </h2>
       </section>
 
-      <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-2 md:px-16 md:py-12">
+      <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
         {/* IMAGE on the right (or bottom on mobile) */}
         <figure className="w-full md:w-1/2 flex justify-center">
           <img
@@ -146,20 +146,20 @@ const Quick_hosting_canada = () => {
       </section>
 
 
-      <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
-        <h2 className="font-bold font-inter text-3xl mt-3 text-center text-textPrimary">
+      <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100  ">
+        <h2 className="font-bold font-inter text-4xl mt-3 text-center text-textPrimary">
           Benefits of Moving from Desktop to QuickBooks Canada Hosting
         </h2>
-        <p className="font-montserrat text-justify w-[90%] text-gray-800 md:text-center mt-4 max-w-4xl">
+        <p className="font-montserrat text-xl  text-justify w-[90%] text-gray-800 md:text-center mt-4 max-w-4xl">
           Our US-based, superfast data centers and SSD-based HPC servers ensure 99.99% uptime for the most seamless collaboration with teams across multiple locations and devices. Experience unparalleled performance and unmatched flexibility with easy accessibility of your fully backed-up data.
 
         </p>
-        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100  pt-12 ">
+        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100  ">
           <div className="grid gap-14 md:grid-cols-3 w-[90%] mx-auto md:gap-8">
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <FaUsersGear />
+                <FaUsersGear className="text-2xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Multi-User Collaboration
@@ -173,7 +173,7 @@ const Quick_hosting_canada = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <GiChoice />
+                <GiChoice className="text-2xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access On the Go
@@ -185,7 +185,7 @@ const Quick_hosting_canada = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <GrSecure />
+                <GrSecure className="text-2xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Data Security and Recovery

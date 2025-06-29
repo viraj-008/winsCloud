@@ -90,7 +90,7 @@ const ActHosting = () => {
       <main>
 
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-6">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -115,7 +115,7 @@ const ActHosting = () => {
 
 
         <div className="h-full my-8 w-full py-8 bg-gradient-to-br from-blue-50 to-gray-100   pt-12  ">
-          <h2 className="font-bold text-3xl md:text-4xl mt-3 font-inter px-4  my-5  text-center text-textPrimary">
+          <h2 className="font-bold  text-4xl  font-inter px-4  my-4  text-center text-textPrimary">
 Simplified ACT Hosting: Our Cloud, Your Financial Data
           </h2>
           <p className="text-center text-xl font-montserrat mb-10 px-4 text-gray-800  mx-auto">ACT! Hosting: Simplify finances, access anywhere, anytime, for peace of mind
@@ -125,7 +125,7 @@ Simplified ACT Hosting: Our Cloud, Your Financial Data
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <GiPayMoney/>
+                <GiPayMoney className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Reduce Expenses
@@ -136,7 +136,7 @@ Simplified ACT Hosting: Our Cloud, Your Financial Data
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                <GiServerRack />
+                <GiServerRack className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">All Add-ons
@@ -148,7 +148,7 @@ Simplified ACT Hosting: Our Cloud, Your Financial Data
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <BsDatabaseCheck />
+                <BsDatabaseCheck className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Data security
@@ -159,7 +159,7 @@ Simplified ACT Hosting: Our Cloud, Your Financial Data
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <MdFactCheck />
+                <MdFactCheck className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Every Time Support
@@ -170,7 +170,7 @@ Simplified ACT Hosting: Our Cloud, Your Financial Data
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <BsPersonLinesFill />
+                <BsPersonLinesFill className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Online support 24/7
@@ -182,7 +182,7 @@ Simplified ACT Hosting: Our Cloud, Your Financial Data
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <MdOutlineSecurity />
+                <MdOutlineSecurity className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">High security

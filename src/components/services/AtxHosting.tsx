@@ -86,7 +86,7 @@ ATX Hosting: Stay ahead of the competition with Winscloud Solutions
       <main>
       
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -121,7 +121,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
                   <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
       
-                      <FaMapLocationDot />
+                      <FaMapLocationDot className="text-2xl"/>
       
                     </div>
                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Well-equipped Data centers
@@ -132,7 +132,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
                   </div>
                   <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                      <GiServerRack />
+                      <GiServerRack className="text-2xl"/>
       
                     </div>
                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">High-performance servers
@@ -144,7 +144,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
       
                   <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                      <BsDatabaseCheck />
+                      <BsDatabaseCheck className="text-2xl"/>
       
                     </div>
                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Data security
@@ -155,7 +155,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
                   </div>
                   <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                      <MdFactCheck />
+                      <MdFactCheck className="text-2xl"/>
       
                     </div>
                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Error Checking and Validation
@@ -165,7 +165,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
                   </div>
                   <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                      <BsPersonLinesFill />
+                      <BsPersonLinesFill className="text-2xl"/>
       
                     </div>
                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Online support 24/7
@@ -177,7 +177,7 @@ ATX Hosting facilitates financial advisors and accountants in accessing crucial 
                   </div>
                   <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
                     <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                      <MdBrowserUpdated />
+                      <MdBrowserUpdated className="text-2xl"/>
       
                     </div>
                     <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Updates and Compliance

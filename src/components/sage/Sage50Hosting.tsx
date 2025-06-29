@@ -127,14 +127,14 @@ const Sage50Hosting = () => {
 
       <main>
         <section>
-          <h2 className='text-3xl text-center py-4 w-[90%] mx-auto font-bold font-montserrat text-textPrimary'>
+          <h2 className='text-3xl text-center py-4 w-[90%] mx-auto font-bold font-inter text-textPrimary'>
 How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
           </h2>
-          <p className="font-montserrat text-xl text-center font-semibold">The power of Cloud Hosting Blended with Sage 50
+          <p className="font-inter text-xl text-center font-semibold">The power of Cloud Hosting Blended with Sage 50
           </p>
         </section>
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -175,9 +175,9 @@ How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Why Choose Sage 50 Cloud hosting?
           </h1>
-          <p className="text-justify md:text-center font-montserrat text-gray-800">The advanced accounting and payroll software helps businesses carry out several key operations such as managing cash flows, sales, invoices, and monitoring payments. The powerful features of the Sage 50 application facilitate handling of a plethora of accounting operations like monitoring revenue, day-to-day expenses, and anticipating future cash flows. Sage 50 hosting is a perfect solution for accountants & bookkeepers, and for small and medium firms operating in manufacturing, construction, retail and wholesale businesses, IT services, law firms, food and beverage, etc. Certain large size businesses also find Sage 50 useful.
+          <p className="text-justify md:text-center text-lg t font-montserrat text-gray-800">The advanced accounting and payroll software helps businesses carry out several key operations such as managing cash flows, sales, invoices, and monitoring payments. The powerful features of the Sage 50 application facilitate handling of a plethora of accounting operations like monitoring revenue, day-to-day expenses, and anticipating future cash flows. Sage 50 hosting is a perfect solution for accountants & bookkeepers, and for small and medium firms operating in manufacturing, construction, retail and wholesale businesses, IT services, law firms, food and beverage, etc. Certain large size businesses also find Sage 50 useful.
           </p>
-          <p className="text-justify md:text-center mt-4 font-montserrat text-gray-800">In today’s world where businesses need to be caught up with the technological advances, Sage 50 hosting plays a key role in their survival. Cloud computing saves these small businesses time, money and effort to stay updated with their business needs and significantly enhances productivity.
+          <p className="text-justify md:text-center text-lg mt-4 font-montserrat text-gray-800">In today’s world where businesses need to be caught up with the technological advances, Sage 50 hosting plays a key role in their survival. Cloud computing saves these small businesses time, money and effort to stay updated with their business needs and significantly enhances productivity.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mt-14">
@@ -213,16 +213,16 @@ How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
         </section>
 
 
-        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100    pt-12  ">
-          <h2 className="font-bold font-inter text-3xl mt-3 mb-12 text-center px-4 text-textPrimary">
+        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100  py-6  ">
+          <h2 className="font-bold font-inter text-4xl mt-3 mb-12 text-center px-4 text-textPrimary">
             Why is Winscloud Matrix the best hosting provider for your business?
           </h2>
 
-          <div className="grid gap-14 w-[90%] mx-auto md:grid-cols-3 py-6 md:gap-8">
+          <div className="grid gap-14 w-[90%] mx-auto md:grid-cols-3  md:gap-8">
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <GrIntegration />
+                <GrIntegration className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Add-ons Integration
@@ -233,7 +233,7 @@ How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                <TbArrowsMaximize />
+                <TbArrowsMaximize  className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Maximum Uptime Guarantee
@@ -245,7 +245,7 @@ How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <GiReceiveMoney />
+                <GiReceiveMoney className="text-2xl"/>
 
 
               </div>
@@ -257,7 +257,7 @@ How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <MdBackup />
+                <MdBackup  className="text-2xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">All Backed Up
@@ -268,7 +268,7 @@ How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <MdSecurity />
+                <MdSecurity  className="text-2xl" />
 
 
               </div>
@@ -280,7 +280,7 @@ How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <BiSupport />
+                <BiSupport  className="text-2xl"/>
 
 
               </div>

@@ -119,7 +119,7 @@ const QuickenHosting = () => {
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <BiSupport />
+                <BiSupport className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Expert Support
@@ -130,7 +130,7 @@ const QuickenHosting = () => {
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                <FaUsersGear />
+                <FaUsersGear className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Multiple User Access
@@ -143,7 +143,7 @@ const QuickenHosting = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <TiDeviceLaptop />
+                <TiDeviceLaptop className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Cross-Device Functionality
@@ -154,7 +154,7 @@ const QuickenHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <IoMdClock />
+                <IoMdClock className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">99.99% uptime
@@ -164,7 +164,7 @@ const QuickenHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <GrServices />
+                <GrServices className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Reliable Services
@@ -175,7 +175,7 @@ The cloud hosting services offered by Winscloud are SSAE-18 Type II (SOC-2) cert
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <MdOutlineSettingsBackupRestore />
+                <MdOutlineSettingsBackupRestore className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Backup & Recovery

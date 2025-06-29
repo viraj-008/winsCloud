@@ -89,7 +89,7 @@ const CloudServerHosting = () => {
         </section>
 
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -140,16 +140,16 @@ const CloudServerHosting = () => {
 
         <ServiceLink />
         <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100  py-6  pt-12  ">
-          <h2 className="font-bold font-inter text-3xl px-3 md:text-4xl mt-3  my-5  text-center text-textPrimary">
+          <h2 className="font-bold font-inter text-4xl px-3  mt-3  my-5  text-center text-textPrimary">
             We are reliable cloud dedicated server hosting provider
           </h2>
-          <p className="text-center font-montserrat mb-10 text-gray-800 max-w-6xl mx-auto">Cloud Dedicated Server Hosting: Simplify finances, access anywhere, anytime, for peace of mind</p>
+          <p className="text-center text-xl font-montserrat mb-10 text-gray-800 max-w-6xl mx-auto">Cloud Dedicated Server Hosting: Simplify finances, access anywhere, anytime, for peace of mind</p>
 
           <div className="grid gap-14 w-[90%] mx-auto py-6 md:grid-cols-3 md:gap-8">
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <FaMapLocation />
+                <FaMapLocation className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Well-equipped Data centers
@@ -161,7 +161,7 @@ const CloudServerHosting = () => {
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                <TbServerSpark />
+                <TbServerSpark className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">High-performance servers
@@ -173,7 +173,7 @@ const CloudServerHosting = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <FaSoundcloud />
+                <FaSoundcloud className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access the Cloud
@@ -185,7 +185,7 @@ const CloudServerHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <VscServerEnvironment />
+                <VscServerEnvironment className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Business continuity
@@ -197,7 +197,7 @@ const CloudServerHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <BiSupport />
+                <BiSupport className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Online support 24/7
@@ -209,7 +209,7 @@ const CloudServerHosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <GrShieldSecurity />
+                <GrShieldSecurity className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">High security
@@ -226,7 +226,7 @@ const CloudServerHosting = () => {
 
 
 
-        <div className="py-16 w-[90%] mx-auto   bg-white">
+        <div className="py-6 w-[90%] mx-auto   bg-white">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl font-bold text-gray-800 font-inter mb-12 text-center">
               What can you do with us

@@ -121,7 +121,7 @@ const Sage_500Hosting = () => {
 
       <main>
         <section>
-          <h2 className='text-3xl text-center py-4 font-bold font-montserrat text-textPrimary'>
+          <h2 className='text-3xl text-center py-4 font-bold font-inter text-textPrimary'>
             Business Operations Simplified with Sage 500 Cloud Hosting
           </h2>
           <p className="font-montserrat text-xl text-center font-semibold">Team Collaboration On-the-Go
@@ -129,7 +129,7 @@ const Sage_500Hosting = () => {
         </section>
 
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -167,15 +167,15 @@ const Sage_500Hosting = () => {
         <SageLinks />
 
         <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
-          <h1 className="text-3xl md:text-4xl  mt-4 text-center font-extrabold font-inter text-blue-900 p-2 ">
+          <h1 className="text-4xl  mt-4 text-center font-extrabold font-inter text-blue-900 p-2 ">
             Who should choose Sage 500 ERP Application Hosting?
           </h1>
 
-          <div className="h-full my-8 w-full pt-12 p-4">
-            <div className="grid gap-14 md:grid-cols-3 md:gap-5">
+          <div className="h-full my-8 w-full ">
+            <div className="grid gap-14 w-[90%] mx-auto md:grid-cols-3 md:gap-5">
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-                  <RiShakeHandsLine />
+                  <RiShakeHandsLine className="text-2xl"/>
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Real time Collaboration
                 </h1>
@@ -185,7 +185,7 @@ const Sage_500Hosting = () => {
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-                  <LuClock />
+                  <LuClock className="text-2xl"/>
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Round the Clock Tech Support</h1>
                 <p className="px-4 text-gray-500">
@@ -195,7 +195,7 @@ const Sage_500Hosting = () => {
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
-                  <MdPublishedWithChanges />
+                  <MdPublishedWithChanges className="text-2xl"/>
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Third-Party Apps Supported</h1>
                 <p className="px-4 text-gray-500">

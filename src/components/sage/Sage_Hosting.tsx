@@ -126,7 +126,7 @@ const Sage_Hosting = () => {
           </p>
         </section>
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
               className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
@@ -164,7 +164,7 @@ const Sage_Hosting = () => {
 
 
         <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100    pt-12  ">
-          <h2 className="font-bold font-inter text-3xl w-[90%] mx-auto mt-3 mb-12 text-center text-textPrimary">
+          <h2 className="font-bold font-inter text-4xl w-[90%] mx-auto mt-3 mb-5 text-center text-textPrimary">
             Benefits of Sage Hosting: What does the cloud have to offer?
           </h2>
 
@@ -172,7 +172,7 @@ const Sage_Hosting = () => {
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <IoIosDesktop />
+                <IoIosDesktop className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Desktop-like Features
@@ -183,7 +183,7 @@ const Sage_Hosting = () => {
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                <SiOpenaccess />
+                <SiOpenaccess className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access On-the-Go
@@ -195,7 +195,7 @@ const Sage_Hosting = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <FaUsersGear />
+                <FaUsersGear className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Multi-User Collaboration
@@ -206,7 +206,7 @@ const Sage_Hosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <GiChoice />
+                <GiChoice className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Enhanced Productivity
@@ -217,7 +217,7 @@ const Sage_Hosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <BiDetail />
+                <BiDetail className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Cost Effective
@@ -229,7 +229,7 @@ const Sage_Hosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <MdOutlineUpdate />
+                <MdOutlineUpdate className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Automatic Updates

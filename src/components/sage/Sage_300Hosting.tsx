@@ -124,12 +124,12 @@ const Sage_300Hosting = () => {
         <section>
           <h2 className='text-3xl text-center py-4 w-[90%] mx-auto font-bold font-inter text-textPrimary'>
             Unify All Your Critical Tasks, Elevate Accounting, and Boost Productivity with Sage 300 ERP Hosting</h2>
-          <p className="font-montserrat text-xl text-center font-semibold">Run Business Seamlessly on the Cloud
+          <p className="font-inter text-xl text-center font-semibold">Run Business Seamlessly on the Cloud
 
           </p>
         </section>
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -154,7 +154,7 @@ const Sage_300Hosting = () => {
 
 
 
-        <section className="w-[90%] mx-auto py-16 ">
+        <section className="w-[90%] mx-auto py-8 ">
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Why is Winscloud Matrix’s Sage 300 Cloud Hosting Service the Best Deal for Your Business?
           </h1>
@@ -215,25 +215,25 @@ const Sage_300Hosting = () => {
 
 
         <div>
-          <h2 className="font-bold  text-4xl font-serif mt-8 max-w-5xl mx-auto  my-5  text-center text-textPrimary">
+          <h2 className="font-bold  text-4xl font-inter mt-8 max-w-5xl mx-auto  my-5  text-center text-textPrimary">
             Sage 300 Cloud hosting service: Why is it the right choice for your business?
           </h2>
-          <p className="text-center font-montserrat mb-10 text-gray-800 max-w-6xl px-4 mx-auto">
+          <p className="text-center text-lg font-montserrat mb-10 text-gray-800 max-w-6xl px-4 mx-auto">
             Sage 300 hosting with Winscloud Matrix is the right choice for your business if you are looking for a trustworthy and experienced hosting provider. We have helped businesses from multiple domains transition to the cloud. Our team has experience in dealing with all sorts of issues that businesses might face before, during or after their transition to the cloud. Our robust security measures help keep your information secure, our state-of-the-art data centers keep your data backed up, ensuring maximum up time so your business is always accessible. Enjoy the highest level of customer satisfaction by moving to the cloud, at affordable prices and experience a comprehensive business solution with Sage 300 cloud hosting.
           </p>
         </div>
 
-        <div className="h-full my-8 bg-gradient-to-br from-blue-50 to-gray-100    pt-12  ">
-          <h2 className="font-bold font-inter px-3 text-3xl mt-3  my-5  text-center text-textPrimary">
+        <div className="h-full my-8 bg-gradient-to-br from-blue-50 to-gray-100   py-6  ">
+          <h2 className="font-bold font-inter px-3 text-4xl mt-3  my-5  text-center text-textPrimary">
             Benefits of Sage Hosting: What does the cloud have to offer?
           </h2>
-          <p className="text-center font-montserrat mb-10 text-gray-800 w-[90%] mx-auto">Migrating your Sage 300 desktop application to the cloud is quite easy. Follow the given 3 steps to host Sage 300 on the cloud to make your transition quick and easy –</p>
+          <p className="text-center font-montserrat mb-10 text-xl text-gray-800 w-[90%] mx-auto">Migrating your Sage 300 desktop application to the cloud is quite easy. Follow the given 3 steps to host Sage 300 on the cloud to make your transition quick and easy –</p>
 
           <div className="grid gap-14 w-[90%] mx-auto md:grid-cols-3 md:gap-8">
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <BiDetail />
+                <BiDetail className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Know Your Needs</h1>
@@ -244,7 +244,7 @@ const Sage_300Hosting = () => {
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                <FaUsersGear />
+                <FaUsersGear className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Finding a Sage 300 cloud hosting provider
@@ -257,7 +257,7 @@ const Sage_300Hosting = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <SiOpenaccess />
+                <SiOpenaccess className="text-2xl"/>
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access the Cloud
               </h1>
@@ -268,7 +268,7 @@ const Sage_300Hosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <IoMdClock />
+                <IoMdClock className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Anytime, anywhere access
@@ -279,7 +279,7 @@ const Sage_300Hosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <RiSecurePaymentFill />
+                <RiSecurePaymentFill className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Bank-grade Security
@@ -290,7 +290,7 @@ const Sage_300Hosting = () => {
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <GiReceiveMoney />
+                <GiReceiveMoney className="text-2xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Cost-effective Solution

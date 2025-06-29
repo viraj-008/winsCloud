@@ -124,13 +124,13 @@ const QickBooks_Hosting = () => {
 
 
       <main>
-        <section className="md:px-12 px-2 w-[90%] mx-auto">
+        <section className="md:px-12 px-2 w-[90%] text-3xl w-[90%] font-inter  mx-auto">
           <h1 className="md:text-3xl font-inter text-2xl text-center pt-4 font-bold text-textPrimary">
             QuickBooks Hosting: Desktop-like experience on any device, from any part of the globe
           </h1>
         </section>
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-6">
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
               className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
@@ -166,19 +166,19 @@ const QickBooks_Hosting = () => {
         </div>
 
         <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100">
-          <h2 className="font-bold font-inter text-3xl mt-3 text-center text-textPrimary">
+          <h2 className="font-bold font-inter  text-4xl mt-3 text-center text-textPrimary">
             Why Choose Winscloud Matrix for QuickBooks Hosting Service?
           </h2>
-          <p className="text-gray-800 mt-4 text-center font-semibold">Access When You Need It</p>
-          <p className="font-inter w-[90%] text-gray-800 text-justify md:text-center mt-8">
+          <p className="text-gray-800 mt-4 text-xl text-center font-semibold">Access When You Need It</p>
+          <p className="font-montserrat w-[90%] text-xl text-gray-800 text-justify md:text-center mt-4">
            Our US-based, superfast data centers and SSD-based HPC servers ensure 99.99% uptime for the most seamless collaboration with teams across multiple locations and devices. Experience unparalleled performance and unmatched flexibility with easy accessibility of your fully backed-up data.
         </p>
 
-          <div className="h-full my-8 w-[90%] pt-12 ">
+          <div className="h-full my-8 w-[90%] pt-6 ">
             <div className="grid gap-14 md:grid-cols-3 md:gap-5">
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-                  <RiShakeHandsLine />
+                  <RiShakeHandsLine className="text-3xl" />
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Best-fitting Plans</h1>
                 <p className="px-4 text-gray-500">
@@ -187,7 +187,7 @@ const QickBooks_Hosting = () => {
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-                  <LuClock />
+                  <LuClock className="text-3xl" />
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Round-the-Clock Support</h1>
                 <p className="px-4 text-gray-500">
@@ -196,7 +196,7 @@ const QickBooks_Hosting = () => {
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
-                  <MdOutlineSecurity />
+                  <MdOutlineSecurity className="text-3xl" />
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Data Security and Recovery</h1>
                 <p className="px-4 text-gray-500">

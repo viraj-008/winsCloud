@@ -139,7 +139,7 @@ function UltraTaxHosting() {
 
         </section>
 
-        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
           {/* IMAGE on the right (or bottom on mobile) */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
@@ -161,12 +161,12 @@ function UltraTaxHosting() {
           </article>
         </section>
 
-        <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
+        <section className=" pt-3 mx-auto mt-10 flex flex-col items-center  bg-gradient-to-br from-blue-50  to-gray-100">
           <h1 className="text-3xl md:text-4xl text-center font-bold font-inter text-blue-900 p-2 ">
             Simplify Your Tax Preparation with UltraTax Cloud Hosting service
           </h1>
 
-          <div className="h-full my-8 w-full pt-12 ">
+          <div className="h-full my-8 w-full  ">
             <div className="grid gap-14 md:grid-cols-3 w-[90%] mx-auto md:gap-5">
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
@@ -204,7 +204,7 @@ function UltraTaxHosting() {
           <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Simplify Your Tax Preparation with UltraTax Cloud Hosting service
           </h1>
-          <p className="text-justify md:text-center font-montserrat text-gray-800">At Winscloud, we understand the need for businesses to be available round-the-clock and have helped multiple small and medium-sized businesses with their UltraTax hosting. Our reliable team of cloud experts provide their cloud knowledge, expertise, and 24/7 support to tackle all your hosting related needs and concerns.
+          <p className="text-justify text-lg md:text-center font-montserrat text-gray-800">At Winscloud, we understand the need for businesses to be available round-the-clock and have helped multiple small and medium-sized businesses with their UltraTax hosting. Our reliable team of cloud experts provide their cloud knowledge, expertise, and 24/7 support to tackle all your hosting related needs and concerns.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mt-14">
@@ -268,7 +268,7 @@ function UltraTaxHosting() {
             <h1 className="text-4xl font-bold text-gray-800 font-inter mb-2 text-center">
               Simplify Your Tax Preparation with UltraTax Cloud Hosting service
             </h1>
-            <p className="font-montserrat max-w-4xl mx-auto text-gray-800 text-center my-6 font-semibold">At Winscloud, we help all small and mid-sized businesses transition to UltraTax CS cloud hosting in three simple steps –
+            <p className="font-inter max-w-4xl mx-auto text-gray-800 text-center my-6 font-semibold">At Winscloud, we help all small and mid-sized businesses transition to UltraTax CS cloud hosting in three simple steps –
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

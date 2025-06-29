@@ -120,12 +120,12 @@ const QuickBook_pos = () => {
       </section>
 
       <section className="">
-        <h2 className='text-3xl text-center max-w-6xl px-3 mx-auto py-4 font-bold font-montserrat text-textPrimary'>
+        <h2 className='text-3xl text-center max-w-6xl px-3 mx-auto py-4 font-bold font-inter text-textPrimary'>
           QuickBooks POS Cloud Hosting: Conveniently track multi-channel sales and manage your retail inventory from multiple locations
         </h2>
       </section>
 
-      <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 py-8 md:px-16 md:py-12">
+      <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 md:px-16 md:py-6">
         {/* IMAGE on the right (or bottom on mobile) */}
         <figure className="w-full md:w-1/2 flex justify-center">
           <img
@@ -170,7 +170,7 @@ const QuickBook_pos = () => {
         <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
           Why Choose Winscloud Matrix for taking your QuickBooks Cloud Hosting?
         </h1>
-        <p className="text-justify md:text-center text-lg md:text-xl text-gray-700 font-montserrat  w-[90%] mx-auto">
+        <p className="text-justify md:text-center text-lg md:text-lg text-gray-700 font-montserrat  w-[90%] mx-auto">
           Retail businesses need to stay updated with their inventory and sales to ensure maximum customer satisfaction. QuickBooks POS is a fantastic solution that allows retail business owners and its employees to stay on the same page and work together in sync, irrespective of their physical location. Winscloud Matrix allows businesses to host their highly efficient and useful QuickBooks POS desktop on the cloud, adding another level of efficacy in managing a retail business. Issues like low inventory, order placement, return requests, sales can be managed in real-time, helping customer satisfaction reach an all-time high. Here’s how Winscloud can help seamlessly achieve this success –
         </p>
 
@@ -217,10 +217,10 @@ const QuickBook_pos = () => {
       <Experience />
 
       <section className="px-3 pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100 ">
-        <h2 className="font-bold font-inter text-3xl mt-3 text-center text-textPrimary">
+        <h2 className="font-bold font-inter text-4xl mt-3 text-center text-textPrimary">
           Hosting QuickBooks POS on the Cloud: Benefits for Your Retail Business
         </h2>
-        <p className="font-inter text-gray-800 text-justify  md:text-center mt-4 w-[90%]">
+        <p className="font-montserrat text-gray-800 text-xl text-justify  md:text-center mt-4 w-[90%]">
           Running a retail business has never been easier. With contemporary solutions like cloud hosting QuickBooks POS, business owners can manage multiple retail stores across different locations in real-time.
         </p>
         <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100  pt-12  ">
@@ -228,7 +228,7 @@ const QuickBook_pos = () => {
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-                <BsSaveFill />
+                <BsSaveFill className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Cost Savings
@@ -244,7 +244,7 @@ const QuickBook_pos = () => {
 
             <div  className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <BsDatabaseFillUp />
+                <BsDatabaseFillUp className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Synchronized Data
@@ -256,7 +256,7 @@ const QuickBook_pos = () => {
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <AiTwotoneControl />
+                <AiTwotoneControl className="text-2xl"/>
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">More Control Over Business
@@ -271,7 +271,7 @@ const QuickBook_pos = () => {
       <Awards />
 
 
-      <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">QuickBooks POS FAQs</h1>
+      <h1 className="text-center font-inter font-bold text-3xl -mb-4 text-textPrimary p-2">QuickBooks POS FAQs</h1>
 
 
       <section className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">

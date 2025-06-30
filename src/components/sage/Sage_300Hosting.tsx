@@ -1,13 +1,23 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Partner from "../Partner";
-
+import { FaUsersGear } from "react-icons/fa6";
+import { BiDetail } from "react-icons/bi";
+import { SiOpenaccess } from "react-icons/si";
+import { IoMdClock } from "react-icons/io";
+import { RiSecurePaymentFill } from "react-icons/ri";
+import { GiReceiveMoney } from "react-icons/gi";
+import { motion } from "framer-motion";
+import Expriance from "../Expriance";
+import Awards from "../Awards";
+import SageLinks from "../SageLinks";
 const Sage_300Hosting = () => {
   const faqs = [
     {
       question: "What is Sage 300 hosting?",
-      answer: "Sage 300 hosting means running the traditional, on-premises application in a cloud environment via the internet. Sage 300 hosting allows business owners to access their desktop software from anywhere, at any time, and collaborate with their remote teams in real time.",     
+      answer: "Sage 300 hosting means running the traditional, on-premises application in a cloud environment via the internet. Sage 300 hosting allows business owners to access their desktop software from anywhere, at any time, and collaborate with their remote teams in real time.",
     },
     {
       question: "Will my data be migrated to the cloud during Sage 300 hosting?",
@@ -39,154 +49,321 @@ const Sage_300Hosting = () => {
 
   return (
     <>
-      {/* Hero Section - Only added <header> tag */}
-      <header className="w-full flex bg-[url('/images/Home/sage1.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center">
-        <div className="w-full text-center md:text-left">
-          <h1 className="text-gray-200 font-josefin text-4xl md:text-6xl md:pt-6">
-            Sage 300 ERP Application <br /> Hosting
-          </h1>
-          <p className='text-xl md:text-3xl bg-gradient-to-r from-blue-100 via-indigo-100 to-green-100 text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
-            Better organize projects, and optimize business operations from anywhere, anytime with Sage 300 cloud hosting
-          </p>
-          <Link to='/trial'>
-            <button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-              Start Free Trial
-            </button>
-          </Link>
+      <section className="md:min-h-[90vh] rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+
+          <Helmet>
+          <title>Sage 300 Hosting – Cloud-Based ERP Access | Winscloud Matrix LLC</title>
+          <meta name="description" content="Simplify business management with Sage 300 cloud hosting—secure access, 99.99% uptime, and 24/7 support. Call now for expert ERP hosting help!" />
+        </Helmet>
+
+        <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
+
+          {/* Left Content */}
+          <div className="text-center md:text-left lg:w-[800px]">
+            <motion.h1
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight md:mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >Sage 300 ERP Cloud Hosting
+            </motion.h1>
+
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl my-3 md:my-0 md:mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+              Better organize projects, and optimize business operations from anywhere, anytime with Sage 300 cloud hosting
+            </p>
+
+            <Link to="/trial">
+              <button className="relative group overflow-hidden">
+                <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
+                    translate-y-[-2px] 
+                    group-active:translate-y-0 transition-transform"></span>
+                <span className="relative flex items-center justify-center gap-2 px-6 py-3 
+                    text-white font-semibold tracking-wide">
+                  get a free trial
+                  <svg
+                    className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+              </button>
+            </Link>
+          </div>
+
+          {/* Right Image */}
+          <motion.div
+            animate={{
+              x: [0, -10, 0, 10, 0],
+              y: [0, 10, 0, -10, 0],
+              opacity: 1,
+            }}
+            transition={{
+              duration: 6,
+              ease: "linear",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className="flex mt-12 md:justify-end"
+          >
+            <img
+              src="/images/Home/homePNG.png"
+              alt="ServerImage"
+              className="w-full max-w-md  h-[230px] md:h-[260px] -my-8  md:my-0  lg:mt-12 xl:mt-0  xl:h-auto rounded-lg object-contain"
+            />
+          </motion.div>
+
         </div>
-      </header>
+      </section>
+
 
       {/* ALL ORIGINAL CONTENT BELOW - ONLY ADDED SEMANTIC TAGS */}
       <main>
         <section>
-          <h1 className="text-center font-serif text-lg md:text-3xl font-bold">
-            Unify All Your Critical Tasks, Elevate Accounting, and Boost Productivity with Sage 300 ERP Hosting
-          </h1>
-          <h2 className="font-semibold text-center font-montserrat mt-5 text-sm text-gray-700 md:text-xl">
-            Run Business Seamlessly on the Cloud
-          </h2>
-        </section>
+          <h2 className='text-3xl text-center py-4 w-[90%] mx-auto font-bold font-inter text-textPrimary'>
+            Unify All Your Critical Tasks, Elevate Accounting, and Boost Productivity with Sage 300 ERP Hosting</h2>
+          <p className="font-inter text-xl my-4 px-3 md:my-0 text-center font-semibold">Run Business Seamlessly on the Cloud
 
-        <section className="flex flex-col md:flex-row justify-between p-4 md:p-8">
-          <div className="font-josefin w-full md:w-[45%]">
-            <p className="my-2 md:my-4 text-sm md:text-base">
-              Sage 300 ERP is robust business management software which is used for multiple business operations such as accounting, bookkeeping, inventory tracking, sales, among others. An Infrastructure-as-a-service, Sage 300 cloud hosting service helps businesses enjoy an enhanced level of security, greater productivity, and more accessibility from anywhere, at any time.
-            </p>
-            <p className="text-sm md:text-base">
-              Business owners can rely on Sage 300 cloud hosting to safely carry out business operations such as inventory management, accounts payable, accounts receivable, automated bank reconciliation, and financial reporting from any location and device.
-            </p>
-          </div>
-
-          <div className="w-full md:w-[50%] flex justify-center mt-6 md:mt-0">
-            <img 
-              className="h-48 md:h-80 border-2 border-black rounded-lg object-cover" 
-              src="./images/logo/sage300.webp" 
-              alt="Sage 300 Cloud Hosting Interface" 
-              loading="lazy"
-            />
-          </div>
-        </section>
-
-        <section className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Card 1 - Only added alt text */}
-          <div className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img 
-              src="images/logo/qb2.webp" 
-              alt="Sage 300 Hosting Plans" 
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" 
-            />
-            <h2 className="font-bold text-xl mb-2 font-kanit">Know Your Needs</h2>
-            <p className="text-gray-700 font-montserrat transition-all duration-300">
-              The first step to embracing Sage 300 cloud hosting is to collect all your information – your personal details, number of users, their names, your Sage 300 license details, and the add-ons or third-party apps you wish to host.
-            </p>
-          </div>
-
-          {/* Card 2 - Only added alt text */}
-          <div className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img 
-              src="images/logo/qb3.webp" 
-              alt="Sage 300 Cloud Support" 
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" 
-            />
-            <h2 className="font-bold text-xl mb-2 font-kanit">Finding a Sage 300 cloud hosting provider</h2>
-            <p className="text-gray-700 font-montserrat">
-              For a seamless transition from desktop to Sage 300 hosting, you need to find the best Sage 300 cloud hosting provider for your business who has the right experience, trained support staff, and robust security measures in place.
-            </p>
-          </div>
-
-          {/* Card 3 - Only added alt text */}
-          <div className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img 
-              src="images/logo/qb1.webp" 
-              alt="Sage 300 Data Security" 
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" 
-            />
-            <h2 className="font-bold text-xl mb-2 font-kanit">Access the Cloud</h2>
-            <p className="text-gray-800 font-montserrat transition-all duration-300">
-              Finally, to migrate to the cloud, you need to enter your complete information, wait for the notification, designate a point person, gain access to the cloud and experience enhanced level of mobility, security, accessibility, and productivity like never before.
-            </p>
-          </div>
-        </section>
-
-        {/* ALL OTHER SECTIONS EXACTLY AS ORIGINAL - ONLY ADDED <section> TAGS */}
-        <section className="bg-red-600 w-[90%] mx-auto mt-8 rounded-lg flex flex-col items-center py-6">
-          <h1 className="text-center font-semibold font-kanit text-2xl px-4">
-            Are you prepared to make your transition to cloud with Sage 300 Cloud Hosting?
-          </h1>
-          <button className="mt-6 border-2 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-            Contact Our Hosting Experts
-          </button>
-        </section>
-
-        <section className="w-[90%] mx-auto my-4">
-          <h1 className="text-center font-semibold font-kanit text-2xl px-4">
-            Sage 300 Cloud hosting service: Why is it the right choice for your business?
-          </h1>
-          <h2 className="text-center text-gray-600 font-semibold font-kanit px-4">
-            Make Your Move to the Cloud
-          </h2>
-          <p className="text-center font-montserrat mt-2 px-4">
-            Sage 300 hosting with Winscloud Matrix is the right choice for your business if you are looking for a trustworthy and experienced hosting provider. We have helped businesses from multiple domains transition to the cloud. Our team has experience in dealing with all sorts of issues that businesses might face before, during or after their transition to the cloud. Our robust security measures help keep your information secure, our state-of-the-art data centers keep your data backed up, ensuring maximum up time so your business is always accessible. Enjoy the highest level of customer satisfaction by moving to the cloud, at affordable prices and experience a comprehensive business solution with Sage 300 cloud hosting.
           </p>
         </section>
 
-        {/* FAQ Section - Only added schema markup */}
-        <section itemScope itemType="https://schema.org/FAQPage" className="my-12 w-[90%] mx-auto">
-          <h1 className="text-2xl text-center font-bold font-kanit mt-8 px-8">
-            Sage 300 Cloud Hosting Service Frequently Asked Questions
-          </h1>
-          <div className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border-b last:border-b-0" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                <button
-                  className="w-full text-left flex justify-between items-center p-4 text-lg font-semibold hover:bg-gray-100"
-                  onClick={() => toggleFAQ(index)}
-                >
-                  <span className="font-josefin">{faq.question}</span>
-                  {openIndex === index ? (
-                    <FaMinus className="text-red-900 min-h-[12px] min-w-[12px] m-4" />
-                  ) : (
-                    <FaPlus className="text-red-600 min-h-[12px] min-w-[28px] m-4" />
-                  )}
-                </button>
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
+          {/* IMAGE on the right (or bottom on mobile) */}
+          <figure className="w-full md:w-1/2 flex justify-center">
+            <img
+              className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
+              src="./images/logo/sage300.webp"
+              alt="sage 300 hosting"
+            />
 
-                <div
-                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                    openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                  }`}
-                  itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"
-                >
-                  <div className="p-4 bg-gray-50 text-gray-700">
-                    {faq.answer && <p className="font-montserrat text-[10px] md:text-sm">{faq.answer}</p>}
-                  </div>
-                </div>
+          </figure>
+
+          {/* TEXT on the left (or top on mobile) */}
+          <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
+            <h2 className="font-semibold text-textPrimary text-justify  text-xl md:text-xl ">
+              Sage 300 ERP is robust business management software which is used for multiple business operations such as accounting, bookkeeping, inventory tracking, sales, among others. An Infrastructure-as-a-service, Sage 300 cloud hosting service helps businesses enjoy an enhanced level of security, greater productivity, and more accessibility from anywhere, at any time.
+            </h2>
+            <p className="font-montserrat text-gray-700 text-justify text-sm md:text-base">
+              Business owners can rely on Sage 300 cloud hosting to safely carry out business operations such as inventory management, accounts payable, accounts receivable, automated bank reconciliation, and financial reporting from any location and device.
+            </p>
+
+          </article>
+        </section>
+
+
+
+        <section className="w-[90%] mx-auto py-8 ">
+          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
+            Why is Winscloud Matrix’s Sage 300 Cloud Hosting Service the Best Deal for Your Business?
+          </h1>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-14">
+            {[
+              {
+                title: "Flexible Pricing & Plans",
+                desc: "Our tailored pricing plans offer flexibility and can be customized to your needs. Our cost-efficient pay-as-you-go model allows you to scale up or down as per your business needs.",
+              },
+              {
+                title: "99.9% uptime surety",
+                desc: "We promise 99.99% uptime guarantee so that your data is always accessible. Your business runs uninterrupted, ensuring maximum customer satisfaction.",
+              },
+              {
+                title: "Multiple Levels of Security",
+                desc: "Our cutting-edge security features keep your data safe from threats like data theft, cyberattacks, ransomware attacks, and protection from natural disasters like floods and earthquakes.",
+              },
+              {
+                title: "Robust Data Centers",
+                desc: "Our state-of-the-art SSAE-16 data centers comply with industry standard security protocols to ensure maximum data protection and uninterrupted business continuity.",
+              },
+              {
+                title: "Support Round-the-Clock",
+                desc: " We have an in-house team of trained technical professionals who are dedicatedly working 24/7 to provide you with support from",
+              },
+              {
+                title: "Fast Transition to the Cloud",
+                desc: "Our team of cloud experts are trained to ensure a fast and seamless 120-min transition of your Sage 300 ERP to the cloud environment.",
+              },
+
+
+            ].map((feature, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+              >
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">{feature.title}</h3>
+                <p className="text-gray-700 text-[15px] leading-relaxed">{feature.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <Partner />
+        <SageLinks />
+        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white my-12 p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+          <div className="flex-1">
+            <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
+              Are you prepared to make your transition to cloud with Sage 300 Cloud Hosting?
+            </h1>
+            <Link to='/trial'>
+              <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition block mx-auto">
+                Start One Month Trial
+              </button>
+            </Link>
+          </div>
+        </div>
+
+
+        <div>
+          <h2 className="font-bold  text-4xl font-inter mt-8 max-w-5xl mx-auto  my-5  text-center text-textPrimary">
+            Sage 300 Cloud hosting service: Why is it the right choice for your business?
+          </h2>
+          <p className="text-center text-lg font-montserrat mb-10 text-gray-800 max-w-6xl px-4 mx-auto">
+            Sage 300 hosting with Winscloud Matrix is the right choice for your business if you are looking for a trustworthy and experienced hosting provider. We have helped businesses from multiple domains transition to the cloud. Our team has experience in dealing with all sorts of issues that businesses might face before, during or after their transition to the cloud. Our robust security measures help keep your information secure, our state-of-the-art data centers keep your data backed up, ensuring maximum up time so your business is always accessible. Enjoy the highest level of customer satisfaction by moving to the cloud, at affordable prices and experience a comprehensive business solution with Sage 300 cloud hosting.
+          </p>
+        </div>
+
+        <div className="h-full my-8 bg-gradient-to-br from-blue-50 to-gray-100   py-6  ">
+          <h2 className="font-bold font-inter px-3 text-4xl mt-3  my-5  text-center text-textPrimary">
+            Benefits of Sage Hosting: What does the cloud have to offer?
+          </h2>
+          <p className="text-center font-montserrat mb-10 text-xl text-gray-800 w-[90%] mx-auto">Migrating your Sage 300 desktop application to the cloud is quite easy. Follow the given 3 steps to host Sage 300 on the cloud to make your transition quick and easy –</p>
+
+          <div className="grid gap-14 w-[90%] mx-auto md:grid-cols-3 md:gap-8">
+            <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+
+                <BiDetail className="text-2xl"/>
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Know Your Needs</h1>
+              <p className="px-4 text-gray-500">
+                The first step to embracing Sage 300 cloud hosting is to collect all your information – your personal details, number of users, their names, your Sage 300 license details, and the add-ons or third-party apps you wish to host.
+
+              </p>
+            </div>
+            <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
+                <FaUsersGear className="text-2xl"/>
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Finding a Sage 300 cloud hosting provider
+              </h1>
+              <p className="px-4 text-gray-500">
+                For a seamless transition from desktop to Sage 300 hosting, you need to find the best Sage 300 cloud hosting provider for your business who has the right experience, trained support staff, and robust security measures in place.
+
+              </p>
+            </div>
+
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
+                <SiOpenaccess className="text-2xl"/>
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access the Cloud
+              </h1>
+              <p className="px-4 text-gray-500">
+                Finally, to migrate to the cloud, you need to enter your complete information, wait for the notification, designate a point person, gain access to the cloud and experience enhanced level of mobility, security, accessibility, and productivity like never before.
+
+              </p>
+            </div>
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
+                <IoMdClock className="text-2xl"/>
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Anytime, anywhere access
+              </h1>
+              <p className="px-4 text-gray-500">
+                Sage 300 cloud hosting lets you access your critical files any time, from anywhere across the globe, so you are always caught up with your business and ensure a high level of productivity.
+              </p>
+            </div>
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
+                <RiSecurePaymentFill className="text-2xl"/>
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Bank-grade Security
+              </h1>
+              <p className="px-4 text-gray-500">
+                Sage 300 ERP hosting service providers ensure that the cloud has multiple layers of security measures in place like network firewalls, 24/7 monitoring, and data backups to ensure your critical data is secure.
+              </p>
+            </div>
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
+                <GiReceiveMoney className="text-2xl" />
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Cost-effective Solution
+              </h1>
+              <p className="px-4 text-gray-500">
+                Hosting Sage 300 on cloud eliminates the need to invest in and implement elaborate, in-house IT infrastructure. You also save on hiring dedicated staff to maintain this infrastructure.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <Expriance />
+        <Awards />
+
+
+        {/* FAQ Section - Only added schema markup */}
+        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-5">
+          Sage 300 Cloud Hosting Service Frequently Asked Questions
+        </h1>
+        <section itemScope itemType="https://schema.org/FAQPage" className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">
+
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="border-b border-gray-100 last:border-b-0"
+              itemScope
+              itemProp="mainEntity"
+              itemType="https://schema.org/Question"
+            >
+              <button
+                className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
+                onClick={() => toggleFAQ(index)}
+              >
+                <span className="font-josefin text-gray-800 text-lg font-medium" itemProp="name">
+                  {faq.question}
+                </span>
+                <div
+                  className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? "bg-red-100" : "bg-gray-100"
+                    } transition-all duration-300`}
+                >
+                  {openIndex === index ? (
+                    <FaMinus className="text-red-600 h-3 w-4" />
+                  ) : (
+                    <FaPlus className="text-gray-600 h-3 w-4" />
+                  )}
+                </div>
+              </button>
+
+              <div
+                className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                  }`}
+                itemScope
+                itemProp="acceptedAnswer"
+                itemType="https://schema.org/Answer"
+              >
+                <div className="p-5 bg-gray-50">
+                  <p className="font-montserrat text-gray-800 text-sm md:text-base leading-relaxed" itemProp="text">
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </section>
+
+
       </main>
+        <Partner />
     </>
   );
 };

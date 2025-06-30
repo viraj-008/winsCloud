@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
-import { Link } from "react-router-dom";
+  import { motion } from "framer-motion";
 import Partner from "../Partner";
 function FAQ() {
 
@@ -63,45 +63,77 @@ function FAQ() {
   return (
     <>
 
-      <header className="w-full flex bg-[url('/images/Home/intro.jpg')] bg-cover bg-center pt-10 px-5 md:px-20 items-center min-h-[330px]">
-        <div className="w-full text-center">
-          <h1 className="text-white text-3xl md:text-6xl leading-tight">FAQ</h1>
-          <Link to="/trial">
-            <button className="mx-auto flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-              Get Free Trial Now
-            </button>
-          </Link>
-        </div>
-      </header>
+      <section className="min-h-[80vh] rounded-b-3xl flex items-center bg-gradient-to-t from-[#6278c0] via-[#102f86] to-black text-white px-6 py-12">
+        <div className="max-w-6xl mx-auto w-full gap-12 items-center mt-8">
 
-      <main>
-        <h1 className="text-center font-kanit font-semibold my-4 text-2xl">FAQs</h1>
-        <div className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
-          {faqs.map((faq, index) => (
-            <article key={index} className="border-b last:border-b-0">
-              <button
-                className="w-full text-left flex justify-between items-center p-4 text-lg font-semibold hover:bg-gray-100"
-                onClick={() => toggleFAQ(index)}
-              >
-                <span className="font-josefin">{faq.question}</span>
-                {openIndex === index ? (
-                  <FaMinus className="text-red-900 min-h-[12px] min-w-[12px] m-4" />
-                ) : (
-                  <FaPlus className="text-red-600 min-h-[12px] min-w-[28px] m-4" />
-                )}
-              </button>
+          {/* Left Content */}
+          <div className="text-center flex flex-col justify-center items-center md:text-left mt-12">
+            <motion.h1
+              className="text-slate-100 font-bold font-josefin text-3xl sm:text-4xl md:text-8xl leading-tight mb-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              FAQ
+            </motion.h1>
 
-              <div
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
-              >
-                <div className="p-4 bg-gray-50 text-gray-700">
-                  {faq.answer && <p className="font-montserrat text-[10px] md:text-sm">{faq.answer}</p>}
-                </div>
-              </div>
-            </article>
-          ))}
+          
+          </div>
+
         </div>
-      </main>
+      </section>
+
+     <main>
+  <div className="max-w-3xl mx-auto mt-10">
+    <h2 className="text-3xl font-josefin font-bold text-center text-gray-800 mb-8">
+      Frequently Asked Questions
+    </h2>
+    
+ <section className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">
+  {faqs.map((faq, index) => (
+    <div key={index} className="border-b border-gray-100 last:border-b-0">
+      <button
+        className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
+        onClick={() => toggleFAQ(index)}
+      >
+        <span className="font-josefin text-gray-800 text-lg font-medium">
+          {faq.question}
+        </span>
+        <div
+          className={`flex items-center justify-center h-8 w-8 rounded-full ${
+            openIndex === index ? "bg-red-100" : "bg-gray-100"
+          } transition-all duration-300`}
+        >
+          {openIndex === index ? (
+            <FaMinus className="text-red-600 h-3 w-4" />
+          ) : (
+            <FaPlus className="text-gray-600 h-3 w-4" />
+          )}
+        </div>
+      </button>
+
+      <div
+        className={`transition-all duration-300 ease-in-out overflow-hidden ${
+          openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="p-5 bg-gray-50 text-gray-700">
+          {faq.answer && (
+            <p className="font-montserrat text-sm md:text-base leading-relaxed">
+              {faq.answer}
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  ))}
+</section>
+
+
+
+  </div>
+</main>
       <Partner />
     </>
   )

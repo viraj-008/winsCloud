@@ -16,7 +16,7 @@ interface BlogSection {
   }
 export  const blogData: BlogData[] = [
     {
-      id: "blog-1",
+      id: "why-tax-and-accounting-services-are-crucial-for-businesse",
       TopHeading: "Why Tax and Accounting Services Are Crucial for Businesses?",
       images: "/images/blogs/Tax.jpg",
       sections: [
@@ -65,11 +65,15 @@ export  const blogData: BlogData[] = [
         {
           heading: " Transparency in Finances and Investor Trust",
           paragraph: "For businesses aiming for investment, transparent financial reporting is indispensable. Precise and open accounting fosters investor trust and has the potential to draw funding. It showcases the business as well-managed and financially robust."
+        },
+        {
+          heading: " Managing Complex Transactions",
+          paragraph: "As businesses expand, their financial dealings grow more intricate. Professional tax and accounting services are equipped to navigate these complexities, which may include mergers and acquisitions, international trade, and intricate tax scenarios. Their expertise guarantees that such transactions are managed accurately and efficiently - In summary, tax and accounting services are essential for businesses striving for compliance, financial well-being, and strategic expansion. They form the bedrock of sound financial management, assisting businesses in navigating the intricacies of the financial realm, enhancing performance, and attaining sustainable long-term success."
         }
       ]
     },
     {
-      id: "blog-2",
+      id: "why-cloud-hosting-drake-software-is-a-game-changer-for-accountants",
       TopHeading: "Why Cloud-Hosting Drake Software is a Game-Changer for Accountants",
       images: "/images/blogs/drake.jpg",
       sections: [
@@ -100,7 +104,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-3",
+      id: "what-are-the-differences-between-quickbooks-desktop-and-quickbooks-online",
       TopHeading: "What are the differences between QuickBooks Desktop and QuickBooks Online?",
       images: "/images/blogs/Different.jpg",
       sections: [
@@ -146,7 +150,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-4",
+      id: "overcome-top-10-emerging-cybersecurity-challenges-with-winscloud-matrix-llc",
       TopHeading: "Overcome Top 10 Emerging Cybersecurity Challenges with Winscloud Matrix LLC",
       images: "/images/blogs/Overcome.jpg",
       sections: [
@@ -197,7 +201,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-5",
+      id: "exploring-quickbooks-desktop-enterprise-is-it-right-for-you",
       TopHeading: "Exploring QuickBooks Desktop Enterprise: Is It Right for You?",
       images: "/images/blogs/QuickBooks-Desktop.jpg",
       sections: [
@@ -259,7 +263,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     { 
-      id: "blog-6",
+      id: "enhancing-quickbooks-desktop-functionality-with-web-connector-on-the-hosted-cloud/",
       TopHeading: "Enhancing QuickBooks Desktop Functionality with Web Connector on the Hosted Cloud",
       images: "/images/blogs/Enhancing.jpg",
       sections: [
@@ -343,7 +347,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-7",
+      id: "cloud-hosting-or-on-premise-whats-right-for-your-tax-accounting-software",
       TopHeading: "Enhancing QuickBooks Desktop Functionality with Web Connector on the Hosted Cloud",
       images: "/images/blogs/Cloud_Hosting.jpg",
       sections: [
@@ -442,7 +446,7 @@ export  const blogData: BlogData[] = [
     },
     
     {
-      id: "blog-8",
+      id: "cloud-hosting-benefits",
       TopHeading: "Cloud Hosting Benefits: A Game-Changer for Businesses Everywhere",
       images: "/images/blogs/benefits.webp",
       sections: [
@@ -486,7 +490,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-9",
+      id: "boost-your-accounting-firms-productivity-with-sage-50-cloud-hosting",
       TopHeading: "Cloud Hosting Benefits- Winscloud Matrix LLC",
       images: "/images/blogs/sage-50.jpg",
       sections: [
@@ -551,13 +555,13 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-10",
+      id: "benefits-of-cloud-hosting-for-proseries-tax-software",
       TopHeading: "Benefits of Cloud Hosting for ProSeries Tax Software",
       images: "/images/blogs/ProSeries.jpg",
       sections: [
         {
           heading: "Benefits of Cloud Hosting for ProSeries Tax Software",
-          // paragraph: "Taxes are fees imposed by the government..."
+          paragraph: "Taxes are fees imposed by the government..."
         },
         {
           heading: "1. Enhanced Accessibility",
@@ -611,7 +615,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-11",
+      id: "accounting-trends-shaping-the-future-of-business-with-cloud-hosting-providers",
       TopHeading: "Accounting Trends Shaping the Future of Business with Cloud Hosting Providers",
       images: "/images/blogs/Accounting.jpg",
       sections: [
@@ -678,7 +682,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-12",
+      id: "8-reasons-to-host-your-drake-tax-application-with-winscloud-matrix",
       TopHeading: "8 Reasons to Host Your Drake Tax Application with Winscloud Matrix",
       images: "/images/blogs/8-Reasons.jpg",
       sections: [
@@ -725,44 +729,70 @@ export  const blogData: BlogData[] = [
 const Blogs = () => {
 
       
-            
-    
-    
   return (
     <>
-    <div className="pt-[100px] bg-pink-800">
-        <h1 className="text-2xl  font-semibold font-josefin text-center   w-[90%] mx-auto rounded-lg text-white border bg-pink-500 shadow-lg mb-2">BLOG POST</h1>
-        
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-8">
-
-      {blogData.map((blog) => (
-        <div
-          key={blog.id}
-          className="border-2 bg-[#fdf5e6]  rounded-2xl shadow-lg overflow-hidden   p-4 hover:scale-[1.02] hover:shadow-2xl transition duration-300"
-        >
+   <div className="min-h-screen  pt-24 pb-12 px-4 sm:px-6">
+  {/* Header */}
+  <div className="max-w-4xl mx-auto mb-12 text-center">
+    <h1 className="text-4xl md:text-5xl font-bold font-josefin text-black mb-6">
+      Latest Blog Posts
+    </h1>
+    <p className="text-xl text-gray-700 font-montserrat max-w-2xl mx-auto">
+      Discover insightful articles and creative ideas from our team
+    </p>
+  </div>
+  
+  {/* Blog Grid */}
+  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+    {blogData.map((blog) => (
+      <div
+        key={blog.id}
+        className="bg-white rounded-xl overflow-hidden shadow-2xl hover:shadow-pink-500/20 transition-all duration-300 hover:-translate-y-2 group"
+      >
+        {/* Image */}
+        <div className="relative overflow-hidden h-60">
           <img
             src={blog.images}
             alt={blog.TopHeading}
-            className="w-full h-48 object-cover border-2 border-black rounded-xl mb-4"
+            className="w-full h-full object-fit transition-transform duration-500 group-hover:scale-105"
           />
-          <h2 className="text-lg font-semibold font-josefin text-red-600 mb-2">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80" />
+        </div>
+        
+        {/* Content */}
+        <div className="p-6">
+          <div className="flex items-center mb-3">
+            <span className="text-sm font-montserrat text-pink-600 font-semibold">
+              { "Featured"}
+            </span>
+            <span className="mx-2 text-gray-400">•</span>
+            <span className="text-sm text-gray-500 font-montserrat">
+              {"Jun 23, 2023"}
+            </span>
+          </div>
+          
+          <h2 className="text-xl font-bold font-josefin text-gray-800 mb-3 leading-tight">
             {blog.sections[0].heading}
           </h2>
-
-          <p className="text-gray-700 font-montserrat   mb-4">
-            {blog.sections[0]?.paragraph?.slice(0, 100)}...
+          
+          <p className="text-gray-600 font-montserrat mb-6 line-clamp-3">
+            {blog.sections[0]?.paragraph?.slice(0, 150)}
           </p>
-
+          
           <Link
             to={`/blog/${blog.id}`}
-            className="text-white border p-2 font-josefin rounded-lg bg-blue-600 font-semibold hover:underline"
+            className="inline-flex items-center px-5 py-2.5 rounded-lg bg-green-800 text-white font-josefin font-medium hover:bg-green-700 transition-colors duration-300"
           >
-            Read More →
+            Read More
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
           </Link>
         </div>
-      ))}
-    </div>
-    </div>
+      </div>
+    ))}
+  </div>
+</div>
 
     <Partner/>
     </>

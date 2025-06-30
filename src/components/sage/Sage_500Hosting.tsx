@@ -1,7 +1,16 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { RiShakeHandsLine } from "react-icons/ri";
+import { MdPublishedWithChanges } from "react-icons/md";
+
+import { LuClock } from "react-icons/lu";
 import Partner from "../Partner";
+import { motion } from "framer-motion";
+import Expriance from "../Expriance";
+import Awards from "../Awards";
+import SageLinks from "../SageLinks";
 
 const Sage_500Hosting = () => {
   const faqs = [
@@ -46,184 +55,297 @@ const Sage_500Hosting = () => {
 
   return (
     <>
-      <header className="w-full flex bg-[url('/images/Home/sage1.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center">
-        <div className="w-full text-center md:text-left">
-          <h1 className="text-white text-3xl md:text-6xl leading-tight md:pt-6">
-            Sage 500 ERP Hosting
-          </h1>
-          <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
-            Anytime, anywhere accounting & high productivity with Sage 500 ERP Hosting
-          </p>
-          <Link to="/trial" aria-label="Start Sage 500 Hosting Free Trial">
-            <button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-              Try Sage 500 Hosting for FREE
-            </button>
-          </Link>
+      <section className="md:min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+        
+        <Helmet>
+          <title>Sage 500 Hosting – Secure Cloud ERP Solutions | Winscloud Matrix LLC</title>
+          <meta name="description" content="Reliable Sage 500 cloud hosting with 99.99% uptime, encryption, disaster recovery & expert support. Call +1 714-882-1244 for a free consultation!" />
+        </Helmet>
+
+        <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
+
+          {/* Left Content */}
+          <div className="text-center md:text-left lg:w-[800px]">
+            <motion.h1
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight md:mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >Sage 500 ERP Hosting
+            </motion.h1>
+
+            <p className="text-md sm:text-lg md:text-xl  font-bold max-w-xl xl:ax-w-2xl my-3 md:my-0 md:mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+              Anytime, anywhere accounting & high productivity with Sage 500 ERP Hosting
+            </p>
+
+            <Link to="/trial">
+              <button className="relative group overflow-hidden">
+                <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
+                    translate-y-[-2px] 
+                    group-active:translate-y-0 transition-transform"></span>
+                <span className="relative flex items-center justify-center gap-2 px-6 py-3 
+                    text-white font-semibold tracking-wide">
+                  Get a free trial
+                  <svg
+                    className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+              </button>
+            </Link>
+          </div>
+
+          {/* Right Image */}
+          <motion.div
+            animate={{
+              x: [0, -10, 0, 10, 0],
+              y: [0, 10, 0, -10, 0],
+              opacity: 1,
+            }}
+            transition={{
+              duration: 6,
+              ease: "linear",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className="flex mt-12 md:justify-end"
+          >
+            <img
+              src="/images/Home/homePNG.png"
+              alt="ServerImage"
+              className="w-full max-w-md h-[230px] md:h-[260px] -my-8  md:my-0  lg:mt-12 xl:mt-0  xl:h-auto rounded-lg object-contain"
+            />
+          </motion.div>
+
         </div>
-      </header>
+      </section>
 
       <main>
-        <section className="p-2">
-          <h2 className="text-center font-serif text-lg md:text-3xl font-bold">
+        <section>
+          <h2 className='text-3xl text-center py-4 font-bold font-inter text-textPrimary'>
             Business Operations Simplified with Sage 500 Cloud Hosting
           </h2>
-          <h3 className="font-semibold text-center font-montserrat mt-5 text-sm text-gray-700 md:text-xl">
-            Team Collaboration On-the-Go
-          </h3>
+          <p className="font-montserrat text-xl mb-3 md:mb-0 text-center font-semibold">Team Collaboration On-the-Go
+          </p>
         </section>
 
-        <section className="flex flex-col md:flex-row justify-between p-4 md:p-8">
-          <article className="w-full md:w-[45%]">
-            <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
+
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
+          {/* IMAGE on the right (or bottom on mobile) */}
+          <figure className="w-full md:w-1/2 flex justify-center">
+            <img
+              className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
+              src="./images/logo/sage-500.webp"
+              alt="Sage 500 Hosting"
+            />
+
+          </figure>
+
+          {/* TEXT on the left (or top on mobile) */}
+          <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
+            <h2 className="font-semibold text-textPrimary text-justify   text-xl md:text-xl ">
               Sage 500 hosting is business management software blended with the cloud which helps businesses drive productivity, add efficacy to their day-to-day operations, and minimize costs with its robust features. Businesses from multiple domains find Sage 500 a valuable addition to their routine operations, helping them make informed decisions that promote profitability.
-            </p>
-            <p className="font-montserrat text-sm md:text-base">
+            </h2>
+            <p className="font-montserrat text-gray-700 text-justify text-sm md:text-base">
               Sage 500 offers customization to accommodate individual business needs. Retail businesses can stay on track with their sales and inventory, ensuring that they always have product availability. The automated supply chain feature of Sage 500 and inventory management contributes to customer satisfaction, forecasts consumer behavior, and maximizes profits. With Sage 500 hosting, these features are amplified 10x. Multiple teams can collaborate in real time to stay on top of these features and ensure seamless business operations round-the-clock.
             </p>
           </article>
-
-          <figure className="w-full md:w-[50%] flex justify-center mt-6 md:mt-0">
-            <img
-              className="h-48 md:h-80 border-2 border-black rounded-lg object-cover"
-              src="./images/logo/sage-500.webp"
-              alt="Sage 500 ERP Hosting Interface"
-            />
-          </figure>
         </section>
 
-        <section className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          <article className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb2.webp"
-              alt="Real-Time Collaboration"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Real-Time Collaboration</h3>
-            <p className="text-gray-700 font-montserrat transition-all duration-300">
-              Sage 500 cloud hosting provides an integrated cloud environment that facilitates multi-user access to financial data saved in the cloud in real time.
-            </p>
-          </article>
-          <article className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb3.webp"
-              alt="Round-the-Clock Support"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Round the Clock Tech Support</h3>
-            <p className="text-gray-700 font-montserrat ">
-              A good Sage 500 cloud hosting services provider like Winscloud Matrix offers 24/7 tech support to assist with troubleshooting and other technical issues.
-            </p>
-          </article>
-          <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb1.webp"
-              alt="Data Security and Recovery"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Third-Party Apps Supported</h3>
-            <p className="text-gray-800 font-montserrat transition-all duration-300">
-              Sage 500 hosting supports an infinite number of add-ons and third-party apps to be hosted on the cloud for enhanced productivity and ease of managing business.
-            </p>
-          </article>
-        </section>
 
-        <section className="bg-gray-200 my-8 w-[90%] mx-auto rounded-lg flex flex-col items-center py-6">
-          <h2 className="text-center font-semibold font-kanit text-2xl px-4">
-            Ready to get started with Sage 500 Cloud Hosting?
-          </h2>
-          <button className="mt-6 border-2 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-            Start Your Free Trial NOW
-          </button>
-        </section>
+        <div className="bg-gradient-to-br w-[90%] my-6 mx-auto  from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+          <div className="flex-1">
+            <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
+              Ready for Sage 500 ERP Cloud Hosting?          </h1>
+            <Link to='/get-in-touch'>
+              <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition block mx-auto">
+                Get in Touch With an Expert
+              </button>
+            </Link>
+          </div>
+        </div>
 
-        <section className="w-[90%] mx-auto my-8">
-          <h2 className="text-center font-semibold font-kanit text-2xl px-4">
-            Simple Steps to Migrate to the Cloud with Sage 500 Cloud Hosting
-          </h2>
-          <p className="px-4 font-montserrat my-4">
-            If you are ready to embrace the cloud, you can migrate your financial data and your desktop-based Sage 500 ERP application to the cloud in the following steps –
-          </p>
-          <ul className="list-disc pl-5">
-            <li>Find the best Sage 500 hosting provider with the right experience for your business</li>
-            <li>Provide your Sage 500 ERP License information to your chosen hosting provider</li>
-            <li>Share any specific requirements with them</li>
-            <li>Provide access to your business data and migrate safely to the cloud environment</li>
-            <li>Receive your cloud credentials from your hosting provider</li>
-          </ul>
-          <h2 className="font-semibold font-kanit text-2xl px-2 my-5">Post your FREE DEMO login and run your business on-the-go</h2>
-          <div className="flex justify-center">
-            <button className="mt-6 border-2 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-              Contact Us for Cloud Hosting
-            </button>
+        <SageLinks />
+
+        <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
+          <h1 className="text-4xl  mt-4 text-center font-extrabold font-inter text-blue-900 p-2 ">
+            Who should choose Sage 500 ERP Application Hosting?
+          </h1>
+
+          <div className="h-full my-8 w-full ">
+            <div className="grid gap-14 w-[90%] mx-auto md:grid-cols-3 md:gap-5">
+              <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+                  <RiShakeHandsLine className="text-2xl"/>
+                </div>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Real time Collaboration
+                </h1>
+                <p className="px-4 text-gray-500">
+                  Sage 500 cloud hosting provides an integrated cloud environment that facilitates multi-user access to financial data saved in the cloud in real time.
+                </p>
+              </div>
+              <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+                  <LuClock className="text-2xl"/>
+                </div>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Round the Clock Tech Support</h1>
+                <p className="px-4 text-gray-500">
+                  A good Sage 500 cloud hosting services provider like Winscloud Matrix offers 24/7 tech support to assist with troubleshooting and other technical issues.
+
+                </p>
+              </div>
+              <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
+                  <MdPublishedWithChanges className="text-2xl"/>
+                </div>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Third-Party Apps Supported</h1>
+                <p className="px-4 text-gray-500">
+                  Sage 500 hosting supports an infinite number of add-ons and third-party apps to be hosted on the cloud for enhanced productivity and ease of managing business.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
-        <section className="my-12 w-[90%] mx-auto">
-          <h2 className="text-center font-kanit font-semibold text-2xl pt-5">
+
+
+        <section className="w-[90%] max-w-4xl mx-auto my-12">
+          <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
+            <h2 className="text-center font-semibold font-kanit text-2xl md:text-4xl font-serif text-blue-800 mb-6 px-4">
+              Simple Steps to Migrate to the Cloud with Sage 500 Cloud Hosting
+            </h2>
+
+            <p className="px-4 font-montserrat text-gray-600 mb-6 text-center text-lg leading-relaxed">
+              If you are ready to embrace the cloud, you can migrate your financial data and your desktop-based Sage 500 ERP application to the cloud in the following steps:
+            </p>
+
+            <ul className="list-disc pl-8 space-y-3 mb-8">
+              <li className="font-montserrat text-gray-700 text-lg p-2 hover:bg-gray-50 rounded transition">
+                <span className="font-medium">Find</span> the best Sage 500 hosting provider with the right experience for your business
+              </li>
+              <li className="font-montserrat text-gray-700 text-lg p-2 hover:bg-gray-50 rounded transition">
+                <span className="font-medium">Provide</span> your Sage 500 ERP License information to your chosen hosting provider
+              </li>
+              <li className="font-montserrat text-gray-700 text-lg p-2 hover:bg-gray-50 rounded transition">
+                <span className="font-medium">Share</span> any specific requirements with them
+              </li>
+              <li className="font-montserrat text-gray-700 text-lg p-2 hover:bg-gray-50 rounded transition">
+                <span className="font-medium">Provide</span> access to your business data and migrate safely to the cloud environment
+              </li>
+              <li className="font-montserrat text-gray-700 text-lg p-2 hover:bg-gray-50 rounded transition">
+                <span className="font-medium">Receive</span> your cloud credentials from your hosting provider
+              </li>
+            </ul>
+
+            <h2 className="font-semibold font-inter text-2xl md:text-3xl text-gray-800 mt-10 mb-6 px-4 text-center">
+              Post your FREE DEMO login and run your business on-the-go
+            </h2>
+
+            <div className="flex justify-center mt-8">
+              <button className="transition-all duration-300 border-2 bg-green-600 hover:bg-green-700 text-lg md:text-xl rounded-full px-8 md:px-14 text-white font-josefin py-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Contact Us for Cloud Hosting
+              </button>
+            </div>
+          </div>
+        </section>
+
+
+        <section className="w-[90%] mx-auto py-16 ">
+          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Why Choose Winscloud Matrix for your Sage 300 ERP cloud hosting services?
-          </h2>
-          <p className="font-montserrat px-4 my-2 text-sm text-center">
-            The right Sage 500 ERP cloud hosting services provider is critical when migrating your business to the cloud. Winscloud Matrix comes with the right experience, success stories, and features that make them the perfect choice for Sage 500 hosting –
+          </h1>
+          <p className="w-[90%] font-montserrat text-xl mx-auto text-justify">The right Sage 500 ERP cloud hosting services provider is critical when migrating your business to the cloud. Winscloud Matrix comes with the right experience, success stories, and features that make them the perfect choice for Sage 500 hosting –
+
           </p>
-          <div className="flex flex-col md:flex-row mt-8">
-            <div className="md:w-[50%] space-y-4 font-montserrat text-sm p-3">
-              <p>
-                <span className="font-kanit font-bold">Remote Access-</span> Sage 500 cloud hosting with Winscloud promotes remote work, multi-user collaboration, and access to the same set of data from anywhere at any time.
-              </p>
-              <p>
-                <span className="font-kanit font-bold my-6">Effective Hosting Cost-</span> Our hosting plans start from a minimal price of $23 per month. Our flexible pay-as-you-go pricing model allows you to scale up/down as per your business needs.
-              </p>
-              <p>
-                <span className="font-kanit font-bold my-6">Multiple Device Support-</span> By hosting your Sage 500 ERP on the cloud, you can access your critical data from any internet connected device on-the-go, including your smart phone, laptop, desktop computer, and tablet.
-              </p>
-            </div>
-            <div className="md:w-[50%] space-y-4 p-3 font-montserrat text-sm">
-              <p>
-                <span className="font-kanit font-bold">Technical Assistance 24/7/365-</span> Our team of technical professionals are readily available round-the-clock and are trained to provide all sorts of assistance and tech support for a smooth cloud experience.
-              </p>
-              <p>
-                <span className="font-kanit font-bold">Bank-grade Security–</span> We ensure that you have better control over your data and unparalleled security with measures like network firewall, routine monitoring redundancies, anti-virus, anti-malware, dedicated servers, etc.
-              </p>
-              <p>
-                <span className="font-kanit font-bold">Data Backup Guarantee–</span> Your data is backed up twice a day to ensure that your critical business information is always accessible, and encrypted copies are saved in three different locations for added safety.
-              </p>
-            </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-14">
+            {[
+              {
+                title: "MRemote Access",
+                desc: "Sage 500 cloud hosting with Winscloud promotes remote work, multi-user collaboration, and access to the same set of data from anywhere at any time.",
+              },
+              {
+                title: "Effective Hosting Cost",
+                desc: "Our hosting plans start from a minimal price of $23 per month. Our flexible pay-as-you-go pricing model allows you to scale up/down as per your business needs. Check our pricing here.",
+              },
+              {
+                title: "Multiple Device Support",
+                desc: " By hosting your Sage 500 ERP on the cloud, you can access your critical data from any internet connected device on-the-go, including your smart phone, laptop, desktop computer, and tablet.",
+              },
+              {
+                title: "Technical Assistance 24/7/365",
+                desc: "Our team of technical professionals are readily available round-the-clock and are trained to provide all sorts of assistance and tech support for a smooth cloud experience.",
+              },
+              {
+                title: "Bank-grade Security",
+                desc: "We ensure that you have better control over your data and unparalleled security with measures like network firewall, routine monitoring redundancies, anti-virus, anti-malware, dedicated servers, etc.",
+              },
+              {
+                title: "Data Backup Guarantee ",
+                desc: " Your data is backed up twice a day to ensure that your critical business information is always accessible, and encrypted copies are saved in three different locations for added safety.",
+              },
+
+
+            ].map((feature, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+              >
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">{feature.title}</h3>
+                <p className="text-gray-700 text-[15px] leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        <section className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
-          <h2 className="text-2xl text-center font-bold font-kanit mt-8 px-8">
-            Sage 500 ERP Frequently Asked Questions
-          </h2>
+        <Expriance />
+        <Awards />
+
+
+        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary mt-6 p-3"> Sage 500 ERP Frequently Asked Questions-
+        </h1>
+        <section className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b last:border-b-0">
+            <div key={index} className="border-b border-gray-100 last:border-b-0">
               <button
-                className="w-full text-left flex justify-between items-center p-4 text-lg font-semibold hover:bg-gray-100"
+                className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="font-josefin">{faq.question}</span>
-                {openIndex === index ? (
-                  <FaMinus className="text-red-900 min-h-[12px] min-w-[12px] m-4" />
-                ) : (
-                  <FaPlus className="text-red-600 min-h-[12px] min-w-[28px] m-4" />
-                )}
+                <span className="font-josefin text-gray-800 text-lg font-medium">
+                  {faq.question}
+                </span>
+                <div className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? 'bg-red-100' : 'bg-gray-100'} transition-all duration-300`}>
+                  {openIndex === index ? (
+                    <FaMinus className="text-red-600 h-3 w-4" />
+                  ) : (
+                    <FaPlus className="text-gray-600 h-3 w-4" />
+                  )}
+                </div>
               </button>
+
               <div
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   }`}
               >
-                <div className="p-4 bg-gray-50 text-gray-700">
-                  {faq.answer && <p className="font-montserrat text-[10px] md:text-sm">{faq.answer}</p>}
+                <div className="p-5 bg-gray-50">
+                  <p className="font-montserrat text-gray-800 text-sm md:text-base leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               </div>
             </div>
           ))}
         </section>
+
       </main>
 
-      <footer>
         <Partner />
-      </footer>
     </>
   );
 };

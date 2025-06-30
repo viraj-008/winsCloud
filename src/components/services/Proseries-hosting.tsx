@@ -1,7 +1,17 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Partner from "../Partner";
+import { motion } from "framer-motion";
+import { RiShakeHandsLine } from "react-icons/ri";
+import { IoLogoSoundcloud } from "react-icons/io5";
+
+import { TbListDetails } from "react-icons/tb";
+
+import ServiceLink from "../ServiceLink";
+import Expriance from "../Expriance";
+import Awards from "../Awards";
 
 const ProseriesHosting = () => {
   const faqs = [
@@ -54,218 +64,358 @@ const ProseriesHosting = () => {
 
   return (
     <>
-      <header className="w-full flex bg-[url('/images/Home/server.webp')] bg-cover bg-center pt-20 px-5 md:px-20 items-center min-h-[230px] md:min-h-[430px]">
-        <div className="w-full text-center md:text-left">
-          <h1 className="text-white text-3xl md:text-6xl leading-tight">
-            ProSeries Tax Software Hosting
-          </h1>
-          <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
-            Secure, scalable and secure tax operations with ProSeries Cloud Hosting
-          </p>
-          <Link to="/trial">
-            <button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-              Get in Touch with Us
-            </button>
-          </Link>
+      <section className="md:min-h-[90vh] rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+
+         <Helmet>
+          <title>ProSeries Hosting for USA & Canada | Fast & Secure Cloud</title>
+          <meta name="description" content="Run ProSeries securely in the cloud with fast performance, daily backups, and 24/7 expert support. Call now for your free consultation!" />
+        </Helmet>
+
+        <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
+
+          {/* Left Content */}
+          <div className="text-center md:text-left lg:w-[800px]">
+            <motion.h1
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight md:mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >ProSeries Tax Software Hosting
+            </motion.h1>
+
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl my-3 md:my-0 md:mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+              Secure, scalable and secure tax operations with ProSeries Cloud Hosting
+            </p>
+
+            <Link to="/get-in-touch">
+              <button className="relative group overflow-hidden">
+                <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
+                    translate-y-[-2px] 
+                    group-active:translate-y-0 transition-transform"></span>
+                <span className="relative flex items-center justify-center gap-2 px-6 py-3 
+                    text-white font-semibold tracking-wide">
+                  Get in Touch with Us
+                  <svg
+                    className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+              </button>
+            </Link>
+          </div>
+
+          {/* Right Image */}
+          <motion.div
+            animate={{
+              x: [0, -10, 0, 10, 0],
+              y: [0, 10, 0, -10, 0],
+              opacity: 1,
+            }}
+            transition={{
+              duration: 6,
+              ease: "linear",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className="flex mt-12 md:justify-end"
+          >
+            <img
+              src="/images/Home/homePNG.png"
+              alt="ServerImage"
+              className="w-full max-w-md h-[230px] md:h-[260px] -my-8  md:my-0  lg:mt-12 xl:mt-0  xl:h-auto  rounded-lg object-contain"
+            />
+          </motion.div>
+
         </div>
-      </header>
+      </section>
 
       <main>
-        <section className="p-2">
-          <h2 className="text-center font-serif text-gray-600 text-lg md:text-3xl font-bold">
+        <section>
+          <h2 className='text-3xl text-center py-4 w-[96%] md:w-[90%] mx-auto font-bold font-inter text-textPrimary'>
             Why Choose ProSeries Hosting: Elevate your tax operations and crack the full potential of your ProSeries Tax Software Hosting
+
           </h2>
+
         </section>
 
-        <section className="flex flex-col md:flex-row justify-between p-4 md:p-8">
-          <article className="w-full md:w-[45%]">
-            <p className="font-montserrat my-2 md:my-4 text-sm md:text-base">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
+          {/* IMAGE on the right (or bottom on mobile) */}
+          <figure className="w-full md:w-1/2 flex justify-center">
+            <img
+              className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
+              src="./images/logo/lace-hosting.webp"
+              alt="ProSeries Hosting"
+            />
+
+          </figure>
+
+
+
+          {/* TEXT on the left (or top on mobile) */}
+          <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
+            <h2 className="font-semibold text-textPrimary text-justify  text-xl md:text-xl ">
               ProSeries Tax Software Hosting is professional tax software based on the cloud. It helps tax pros and accountants carry out key tasks for their clients like preparing and monitoring returns, filing e-forms, and tracking errors from anywhere, at any time, with efficiency. With the power of cloud, accountants and tax professionals can give their clients peace of mind since ProSeries Hosting keeps their data safe and secure, with bank grade security measures like encrypted servers, network firewalls, and anti-virus.
-            </p>
-            <p className="font-montserrat text-sm md:text-base">
+            </h2>
+            <p className="font-montserrat text-gray-700 text-justify text-sm md:text-base">
               With ProSeries Cloud Hosting, tax preparers can experience easy tax filing, enjoy the robust features of the popular tax software, gain 24/7 access to tax data so they can stay on top of their clients’ tax filing anytime, anywhere, and remotely collaborate with their clients and team. This added flexibility, security, and productivity that comes with ProSeries Cloud Hosting significantly elevates the entire tax preparation process.
             </p>
+
           </article>
 
-          <figure className="w-full md:w-[50%] flex justify-center mt-6 md:mt-0">
-            <img
-              className="h-48 md:h-80 border-2 border-black rounded-lg object-cover"
-              src="./images/logo/pro-hosting.webp"
-              alt="ProSeries Hosting Overview"
-            />
-          </figure>
+
         </section>
 
-        <section>
-          <h2 className="text-center text-lg md:text-2xl my-5 px-4 font-bold">
+
+
+        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl mt-7 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+          <div className="flex-1">
+            <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
+              Ready to see how ProSeries Cloud Hosting helps with tax preparation?
+            </h1>
+            <Link to='/trial'>
+              <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition block mx-auto">
+                Try ProSeries Hosting for FREE
+              </button>
+            </Link>
+          </div>
+        </div>
+
+
+
+        <div className="mt-14 max-w-4xl mx-auto  px-4 text-center">
+          <h1 className="text-3xl font-bold text-gray-800 font-inter mb-6">
             Key Features: What makes ProSeries Cloud Hosting stand out?
-          </h2>
+          </h1>
 
-          <div className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-center">
             {/* Card 1 */}
-            <article className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb2.webp"
-                alt="Remote Access"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Remote Access</h3>
-              <p className="text-gray-700 font-montserrat transition-all duration-300">
-                ProSeries Cloud hosting facilitates anytime, anywhere access to data. File taxes on the go, work with a remote team in collaboration, and file e-forms well before the deadline.
-              </p>
-            </article>
+            <div className="p-4 max-w-sm">
+              <div className="flex rounded-lg h-full  bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col">
+                <div className="flex items-center mb-3">
+                  <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      className="w-5 h-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                  </div>
+                  <h2 className="text-gray-100  text-lg font-medium">Remote Access
+                  </h2>
+                </div>
+                <div className="flex flex-col justify-between flex-grow">
+                  <p className="leading-relaxed text-base text-white">
+                    ProSeries Cloud hosting facilitates anytime, anywhere access to data. File taxes on the go, work with a remote team in collaboration, and file e-forms well before the deadline.
+                  </p>
+
+                </div>
+              </div>
+            </div>
 
             {/* Card 2 */}
-            <article className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb3.webp"
-                alt="Data Security"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Data Security</h3>
-              <p className="text-gray-700 font-montserrat">
-                Cloud hosting providers ensure that your client’s data is safe and secure with bank-grade security measures like network firewalls, server encryption, anti-virus, anti-malware, and more.
-              </p>
-            </article>
+            <div className="p-4 max-w-sm">
+              <div className="flex rounded-lg h-full  bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col">
+                <div className="flex items-center mb-3">
+                  <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      className="w-5 h-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                  </div>
+                  <h2 className="text-gray-100  text-lg font-medium">Data Security
+                  </h2>
+                </div>
+                <div className="flex flex-col justify-between flex-grow">
+                  <p className="leading-relaxed text-base text-white">
+                    Cloud hosting providers ensure that your client’s data is safe and secure with bank-grade security measures like network firewalls, server encryption, anti-virus, anti-malware, and more.
+                  </p>
+
+                </div>
+              </div>
+            </div>
 
             {/* Card 3 */}
-            <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb1.webp"
-                alt="Data Backup"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Data Backup</h3>
-              <p className="text-gray-800 font-montserrat transition-all duration-300">
-                Be assured of your data accessibility as your data is backed up twice a day, across multiple layers so it is never lost, keeping your accounting and tax operations always running.
-              </p>
-            </article>
-          </div>
-        </section>
+            <div className="p-4 max-w-sm">
+              <div className="flex rounded-lg h-full bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black p-8 flex-col">
+                <div className="flex items-center mb-3">
+                  <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      className="w-5 h-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                  </div>
+                  <h2 className="text-gray-200 text-lg font-medium">Data Backup
+                  </h2>
+                </div>
+                <div className="flex flex-col justify-between flex-grow">
+                  <p className="leading-relaxed text-base text-white">
+                    Be assured of your data accessibility as your data is backed up twice a day, across multiple layers so it is never lost, keeping your accounting and tax operations always running.
+                  </p>
 
-        <section>
-          <h2 className="text-center text-lg md:text-2xl my-5 px-4 font-bold">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <ServiceLink />
+
+        <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50  to-gray-100">
+          <h1 className="text-4xl md:text-4xl text-center font-bold font-inter text-blue-900 p-2 ">
             How to Set Up Your ProSeries Tax Software on the Cloud in 3 Simple Steps?
-          </h2>
+          </h1>
+          <p className="text-xl mt-2 font-montserrat text-center">Team Winscloud can help you transition to ProSeries Hosting seamlessly in 3 easy steps –
 
-          <p className="text-center px-4 font-montserrat">Team Winscloud can help you transition to ProSeries Hosting seamlessly in 3 easy steps –</p>
-
-          <div className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Card 1 */}
-            <article className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb2.webp"
-                alt="Best-fitting Plans"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">
-                Choose a hosting plan that best suits your business
-              </h3>
-              <p className="text-gray-700 font-montserrat transition-all duration-300">
-                We offer both dedicated as well as shared hosting so you can choose the option that fits in with your budget and meets your hosting needs. You can scale up or down as you go hassle-free.
-              </p>
-            </article>
-
-            {/* Card 2 */}
-            <article className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb3.webp"
-                alt="Round-the-Clock Support"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Share your ProSeries License and other details</h3>
-              <p className="text-gray-700 font-montserrat">
-                Once you provide our cloud expert with your application license, software link, data you need to be transferred to the cloud and chosen plan details, we will begin your cloud transition process.
-              </p>
-            </article>
-
-            {/* Card 3 */}
-            <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-              <img
-                src="images/logo/qb1.webp"
-                alt="Data Security and Recovery"
-                className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-              />
-              <h3 className="font-bold text-xl mb-2 font-kanit">Start Your Tax Preparation Process in the Cloud</h3>
-              <p className="text-gray-800 font-montserrat transition-all duration-300">
-                Our experts are trained to complete your transition to cloud in just 120 minutes, depending on your data. Your data is safely and securely migrated to the cloud with maximum up time, so you can start your clients’ tax prep right away.
-              </p>
-            </article>
+          </p>
+          <div className="h-full my-8 w-[90%] pt-12 ">
+            <div className="grid gap-14 md:grid-cols-3 md:gap-5">
+              <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+                  <RiShakeHandsLine className="text-2xl"/>
+                </div>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Choose a hosting plan that best suits your business
+                </h1>
+                <p className="px-4 text-gray-500">
+                  We offer both dedicated as well as shared hosting so you can choose the option that fits in with your budget and meets your hosting needs. You can scale up or down as you go hassle-free.
+                </p>
+              </div>
+              <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+                  <TbListDetails className="text-2xl"/>
+                </div>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Share your ProSeries License and other details</h1>
+                <p className="px-4 text-gray-500">
+                  Once you provide our cloud expert with your application license, software link, data you need to be transferred to the cloud and chosen plan details, we will begin your cloud transition process.
+                </p>
+              </div>
+              <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
+                  <IoLogoSoundcloud className="text-2xl"/>
+                </div>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Start Your Tax Preparation Process in the Cloud</h1>
+                <p className="px-4 text-gray-500">
+                  Our experts are trained to complete your transition to cloud in just 120 minutes, depending on your data. Your data is safely and securely migrated to the cloud with maximum up time, so you can start your clients’ tax prep right away.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
-        <section className="bg-gray-200 my-8 w-[90%] mx-auto rounded-lg flex flex-col items-center py-6">
-          <h2 className="text-center font-semibold font-kanit text-2xl px-4">
-            Ready to see how ProSeries Cloud Hosting helps with tax preparation?
-          </h2>
-          <button className="mt-6 border-2 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-            Try ProSeries Hosting for FREE
-          </button>
-        </section>
-
-        <section className="my-12 w-[90%] mx-auto">
-          <h2 className="text-center font-kanit font-semibold text-2xl pt-5">
+        <section className="w-[90%] mx-auto py-16 ">
+          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
             Why Choose Winscloud Matrix for Your ProSeries Cloud Hosting: Anytime, Anywhere Advantage with Unceasing Expert Support
-          </h2>
+          </h1>
 
-          <div className="flex flex-col md:flex-row mt-8">
-            <article className="md:w-[50%] space-y-4 font-montserrat text-sm p-3">
-              <p>
-                <span className="font-kanit font-bold">Remote Collaboration-</span>With Winscloud Matrix ProSeries Hosting, you can collaborate with your clients and other professionals from your team on-the-go, breaking all the location barriers.
-              </p>
-              <p>
-                <span className="font-kanit font-bold my-6">Effective Hosting Cost-</span>Our hosting plans are affordable, flexible, and scalable, giving you complete freedom to choose services that you require and pay only for what you use.
-              </p>
-              <p>
-                <span className="font-kanit font-bold my-6">Bank Grade Security-</span>We make conscious efforts to keep your data integrity intact, with multiple layers of security such as firewall, encryption, backups, monitoring, and anti-virus protection in place.
-              </p>
-            </article>
+          <div className="grid md:grid-cols-2 gap-8 mt-14">
+            {[
+              {
+                title: "Remote Collaboration",
+                desc: "With Winscloud Matrix ProSeries Hosting, you can collaborate with your clients and other professionals from your team on-the-go, breaking all the location barriers.",
+              },
+              {
+                title: "Effective Hosting Cost",
+                desc: "Our hosting plans are affordable, flexible, and scalable, giving you complete freedom to choose services that you require and pay only for what you use.",
+              },
+              {
+                title: "Bank Grade Security",
+                desc: " We make conscious efforts to keep your data integrity intact, with multiple layers of security such as firewall, encryption, backups, monitoring, and anti-virus protection in place.",
+              },
+              {
+                title: "High Up Time Guarantee",
+                desc: "Our high-speed servers and secure and reliable networks ensure that you get maximum up time with your ProSeries cloud hosting, ensuring a high level of productivity.",
+              },
+              {
+                title: "Multiple Device Compatibility-",
+                desc: "ProSeries Cloud hosting allows tax preparers and accountants to access the software and tax data from any device connected with the internet, including laptop, phone, tablet, and desktop.",
+              },
+              {
+                title: "24×7 Technical Support",
+                desc: " Our technical support team is dedicatedly working round-the-clock to provide you with assistance, troubleshooting, and guidance via email, chat, and call.",
+              },
 
-            <article className="md:w-[50%] space-y-4 p-3 font-montserrat text-sm">
-              <p>
-                <span className="font-kanit font-bold">High Up Time Guarantee-</span>Our high-speed servers and secure and reliable networks ensure that you get maximum up time with your ProSeries cloud hosting, ensuring a high level of productivity.
-              </p>
-              <p>
-                <span className="font-kanit font-bold">Multiple Device Compatibility-</span>ProSeries Cloud hosting allows tax preparers and accountants to access the software and tax data from any device connected with the internet, including laptop, phone, tablet, and desktop.
-              </p>
-              <p>
-                <span className="font-kanit font-bold">24×7 Technical Support-</span>Our technical support team is dedicatedly working round-the-clock to provide you with assistance, troubleshooting, and guidance via email, chat, and call.
-              </p>
-            </article>
+
+            ].map((feature, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+              >
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">{feature.title}</h3>
+                <p className="text-gray-700 text-[15px] leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        <section>
-          <h2 className="text-2xl text-center font-bold font-kanit mt-8 px-8">
-            ProSeries Cloud Hosting Frequently Asked Questions (FAQs) -
-          </h2>
+        <Expriance />
+        <Awards />
 
-          <div className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
+        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">ProSeries Cloud Hosting Frequently Asked Questions (FAQs) -</h1>
+        <section>
+
+          <section className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">
             {faqs.map((faq, index) => (
-              <div key={index} className="border-b last:border-b-0">
+              <div key={index} className="border-b border-gray-100 last:border-b-0">
                 <button
-                  className="w-full text-left flex justify-between items-center p-4 text-lg font-semibold hover:bg-gray-100"
+                  className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <span className="font-josefin">{faq.question}</span>
-                  {openIndex === index ? (
-                    <FaMinus className="text-red-900 min-h-[12px] min-w-[12px] m-4" />
-                  ) : (
-                    <FaPlus className="text-red-600 min-h-[12px] min-w-[28px] m-4" />
-                  )}
+                  <span className="font-josefin text-gray-800 text-lg font-medium">
+                    {faq.question}
+                  </span>
+                  <div
+                    className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? "bg-red-100" : "bg-gray-100"
+                      } transition-all duration-300`}
+                  >
+                    {openIndex === index ? (
+                      <FaMinus className="text-red-600 h-3 w-4" />
+                    ) : (
+                      <FaPlus className="text-gray-600 h-3 w-4" />
+                    )}
+                  </div>
                 </button>
 
                 <div
-                  className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                     }`}
                 >
-                  <div className="p-4 bg-gray-50 text-gray-700">
-                    {faq.answer && <p className="font-montserrat text-[10px] md:text-sm">{faq.answer}</p>}
+                  <div className="p-5 bg-gray-50 text-gray-700">
+                    {faq.answer && (
+                      <p className="font-montserrat text-sm md:text-base leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
             ))}
-          </div>
+          </section>
+
         </section>
       </main>
 

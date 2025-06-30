@@ -1,14 +1,28 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import Partner from "../Partner";
+import { FaUsersGear } from "react-icons/fa6";
+import { GiChoice } from "react-icons/gi";
+import { BiDetail } from "react-icons/bi";
+import { IoIosDesktop } from "react-icons/io";
+import { SiOpenaccess } from "react-icons/si";
+import { MdOutlineUpdate } from "react-icons/md";
+
+
+
+import SageLinks from "../SageLinks";
+import Awards from "../Awards";
+import Expriance from "../Expriance";
 
 const Sage_Hosting = () => {
   const faqs = [
     {
       question: "What is Sage Hosting?",
       answer: "Sage Hosting providers like Winscloud Matrix host the Sage desktop application on the cloud, making it accessible via the internet using multiple devices like phone, tablet, laptop, or desktop. This allows business owners, CPAs, and bookkeepers to access data at any time, from anywhere in the world.",
-     
+
     },
     {
       question: "What are the benefits of Sage Hosting?",
@@ -39,204 +53,292 @@ const Sage_Hosting = () => {
 
   return (
     <>
-      <header className="w-full flex bg-[url('/images/Home/sage1.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center">
-        <div className="w-full text-center md:text-left">
-          <h1 className="text-white text-3xl md:text-6xl leading-tight md:pt-6">
-            Sage Hosting
-          </h1>
-          <p className="text-base text-gray-200 md:text-3xl mt-4 md:mt-7">
-            Elevate your accounting experience with cloud-based Sage ERP & CRM applications with Winscloud Sage Hosting Provider
-          </p>
-          <Link to="/trial" aria-label="Start Sage Hosting Free Trial">
-            <button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-              Get Free Trial Now
-            </button>
-          </Link>
+      <section className="md:min-h-[90vh] rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+
+         <Helmet>
+          <title>Sage Hosting Providers – Secure Cloud Solutions | Winscloud</title>
+          <meta name="description" content="Host Sage software on the cloud with secure, scalable, and reliable servers. Call +1 714-882-1244 for expert Sage hosting support and fast setup today!" />
+        </Helmet>
+
+        <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
+
+          {/* Left Content */}
+          <div className="text-center md:text-left lg:w-[800px]">
+            <motion.h1
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight md:mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >Sage Hosting
+            </motion.h1>
+
+            <p className="text-md sm:text-lg  md:text-xl font-bold max-w-xl xl:max-w-2xl my-3 md:my-0 md:mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+              Elevate your accounting experience with cloud-based Sage ERP & CRM applications with Winscloud Sage Hosting Provider
+            </p>
+
+            <Link to="/Get-in-Tou">
+              <button className="relative group overflow-hidden">
+                <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
+                    translate-y-[-2px] 
+                    group-active:translate-y-0 transition-transform"></span>
+                <span className="relative flex items-center justify-center gap-2 px-6 py-3 
+                    text-white font-semibold tracking-wide">
+                  Get Free Trial Now
+                  <svg
+                    className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+              </button>
+            </Link>
+          </div>
+
+          {/* Right Image */}
+          <motion.div
+            animate={{
+              x: [0, -10, 0, 10, 0],
+              y: [0, 10, 0, -10, 0],
+              opacity: 1,
+            }}
+            transition={{
+              duration: 6,
+              ease: "linear",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className="flex mt-12 md:justify-end"
+          >
+            <img
+              src="/images/Home/homePNG.png"
+              alt="ServerImage"
+              className="w-full max-w-md h-[230px] md:h-[260px] -my-8  md:my-0  lg:mt-12 xl:mt-0  xl:h-auto rounded-lg object-contain"
+            />
+          </motion.div>
+
         </div>
-      </header>
+      </section>
 
       <main>
-        <section className="p-4">
-          <h2 className="text-center font-serif text-lg md:text-3xl font-bold">
-            Enhanced Flexibility and Business Accessibility with Sage Hosting
+        <section>
+          <h2 className='text-3xl text-center  py-4 w-[90%] mx-auto font-bold font-inter text-textPrimary'>
+            QuickBooks POS Cloud Hosting: Conveniently track multi-channel sales and manage your retail inventory from multiple locations
           </h2>
-          <h3 className="font-semibold text-center font-montserrat mt-5 text-sm text-gray-600 md:text-xl">
-            Host Your Sage Desktop & Experience the Power of the Cloud
-          </h3>
+          <p className="font-montserrat text-xl w-[90%] mx-auto text-center font-semibold">Host Your Sage Desktop & Experience the Power of the Cloud
+          </p>
         </section>
 
-        <section className="flex flex-col md:flex-row justify-between p-4 md:p-8">
-          <article className="w-full text-justify font-josefin text-gray-600 md:w-[45%]">
-            <p className="my-2 md:my-4 text-sm md:text-base">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
+          <figure className="w-full md:w-1/2 flex justify-center">
+            <img
+              className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
+              src="./images/logo/sage-hosting.jpg"
+              alt="sage Hosting"
+            />
+
+          </figure>
+
+          {/* TEXT on the left (or top on mobile) */}
+          <article className="w-full md:w-1/2 text-center md:text-start  space-y-4">
+            <h2 className="font-semibold text-textPrimary text-justify  text-xl md:text-xl ">
               Sage hosting means taking your licensed desktop Sage accounting, ERP and CRM applications to the cloud to experience the flexibility and security of the cloud in your day-to-day business operations. Sage Cloud hosting allows multi-user collaboration in real-time, from anywhere across the world. The enhanced productivity that comes with Sage hosting improves customer satisfaction, little to no errors in data, and saves time.
-            </p>
-            <p className="text-sm md:text-base">
+            </h2>
+            <p className="font-montserrat text-gray-700 text-justify text-sm md:text-base">
               Unlike Online versions, Sage hosting comes packed with all the features of the desktop application, thus adding to the efficiency. It can prove to be an excellent service for various businesses like accounting firms, retail & wholesale businesses, various types of industries, food and beverage, and not-for-profit organizations.
             </p>
+
           </article>
-
-          <figure className="w-full md:w-[50%] flex justify-center mt-6 md:mt-0">
-            <img
-              className="h-48 md:h-80 border-2 border-black rounded-lg object-cover"
-              src="./images/logo/sage-hosting.jpg"
-              alt="Sage Hosting Interface"
-            />
-          </figure>
         </section>
 
-        <section className="bg-gray-200 w-[90%] mx-auto rounded-lg flex flex-col items-center py-6">
-          <h2 className="text-center font-semibold font-kanit text-2xl px-4">
-            Are you ready to experience Sage Hosting for your business?
-          </h2>
-          <button className="mt-6 border-2 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-            Contact Our Sage Hosting Expert
-          </button>
-        </section>
+        <div className="bg-gradient-to-br w-[90%] my-6 mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+          <div className="flex-1">
+            <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
+              Are you ready to experience Sage Hosting for your business?
+            </h1>
+            <Link to='/get-in-touch'>
+              <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition block mx-auto">
+                Get in Touch With an Expert
+              </button>
+            </Link>
+          </div>
+        </div>
 
-        <section className="w-[90%] mx-auto mt-10 flex flex-col items-center">
-          <h2 className="font-bold font-kanit">
+
+
+        <div className="h-full my-8 w-full bg-gradient-to-br from-blue-50 to-gray-100    pt-12  ">
+          <h2 className="font-bold font-inter text-4xl w-[90%] mx-auto mt-3 mb-5 text-center text-textPrimary">
             Benefits of Sage Hosting: What does the cloud have to offer?
           </h2>
-        </section>
 
-        <section className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          <article className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img
-              src="images/logo/qb1.webp"
-              alt="Desktop-like Features"
-              className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28"
-            />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Desktop-like Features</h3>
-            <p className="text-gray-700 font-montserrat transition-all duration-300">
-              Hosting your Sage application on the cloud makes the robust features of the desktop application accessible on the virtual server.
-            </p>
-          </article>
-          <article className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-green-500 transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img src="images/logo/teamwork.webp" alt="Round-the-Clock Support" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
-            <h3 className="font-bold text-xl mb-2 font-kanit">Access On-the-Go</h3>
-            <p className="text-gray-700 font-montserrat " >
-              Enjoy easy access to your financial data from multiple devices like your phone, tablet, desktop at home, or laptop with Sage hosting.
-            </p>
-          </article>
-          <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img src="images/logo/qb2.webp" alt="Data Security and Recovery" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
-            <h3 className="font-bold text-xl mb-2  font-kanit">Multi-User Collaboration</h3>
-            <p className="text-gray-800 font-montserrat transition-all duration-300">
-              Sage hosting supports multiple users access to the same set of data, in real time, making collaboration feasible and accounting operations fast.
-            </p>
-          </article>
-          <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img src="images/logo/qb3.webp" alt="Data Security and Recovery" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
-            <h3 className="font-bold text-xl mb-2  font-kanit">Enhanced Productivity</h3>
-            <p className="text-gray-800 font-montserrat transition-all duration-300">
-              With all your financial data accessible round-the-clock and on any device, your data stays updated, leading to enhanced customer satisfaction. 
-            </p>
-          </article>
-          <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img src="images/logo/qb3.webp" alt="Data Security and Recovery" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
-            <h3 className="font-bold text-xl mb-2  font-kanit">Cost Effective</h3>
-            <p className="text-gray-800 font-montserrat transition-all duration-300">
-              Eliminate the need for an expensive and space-consuming, in-house IT infrastructure and a dedicated IT team for maintenance and support.
-            </p>
-          </article>
-          <article className="bg-white/20 hover:bg-green-500 hover:text-white transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img src="images/logo/qb1.webp" alt="Data Security and Recovery" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
-            <h3 className="font-bold text-xl mb-2  font-kanit">Automatic Updates</h3>
-            <p className="text-gray-800 font-montserrat transition-all duration-300">
-              Sage hosting promotes error free updates of your books and critical financial data, eradicating the scope for manual errors.
-            </p>
-          </article>
-        </section>
+          <div className="grid gap-14 w-[90%] mx-auto py-6 md:grid-cols-3 md:gap-8">
+            <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
 
-        <section>
-          <h2 className="text-3xl text-center font-bold font-kanit mt-8 px-8">
-            We host all versions of Sage Applications: Choose the one that suits your business the best
-          </h2>
-          <p className="text-blue-500 text-center mt-6 pr-2">
-            sage 50 <span className="text-black ml-2">|</span> sage 100 <span className="text-black">|</span> sage 300 <span className="text-black">|</span> sage 500
-          </p>
-        </section>
+                <IoIosDesktop className="text-2xl"/>
 
-        <section className="my-12 w-[90%] mx-auto">
-          <h2 className="text-center font-kanit font-semibold text-2xl pt-5">
-            Winscloud QuickBooks Enterprise Cloud Hosting: Powerful Features That Help Your Business Grow
-          </h2>
-          <p className="text-center font-montserrat text-sm mt-3">
-            Flexible, Productive, and Secure Accounting
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 mt-8 font-montserrat text-sm p-3">
-            <div>
-              <p>
-                <span className="font-kanit font-bold">Data Security - </span>
-                Winscloud Matrix has multiple layers of security in place such as SSAE 16 certified data centers, automated data backups, anti-virus and anti-malware, network firewalls, and two-factor verification to keep your data safe.
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Desktop-like Features
+              </h1>
+              <p className="px-4 text-gray-500">
+                Hosting your Sage application on the cloud makes the robust features of the desktop application accessible on the virtual server.
               </p>
             </div>
-            <div>
-              <p>
-                <span className="font-kanit font-bold">Uptime Guarantee - </span>
-                At Winscloud, we understand the importance of business continuity. Our SSAE-16 Type-II (SOC-2) data centers ensure maximum uptime with uninterrupted access to your business.
+            <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
+                <SiOpenaccess className="text-2xl"/>
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access On-the-Go
+              </h1>
+              <p className="px-4 text-gray-500">
+                Enjoy easy access to your financial data from multiple devices like your phone, tablet, desktop at home, or laptop with Sage hosting.
               </p>
             </div>
-            <div>
-              <p>
-                <span className="font-kanit font-bold">Round-the-Clock Tech Support - </span>
-                Our dedicated, in-house tech team provides support around the clock. Whether you need technical guidance or help with troubleshooting, our team is always at your disposal to provide the necessary assistance.
+
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
+                <FaUsersGear className="text-2xl"/>
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Multi-User Collaboration
+              </h1>
+              <p className="px-4 text-gray-500">
+                Sage hosting supports multiple users access to the same set of data, in real time, making collaboration feasible and accounting operations fast.
               </p>
             </div>
-            <div>
-              <p>
-                <span className="font-kanit font-bold">Flexible Plans - </span>
-                Winscloud’s pricing plans offer scalability and cost optimization. Our pricing model is flexible, allowing you to pay as you go based on the actual cloud usage.
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
+                <GiChoice className="text-2xl"/>
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Enhanced Productivity
+              </h1>
+              <p className="px-4 text-gray-500">
+                With all your financial data accessible round-the-clock and on any device, your data stays updated, leading to enhanced customer satisfaction.
               </p>
             </div>
-            <div>
-              <p>
-                <span className="font-kanit font-bold">Scalability - </span>
-                Modern businesses have dynamic needs. Our cloud infrastructure accommodates these changing needs of small businesses, giving them the freedom to scale up and down as required.
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
+                <BiDetail className="text-2xl"/>
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Cost Effective
+              </h1>
+              <p className="px-4 text-gray-500">
+                Eliminate the need for an expensive and space-consuming, in-house IT infrastructure and a dedicated IT team for maintenance and support.
+
               </p>
             </div>
-            <div>
-              <p>
-                <span className="font-kanit font-bold">120-Min Data Migration - </span>
-                Our team of experienced professionals are trained to seamlessly transfer business data saved on your desktop application to the cloud in just 2 hours.
+            <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+              <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
+                <MdOutlineUpdate className="text-2xl"/>
+
+              </div>
+              <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Automatic Updates
+              </h1>
+              <p className="px-4 text-gray-500">
+                Sage hosting promotes error free updates of your books and critical financial data, eradicating the scope for manual errors.
+
               </p>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden">
-          <h2 className="text-2xl text-center font-bold font-kanit mt-8 px-8">
-            Sage Hosting Frequently Asked Questions (FAQs)
-          </h2>
+
+        <SageLinks />
+
+
+        <section className="w-[90%] mx-auto py-16 ">
+          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
+            Winscloud QuickBooks Enterprise Cloud Hosting: Powerful Features That Help Your Business Grow
+          </h1>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-14">
+            {[
+              {
+                title: "Data Security",
+                desc: "Winscloud Matrix has multiple layers of security in place such as SSAE 16 certified data centers, automated data backups, anti-virus and anti-malware, network firewalls, and two-factor verification to keep your data safe.",
+              },
+              {
+                title: "Round-the-Clock Tech support",
+                desc: "Our dedicated, in-house tech team provides support around the clock. Whether you need technical guidance or help with troubleshooting, our team is always at your disposal to provide the necessary assistance.",
+              },
+              {
+                title: "Scalability",
+                desc: "Modern businesses have dynamic needs. Our cloud infrastructure accommodates these changing needs of small businesses, giving them the freedom to scale up and down as required.",
+              },
+              {
+                title: "Uptime Guarantee",
+                desc: "At Winscloud, we understand the importance of business continuity. Our SSAE-16 Type-II (SOC-2) data centers ensure maximum uptime with uninterrupted access to your business.",
+              },
+              {
+                title: "Flexible Plans",
+                desc: "Winscloud’s pricing plans offer scalability and cost optimization. Our pricing model is flexible, allowing you to pay as you go based on the actual cloud usage.",
+              },
+              {
+                title: "120-Min Data Migration",
+                desc: " Our team of experienced professionals are trained to seamlessly transfer business data saved on your desktop application to the cloud in just 2 hours.",
+              },
+            ].map((feature, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+              >
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">{feature.title}</h3>
+                <p className="text-gray-700 text-[15px] leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+        <Expriance />
+        <Awards />
+
+        <h1 className="text-center font-inter font-bold text-3xl text-textPrimary px-4 md:pt-4">Sage Hosting Frequently Asked Questions (FAQs) -</h1>
+
+        <section className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b last:border-b-0">
+            <div key={index} className="border-b border-gray-100 last:border-b-0">
               <button
-                className="w-full text-left flex justify-between items-center p-4 text-lg font-semibold hover:bg-gray-100"
+                className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="font-josefin">{faq.question}</span>
-                {openIndex === index ? (
-                  <FaMinus className="text-red-900 min-h-[12px] min-w-[12px] m-4" />
-                ) : (
-                  <FaPlus className="text-red-600 min-h-[12px] min-w-[28px] m-4" />
-                )}
+                <span className="font-josefin text-gray-800 text-lg font-medium">
+                  {faq.question}
+                </span>
+                <div
+                  className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? "bg-red-100" : "bg-gray-100"
+                    } transition-all duration-300`}
+                >
+                  {openIndex === index ? (
+                    <FaMinus className="text-red-600 h-3 w-4" />
+                  ) : (
+                    <FaPlus className="text-gray-600 h-3 w-4" />
+                  )}
+                </div>
               </button>
+
               <div
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   }`}
               >
-                <div className="p-4 bg-gray-50 text-gray-700">
-                  {faq.answer && <p className="font-montserrat text-[10px] md:text-sm">{faq.answer}</p>}
+                <div className="p-5 bg-gray-50">
+                  <p className="font-montserrat text-gray-800 text-sm md:text-base leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               </div>
             </div>
           ))}
         </section>
+
       </main>
 
-      <footer>
         <Partner />
-      </footer>
     </>
   );
 };

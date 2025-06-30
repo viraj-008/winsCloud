@@ -1,95 +1,118 @@
-import { Link } from "react-router-dom"
 import { motion } from "framer-motion";
+
 const Partner = () => {
+  interface Logo {
+    image: string;
+  }
 
-    interface Logo {
-        image: string;
-      }
-      const footerLogos:Logo[]=[
-      {image:"/images/Flogo/Google.webp"},
-      {image:"/images/Flogo/idrive.png"},
-      {image:"/images/Flogo/micro.png"},
-      {image:"/images/Flogo/pci.jpg"},
-      {image:"/images/Flogo/Sectigo.png"},
-      {image:"/images/Flogo/symantec.png"},
-      {image:"/images/Flogo/veeam.png"},
-      {image:"/images/Flogo/vm.png"},
-      {image:"/images/Flogo/Wasabi.png"},
-      ]
-      const slideVariants = {
-        animate: {
-          x: ["0%", "-50%"],
-          transition: {
-            duration: 10,      // Slower and smoother
-            ease: "linear",
-            repeat: Infinity,
-          },
-        },
-      };
-      
-      
-      
+  const footerLogos: Logo[] = [
+    { image: "/images/Flogo/Google.webp" },
+    { image: "/images/Flogo/idrive.png" },
+    { image: "/images/Flogo/micro.png" },
+    { image: "/images/Flogo/Sectigo.png" },
+    { image: "/images/Flogo/veeam.png" },
+    { image: "/images/Flogo/Wasabi.png" },
+  ];
+
+  // Animation variants
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  const hoverEffect = {
+    scale: 1.05,
+    boxShadow: "0px 10px 20px rgba(0, 0, 255, 0.3)",
+    transition: { duration: 0.3 },
+  };
+
   return (
-    <>
+    <div className="w-full py-16 bg-gradient-to-t from-[#0f172a] via-[#163579] to-black relative mt-12 overflow-hidden">
+      {/* Futuristic background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full bg-blue-500"
+              style={{
+                width: `${Math.random() * 10 + 5}px`,
+                height: `${Math.random() * 10 + 5}px`,
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                opacity: Math.random() * 0.5 + 0.1,
+              }}
+            />
+          ))}
+        </div>
+      </div>
 
+      <div className="relative z-10 text-center mb-12 px-4">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-4"
+        >
+          Our Trusted Partners
+        </motion.h2>
 
-    <h1 className="text-4xl text-center bg-gray-300 my-8 font-serif p-3 font-bold text-gray-800 w-[96%] rounded-xl mx-auto">Our Trusted Partners</h1>
-   <motion.div className="overflow-hidden my-4 w-[90%] bg-white py-4 mx-auto">
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.8 }}
+          className="w-32 h-1 mx-auto bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-full mb-6"
+        />
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="rounded-xl px-6 py-4 max-w-3xl mx-auto backdrop-blur-sm bg-white/5 border border-white/10"
+        >
+          <p className="text-sm md:text-base text-gray-300 font-light leading-relaxed">
+            Backed by <span className="text-blue-400">industry leaders</span> in cloud infrastructure, data security, and IT innovation, we ensure seamless service delivery. Our partners help us build a <span className="text-purple-400">resilient, high-performance</span> environment so you can focus on what matters most — your success.
+          </p>
+        </motion.div>
+      </div>
+
       <motion.div
-        className="flex gap-8 w-max"
-        variants={slideVariants}
-        animate="animate"
+        className="w-[90%] mx-auto "
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
       >
-        {footerLogos.map((logo, index) => (
-          <div
-            key={index}
-            className="w-[150px] h-[75px] flex items-center justify-center bg-white p-2 rounded-md shadow-sm"
-          >
-            <img
-              src={logo.image}
-              alt={`Logo ${index + 1}`}
-              className="w-full h-full object-contain"
-            />
-          </div>
-        ))}
-
-        {/* Duplicate logos for seamless loop */}
-        {footerLogos.map((logo, index) => (
-          <div
-            key={`dup-${index}`}
-            className="w-[150px] h-[75px] flex items-center justify-center bg-white p-2 rounded-md shadow-sm"
-          >
-            <img
-              src={logo.image}
-              alt={`Logo duplicate ${index + 1}`}
-              className="w-full h-full object-contain"
-            />
-          </div>
-        ))}
+        <div className="grid grid-cols-2 sm:grid-cols-3 -mb-8 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          {footerLogos.map((logo, index) => (
+            <motion.div
+              key={index}
+              variants={item}
+              whileHover={hoverEffect}
+              className="flex items-center justify-center p-4 rounded-xl backdrop-blur-sm bg-white/5 border border-white/10 hover:border-blue-400/30"
+            >
+              <motion.img
+                src={logo.image}
+                alt={`Logo ${index + 1}`}
+                className="w-full h-auto max-h-12 object-contain  transition-all duration-300"
+                whileHover={{ scale: 1.1 }}
+              />
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
-    </motion.div>
+    </div>
+  );
+};
 
-     <motion.div
-  className="bg-red-700 flex flex-col my-8 md:flex-row justify-around mt-8 px-4 rounded-lg md:w-[90%] w-[90%] mx-auto items-center"
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7, type: "spring", stiffness: 100, delay: 0.1 }}
-  viewport={{ once: false, amount: 0.2 }}
->
-  <p className="text-white text-center mt-4 md:mt-0 font-josefin font-bold">
-    Get an Account in Minutes Today!
-  </p>
-  <Link to="/trial">
-    <button className="border mx-auto font-josefin m-4 md:my-3 bg-green-600 hover:bg-green-700 text-md md:text-lg px-6 md:px-12 text-white py-2 rounded-full">
-      Free One-Month trial!
-    </button>
-  </Link>
-</motion.div>
-
-
-    </>      
-    
-  )
-}
-
-export default Partner
+export default Partner;

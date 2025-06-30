@@ -13,6 +13,8 @@ import { GrStorage } from "react-icons/gr";
 import { MdSdStorage } from "react-icons/md";
 import { FiUsers } from "react-icons/fi";
 
+import Partner from '../Partner';
+
 const validationSchema = Yup.object({
     FullName: Yup.string()
         .min(2, 'Name is too short')
@@ -31,15 +33,59 @@ const validationSchema = Yup.object({
         .required('Desired User Name/Names is required'),
     Choose_Application_Host: Yup.string()
         .required('Please select an application to host'),
+    AdditionalRAM: Yup.number().min(0),
+    additionalStorage: Yup.number().min(0),
+    noOfUsers: Yup.number().min(1),
+    totalPrice: Yup.number().min(0)
 });
 
 interface Props {
     selectedPlan: Plan;
     setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
     planType: string;
+    sharedPlans?: Plan[];
+    dedicatedPlans?: Plan[];
+    onSwitchPlan?: (plan: Plan) => void;
 }
 
-const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
+interface FormValues {
+    AdditionalRAM: number;
+    additionalStorage: number;
+    noOfUsers: number;
+    totalPrice: number;
+    FullName: string;
+    Desired_User: string;
+    Choose_Application_Host: string;
+    Email: string;
+    Company: string;
+    Phone: string;
+    License_Details: string;
+    planType: string;
+}
+
+const PRICE_PER_RAM = 5; // Price per RAM unit
+const PRICE_PER_STORAGE = 1; // Price per Storage unit
+const RAM_INCREMENT = 1; // RAM increment/decrement amount
+
+const calculateTotalPrice = (values: FormValues, plan: Plan, planType: string): number => {
+    const basePrice = planType === "shared"
+        ? values.noOfUsers * (plan.userMonth ?? 0)
+        : plan.packageMonth ?? 0;
+
+    const extraUsers = planType === "dedicated"
+        ? Math.max(0, values.noOfUsers - (plan.default ?? 0)) * (plan.AdditionalAccount ?? 0)
+        : 0;
+
+    console.log("Base Price:", values, basePrice);
+    console.log("Extra Users Price:", extraUsers);
+
+    const ramPrice = values.AdditionalRAM * PRICE_PER_RAM;
+    const storagePrice = values.additionalStorage * PRICE_PER_STORAGE;
+
+    return basePrice + extraUsers + ramPrice + storagePrice;
+};
+
+const PriceForm = ({ selectedPlan, setShowForm, planType, sharedPlans, dedicatedPlans, onSwitchPlan }: Props) => {
 
     const [loading, setLoading] = useState<boolean>(false);
 
@@ -61,324 +107,346 @@ const PriceForm = ({ selectedPlan, setShowForm, planType }: Props) => {
     };
 
 
-    // const handleIncrease = (field: string, increment: number, values: any, setFieldValue: any) => {
-    //     const newValue = values[field] + increment;
-    //     setFieldValue(field, Math.max(newValue, 0));
-    //     if (field === 'AdditionalRAM' || field === 'additionalStorage') {
-    //         setFieldValue('totalPrice', values.totalPrice + increment);
-    //     } else if (field === 'noOfUsers') {
-    //         let newTotalPrice = 0;
-    //         if (planType === "shared") {
-    //             newTotalPrice = newValue * (selectedPlan.userMonth ?? 0);
-    //         } else {
-    //             const basePrice = selectedPlan.packageMonth ?? 0;
-    //             const defaultUsers = selectedPlan.default ?? 0;
-    //             const extraPerUser = selectedPlan.AdditionalAccount ?? 0;
-    //             const extraUsers = Math.max(0, newValue - defaultUsers);
-    //             newTotalPrice = basePrice + extraUsers * extraPerUser;
-    //         }
-    //         setFieldValue('totalPrice', newTotalPrice);
-    //     }
-    //     console.log('Updated Value:', initialValues);
-    // };
+    // Helper to find next plan
+    const findNextPlan = (currentPlan: Plan) => {
+        const plans = planType === "shared" ? sharedPlans : dedicatedPlans;
+        if (!plans) return null;
+        const currentIndex = plans.findIndex(p => p.keyName === currentPlan.keyName);
+        return currentIndex < plans.length - 1 ? plans[currentIndex + 1] : null;
+    };
+
+    // Helper to find previous plan
+    const findPreviousPlan = (currentPlan: Plan) => {
+        const plans = planType === "shared" ? sharedPlans : dedicatedPlans;
+        if (!plans) return null;
+        const currentIndex = plans.findIndex(p => p.keyName === currentPlan.keyName);
+        return currentIndex > 0 ? plans[currentIndex - 1] : null;
+    };
 
     const handleIncrease = (
-        field: string,
+        field: keyof FormValues,
         increment: number,
-        values: any,
-        setFieldValue: any
+        values: FormValues,
+        setFieldValue: (field: string, value: number) => void
     ) => {
-        let newValue = values[field] + increment;
+        let newValue = values[field] as number + increment;
 
+        if (field === 'AdditionalRAM') {
+            if (newValue < 0) return;
+        }
+        if (field === 'additionalStorage') {
+            if (increment !== 1 && increment !== -1) return;
+            if (newValue < 0) return;
+        }
         if (field === 'noOfUsers') {
             const minUsers = selectedPlan.numberUserFrom ?? 1;
             const maxUsers = selectedPlan.numberUserto ?? 100;
-
-            // Apply limits
-            if (newValue < minUsers) {
-                newValue = minUsers;
-            } else if (newValue > maxUsers) {
+            if (newValue > maxUsers) {
+                const next = findNextPlan(selectedPlan);
+                if (next && onSwitchPlan) {
+                    onSwitchPlan(next);
+                    return;
+                }
                 newValue = maxUsers;
-            }
-
-            setFieldValue(field, newValue);
-
-            let newTotalPrice = 0;
-            if (planType === "shared") {
-                newTotalPrice = newValue * (selectedPlan.userMonth ?? 0);
-            } else {
-                const basePrice = selectedPlan.packageMonth ?? 0;
-                const defaultUsers = selectedPlan.default ?? 0;
-                const extraPerUser = selectedPlan.AdditionalAccount ?? 0;
-                const extraUsers = Math.max(0, newValue - defaultUsers);
-                newTotalPrice = basePrice + extraUsers * extraPerUser;
-            }
-
-            setFieldValue('totalPrice', newTotalPrice);
-
-        } else {
-            // For fields like AdditionalRAM or additionalStorage
-            newValue = Math.max(newValue, 0);
-            setFieldValue(field, newValue);
-
-            if (field === 'AdditionalRAM' || field === 'additionalStorage') {
-                setFieldValue('totalPrice', values.totalPrice + increment);
+            } else if (newValue < minUsers) {
+                const prev = findPreviousPlan(selectedPlan);
+                if (prev && onSwitchPlan) {
+                    onSwitchPlan(prev);
+                    return;
+                }
+                newValue = minUsers;
             }
         }
-
-        console.log('Updated Value:', initialValues);
+        setFieldValue(field, newValue);
+        // Always recalculate total price from all current values
+        const updatedValues = { ...values, [field]: newValue };
+        const newTotalPrice = calculateTotalPrice(updatedValues, selectedPlan, planType);
+        setFieldValue('totalPrice', newTotalPrice);
     };
 
 
     return (
         <>
             <div className='fixed top-3 px-4 shadow-xl inset-0 z-50 flex items-center justify-center bg-opacity-90'>
-                <div className='rounded-lg w-full max-w-4xl'> {/* Added responsive width */}
-                    <div className='bg-white w-full sm:w-[600px] mx-auto border-4 border-green-500 p-6 rounded-lg max-h-[90vh] overflow-y-auto shadow-lg'>
+                <div className='rounded-lg w-full max-w-4xl'>
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-30 backdrop-blur-sm">
+                        <div className="bg-white w-full max-w-md mx-4 rounded-xl shadow-xl border border-gray-200 max-h-[90vh] overflow-y-auto">
+                            {/* Header */}
+                            <div className="sticky top-0 bg-white p-4 border-b border-gray-100 flex justify-between items-center">
+                                <div>
+                                    <h1 className="text-sm font-josefin text-gray-500">Plan Type: <span className="font-bold">{planType.toUpperCase()}</span></h1>
+                                    <h2 className="text-xl  font-josefin font-bold text-green-600">{selectedPlan.keyName}</h2>
+                                </div>
+                                <button
+                                    onClick={() => setShowForm(false)}
+                                    className="text-gray-400 hover:text-red-500 transition-colors"
+                                >
+                                    <RiCloseLargeFill className="text-xl" />
+                                </button>
+                            </div>
 
-                        <div className=' mb-4  flex justify-end'> <RiCloseLargeFill className='text-2xl text-red-600 border border-black rounded-xl p-1 cursor-pointer' onClick={() => setShowForm(false)} /></div>
+                            <div className="p-4">
+                                <Formik
+                                    initialValues={initialValues}
+                                    validationSchema={validationSchema}
+                                    onSubmit={(values) => {
+                                        setLoading(true);
+                                        emailjs
+                                            .send('service_zho6x7p', 'template_ly9vtaw', values, {
+                                                publicKey: 'Ywh2vouw_5P3OOzfk',
+                                            })
+                                            .then(
+                                                () => {
+                                                    toast.success('Request sent successfully!');
+                                                    setLoading(false);
+                                                    setShowForm(false);
+                                                },
+                                                () => {
+                                                    toast.error('Something went wrong!');
+                                                    setLoading(false);
+                                                    setShowForm(false);
+                                                },
+                                            );
+                                    }}
+                                >
+                                    {({ values, setFieldValue, handleSubmit }) => (
+                                        console.log("Form Values:", values),
+                                        <Form onSubmit={handleSubmit} className="space-y-3">
+                                            {/* Compact Configuration */}
+                                            <div className="grid grid-cols-3 gap-2 mb-3">
+                                                {/* Storage */}
+                                                <div className="bg-gray-50 p-2 rounded-lg">
+                                                    <label className="block text-xs text-gray-500 text-center font-josefin mb-1">
+                                                        <GrStorage className="mx-auto text-blue-400 text-lg" />
+                                                        Storage
+                                                    </label>
+                                                    <div className="flex justify-center items-center space-x-1">
+                                                        <button
+                                                            type="button"
+                                                            onClick={() => handleIncrease('additionalStorage', -1, values, setFieldValue)}
+                                                            disabled={values.additionalStorage <= 0}
+                                                            className={`p-1 rounded ${values.additionalStorage <= 0 ? 'text-gray-300' : 'text-red-400 hover:bg-red-50'}`}
+                                                        >
+                                                            <TiMinus className="text-sm" />
+                                                        </button>
+                                                        <span className="text-sm font-medium w-6 text-center">
+                                                            {values.additionalStorage}
+                                                        </span>
+                                                        <button
+                                                            type="button"
+                                                            onClick={() => handleIncrease('additionalStorage', 1, values, setFieldValue)}
+                                                            className="p-1 rounded text-green-500 hover:bg-green-50"
+                                                        >
+                                                            <FaPlus className="text-sm" />
+                                                        </button>
+                                                    </div>
+                                                </div>
 
-                        <h1 className='text-center md:text-xl font-josefin font-bold mb-2 text-gray-800  tracking-wider  '>
-                            <span className='font-serif text-black font-extralight'>Plan Type: </span>  ( {planType.toUpperCase()} )
-                        </h1>
-                        <h2 className='text-2xl text-center font-josefin font-bold underline  text-red-800 py-3 rounded-lg mb-4'>
-                            {selectedPlan.keyName}
-                        </h2>
+                                                {/* RAM */}
+                                                {planType === "dedicated" && (
+                                                    <div className="bg-gray-50 p-2 rounded-lg">
+                                                        <label className="block text-xs text-gray-500 text-center font-josefin mb-1">
+                                                            <MdSdStorage className="mx-auto text-blue-400 text-lg" />
+                                                            RAM
+                                                        </label>
+                                                        <div className="flex justify-center items-center space-x-1">
+                                                            <button
+                                                                type="button"
+                                                                onClick={() => handleIncrease('AdditionalRAM', -RAM_INCREMENT, values, setFieldValue)}
+                                                                disabled={values.AdditionalRAM <= 0}
+                                                                className={`p-1 rounded ${values.AdditionalRAM <= 0 ? 'text-gray-300' : 'text-red-400 hover:bg-red-50'}`}
+                                                            >
+                                                                <TiMinus className="text-sm" />
+                                                            </button>
+                                                            <span className="text-sm font-medium w-6 text-center">
+                                                                {values.AdditionalRAM}
+                                                            </span>
+                                                            <button
+                                                                type="button"
+                                                                onClick={() => handleIncrease('AdditionalRAM', RAM_INCREMENT, values, setFieldValue)}
+                                                                className="p-1 rounded text-green-500 hover:bg-green-50"
+                                                            >
+                                                                <FaPlus className="text-sm" />
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                )}
 
-                        <Formik
-                            initialValues={initialValues}
-                            validationSchema={validationSchema}
-                            onSubmit={(values) => {
-                                // e.preventDefault();
-                                // console.log("Form submitted:", e.target);
-                                setLoading(true);
-
-                                emailjs
-                                    .send('service_zho6x7p', 'template_ly9vtaw', values, {
-                                        publicKey: 'Ywh2vouw_5P3OOzfk',
-                                    })
-                                    .then(
-                                        () => {
-                                            toast.success('Request sent successfully!');
-                                            console.log('SUCCESS!');
-                                            setLoading(false);
-                                        },
-                                        (error) => {
-                                            toast.error('Something went wrong!');
-                                            console.log('FAILED...', error.text);
-                                            setLoading(false);
-                                        },
-                                    );
-
-                                // console.log("Submitted Form Data:", form);
-                                // (Object.prototype.hasOwnProperty.call(values, 'AdditionalRAM') && delete values.AdditionalRAM);
-
-                                console.log('Form Submitted:', values);
-                            }}
-                        >
-                            {({ values, setFieldValue, handleSubmit }) => (
-                                <Form onSubmit={handleSubmit}>
-                                    <div className='flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 mb-4'>
-                                        <div className='md:w-1/2 w-full'>
-                                            <label className='block text-red-700 ml-1 text-sm text-center font-josefin'>
-                                                <GrStorage className='mx-auto text-gray-800  text-2xl ' />  Additional Storage
-                                            </label>
-                                            <div className='flex justify-center  items-center space-x-2 mt-2'>
-                                                <button
-                                                    type='button'
-                                                    onClick={() => handleIncrease('additionalStorage', -1, values, setFieldValue)}
-                                                    className='text-red-600'
-                                                >
-                                                    <TiMinus />
-                                                </button>
-                                                <input
-                                                    type='text'
-                                                    value={values.additionalStorage}
-                                                    readOnly
-                                                    className='w-10 text-center font-bold text-2xl  rounded-full'
-                                                />
-                                                <button
-                                                    type='button'
-                                                    onClick={() => handleIncrease('additionalStorage', 1, values, setFieldValue)}
-                                                    className='text-green-600'
-                                                >
-                                                    <FaPlus />
-                                                </button>
+                                                {/* Users */}
+                                                {selectedPlan.numberUserFrom !== undefined && (
+                                                    <div className="bg-gray-50 p-2 rounded-lg">
+                                                        <label className="block text-xs text-gray-500 text-center font-josefin mb-1">
+                                                            <FiUsers className="mx-auto text-blue-400 text-lg" />
+                                                            Users
+                                                        </label>
+                                                        <div className="flex justify-center items-center space-x-1">
+                                                            <button
+                                                                type="button"
+                                                                onClick={() => handleIncrease('noOfUsers', -1, values, setFieldValue)}
+                                                                disabled={values.noOfUsers <= (planType === "dedicated" ? (selectedPlan.default ?? 1) : selectedPlan.numberUserFrom)}
+                                                                className={`p-1 rounded ${values.noOfUsers <= (planType === "dedicated" ? (selectedPlan.default ?? 1) : selectedPlan.numberUserFrom) ? 'text-gray-300' : 'text-red-400 hover:bg-red-50'}`}
+                                                            >
+                                                                <TiMinus className="text-sm" />
+                                                            </button>
+                                                            <span className="text-sm font-medium w-6 text-center">
+                                                                {values.noOfUsers}
+                                                            </span>
+                                                            <button
+                                                                type="button"
+                                                                onClick={() => handleIncrease('noOfUsers', 1, values, setFieldValue)}
+                                                                className="p-1 rounded text-green-500 hover:bg-green-50"
+                                                            >
+                                                                <FaPlus className="text-sm" />
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                )}
                                             </div>
-                                        </div>
 
-                                        {planType === "dedicated" && (
-                                            <div className='md:w-1/2 w-full'>
-                                                <label className='block text-blue-700 ml-1 text-sm text-center font-josefin'>
-                                                    <MdSdStorage className='mx-auto text-gray-800  text-2xl' /> Additional Ram
-                                                </label>
-                                                <div className='flex justify-center items-center space-x-2 mt-2'>
-                                                    <button
-                                                        type='button'
-                                                        onClick={() => handleIncrease('AdditionalRAM', -1, values, setFieldValue)}
-                                                        className='text-red-600'
-                                                    >
-                                                        <TiMinus />
-                                                    </button>
-                                                    <input
-                                                        type='text'
-                                                        value={values.AdditionalRAM}
-                                                        name='AdditionalRAM'
-                                                        readOnly
-                                                        className='w-10 text-center font-bold text-2xl '
-                                                    />
-                                                    <button
-                                                        type='button'
-                                                        onClick={() => handleIncrease('AdditionalRAM', 1, values, setFieldValue)}
-                                                        className='text-green-600 '
-                                                    >
-                                                        <FaPlus />
-                                                    </button>
+                                            {/* Total Price */}
+                                            <div className="bg-blue-50 p-2 rounded-lg mb-3">
+                                                <div className="flex justify-between items-center">
+                                                    <span className="text-xs font-josefin text-blue-600">Total Price</span>
+                                                    <span className="text-lg font-bold text-blue-700">${values.totalPrice}</span>
                                                 </div>
                                             </div>
-                                        )}
 
-                                        {selectedPlan.numberUserFrom !== undefined && (
-                                            <div className='md:w-1/2 w-full flex flex-col justify-center'>
-                                                <label className='block text-green-700 font-josefin text-center'>
-                                                    <FiUsers className='mx-auto text-gray-800  text-2xl ' />  Number of Users
-                                                </label>
-                                                <div className='flex justify-center items-center space-x-2 mt-2'>
-                                                    <button
-                                                        type='button'
-                                                        onClick={() => handleIncrease('noOfUsers', -1, values, setFieldValue)}
-                                                        className='text-red-600'
-                                                    >
-                                                        <TiMinus />
-                                                    </button>
-                                                    <input
-                                                        type='number'
-                                                        value={values.noOfUsers}
-                                                        name='noOfUsers'
-                                                        readOnly
-                                                        className='w-10 text-center font-bold text-2xl'
+                                            {/* Compact Form Fields */}
+                                            <div className="space-y-2">
+                                                <div>
+                                                    <label className="block text-xs text-gray-500 font-josefin mb-1">Full Name*</label>
+                                                    <Field
+                                                        type="text"
+                                                        name="FullName"
+                                                        className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
                                                     />
-                                                    <button
-                                                        type='button'
-                                                        onClick={() => handleIncrease('noOfUsers', 1, values, setFieldValue)}
-                                                        className='text-green-600'
+                                                    <ErrorMessage name="FullName" component="div" className="text-red-400 text-xs mt-1" />
+                                                </div>
+
+                                                <div>
+                                                    <label className="block text-xs text-gray-500 font-josefin mb-1">Email*</label>
+                                                    <Field
+                                                        type="email"
+                                                        name="Email"
+                                                        className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                                                    />
+                                                    <ErrorMessage name="Email" component="div" className="text-red-400 text-xs mt-1" />
+                                                </div>
+
+                                                <div>
+                                                    <label className="block text-xs text-gray-500 font-josefin mb-1">Company</label>
+                                                    <Field
+                                                        type="text"
+                                                        name="Company"
+                                                        className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                                                    />
+                                                    <ErrorMessage name="Company" component="div" className="text-red-400 text-xs mt-1" />
+                                                </div>
+
+                                                <div>
+                                                    <label className="block text-xs text-gray-500 font-josefin mb-1">Desired Username(s)*</label>
+                                                    <Field
+                                                        type="text"
+                                                        name="Desired_User"
+                                                        className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                                                    />
+                                                    <ErrorMessage name="Desired_User" component="div" className="text-red-400 text-xs mt-1" />
+                                                </div>
+
+                                                <div>
+                                                    <label className="block text-xs text-gray-500 font-josefin mb-1">Phone*</label>
+                                                    <PhoneInput
+                                                        defaultCountry="us"
+                                                        value={values.Phone}
+                                                        onChange={(phone: string) => setFieldValue('Phone', phone)}
+                                                        className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                                                    />
+                                                    <ErrorMessage name="Phone" component="div" className="text-red-400 text-xs mt-1" />
+                                                </div>
+
+                                                <div>
+                                                    <label className="block text-xs text-gray-500 font-josefin mb-1">Application*</label>
+                                                    <Field
+                                                        as="select"
+                                                        name="Choose_Application_Host"
+                                                        className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 text-gray-700"
+                                                        onChange={(e: any) => {
+                                                            const selectedValue = e.target.value;
+                                                            setFieldValue("Choose_Application_Host", selectedValue);
+                                                            if (selectedValue !== "Other") {
+                                                                setFieldValue("Custom_Application_Name", ""); // Reset custom name if not Other
+                                                            }
+                                                        }}
                                                     >
-                                                        <FaPlus />
-                                                    </button>
+                                                        <option value="" disabled>Select your plan</option>
+                                                        <option value="QuickBook">QuickBook</option>
+                                                        <option value="Sage">Sage</option>
+                                                        <option value="AngularDrake">Drake</option>
+                                                        <option value="Other">Other Applications</option>
+                                                    </Field>
+                                                    {values.Choose_Application_Host === "Other" && (
+                                                        <div className="mt-2">
+                                                            <label className="block text-xs text-gray-500 font-josefin mb-1">Type Application Name*</label>
+                                                            <Field
+                                                                type="text"
+                                                                name="Custom_Application_Name"
+                                                                placeholder="Enter application name"
+                                                                className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                                                            />
+                                                            <ErrorMessage name="Custom_Application_Name" component="div" className="text-red-400 text-xs mt-1" />
+                                                        </div>
+                                                    )}
+
+                                                    <ErrorMessage name="Choose_Application_Host" component="div" className="text-red-400 text-xs mt-1" />
+                                                </div>
+
+                                                <div>
+                                                    <label className="block text-xs text-gray-500 font-josefin mb-1">License Details*</label>
+                                                    <Field
+                                                        as="textarea"
+                                                        name="License_Details"
+                                                        rows={2}
+                                                        className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                                                    />
+                                                    <ErrorMessage name="License_Details" component="div" className="text-red-400 text-xs mt-1" />
                                                 </div>
                                             </div>
-                                        )}
-                                    </div>
 
-                                    <div className='mb-4'>
-                                        <label className='block text-gray-700 font-josefin'>Total Price</label>
-                                        <input
-                                            type='text'
-                                            value={`$${values.totalPrice}`}
-                                            className='w-full px-4 py-2 border border-gray-300 rounded-lg mt-2'
-                                            name='totalPrice'
-                                            readOnly
-                                        />
-                                    </div>
-
-                                    <div className='mb-4'>
-                                        <label className='block text-gray-700 font-josefin'>Full Name</label>
-                                        <Field
-                                            type='text'
-                                            name='FullName'
-                                            className='w-full px-4 py-2 border border-gray-300 rounded-lg mt-2'
-                                        />
-                                        <ErrorMessage name='FullName' component='div' className='text-red-500 text-sm' />
-                                    </div>
-
-                                    <div className='mb-4'>
-                                        <label className='block text-gray-700 font-josefin'>Email</label>
-                                        <Field
-                                            type='email'
-                                            name='Email'
-                                            className='w-full px-4 py-2 border border-gray-300 rounded-lg mt-2'
-                                        />
-                                        <ErrorMessage name='Email' component='div' className='text-red-500 text-sm' />
-                                    </div>
-
-                                    <div className='mb-4'>
-                                        <label className='block text-gray-700 font-josefin'>Company</label>
-                                        <Field
-                                            type='text'
-                                            name='Company'
-                                            className='w-full px-4 py-2 border border-gray-300 rounded-lg mt-2'
-                                        />
-                                        <ErrorMessage name='Company' component='div' className='text-red-500 text-sm' />
-                                    </div>
-                                    <div className='mb-4'>
-                                        <label className='block text-gray-700 font-josefin'>Desired User Name/Names*</label>
-                                        <Field
-                                            type='text'
-                                            name='Desired_User'
-                                            className='w-full px-4 py-2 border border-gray-300 rounded-lg mt-2'
-                                        />
-                                        <ErrorMessage name='Desired_User' component='div' className='text-red-500 text-sm' />
-                                    </div>
-
-                                    <div className="mb-4">
-                                        <label className="block text-gray-700 font-josefin">Phone NO.</label>
-                                        <PhoneInput
-                                            defaultCountry="in"
-                                            value={values.Phone}
-                                            onChange={(phone: string) => setFieldValue('Phone', phone)}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
-                                            placeholder="Phone Number*"
-                                        />
-                                        <ErrorMessage name='Phone' component='div' className='text-red-500 text-sm' />
-                                    </div>
-                                    <div className='mb-4'>
-                                        <label className='block text-gray-700 font-josefin'>Choose Application to Host</label>
-                                        <Field
-                                            as='select'
-                                            name='Choose_Application_Host'
-                                            className='w-full px-4 py-2 text-red-600 font-bold border border-gray-300 rounded-lg mt-2'
-                                        >
-                                            <option value='QuickBook'>QuickBook</option>
-                                            <option value='Sage'>Sage</option>
-                                            <option value='AngularDrake'>Drake</option>
-                                            <option value='Other'>Other</option>
-                                        </Field>
-                                        <ErrorMessage name='Choose_Application_Host' component='div' className='text-red-500 text-sm' />
-                                    </div>
-
-                                    <div className='mb-4'>
-                                        <label className='block text-gray-700 font-josefin'>License Details*</label>
-                                        <Field
-                                            as='textarea'
-                                            name='License_Details'
-                                            className='w-full px-4 py-2 border border-gray-300 rounded-lg mt-2 resize-none'
-                                        />
-                                        <ErrorMessage name='License_Details' component='div' className='text-red-500 text-sm' />
-                                    </div>
-
-
-                                    <div className='flex justify-end gap-4 mt-4'>
-                                        <button
-                                            type='button'
-                                            onClick={() => setShowForm(false)}
-                                            className='px-4 py-2 bg-gray-800 text-white rounded-lg hover:text-red-600 font-josefin'
-                                        >
-                                            Cancel
-                                        </button>
-                                        <button
-                                            type='submit'
-                                            className='px-4 py-2 font-josefin bg-blue-600 text-white rounded-lg hover:bg-blue-700'
-                                        >
-                                            {loading ? "Submiting..." : "Get 7 Days Free Trial"}
-                                        </button>
-                                    </div>
-                                </Form>
-                            )}
-                        </Formik>
+                                            {/* Compact Buttons */}
+                                            <div className="flex justify-end gap-2 pt-3">
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setShowForm(false)}
+                                                    className="px-4 py-2 text-xs font-josefin text-gray-600 hover:text-gray-800"
+                                                >
+                                                    Cancel
+                                                </button>
+                                                <button
+                                                    type="submit"
+                                                    disabled={loading}
+                                                    className="px-4 py-2 text-xs font-josefin bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-70"
+                                                >
+                                                    {loading ? (
+                                                        <span className="flex items-center justify-center">
+                                                            <svg className="animate-spin mr-1 h-3 w-3 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                                            </svg>
+                                                            Processing...
+                                                        </span>
+                                                    ) : "Get 7-Day Trial"}
+                                                </button>
+                                            </div>
+                                        </Form>
+                                    )}
+                                </Formik>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            {/* <Partner /> */}
+
+            <Partner />
         </>
     );
 };

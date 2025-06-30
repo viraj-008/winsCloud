@@ -1,46 +1,86 @@
 import React from 'react';
-import { FaLocationDot } from "react-icons/fa6";
-import { FaPhoneVolume } from "react-icons/fa6";
-import { MdOutlineMail } from "react-icons/md";
-
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const GetTouch: React.FC = () => {
   return (
-    <div>
-      <section className="px-6  py-32  bg-gray-900">
-        <div className="max-w-7xl mx-auto text-white flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0">
-          
-          {/* Text Content */}
-          <div className="md:w-1/2 mt-4">
-            <div className="text-2xl border rounded-lg  p-2 md:text-5xl font-bold mb-6 leading-tight">
-             <h1 className='flex items-center font-montserrat'><FaLocationDot className='mr-2 text-blue-600'/>Location.</h1>
-             <p className='text-sm   font-josefin text-center text-slate-200 mt-2'> <span className='text-red-600'>Address </span>: 16192 Coastal Highway Lewes, DE 19958, United States</p>
-            </div>
-            <div className="text-2xl border  rounded-lg p-2 md:text-5xl font-bold mb-6 leading-tight">
-           <h1 className='flex items-center font-montserrat'><FaPhoneVolume className='mr-2 text-4xl text-green-500'/> Phone. </h1> 
-           <p className='text-sm  font-josefin text-center text-slate-200  mt-2'>+1 714-882-1244</p>
-
-            </div>
-            <div className="text-2xl border rounded-lg  p-2 md:text-5xl font-bold mb-6 leading-tight">
-            <h1 className='flex items-center font-montserrat'><MdOutlineMail className='mr-2  text-red-500'/> Email.</h1>
-            <p className='text-sm font-josefin text-slate-200  text-center mt-2'>info@winscloudmatrix.com --
-
-sales@winscloudmatrix.com</p>
-            </div>
-           
-          </div>
-
-          {/* Hero Image */}
-          <div className="md:w-1/2">
-            <img
-              src="./images/logo/get.png"
-              alt="Hero"
-              className="rounded-lg shadow-lg w-[400px] md:ml-[100px]"
-            />
-          </div>
-        </div>
-      </section>
+        <div className="min-h-screen bg-gradient-to-t from-[#090c17] via-[#102f86] to-black py-16 px-4 sm:px-6 lg:px-8 flex items-center">
+  <div className="max-w-6xl  mx-auto w-full">
+    {/* Header */}
+    <div className="text-center mb-12">
+      <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
+        Get in <span className="text-indigo-400">Touch</span>
+      </h1>
+      <p className="text-lg text-gray-300 max-w-lg mx-auto leading-relaxed">
+        We'd love to hear from you! Whether you have a question or just want to say hi, reach out and we'll respond as soon as we can.
+      </p>
     </div>
+
+    {/* Contact Cards - Centered */}
+    <div className="flex flex-col  md:flex-row md:justify-between mx-auto space-y-6 md:space-y-0 md:space-x">
+  {/* Location Card */}
+
+
+  {/* Phone Card */}
+  <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-green-200/50 transform hover:-translate-y-1">
+    <div className="flex items-start space-x-5">
+      <div className="flex-shrink-0 p-3 rounded-xl bg-green-100 text-green-600">
+        <FaPhoneAlt className="text-xl" />
+      </div>
+      <div>
+        <h3 className="text-xl font-semibold text-gray-800 mb-1.5">Call Us</h3>
+        <a 
+          href="tel:+17148821244" 
+          className="text-indigo-600 hover:text-indigo-700 transition-colors text-lg font-medium block mb-0.5"
+        >
+          +1 (714) 882-1244
+        </a>
+        <span className="text-gray-500 text-sm">Available 24/7</span>
+      </div>
+    </div>
+  </div>
+
+  {/* Email Card */}
+  <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-pink-200/50 transform hover:-translate-y-1">
+    <div className="flex items-start space-x-5">
+      <div className="flex-shrink-0 p-3 rounded-xl bg-pink-100 text-pink-600">
+        <FaEnvelope className="text-xl" />
+      </div>
+      <div>
+        <h3 className="text-xl font-semibold text-gray-800 mb-1.5">Email Us</h3>
+        <a 
+          href="mailto:info@winscloudmatrix.com" 
+          className="text-indigo-600 hover:text-indigo-700 transition-colors text-base font-medium block mb-1"
+        >
+          info@winscloudmatrix.com
+        </a>
+        <a 
+          href="mailto:sales@winscloudmatrix.com" 
+          className="text-indigo-600 hover:text-indigo-700 transition-colors text-base font-medium block"
+        >
+          sales@winscloudmatrix.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-indigo-200/50 transform hover:-translate-y-1">
+    <div className="flex items-start space-x-5">
+      <div className="flex-shrink-0 p-3 rounded-xl bg-indigo-100 text-indigo-600">
+        <FaMapMarkerAlt className="text-xl" />
+      </div>
+      <div>
+        <h3 className="text-xl font-semibold text-gray-800 mb-1.5">Our Location</h3>
+        <p className="text-gray-600 leading-snug">
+          16192 Coastal Highway<br />
+          Lewes, DE 19958<br />
+          United States
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
   );
 };
 

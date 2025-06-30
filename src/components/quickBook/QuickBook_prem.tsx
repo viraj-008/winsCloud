@@ -1,7 +1,20 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import Partner from "../Partner";
+import { motion } from "framer-motion";
+import { AiOutlineSolution } from "react-icons/ai";
+import { MdInstallDesktop } from "react-icons/md";
+import { MdDevices } from "react-icons/md";
+
+
+
+
+import QuickLinks from "../QuickLinks";
+import Expriance from "../Expriance";
+import Awards from "../Awards";
+
 const QuickBook_prem = () => {
 
   const faqs = [
@@ -48,173 +61,268 @@ const QuickBook_prem = () => {
   };
   return (
     <>
-      <header className="w-full flex bg-[url('/images/Home/quickBook.jpg')] bg-cover bg-center pt-20 px-5 md:px-20 items-center">
-        <div className="w-full text-center md:text-left">
-          <h1 className="text-white font-josefin text-4xl md:text-6xl md:pt-6">
-            QuickBooks Premier Hosting
-          </h1>
-          <p className='text-xl md:text-3xl bg-gradient-to-r from-orange-500 via-indigo-100 to-green-100 text-transparent bg-clip-text font-kanit mt-4 md:mt-7'>
-            Host your QuickBooks Premier on the cloud and make your critical accounting data easily accessible, anytime, anywhere.
-          </p>
-          <Link to='/trial' aria-label="Start QuickBooks Premier Free Trial">
-            <button className="mx-auto md:mx-0 flex border-2 my-6 md:my-12 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-              Start QuickBooks Premier Hosting Free Trial
-            </button>
-          </Link>
-        </div>
-      </header>
+      <section className="md:min-h-[90vh]  rounded-b-3xl  flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
 
-      <main>
-        <section className="p-4">
-          <h2 className="text-center font-serif text-lg md:text-3xl font-bold">
-            Seamless Accounting for your Business with QuickBooks Premier Plus Hosting
-          </h2>
-        </section>
+         <Helmet>
+          <title>QuickBooks Premier Hosting – Work Smarter from Anywhere</title>
+          <meta name="description" content="Cloud-hosted QuickBooks Premier for accountants & businesses. Fast setup, secure access, expert U.S. support. Start now – call +1 714-882-1244!" />
+        </Helmet>
+        
+        <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
 
-        <section className="flex flex-col md:flex-row justify-between p-4 md:p-8">
-          <article className="w-full text-justify font-josefin text-gray-600 md:w-[45%]">
-            <p className=" my-2 md:my-4 text-sm md:text-base">
-              QuickBooks Premier Plus is one of the most popular accounting software used by CPAs, accountants, and small businesses.
-              Hosting the QuickBooks Premier Plus can transform your accounting workflow, boost productivity, and promote multi-user collaboration.
+          {/* Left Content */}
+          <div className="text-center md:text-left lg:w-[800px]">
+            <motion.h1
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight md:mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >QuickBooks Premier Hosting
+            </motion.h1>
+
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl my-3 md:my-0 md:mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+              Host your QuickBooks Premier on the cloud and make your critical accounting data easily accessible, anytime, anywhere.
             </p>
-            <p className=" text-sm md:text-base">
-              Our team at Winscloud, your top quickbooks hosting provider, has helped small and mid-sized businesses completely turn around their business operations
-              with services like QuickBooks Pro hosting. We help take your business to the cloud and help your team work remotely, without worrying about the hassles of transitioning
-              to the cloud. Our team of experts take care of all your needs and preferences and ensure your business runs smoothly even during transition, ensuring maximum up time.
-            </p>
-          </article>
 
-          <figure className="w-full md:w-[50%] flex justify-center mt-6 md:mt-0">
-            <img
-              className="h-48 md:h-80 border-2 border-black rounded-lg object-cover"
-              src="./images/logo/qb-prem.webp"
-              alt="QuickBooks Premier Cloud Hosting Interface"
-            />
-          </figure>
-        </section>
-
-        <section className="w-[90%] mx-auto mt-10 flex flex-col items-center">
-          <h2 className="font-bold text-center my-4 text-2xl font-kanit">
-            QuickBooks Premier Cloud Hosting: Why should you opt for
-          </h2>
-          <p className="text-gray-600 text-center font-bold">Automate Everyday Accounting Tasks and Focus on Other Important Productive Business Operations</p>
-        </section>
-
-        <section className="w-[90%] mt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          <article className="bg-white/20 backdrop-blur-lg p-6 border hover:text-white hover:bg-red-800 transition-all duration-300 shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img src="images/logo/qb2.webp" alt="QuickBooks Premier Budget-Friendly Solutions" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
-            <h2 className="font-bold text-xl mb-2 font-kanit">Budget Friendly Solution</h2>
-            <p className=" font-montserrat  transition-all duration-300">
-              QuickBooks Premier Cloud hosting eliminates the need for an in-house, physical IT infrastructure and therefore the cost of maintaining them.
-            </p>
-          </article>
-
-          <article className="bg-white/20 backdrop-blur-lg p-6 hover:text-white hover:bg-red-800  transition-all duration-300 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img src="images/logo/qb3.webp" alt="Round-the-Clock Support" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
-            <h2 className="font-bold text-xl mb-2 font-kanit">Desktop-like Features on Cloud</h2>
-            <p className="0 font-montserrat " >
-              With QuickBooks Premier hosting, you get the full package – all your desktop application features, your complete data, and other apps with the added flexibility of the cloud.
-            </p>
-          </article>
-
-          <article className="bg-white/20 hover:text-white hover:bg-red-800  transition-all duration-300 backdrop-blur-lg p-6 border shadow-[4px_4px_10px_rgba(0,0,25,0.5)] rounded-lg text-center">
-            <img src="images/logo/qb1.webp" alt="Data Security and Recovery" className="mx-auto hover:scale-125 hover:translate-y-2 transition-all duration-300 mb-4 w-28" />
-            <h2 className="font-bold text-xl mb-2  font-kanit">Multi-Device Compatibility</h2>
-            <p className=" font-montserrat transition-all duration-300">
-              Access your critical business data and collaborate with CPAs and bookkeepers on multiple devices like PC, tablet, or phone.
-            </p>
-          </article>
-        </section>
-
-        <section aria-label="QuickBooks Versions" className="text-center">
-          <h2 className="text-3xl text-center font-bold font-kanit mt-8">
-            Step Up Your Accounting Operations with our QuickBooks Hosting Services
-          </h2>
-          <nav className="text-blue-500 text-center mt-6 font-bold">
-            <Link to="/quickbooks-desktop" className="hover:underline">QuickBooks Desktop</Link> <span className="text-black">|</span>{' '}
-            <Link to="/quickbooks-pro" className="hover:underline">QuickBooks Pro</Link> <span className="text-black">|</span>{' '}
-            <Link to="/quickbooks-premier" className="hover:underline">QuickBooks Premier</Link> <span className="text-black">|</span>{' '}
-            <Link to="/quickbooks-enterprise" className="hover:underline">QuickBooks Enterprise</Link> <span className="text-black">|</span>{' '}
-            <Link to="/quickbooks-pos" className="hover:underline">QuickBooks POS</Link> <span className="text-black">|</span>{' '}
-            <Link to="/quickbooks-canada" className="hover:underline">QuickBooks Canada</Link>
-          </nav>
-        </section>
-
-        <section className="my-12 w-[90%] mx-auto" aria-label="Why Choose Winscloud">
-          <h1 className="text-center font-serif font-semibold text-2xl pt-5">
-            Winscloud QuickBooks Premier Cloud Hosting: Why should you choose us as your hosting provider?
-          </h1>
-
-          <div className="flex flex-col font-montserrat  md:flex-row  mt-8">
-
-            <div className="md:w-[50%] space-y-4  text-sm p-3">
-              <p className=" "><span className=" font-bold ">Pocket-friendly Transition-</span>Our plans are pocket-friendly and can accommodate any changing business needs within minutes.<Link to='/pricing' className="text-blue-500 font-semibold">Check our quickbooks premier cloud hosting pricing here.</Link> </p>
-              <p className=" "> <span className=" font-bold my-6 ">Round-the-Clock Tech Support-</span>The expert advisors at Winscloud are available for support, guidance, and troubleshooting issues 24/7/365 so you don’t have to worry about any tech issues during/post transition.</p>
-              <p className=""> <span className=" font-bold ">99.99% Up-Time Guarantee- </span>Our team of technical experts work round-the-clock to ensure that you always get maximum server uptime. In case of any technical issue that may cause downtime, our team of experts can provide full support to resolve the issue.</p>
-            </div>
-
-            <div className="md:w-[50%] space-y-4 p-3  text-sm">
-
-              <p className=" "><span className=" font-bold ">Add-Ons Integration- </span> We are fully equipped with hosting multiple add-ons and integrating third party apps along with QuickBooks Premier hosting and promote seamless collaboration with other CPAs and bookkeeper</p>
-              <p className=""><span className=" font-bold ">High Data Security- </span> Security is a concern for most CPAs and business owners. With QuickBooks Premier cloud hosting, you have the freedom to provide access to authorized users only.</p>
-              <p className=" "><span className=" font-bold ">High-performance Servers- </span>  Our state-of-the-art high-performance, SSD-based remote servers offer seamless collaboration with your remote team and automated data backups for quick recovery in case of disaster</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="my-12 w-[90%] mx-auto bg-gray-200 rounded-lg text-center">
-          <h2 className="text-center font-kanit font-semibold text-2xl pt-5 px-2">
-            Want us to help you decide which version of QuickBooks Premier Hosting is best for your small business?
-          </h2>
-          <div className="flex justify-center">
-            <Link to='/get-in-touch'>
-              <button className="border-2 my-6 md:my-6 bg-green-600 hover:bg-green-700 text-sm md:text-xl rounded-full px-5 md:px-12 text-white font-josefin py-2">
-                Get in Touch for quickbooks premier hosting with our Expert
+            <Link to="/trial">
+              <button className="relative group overflow-hidden">
+                <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
+                    translate-y-[-2px] 
+                    group-active:translate-y-0 transition-transform"></span>
+                <span className="relative flex items-center justify-center gap-2 px-6 py-3 
+                    text-white font-semibold tracking-wide">
+                  Start QuickBooks Premier Hosting Free Trial
+                  <svg
+                    className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
               </button>
             </Link>
           </div>
-        </section>
 
-        <section className="w-[90%] mx-auto mt-10 flex flex-col items-center">
-          <h2 className="font-bold font-kanit">
-            QuickBooks Premier Cloud Hosting FAQs -
+          {/* Right Image */}
+          <motion.div
+            animate={{
+              x: [0, -10, 0, 10, 0],
+              y: [0, 10, 0, -10, 0],
+              opacity: 1,
+            }}
+            transition={{
+              duration: 6,
+              ease: "linear",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className="flex mt-12 md:justify-end"
+          >
+            <img
+              src="/images/Home/homePNG.png"
+              alt="ServerImage"
+              className="w-full max-w-md h-[230px] md:h-[260px] -my-8 md:my-0  lg:mt-12 xl:mt-0  xl:h-auto rounded-lg object-contain"
+            />
+          </motion.div>
+
+        </div>
+      </section>
+
+      <main>
+
+        <div className="">
+          <h2 className='text-3xl font-inter text-center py-4 px-6 font-bold  text-textPrimary'>
+            Seamless Accounting for your Business with QuickBooks Premier Plus Hosting
           </h2>
+        </div>
+
+        <section className="flex flex-col-reverse md:flex-row items-center gap-8 px-4  md:px-16 md:py-6">
+          {/* IMAGE on the right (or bottom on mobile) */}
+          <figure className="w-full md:w-1/2 flex justify-center">
+            <img
+              className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
+              src="./images/logo/qb-prem.webp"
+              alt="QuickBooks premier"
+            />
+
+          </figure>
+
+          {/* TEXT on the left (or top on mobile) */}
+          <article className="w-full md:w-1/2 text-center  md:text-start  space-y-4">
+            <h2 className="font-semibold text-textPrimary text-justify   text-xl md:text-xl ">
+              QuickBooks Premier Plus is one of the most popular accounting software used by CPAs, accountants, and small businesses. Hosting the QuickBooks Premier Plus can transform your accounting workflow, boost productivity, and promote multi-user collaboration.
+
+            </h2>
+
+            <p className="font-montserrat text-gray-700  text-justify text-sm md:text-base">
+              Our team at Winscloud, your top quickbooks hosting provider, has helped small and mid-sized businesses completely turn around their business operations with services like QuickBooks Pro hosting. We help take your business to the cloud and help your team work remotely, without worrying about the hassles of transitioning to the cloud. Our team of experts take care of all your needs and preferences and ensure your business runs smoothly even during transition, ensuring maximum up time.
+            </p>
+          </article>
         </section>
 
-        <section className="max-w-3xl mx-auto mt-10 border rounded-lg shadow-lg overflow-hidden" aria-label="Frequently Asked Questions">
-        
+
+        <section className=" pt-3 mx-auto mt-10 flex flex-col items-center bg-gradient-to-br from-blue-50 to-gray-100  ">
+          <h2 className="font-bold font-inter text-4xl mt-3 text-center text-textPrimary">
+            QuickBooks Premier Cloud Hosting: Why should you opt for
+          </h2>
+          <p className="font-montserrat w-[90%] text-xl text-gray-800 text-center mt-4">
+            Automate Everyday Accounting Tasks and Focus on Other Important Productive Business Operations
+          </p>
+          <div className="h-full my-8 w-[90%] bg-gradient-to-br from-blue-50 to-gray-100  ">
+            <div className="grid gap-14 md:grid-cols-3 md:gap-8">
+              <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+                <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+
+                  <AiOutlineSolution className="text-2xl"/>
+
+                </div>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Budget Friendly Solution
+                </h1>
+                <p className="px-4 text-gray-500">
+                  QuickBooks Premier Cloud hosting eliminates the need for an in-house, physical IT infrastructure and therefore the cost of maintaining them.
+                </p>
+              </div>
+
+
+
+              <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+                <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
+                  <MdInstallDesktop className="text-2xl"/>
+
+                </div>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Desktop-like Features on Cloud
+                </h1>
+                <p className="px-4 text-gray-500">
+                  With QuickBooks Premier hosting, you get the full package – all your desktop application features, your complete data, and other apps with the added flexibility of the cloud.
+                </p>
+              </div>
+
+              <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
+                <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
+                  <MdDevices className="text-2xl" />
+
+                </div>
+                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Multi-Device Compatibility
+                </h1>
+                <p className="px-4 text-gray-500">
+                  Access your critical business data and collaborate with CPAs and bookkeepers on multiple devices like PC, tablet, or phone.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <QuickLinks />
+
+
+        <section className="w-[90%] mx-auto py-16 ">
+          <h1 className="text-3xl md:text-5xl text-center font-extrabold font-serif text-blue-900 mb-4">
+            Winscloud QuickBooks Premier Cloud Hosting: Why should you choose us as your hosting provider?          </h1>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-14">
+            {[
+              {
+                title: "Pocket-friendly Transition ",
+                desc: "Our plans are pocket-friendly and can accommodate any changing business needs within minutes. Check our quickbooks premier cloud hosting pricing here.",
+              },
+              {
+                title: "Round-the-Clock Tech Support",
+                desc: "The expert advisors at Winscloud are available for support, guidance, and troubleshooting issues 24/7/365 so you don’t have to worry about any tech issues during/post transition.",
+              },
+              {
+                title: "99.99% Up-Time Guarantee",
+                desc: "Our team of technical experts work round-the-clock to ensure that you always get maximum server uptime. In case of any technical issue that may cause downtime, our team of experts can provide full support to resolve the issue..",
+              },
+              {
+                title: "Add-Ons Integration",
+                desc: "We are fully equipped with hosting multiple add-ons and integrating third party apps along with QuickBooks Premier hosting and promote seamless collaboration with other CPAs and bookkeepers.",
+              },
+              {
+                title: "High Data Security",
+                desc: "Security is a concern for most CPAs and business owners. With QuickBooks Premier cloud hosting, you have the freedom to provide access to authorized users only..",
+              },
+              {
+                title: "High-performance Servers",
+                desc: "Our state-of-the-art high-performance, SSD-based remote servers offer seamless collaboration with your remote team and automated data backups for quick recovery in case of disaster.",
+              },
+            ].map((feature, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+              >
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">{feature.title}</h3>
+                <p className="text-gray-700 text-[15px] leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+
+
+        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+
+          <div className="flex-1">
+            <h1 className="text-3xl text-center md:text-start md:text-4xl font-bold mb-2">
+              Want us to help you decide which version of QuickBooks Premier Hosting is best for your small business?
+            </h1>
+            <Link to='/get-in-touch'>
+              <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-full font-semibold transition">
+                Get in Touch for quickbooks premier hosting with our Expert </button>
+            </Link>
+          </div>
+
+        </div>
+        <Expriance />
+        <Awards />
+
+        <h1 className="text-center font-inter -mb-4 font-bold text-3xl text-textPrimary p-2">QuickBooks Pro FAQs</h1>
+        <section
+          className="max-w-3xl mx-auto mt-10 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white"
+          aria-label="Frequently Asked Questions"
+        >
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b last:border-b-0">
+            <div key={index} className="border-b border-gray-100 last:border-b-0">
               <button
-                className="w-full text-left flex justify-between items-center p-4 text-lg font-semibold hover:bg-gray-100"
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-${index}`}
+                className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="font-josefin">{faq.question}</span>
-                {openIndex === index ? (
-                  <FaMinus className="text-red-900 min-h-[12px] min-w-[12px] m-4" />
-                ) : (
-                  <FaPlus className="text-red-600 min-h-[12px] min-w-[28px] m-4" />
-                )}
+                <span className="font-josefin text-gray-800 text-lg font-medium">
+                  {faq.question}
+                </span>
+                <span className="flex items-center justify-center h-6 w-6 rounded-full bg-gray-100">
+                  {openIndex === index ? (
+                    <FaMinus className="text-red-600 text-xs" aria-hidden="true" />
+                  ) : (
+                    <FaPlus className="text-gray-600 text-xs" aria-hidden="true" />
+                  )}
+                </span>
               </button>
 
               <div
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                id={`faq-${index}`}
+                role="region"
+                className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   }`}
               >
-                <div className="p-4 bg-gray-50 text-gray-700">
-                  <p className="font-montserrat text-[10px] md:text-sm">{faq.answer}</p>
-
+                <div className="p-5 bg-gray-50">
+                  <p className="font-montserrat text-gray-700 text-sm md:text-base leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
-
               </div>
             </div>
           ))}
         </section>
       </main>
 
-      <footer>
         <Partner />
-      </footer>
     </>
   )
 }

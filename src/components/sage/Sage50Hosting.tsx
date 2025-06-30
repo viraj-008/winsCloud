@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -60,13 +61,19 @@ const Sage50Hosting = () => {
 
   return (
     <>
-      <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+      <section className="md:min-h-[90vh] rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+        
+         <Helmet>
+          <title>Best Sage 50 Cloud Hosting Services | Winscloud Matrix</title>
+          <meta name="description" content="Get fast, secure Sage 50 cloud hosting with daily backups, remote access & 24/7 support. Call +1 714-882-1244 for expert Sage 50 hosting solutions now!" />
+        </Helmet>
+
         <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
 
           {/* Left Content */}
           <div className="text-center md:text-left lg:w-[800px]">
             <motion.h1
-              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight mb-8"
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight md:mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -74,7 +81,7 @@ const Sage50Hosting = () => {
             >Sage 50 Cloud Hosting
             </motion.h1>
 
-            <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl xl:max-w-2xl my-3 md:my-0 md:mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
               Anytime, anywhere accounting for your Small and Mid-Sized Business with Sage 50 Hosting Service
             </p>
 
@@ -117,8 +124,8 @@ const Sage50Hosting = () => {
           >
             <img
               src="/images/Home/homePNG.png"
-              alt="Server"
-              className="w-full max-w-md md:h-[400px] rounded-lg object-contain"
+              alt="ServerImage"
+              className="w-full max-w-md h-[230px] md:h-[260px] -my-8  md:my-0  lg:mt-12 xl:mt-0  xl:h-auto rounded-lg object-contain"
             />
           </motion.div>
 
@@ -130,7 +137,7 @@ const Sage50Hosting = () => {
           <h2 className='text-3xl text-center py-4 w-[90%] mx-auto font-bold font-inter text-textPrimary'>
 How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
           </h2>
-          <p className="font-inter text-xl text-center font-semibold">The power of Cloud Hosting Blended with Sage 50
+          <p className="font-inter my-2 text-xl text-center font-semibold">The power of Cloud Hosting Blended with Sage 50
           </p>
         </section>
 
@@ -140,7 +147,7 @@ How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
             <img
               className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
               src="./images/logo/sage50.webp"
-              alt="QuickBooks Hosting Service"
+              alt="sage 50 hosting"
             />
 
           </figure>
@@ -158,7 +165,7 @@ How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
         </section>
 
 
-        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-gradient-to-br w-[90%] my-6 mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
           <div className="flex-1">
             <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
               Is your business ready to move to the cloud with Sage 50 hosting service?
@@ -335,9 +342,7 @@ How is Sage 50 Cloud Hosting by Winscloud Matrix Beneficial for Your Business?
 
       </main>
 
-      <footer>
         <Partner />
-      </footer>
     </>
   );
 };

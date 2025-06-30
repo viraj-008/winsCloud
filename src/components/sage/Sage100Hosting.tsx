@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -51,13 +52,19 @@ const Sage100Hosting = () => {
   };
   return (
     <>
-      <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+      <section className="md:min-h-[90vh] rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+
+         <Helmet>
+          <title>Sage 100 Hosting Providers – Cloud Experts | Winscloud Matrix LLC</title>
+          <meta name="description" content="Host Sage 100 securely in the cloud with real-time access, multi-user support & expert help. Call +1 714-882-1244 to get started instantly!" />
+        </Helmet>
+
         <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
 
           {/* Left Content */}
           <div className="text-center md:text-left lg:w-[800px]">
             <motion.h1
-              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-8"
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight md:mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -65,7 +72,7 @@ const Sage100Hosting = () => {
             >Sage 100 ERP Application Hosting
             </motion.h1>
 
-            <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl xl:max-w-2xl  my-3 md:my-0 md:mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
               Access and manage your small and mid-sized business from anywhere, at any time with Sage 100 cloud hosting
             </p>
 
@@ -76,7 +83,7 @@ const Sage100Hosting = () => {
                     group-active:translate-y-0 transition-transform"></span>
                 <span className="relative flex items-center justify-center gap-2 px-6 py-3 
                     text-white font-semibold tracking-wide">
-                  get a free trial
+                  Get a free trial
                   <svg
                     className="w-5 h-5 transition-transform group-hover:translate-x-1"
                     fill="none"
@@ -108,8 +115,8 @@ const Sage100Hosting = () => {
           >
             <img
               src="/images/Home/homePNG.png"
-              alt="Server"
-              className="w-full max-w-md md:h-[400px] rounded-lg object-contain"
+              alt="ServerImage"
+              className="w-full max-w-md  h-[230px] md:h-[260px] -my-8  md:my-0  lg:mt-12 xl:mt-0  xl:h-auto rounded-lg object-contain"
             />
           </motion.div>
 
@@ -131,7 +138,7 @@ const Sage100Hosting = () => {
             <img
               className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
               src="./images/logo/sage100.webp"
-              alt="QuickBooks Hosting Service"
+              alt="sage 100 hosting"
             />
 
           </figure>
@@ -149,7 +156,7 @@ const Sage100Hosting = () => {
 
 
 
-        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-gradient-to-br w-[90%] my-6 mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
           <div className="flex-1">
             <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
               Ready for Sage 100 ERP Cloud Hosting?          </h1>
@@ -299,9 +306,7 @@ const Sage100Hosting = () => {
 
       </main>
 
-      <footer>
         <Partner />
-      </footer>
     </>
   );
 };

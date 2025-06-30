@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -56,13 +57,20 @@ const QickBooks_Hosting = () => {
 
   return (
     <>
-      <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
-        <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
+
+      <section className="md:min-h-[90vh]  rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+        <Helmet>
+          <title>QuickBooks Hosting Services | Fast & Secure Cloud Hosting</title>
+          <meta name="description" content="Get reliable QuickBooks cloud hosting with 99.9% uptime, full data security & expert support. Call +1 714-882-1244 to move QuickBooks to the cloud today!" />
+        </Helmet>
+
+
+        <div className="max-w-6xl mx-auto    pt-6 w-full grid md:grid-cols-2 items-center gap-12">
 
           {/* Left Content */}
-          <div className="text-center md:text-left lg:w-[800px]">
+          <div className="text-center md:text-left  lg:w-[800px]">
             <motion.h1
-              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight mb-8"
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight md:mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -71,7 +79,7 @@ const QickBooks_Hosting = () => {
               Trusted QuickBooks Hosting Provider
             </motion.h1>
 
-            <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl my-3 md:my-0 md:mb-10  bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
               Make your accounting operations more secure and collaborate with your team anytime, from anywhere with Winscloud’s QuickBooks Hosting Services.
             </p>
 
@@ -110,12 +118,12 @@ const QickBooks_Hosting = () => {
               repeat: Infinity,
               repeatType: "loop",
             }}
-            className="flex mt-12 md:justify-end"
+            className="flex py-8 md:mt-16 md:justify-end"
           >
             <img
               src="/images/Home/homePNG.png"
-              alt="Server"
-              className="w-full max-w-md md:h-[400px] rounded-lg object-contain"
+              alt="ServerImage"
+              className="w-full  max-w-md h-[230px] md:h-[260px] -my-16 md:my-0  xl:h-auto    rounded-lg object-contain"
             />
           </motion.div>
 
@@ -124,7 +132,7 @@ const QickBooks_Hosting = () => {
 
 
       <main>
-        <section className="md:px-12 px-2 w-[90%] text-3xl w-[90%] font-inter  mx-auto">
+        <section className="md:px-12 px-2 w-[90%] text-3xl  font-inter  mx-auto">
           <h1 className="md:text-3xl font-inter text-2xl text-center pt-4 font-bold text-textPrimary">
             QuickBooks Hosting: Desktop-like experience on any device, from any part of the globe
           </h1>
@@ -135,7 +143,7 @@ const QickBooks_Hosting = () => {
             <img
               className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
               src="./images/logo/qb-hosting.webp"
-              alt="QuickBooks Hosting Service"
+              alt="QuickBooks Hosting"
             />
           </figure>
           <article className="w-full md:w-1/2  text-center md:text-start space-y-4">
@@ -171,8 +179,8 @@ const QickBooks_Hosting = () => {
           </h2>
           <p className="text-gray-800 mt-4 text-xl text-center font-semibold">Access When You Need It</p>
           <p className="font-montserrat w-[90%] text-xl text-gray-800 text-justify md:text-center mt-4">
-           Our US-based, superfast data centers and SSD-based HPC servers ensure 99.99% uptime for the most seamless collaboration with teams across multiple locations and devices. Experience unparalleled performance and unmatched flexibility with easy accessibility of your fully backed-up data.
-        </p>
+            Our US-based, superfast data centers and SSD-based HPC servers ensure 99.99% uptime for the most seamless collaboration with teams across multiple locations and devices. Experience unparalleled performance and unmatched flexibility with easy accessibility of your fully backed-up data.
+          </p>
 
           <div className="h-full my-8 w-[90%] pt-6 ">
             <div className="grid gap-14 md:grid-cols-3 md:gap-5">
@@ -182,7 +190,7 @@ const QickBooks_Hosting = () => {
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Best-fitting Plans</h1>
                 <p className="px-4 text-gray-500">
-               Our monthly QuickBooks Hosting plans are highly flexible, perfect to accommodate your changing needs. Not sure if Winscloud fits the bill for you? We promise a 30-day money back guarantee to ensure full value for your investments.                  .
+                  Our monthly QuickBooks Hosting plans are highly flexible, perfect to accommodate your changing needs. Not sure if Winscloud fits the bill for you? We promise a 30-day money back guarantee to ensure full value for your investments.                  .
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
@@ -191,7 +199,7 @@ const QickBooks_Hosting = () => {
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Round-the-Clock Support</h1>
                 <p className="px-4 text-gray-500">
-                Need expert help with technical issues related to your QuickBooks or are you simply on the lookout for a certified expert to provide you with the technical know-how of Hosted QuickBooks on the cloud? We promise 24/7 tech support via email, call and text with a 15-minute response time.
+                  Need expert help with technical issues related to your QuickBooks or are you simply on the lookout for a certified expert to provide you with the technical know-how of Hosted QuickBooks on the cloud? We promise 24/7 tech support via email, call and text with a 15-minute response time.
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
@@ -200,7 +208,7 @@ const QickBooks_Hosting = () => {
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Data Security and Recovery</h1>
                 <p className="px-4 text-gray-500">
-                 We understand that modern businesses seek modern solutions when it comes to data security. Our SSAE 16 certified data centers, network firewalls, automated data backups, anti-virus among other security solutions ensure that your hosted QuickBooks data is safe and secure.
+                  We understand that modern businesses seek modern solutions when it comes to data security. Our SSAE 16 certified data centers, network firewalls, automated data backups, anti-virus among other security solutions ensure that your hosted QuickBooks data is safe and secure.
                 </p>
               </div>
             </div>
@@ -282,9 +290,7 @@ const QickBooks_Hosting = () => {
         </section>
       </main>
 
-      <footer>
-        <Partner />
-      </footer>
+      <Partner />
     </>
   );
 };

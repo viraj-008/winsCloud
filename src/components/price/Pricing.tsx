@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import PriceForm from "./PriceForm";
 import Partner from "../Partner";
@@ -61,7 +62,11 @@ function Pricing() {
 
     <>
     <div className="z-10">
-  {/* Hero Section */}
+       <Helmet>
+          <title>Choose Smart, Pay Less | Explore Winscloud Cloud Pricing</title>
+          <meta name="description" content="Explore Winscloud's flexible and transparent pricing plans designed for businesses of all sizes. Get affordable, scalable, and secure cloud hosting solutions tailored to your needs." />
+        </Helmet>
+
   <div className="w-full flex bg-gradient-to-br from-blue-900 to-black pt-20 px-5 md:px-20 items-center min-h-[340px] rounded-b-3xl shadow-xl">
     <div className="w-full text-center md:text-left">
         <motion.h1

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
@@ -63,13 +64,17 @@ const QuickBook_enterprice = () => {
 
   return (
     <>
-      <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+      <section className="md:min-h-[90vh] rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+         <Helmet>
+          <title>QuickBooks Enterprise Hosting for CPAs | Winscloud Cloud Experts</title>
+          <meta name="description" content="Cloud-hosted QuickBooks Enterprise for CPAs—multi-user access, secure file sharing, and real-time collaboration. Call +1 714-882-1244 for your free demo!" />
+        </Helmet>
         <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
 
           {/* Left Content */}
           <div className="text-center md:text-left lg:w-[800px]">
             <motion.h1
-              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight mb-8"
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight md:mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -116,12 +121,12 @@ const QuickBook_enterprice = () => {
               repeat: Infinity,
               repeatType: "loop",
             }}
-            className="flex mt-12 md:justify-end"
+            className="flex md:mt-12 md:justify-end"
           >
             <img
               src="/images/Home/homePNG.png"
-              alt="Server"
-              className="w-full max-w-md md:h-[400px] rounded-lg object-contain"
+              alt="ServerImage"
+              className="w-full float-right  max-w-md h-[230px] md:h-[260px] -my-4 lg:mt-12 xl:mt-0 xl:h-auto md:my-0  rounded-lg object-contain"
             />
           </motion.div>
 
@@ -139,7 +144,7 @@ const QuickBook_enterprice = () => {
             <img
               className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
               src="./images/logo/qb-hosting.webp"
-              alt="QuickBooks Hosting Service"
+              alt="QuickBooks enterprise"
             />
 
           </figure>
@@ -159,7 +164,7 @@ const QuickBook_enterprice = () => {
         </section>
 
 
-        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-gradient-to-br w-[90%] my-6  mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
 
           <div className="flex-1">
             <h1 className="text-3xl text-center md:text-start md:text-4xl font-bold mb-2">
@@ -359,9 +364,7 @@ const QuickBook_enterprice = () => {
         </section>
       </main>
 
-      <footer>
         <Partner />
-      </footer>
     </>
   )
 }

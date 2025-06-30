@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -59,13 +60,19 @@ const Lecerte_Hosting = () => {
 
   return (
     <>
-      <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+      <section className="md:min-h-[90vh] rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+
+        <Helmet>
+          <title>Lacerte Hosting – Secure Cloud Tax Software Hosting | Winscloud Martix</title>
+          <meta name="description" content="Cloud-hosted Lacerte with premium backup, remote access & top-tier support. Reliable solutions for CPAs & tax firms. Call now for a free demo!" />
+        </Helmet>
+        
         <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
 
           {/* Left Content */}
           <div className="text-center md:text-left lg:w-[800px]">
             <motion.h1
-              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-8"
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight md:mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -73,7 +80,7 @@ const Lecerte_Hosting = () => {
             >Lacerte Tax Software Hosting
             </motion.h1>
 
-            <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl my-3 md:my-0 md:mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
               Streamline your workflow and organize your tax operations with Lacerte Hosting
             </p>
 
@@ -116,8 +123,8 @@ const Lecerte_Hosting = () => {
           >
             <img
               src="/images/Home/homePNG.png"
-              alt="Server"
-              className="w-full max-w-md md:h-[400px] rounded-lg object-contain"
+              alt="ServerImage"
+              className="w-full max-w-md h-[230px] md:h-[260px] -my-8  md:my-0  lg:mt-12 xl:mt-0  xl:h-auto rounded-lg object-contain"
             />
           </motion.div>
 
@@ -126,7 +133,7 @@ const Lecerte_Hosting = () => {
 
       <main>
         <section>
-          <h2 className='text-3xl w-[90%] mx-auto text-center pt-4 font-bold font-montserrat text-textPrimary'>
+          <h2 className='text-3xl w-[90%] mb-4 md:mb-0 mx-auto text-center pt-4 font-bold font-montserrat text-textPrimary'>
             Lacerte Hosting: A Modern Solution to Facilitate Business Growth, Team Collaboration, and Seamless Tax Filing
           </h2>
 
@@ -138,7 +145,7 @@ const Lecerte_Hosting = () => {
             <img
               className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
               src="./images/logo/lace-hosting.webp"
-              alt="QuickBooks Hosting Service"
+              alt="lacerte hosting"
             />
 
           </figure>
@@ -170,7 +177,7 @@ const Lecerte_Hosting = () => {
             <div className="grid gap-14 w-[90%] mx-auto md:grid-cols-3 md:gap-5">
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-                  <RiShakeHandsLine className="text-2xl"/>
+                  <RiShakeHandsLine className="text-2xl" />
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Choose your preferred hosting plan</h1>
                 <p className="px-4 text-gray-500">
@@ -191,7 +198,7 @@ const Lecerte_Hosting = () => {
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
-                 <LuClock className="text-2xl"/>
+                  <LuClock className="text-2xl" />
                 </div>
                 <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Begin your Lacerte cloud hosting journey
                 </h1>

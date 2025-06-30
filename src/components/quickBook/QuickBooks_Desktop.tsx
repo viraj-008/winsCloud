@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -68,71 +69,77 @@ const QickBooks_Desktop = () => {
   };
   return (
     <>
-       <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
-       <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
-         
-         {/* Left Content */}
-         <div className="text-center md:text-left lg:w-[800px]">
-           <motion.h1
-             className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight mb-8"
-             initial={{ opacity: 0, y: 30 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             transition={{ duration: 0.8, ease: 'easeOut' }}
-             viewport={{ once: true, amount: 0.8 }}
-           >
-QuickBooks Desktop Cloud Hosting
-           </motion.h1>
-     
-           <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
-Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
-           </p>
-     
-          <Link to="/trial">
-  <button className="relative group overflow-hidden">
-        <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
+      <section className="md:min-h-[90vh] rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+
+        <Helmet>
+          <title>QuickBooks Desktop Hosting – Secure Cloud Access | Winscloud</title>
+          <meta name="description" content="Access your QuickBooks Desktop anytime, anywhere with our secure cloud hosting. 99.99% uptime, daily backups, and 24/7 expert support. Get started today!" />
+        </Helmet>
+
+        <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
+
+          {/* Left Content */}
+          <div className="text-center md:text-left lg:w-[800px]">
+            <motion.h1
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-5xl leading-tight md:mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              QuickBooks Desktop Cloud Hosting
+            </motion.h1>
+
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl my-3 md:my-0 md:mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+              Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
+            </p>
+
+            <Link to="/trial">
+              <button className="relative group overflow-hidden">
+                <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
                     translate-y-[-2px] 
                     group-active:translate-y-0 transition-transform"></span>
-        <span className="relative flex items-center justify-center gap-2 px-6 py-3 
+                <span className="relative flex items-center justify-center gap-2 px-6 py-3 
                     text-white font-semibold tracking-wide">
-      Start FREE Trial - Claim Top Hosting Services Today!
-      <svg 
-        className="w-5 h-5 transition-transform group-hover:translate-x-1" 
-        fill="none" 
-        stroke="currentColor" 
-        viewBox="0 0 24 24" 
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-      </svg>
-    </span>
-  </button>
-</Link>
-         </div>
-     
-         {/* Right Image */}
-         <motion.div
-           animate={{
-             x: [0, -10, 0, 10, 0],
-             y: [0, 10, 0, -10, 0],
-             opacity: 1,
-           }}
-           transition={{
-             duration: 6,
-             ease: "linear",
-             repeat: Infinity,
-             repeatType: "loop",
-           }}
-           className="flex mt-12 md:justify-end"
-         >
-           <img
-             src="/images/Home/homePNG.png"
-             alt="Server"
-             className="w-full max-w-md md:h-[400px] rounded-lg object-contain"
-           />
-         </motion.div>
-     
-       </div>
-     </section>
+                  Start FREE Trial - Claim Top Hosting Services Today!
+                  <svg
+                    className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+              </button>
+            </Link>
+          </div>
+
+          {/* Right Image */}
+          <motion.div
+            animate={{
+              x: [0, -10, 0, 10, 0],
+              y: [0, 10, 0, -10, 0],
+              opacity: 1,
+            }}
+            transition={{
+              duration: 6,
+              ease: "linear",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className="flex md:mt-12 md:justify-end"
+          >
+            <img
+              src="/images/Home/homePNG.png"
+              alt="ServerImage"
+              className="w-full max-w-md h-[230px] md:h-[260px] -my-4 md:my-0  lg:mt-12 xl:mt-0 xl:h-auto rounded-lg object-contain"
+            />
+          </motion.div>
+
+        </div>
+      </section>
 
       <main>
         <section className="w-[90%] mx-auto">
@@ -147,7 +154,7 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
             <img
               className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
               src="./images/logo/qb-desktop.webp"
-              alt="QuickBooks Hosting Service"
+              alt="QuickBooks desktop"
             />
 
           </figure>
@@ -164,15 +171,15 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
           </article>
         </section>
 
-        <div className="bg-gradient-to-br w-[90%] mx-auto from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-gradient-to-br w-[90%] mx-auto my-6 from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
 
           <div className="flex-1">
             <h1 className="text-3xl  md:text-4xl font-bold mb-2">
               Try Our QuickBooks Desktop Cloud Hosting
 
-</h1>
+            </h1>
             <p className="text-gray-100 font-josefin ">
-            Try our QuickBooks Desktop Cloud Hosting and access your QuickBooks securely from anywhere, anytime. Enjoy reliable performance, easy collaboration, and peace of mind with our fully managed cloud solution.
+              Try our QuickBooks Desktop Cloud Hosting and access your QuickBooks securely from anywhere, anytime. Enjoy reliable performance, easy collaboration, and peace of mind with our fully managed cloud solution.
             </p>
 
 
@@ -187,17 +194,17 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
 
 
         <div className="h-full my-8 mx-auto bg-gradient-to-br from-blue-50 to-gray-100   py-6">
-              <h2 className="font-bold mx-auto text-4xl mt-3 w-[90%] font-inter text-center text-textPrimary">
+          <h2 className="font-bold mx-auto text-4xl mt-3 w-[90%] font-inter text-center text-textPrimary">
             Six Easy Steps to Transition to QuickBooks Desktop Cloud Hosting
           </h2>
           <p className="font-montserrat text-justify  w-[90%] md:w-[80%] text-xl mx-auto mb-12 text-gray-800 md:text-center mt-4">
-          Migrating to the cloud can be done in a few easy steps. Having the right QuickBooks Desktop Hosting Provider on your side can make the process simpler and faster. With Winscloud, you are assigned a cloud expert right from the start who will assist you with your cloud migration. You can also opt for a one-month Free Trial to get the real experience of running your business from the cloud. To begin your transition, here are the simple steps you need to follow –
-        </p>
+            Migrating to the cloud can be done in a few easy steps. Having the right QuickBooks Desktop Hosting Provider on your side can make the process simpler and faster. With Winscloud, you are assigned a cloud expert right from the start who will assist you with your cloud migration. You can also opt for a one-month Free Trial to get the real experience of running your business from the cloud. To begin your transition, here are the simple steps you need to follow –
+          </p>
           <div className="grid gap-14 md:grid-cols-3  w-[90%] mx-auto md:gap-8">
 
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
-                <LuDatabaseBackup className="text-3xl"/>
+                <LuDatabaseBackup className="text-3xl" />
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Wait for Data Transfer</h1>
               <p className="px-4 text-gray-500">
@@ -206,7 +213,7 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-red-400 shadow-lg shadow-teal-500/40">
-                <FaUsersGear className="text-3xl"/>
+                <FaUsersGear className="text-3xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Access Using Credentials
@@ -218,7 +225,7 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
 
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-green-500 shadow-rose-500/40">
-                <RiInformation2Fill className="text-3xl"/>
+                <RiInformation2Fill className="text-3xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Provide Your License Information
@@ -229,7 +236,7 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-orange-500 shadow-rose-500/40">
-                <GiChoice className="text-3xl"/>
+                <GiChoice className="text-3xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Select a Hosting Plan
@@ -240,7 +247,7 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-yellow-500 shadow-rose-500/40">
-                <BiDetail className="text-3xl"/>
+                <BiDetail className="text-3xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Provide Your Details
@@ -252,7 +259,7 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
             </div>
             <div data-aos-delay="150" className="rounded-xl bg-white p-6 text-center shadow-xl">
               <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-purple-500 shadow-rose-500/40">
-                <GrDocumentTest className="text-3xl"/>
+                <GrDocumentTest className="text-3xl" />
 
               </div>
               <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Begin Access Testing
@@ -344,44 +351,41 @@ Anytime, anywhere access to business with Cloud Hosting for QuickBooks Desktop
         <Awards />
 
         <h1 className="text-center font-inter font-bold text-3xl text-textPrimary p-2">QuickBooks Desktop FAQs</h1>
-       <section className="max-w-3xl mx-auto my-6 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">
-  {faqs.map((faq, index) => (
-    <article key={index} className="border-b border-gray-100 last:border-b-0">
-      <button
-        className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
-        onClick={() => toggleFAQ(index)}
-      >
-        <span className="font-josefin text-gray-800 text-lg font-medium">
-          {faq.question}
-        </span>
-        <div className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? 'bg-red-100' : 'bg-gray-100'} transition-all duration-300`}>
-          {openIndex === index ? (
-            <FaMinus className="text-red-600 text-xs" />
-          ) : (
-            <FaPlus className="text-gray-600 text-xs" />
-          )}
-        </div>
-      </button>
+        <section className="max-w-3xl mx-auto my-6 border border-gray-200 rounded-lg shadow-lg overflow-hidden bg-white">
+          {faqs.map((faq, index) => (
+            <article key={index} className="border-b border-gray-100 last:border-b-0">
+              <button
+                className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
+                onClick={() => toggleFAQ(index)}
+              >
+                <span className="font-josefin text-gray-800 text-lg font-medium">
+                  {faq.question}
+                </span>
+                <div className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? 'bg-red-100' : 'bg-gray-100'} transition-all duration-300`}>
+                  {openIndex === index ? (
+                    <FaMinus className="text-red-600 text-xs" />
+                  ) : (
+                    <FaPlus className="text-gray-600 text-xs" />
+                  )}
+                </div>
+              </button>
 
-      <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${
-          openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="p-5 bg-gray-50">
-          <p className="font-montserrat text-gray-700 text-sm md:text-base leading-relaxed">
-            {faq.answer}
-          </p>
-        </div>
-      </div>
-    </article>
-  ))}
-</section>
+              <div
+                className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                  }`}
+              >
+                <div className="p-5 bg-gray-50">
+                  <p className="font-montserrat text-gray-700 text-sm md:text-base leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </section>
       </main>
 
-      <footer>
         <Partner />
-      </footer>
     </>
   );
 };

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -5,8 +6,6 @@ import Partner from "../Partner";
 import { RiShakeHandsLine } from "react-icons/ri";
 import { MdSupportAgent } from "react-icons/md";
 import { IoMdAppstore } from "react-icons/io";
-
-
 import { motion } from "framer-motion";
 import ServiceLink from "../ServiceLink";
 import Awards from "../Awards";
@@ -59,13 +58,17 @@ const Drake_Hosting = () => {
 
   return (
     <>
-      <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+      <section className="md:min-h-[90vh] rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+         <Helmet>
+          <title>Drake Tax Hosting | Cloud Drake Software by Winscloud</title>
+          <meta name="description" content="Host Drake Tax Software securely in the cloud with Winscloud Matrix LLC. Fast, scalable, and 24/7 support. Call +1 714-882-1244 for expert Drake Hosting." />
+        </Helmet>
         <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
 
           {/* Left Content */}
           <div className="text-center md:text-left lg:w-[800px]">
             <motion.h1
-              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-8"
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight md:mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -73,7 +76,7 @@ const Drake_Hosting = () => {
             >Drake Tax Software Hosting
             </motion.h1>
 
-            <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl xl:max-w-2xl  my-3 md:my-0 md:mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
               Professional Tax returns, anytime, anywhere with Drake tax software cloud hosting
             </p>
 
@@ -116,8 +119,8 @@ const Drake_Hosting = () => {
           >
             <img
               src="/images/Home/homePNG.png"
-              alt="Server"
-              className="w-full max-w-md md:h-[400px] rounded-lg object-contain"
+              alt="ServerImage"
+              className="w-full max-w-md h-[230px] md:h-[260px] -my-8  md:my-0  lg:mt-12 xl:mt-0  xl:h-auto rounded-lg object-contain"
             />
           </motion.div>
 
@@ -140,7 +143,7 @@ const Drake_Hosting = () => {
             <img
               className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
               src="./images/logo/drake.jpg"
-              alt="QuickBooks Hosting Service"
+              alt="Drake Hosting"
             />
 
           </figure>
@@ -417,9 +420,7 @@ const Drake_Hosting = () => {
 
       </main>
 
-      <footer>
         <Partner />
-      </footer>
     </>
   );
 };

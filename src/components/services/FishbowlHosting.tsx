@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Partner from "../Partner";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -13,16 +14,19 @@ import ServiceLink from "../ServiceLink";
 import Awards from "../Awards";
 
 const FishbowlHosting = () => {
-  console.log("Fishbowl Hosting Page Loaded");
   return (
     <>
-      <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+      <section className="md:min-h-[90vh] rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+         <Helmet>
+          <title>Fishbowl Hosting | Cloud-Based Fishbowl ERP by Winscloud</title>
+          <meta name="description" content="Get fast, secure Fishbowl Hosting at the best price with Winscloud. Scalable for any business size—Boost your inventory management today, start now!" />
+        </Helmet>
         <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
 
           {/* Left Content */}
           <div className="text-center md:text-left lg:w-[800px]">
             <motion.h1
-              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-7xl leading-tight mb-8"
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-7xl leading-tight md:mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -32,7 +36,7 @@ const FishbowlHosting = () => {
 
 
             <Link to="/trial">
-              <button className="relative group overflow-hidden">
+              <button className="relative mt-3 group overflow-hidden">
                 <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
                     translate-y-[-2px] 
                     group-active:translate-y-0 transition-transform"></span>
@@ -70,7 +74,7 @@ const FishbowlHosting = () => {
           >
             <img
               src="/images/Home/homePNG.png"
-              alt="Server"
+              alt="ServerImage"
               className="w-full max-w-md md:h-[400px] rounded-lg object-contain"
             />
           </motion.div>
@@ -81,7 +85,7 @@ const FishbowlHosting = () => {
       <main>
 
         <section>
-          <h2 className='text-3xl text-center py-4 max-w-6xl mx-auto font-bold font-montserrat text-textPrimary'>
+          <h2 className='text-3xl text-center py-4 w-[96%] mx-auto font-bold font-montserrat text-textPrimary'>
             Fishbowl Hosting Services: Streamlining Inventory Management for Businesses
           </h2>
 
@@ -95,7 +99,7 @@ const FishbowlHosting = () => {
             <img
               className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
               src="./images/logo/fish-bowl.webp"
-              alt="Fishbowl Hosting Service"
+              alt="Fishbowl Hosting"
             />
 
           </figure>
@@ -325,9 +329,7 @@ const FishbowlHosting = () => {
         <Awards />
       </main>
 
-      <footer>
         <Partner />
-      </footer>
     </>
   );
 };

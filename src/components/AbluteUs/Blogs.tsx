@@ -16,7 +16,7 @@ interface BlogSection {
   }
 export  const blogData: BlogData[] = [
     {
-      id: "blog-1",
+      id: "why-tax-and-accounting-services-are-crucial-for-businesse",
       TopHeading: "Why Tax and Accounting Services Are Crucial for Businesses?",
       images: "/images/blogs/Tax.jpg",
       sections: [
@@ -65,11 +65,15 @@ export  const blogData: BlogData[] = [
         {
           heading: " Transparency in Finances and Investor Trust",
           paragraph: "For businesses aiming for investment, transparent financial reporting is indispensable. Precise and open accounting fosters investor trust and has the potential to draw funding. It showcases the business as well-managed and financially robust."
+        },
+        {
+          heading: " Managing Complex Transactions",
+          paragraph: "As businesses expand, their financial dealings grow more intricate. Professional tax and accounting services are equipped to navigate these complexities, which may include mergers and acquisitions, international trade, and intricate tax scenarios. Their expertise guarantees that such transactions are managed accurately and efficiently - In summary, tax and accounting services are essential for businesses striving for compliance, financial well-being, and strategic expansion. They form the bedrock of sound financial management, assisting businesses in navigating the intricacies of the financial realm, enhancing performance, and attaining sustainable long-term success."
         }
       ]
     },
     {
-      id: "blog-2",
+      id: "why-cloud-hosting-drake-software-is-a-game-changer-for-accountants",
       TopHeading: "Why Cloud-Hosting Drake Software is a Game-Changer for Accountants",
       images: "/images/blogs/drake.jpg",
       sections: [
@@ -100,7 +104,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-3",
+      id: "what-are-the-differences-between-quickbooks-desktop-and-quickbooks-online",
       TopHeading: "What are the differences between QuickBooks Desktop and QuickBooks Online?",
       images: "/images/blogs/Different.jpg",
       sections: [
@@ -146,7 +150,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-4",
+      id: "overcome-top-10-emerging-cybersecurity-challenges-with-winscloud-matrix-llc",
       TopHeading: "Overcome Top 10 Emerging Cybersecurity Challenges with Winscloud Matrix LLC",
       images: "/images/blogs/Overcome.jpg",
       sections: [
@@ -197,7 +201,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-5",
+      id: "exploring-quickbooks-desktop-enterprise-is-it-right-for-you",
       TopHeading: "Exploring QuickBooks Desktop Enterprise: Is It Right for You?",
       images: "/images/blogs/QuickBooks-Desktop.jpg",
       sections: [
@@ -259,7 +263,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     { 
-      id: "blog-6",
+      id: "enhancing-quickbooks-desktop-functionality-with-web-connector-on-the-hosted-cloud/",
       TopHeading: "Enhancing QuickBooks Desktop Functionality with Web Connector on the Hosted Cloud",
       images: "/images/blogs/Enhancing.jpg",
       sections: [
@@ -343,7 +347,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-7",
+      id: "cloud-hosting-or-on-premise-whats-right-for-your-tax-accounting-software",
       TopHeading: "Enhancing QuickBooks Desktop Functionality with Web Connector on the Hosted Cloud",
       images: "/images/blogs/Cloud_Hosting.jpg",
       sections: [
@@ -442,7 +446,7 @@ export  const blogData: BlogData[] = [
     },
     
     {
-      id: "blog-8",
+      id: "cloud-hosting-benefits",
       TopHeading: "Cloud Hosting Benefits: A Game-Changer for Businesses Everywhere",
       images: "/images/blogs/benefits.webp",
       sections: [
@@ -486,7 +490,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-9",
+      id: "boost-your-accounting-firms-productivity-with-sage-50-cloud-hosting",
       TopHeading: "Cloud Hosting Benefits- Winscloud Matrix LLC",
       images: "/images/blogs/sage-50.jpg",
       sections: [
@@ -551,13 +555,13 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-10",
+      id: "benefits-of-cloud-hosting-for-proseries-tax-software",
       TopHeading: "Benefits of Cloud Hosting for ProSeries Tax Software",
       images: "/images/blogs/ProSeries.jpg",
       sections: [
         {
           heading: "Benefits of Cloud Hosting for ProSeries Tax Software",
-          // paragraph: "Taxes are fees imposed by the government..."
+          paragraph: "Taxes are fees imposed by the government..."
         },
         {
           heading: "1. Enhanced Accessibility",
@@ -611,7 +615,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-11",
+      id: "accounting-trends-shaping-the-future-of-business-with-cloud-hosting-providers",
       TopHeading: "Accounting Trends Shaping the Future of Business with Cloud Hosting Providers",
       images: "/images/blogs/Accounting.jpg",
       sections: [
@@ -678,7 +682,7 @@ export  const blogData: BlogData[] = [
       ]
     },
     {
-      id: "blog-12",
+      id: "8-reasons-to-host-your-drake-tax-application-with-winscloud-matrix",
       TopHeading: "8 Reasons to Host Your Drake Tax Application with Winscloud Matrix",
       images: "/images/blogs/8-Reasons.jpg",
       sections: [
@@ -750,7 +754,7 @@ const Blogs = () => {
           <img
             src={blog.images}
             alt={blog.TopHeading}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-fit transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80" />
         </div>
@@ -772,7 +776,7 @@ const Blogs = () => {
           </h2>
           
           <p className="text-gray-600 font-montserrat mb-6 line-clamp-3">
-            {blog.sections[0]?.paragraph?.slice(0, 150)}...
+            {blog.sections[0]?.paragraph?.slice(0, 150)}
           </p>
           
           <Link

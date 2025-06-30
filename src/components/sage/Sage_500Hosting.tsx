@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -54,13 +55,19 @@ const Sage_500Hosting = () => {
 
   return (
     <>
-      <section className="min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+      <section className="md:min-h-[90vh] rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+        
+        <Helmet>
+          <title>Sage 500 Hosting – Secure Cloud ERP Solutions | Winscloud Matrix LLC</title>
+          <meta name="description" content="Reliable Sage 500 cloud hosting with 99.99% uptime, encryption, disaster recovery & expert support. Call +1 714-882-1244 for a free consultation!" />
+        </Helmet>
+
         <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
 
           {/* Left Content */}
           <div className="text-center md:text-left lg:w-[800px]">
             <motion.h1
-              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-8"
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight md:mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -68,7 +75,7 @@ const Sage_500Hosting = () => {
             >Sage 500 ERP Hosting
             </motion.h1>
 
-            <p className="text-md sm:text-lg md:text-xl font-bold max-w-2xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+            <p className="text-md sm:text-lg md:text-xl  font-bold max-w-xl xl:ax-w-2xl my-3 md:my-0 md:mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
               Anytime, anywhere accounting & high productivity with Sage 500 ERP Hosting
             </p>
 
@@ -79,7 +86,7 @@ const Sage_500Hosting = () => {
                     group-active:translate-y-0 transition-transform"></span>
                 <span className="relative flex items-center justify-center gap-2 px-6 py-3 
                     text-white font-semibold tracking-wide">
-                  get a free trial
+                  Get a free trial
                   <svg
                     className="w-5 h-5 transition-transform group-hover:translate-x-1"
                     fill="none"
@@ -111,8 +118,8 @@ const Sage_500Hosting = () => {
           >
             <img
               src="/images/Home/homePNG.png"
-              alt="Server"
-              className="w-full max-w-md md:h-[400px] rounded-lg object-contain"
+              alt="ServerImage"
+              className="w-full max-w-md h-[230px] md:h-[260px] -my-8  md:my-0  lg:mt-12 xl:mt-0  xl:h-auto rounded-lg object-contain"
             />
           </motion.div>
 
@@ -124,7 +131,7 @@ const Sage_500Hosting = () => {
           <h2 className='text-3xl text-center py-4 font-bold font-inter text-textPrimary'>
             Business Operations Simplified with Sage 500 Cloud Hosting
           </h2>
-          <p className="font-montserrat text-xl text-center font-semibold">Team Collaboration On-the-Go
+          <p className="font-montserrat text-xl mb-3 md:mb-0 text-center font-semibold">Team Collaboration On-the-Go
           </p>
         </section>
 
@@ -135,7 +142,7 @@ const Sage_500Hosting = () => {
             <img
               className="w-full max-w-lg border-4 border-blue-300 shadow-2xl rounded-2xl object-contain"
               src="./images/logo/sage-500.webp"
-              alt="QuickBooks Hosting Service"
+              alt="Sage 500 Hosting"
             />
 
           </figure>
@@ -152,7 +159,7 @@ const Sage_500Hosting = () => {
         </section>
 
 
-        <div className="bg-gradient-to-br w-[90%] mx-auto  from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-gradient-to-br w-[90%] my-6 mx-auto  from-blue-900 to-blue-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
           <div className="flex-1">
             <h1 className="text-3xl text-center md:text-4xl font-bold mb-2">
               Ready for Sage 500 ERP Cloud Hosting?          </h1>
@@ -338,9 +345,7 @@ const Sage_500Hosting = () => {
 
       </main>
 
-      <footer>
         <Partner />
-      </footer>
     </>
   );
 };

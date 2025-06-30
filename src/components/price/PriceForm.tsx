@@ -204,7 +204,7 @@ const PriceForm = ({ selectedPlan, setShowForm, planType, sharedPlans, dedicated
                                                 () => {
                                                     toast.error('Something went wrong!');
                                                     setLoading(false);
-                                                     setShowForm(false);
+                                                    setShowForm(false);
                                                 },
                                             );
                                     }}
@@ -364,42 +364,41 @@ const PriceForm = ({ selectedPlan, setShowForm, planType, sharedPlans, dedicated
                                                     <ErrorMessage name="Phone" component="div" className="text-red-400 text-xs mt-1" />
                                                 </div>
 
-                                               <div>
-  <label className="block text-xs text-gray-500 font-josefin mb-1">Application*</label>
-  <Field
-    as="select"
-    name="Choose_Application_Host"
-    className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 text-gray-700"
-    onChange={(e:any) => {
-      const selectedValue = e.target.value;
-      setFieldValue("Choose_Application_Host", selectedValue);
-      if (selectedValue !== "Other") {
-        setFieldValue("Custom_Application_Name", ""); // Reset custom name if not Other
-      }
-    }}
-  >
-    <option value="" disabled>Select your plan</option>
-    <option value="QuickBook">QuickBook</option>
-    <option value="Sage">Sage</option>
-    <option value="AngularDrake">Drake</option>
-    <option value="Other">Other Applications</option>
-  </Field>
-  {values.Choose_Application_Host === "Other" && (
-  <div className="mt-2">
-    <label className="block text-xs text-gray-500 font-josefin mb-1">Type Application Name*</label>
-    <Field
-      type="text"
-      name="Custom_Application_Name"
-      placeholder="Enter application name"
-      className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
-    />
-    <ErrorMessage name="Custom_Application_Name" component="div" className="text-red-400 text-xs mt-1" />
-  </div>
-)}
+                                                <div>
+                                                    <label className="block text-xs text-gray-500 font-josefin mb-1">Application*</label>
+                                                    <Field
+                                                        as="select"
+                                                        name="Choose_Application_Host"
+                                                        className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 text-gray-700"
+                                                        onChange={(e: any) => {
+                                                            const selectedValue = e.target.value;
+                                                            setFieldValue("Choose_Application_Host", selectedValue);
+                                                            if (selectedValue !== "Other") {
+                                                                setFieldValue("Custom_Application_Name", ""); // Reset custom name if not Other
+                                                            }
+                                                        }}
+                                                    >
+                                                        <option value="" disabled>Select your plan</option>
+                                                        <option value="QuickBook">QuickBook</option>
+                                                        <option value="Sage">Sage</option>
+                                                        <option value="AngularDrake">Drake</option>
+                                                        <option value="Other">Other Applications</option>
+                                                    </Field>
+                                                    {values.Choose_Application_Host === "Other" && (
+                                                        <div className="mt-2">
+                                                            <label className="block text-xs text-gray-500 font-josefin mb-1">Type Application Name*</label>
+                                                            <Field
+                                                                type="text"
+                                                                name="Custom_Application_Name"
+                                                                placeholder="Enter application name"
+                                                                className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                                                            />
+                                                            <ErrorMessage name="Custom_Application_Name" component="div" className="text-red-400 text-xs mt-1" />
+                                                        </div>
+                                                    )}
 
-  <ErrorMessage name="Choose_Application_Host" component="div" className="text-red-400 text-xs mt-1" />
-</div>
-
+                                                    <ErrorMessage name="Choose_Application_Host" component="div" className="text-red-400 text-xs mt-1" />
+                                                </div>
 
                                                 <div>
                                                     <label className="block text-xs text-gray-500 font-josefin mb-1">License Details*</label>

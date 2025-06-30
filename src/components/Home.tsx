@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import Partner from './Partner';
@@ -21,7 +22,8 @@ type Feature = {
   name: string
   description: string
   icon: React.ElementType
-  images: string
+  images: string,
+  link: string
 }
 
 const features: Feature[] = [
@@ -29,55 +31,64 @@ const features: Feature[] = [
     name: 'QuickBooks Hosting',
     description: 'Seamlessly migrate and remotely access your preferred QuickBooks Software, be it QuickBooks Pro, QuickBooks Premier, and QuickBooks Enterprise anytime, anywhere.',
     icon: AiOutlineThunderbolt,
-    images: "images/Home/QuickBooks.webp"
+    images: "images/Home/QuickBooks.webp",
+     link: "/quickbooks-hosting"
   },
   {
     name: ' Sage Hosting',
     description: 'Whether you are using Sage 50, Sage 100, Sage 300, and Sage 500 , our Sage Hosting solution streamlines your accounting processes seamlessly.',
     icon: AiOutlineThunderbolt,
-    images: "images/Home/Sage1.webp"
+    images: "images/Home/Sage1.webp",
+    link: "/sage-hosting"
   },
   {
     name: 'Drake Hosting',
     description: 'Wish tax filing was more efficient, quicker, and secure? Our cloud-based Drake Hosting solutions are perfect to make tax preparation smoother for both you and your team.',
     icon: AiOutlineThunderbolt,
-    images: "images/Home/Drake.webp"
+    images: "images/Home/Drake.webp",
+    link: "/drake-hosting"
   },
   {
     name: ' ProSeries Hosting',
     description: 'Experience productive, accurate, and hassle-free tax preparation on-the-go, with our ProSeries Hosting solution.',
     icon: AiOutlineThunderbolt,
-    images: "images/Home/ProSeries.webp"
+    images: "images/Home/ProSeries.webp",
+    link: "/proseries-hosting"
   },
   {
     name: 'Lacerte Hosting',
     description: 'GWinscloud Matrix’s Lacerte Hosting solutions let you experience faster data transfer that is secure and saves time and helps you modernize your accounting operations.',
     icon: AiOutlineThunderbolt,
-    images: "images/Home/Lacerte.webp"
+    images: "images/Home/Lacerte.webp",
+    link: "/lacerte_Hosting"
   },
   {
     name: ' ATX Hosting',
     description: 'Maximize efficiency in tax compliance with one of our top hosting services, ATX Hosting – a powerful solution for both tax professionals as well as accounting firms.',
     icon: AiOutlineThunderbolt,
-    images: "images/Home/ATX.webp"
+    images: "images/Home/ATX.webp",
+    link: "/atx-hosting"
   },
   {
     name: 'UltraTax Hosting',
     description: 'Our UltraTax Hosting solution helps increase user collaboration across multiple devices, making tax filing reliable, fast and hassle-free.',
     icon: AiOutlineThunderbolt,
-    images: "images/Home/UltraTax.webp"
+    images: "images/Home/UltraTax.webp",
+    link: "/ultratax-hosting"
   },
   {
     name: ' ACT Hosting',
     description: 'Make tax season stress-free and add more power to your tax preparation with ACT Hosting by Winscloud.',
     icon: AiOutlineThunderbolt,
-    images: "images/Home/ACT.webp"
+    images: "images/Home/ACT.webp",
+    link: "/act-hosting"
   },
   {
-    name: '    TaxWise Hosting',
+    name: 'TaxWise Hosting',
     description: 'Facing a busy tax season? Our TaxWise hosting offers real-time collaboration, secure and fast data transfer, allowing you to handle your workload with ease.',
     icon: AiOutlineThunderbolt,
-    images: "images/Home/TaxWise.webp"
+    images: "images/Home/TaxWise.webp",
+    link: "/tax-wise-hosting"
   },
 
 ]
@@ -115,13 +126,17 @@ const Home: React.FC = () => {
     <>
 
 
-      <section className="min-h-screen rounded-b-xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12">
+      <section className="md:min-h-screen   rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12">
+         <Helmet>
+        <title>Best Cloud Hosting & Application Hosting | WinsCloud Matrix</title>
+        <meta name="description" content="Discover top-tier cloud & application hosting with WinsCloud Matrix LLC. 24/7 support, fast servers & CPA software hosting. Call +1 714-882-1244 today!" />
+      </Helmet>
         <div className="max-w-6xl mx-auto pt-6 w-full grid md:grid-cols-2 items-center gap-12">
 
           {/* Left Content */}
           <div className="text-center md:text-left lg:w-[800px]">
             <motion.h1
-              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight mb-8"
+              className="text-slate-100 mt-4 font-bold font-josefin text-3xl sm:text-4xl md:text-6xl leading-tight md:mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -130,7 +145,7 @@ const Home: React.FC = () => {
               Celebrating a Decade of Powerful Servers
             </motion.h1>
 
-            <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
+            <p className="text-md sm:text-lg md:text-xl font-bold max-w-xl my-6 md:my-0 md:mb-10 bg-gradient-to-r from-yellow-400 via-cyan-400 to-slate-300 bg-clip-text text-transparent">
               Get the financial tools and insights to start, build, and grow your business.
             </p>
 
@@ -170,12 +185,12 @@ const Home: React.FC = () => {
               repeat: Infinity,
               repeatType: "loop",
             }}
-            className="flex mt-12 md:justify-end"
+            className="flex md:mt-12 md:justify-end"
           >
             <img
               src="/images/Home/homePNG.png"
-              alt="Server"
-              className="w-full max-w-md h-auto rounded-lg object-contain"
+              alt="ServerImage"
+              className=" w-full  max-w-md h-[210px] md:h-[260px] -my-6 xl:h-auto  rounded-lg object-contain"
             />
           </motion.div>
 
@@ -355,7 +370,7 @@ const Home: React.FC = () => {
       <img
         src={feature.images}
         alt={feature.name}
-        className="w-full h-full rounded-lg border object-cover transition-transform duration-300 group-hover:scale-105"
+        className="w-full h-auto rounded-lg border object-fit transition-transform duration-300 group-hover:scale-105"
       />
     </div>
 
@@ -366,15 +381,15 @@ const Home: React.FC = () => {
           type="button"
           className="hover:scale-125 transition-transform duration-300 z-10 bg-white/80 backdrop-blur-sm rounded-full p-2"
         >
-          <FaExternalLinkAlt className="text-gray-700" />
+         <Link to={feature.link}><FaExternalLinkAlt className="text-gray-700" /></Link>
         </button>
       </div>
 
-      <h3 className="text-xl font-bold text-center text-gray-800">
+      <h3 className="text-lg md:text-xl font-bold text-center text-gray-900">
         {feature.name}
       </h3>
 
-      <p className="text-sm text-center text-gray-600 mt-2 leading-relaxed">
+      <p className="text-xl text-center text-gray-600 mt-2 leading-relaxed">
         {feature.description}
       </p>
     </div>

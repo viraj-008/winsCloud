@@ -142,8 +142,8 @@ const QickBooks_Desktop = () => {
       </section>
 
       <main>
-        <section className="w-[90%] mx-auto">
-          <h2 className='text-3xl w-[90%] font-inter text-center py-4 font-bold  text-textPrimary'>
+        <section className="">
+          <h2 className='text-3xl w-[90%] mx-auto font-inter text-center py-4 font-bold  text-textPrimary'>
             QuickBooks Desktop Hosting: Run your favorite QuickBooks Desktop Application from Anywhere, at Anytime
           </h2>
         </section>
@@ -358,7 +358,7 @@ const QickBooks_Desktop = () => {
                 className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="font-josefin text-gray-800 text-lg font-medium">
+                <span className="font-josefin w-[90%] text-gray-800 text-lg font-medium">
                   {faq.question}
                 </span>
                 <div className={`flex items-center justify-center h-8 w-8 rounded-full ${openIndex === index ? 'bg-red-100' : 'bg-gray-100'} transition-all duration-300`}>

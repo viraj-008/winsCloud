@@ -333,7 +333,7 @@ const QuickBook_enterprice = () => {
                 className="w-full text-left flex justify-between items-center p-5 hover:bg-gray-50 transition-colors duration-200"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="font-josefin text-gray-800 text-lg font-medium">
+                <span className="font-josefin w-[90%] text-gray-800 text-lg font-medium">
                   {faq.question}
                 </span>
                 <div className="flex items-center justify-center">

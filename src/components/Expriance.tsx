@@ -35,10 +35,10 @@ const Expriance:React.FC = () => {
         <div className="py-12">
           <div className="max-w-5xl mx-auto px-6 text-center">
             <img className="mx-auto h-20 mb-4" src="images/logo/rockk.png" alt="Company Logo" />
-            <h2 className="text-4xl font-bold text-gray-800 sm:text-5xl">
+            <h2 className="text-4xl font-inter font-bold text-gray-800 sm:text-5xl">
               Precision-Driven Skills, Purposeful Experience
             </h2>
-            <p className="mt-4 text-lg sm:text-xl text-gray-600">
+            <p className="mt-4 font-montserrat text-justify text-lg sm:text-xl text-gray-600">
               With years of industry experience and modern tools, we deliver precise financial
               solutions that support your business growth and compliance with confidence.
             </p>
@@ -46,11 +46,11 @@ const Expriance:React.FC = () => {
 
           <div className="mt-12">
             <div className="max-w-5xl mx-auto">
-              <dl className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <dl className="grid grid-cols-1 px-4 sm:grid-cols-3 gap-6">
                 {stats.map((stat, index) => (
                   <div
                     key={stat.label}
-                    className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                    className="flex flex-col items-center justify-center p-12 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
                   >
                     <dd className="text-5xl font-extrabold text-green-600">
                       {animatedCounts[index]}

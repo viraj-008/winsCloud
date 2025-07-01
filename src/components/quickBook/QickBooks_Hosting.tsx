@@ -58,14 +58,14 @@ const QickBooks_Hosting = () => {
   return (
     <>
 
-      <section className="md:min-h-[90vh]  rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12 lg:py-0">
+      <section className="md:min-h-[90vh]  rounded-b-3xl flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-black text-white px-6 py-12  lg:py-0">
         <Helmet>
           <title>QuickBooks Hosting Services | Fast & Secure Cloud Hosting</title>
           <meta name="description" content="Get reliable QuickBooks cloud hosting with 99.9% uptime, full data security & expert support. Call +1 714-882-1244 to move QuickBooks to the cloud today!" />
         </Helmet>
 
 
-        <div className="max-w-6xl mx-auto    pt-6 w-full grid md:grid-cols-2 items-center gap-12">
+        <div className="max-w-6xl mx-auto    pt-6 md:pt-0 w-full grid md:grid-cols-2 items-center gap-12">
 
           {/* Left Content */}
           <div className="text-center md:text-left  lg:w-[800px]">
@@ -84,7 +84,7 @@ const QickBooks_Hosting = () => {
             </p>
 
             <Link to="/trial">
-              <button className="relative group overflow-hidden">
+              <button className="relative  group overflow-hidden">
                 <span className="absolute inset-0.5 bg-gradient-to-b from-emerald-600 to-emerald-700 rounded-full
                     translate-y-[-2px] 
                     group-active:translate-y-0 transition-transform"></span>
@@ -118,7 +118,7 @@ const QickBooks_Hosting = () => {
               repeat: Infinity,
               repeatType: "loop",
             }}
-            className="flex py-8 md:mt-16 md:justify-end"
+            className="flex py-8 md:mt-13 md:justify-end"
           >
             <img
               src="/images/Home/homePNG.png"

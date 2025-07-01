@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div className={`   fixed 
+    <header className={`   fixed 
   inset-x-0
     mt-5
     w-[90%]              
@@ -204,7 +204,7 @@ const Navbar: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
